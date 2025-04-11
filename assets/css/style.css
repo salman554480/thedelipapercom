@@ -606,6 +606,10 @@ nav .navbar .links li .sub-menu li{
   height: auto;
   border-radius: 8px;
 }
+.carousel-image2 {
+  width: 100%;
+  height: auto;
+}
 .owl-nav {
   display: none; /* Hide arrows */
 }
@@ -697,6 +701,23 @@ nav .navbar .links li .sub-menu li{
 .copyrightarea{
   background-color: #000;
 }
+
+
+/* Product Page */
+
+.product-main-image {
+  border-radius: 12px; /* Adjust radius as needed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-main-image:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+.blue-tick{
+  color: #145da0;
+}
+
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
