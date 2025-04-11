@@ -147,7 +147,7 @@ nav .navbar .links li .sub-menu{
   top: 70px;
   left: 0;
   line-height: 40px;
-  background: #827081;
+  background: #2e8bc0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   display: none;
@@ -206,7 +206,7 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 80px;
   height: 60px;
   width: 300px;
-  background: #827081;
+  background: #2e8bc0;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -216,14 +216,14 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 65px;
   opacity: 1;
   pointer-events: auto;
-  background: #827081;
+  background: #2e8bc0;
 }
 .search-box .input-box::before{
   content: '';
   position: absolute;
   height: 20px;
   width: 20px;
-  background: #827081;
+  background: #2e8bc0;
   right: 10px;
   top: -6px;
   transform: rotate(45deg);
@@ -544,4 +544,200 @@ nav .navbar .links li .sub-menu li{
   line-height: 27px;
   margin-bottom: 20px;
   text-align: left;
+}
+
+.section-two-column {
+  padding: 60px 0;
+}
+.section-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.section-heading{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #145da0;
+}
+
+.section-subheading{
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  color: #000;
+}
+
+.faq-section {
+  padding: 60px 0;
+}
+.faq-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 100%; */
+}
+.faq-item + .faq-item {
+  margin-top: 1rem;
+}
+.faq-item .card-header{
+  background-color: #b1d4e0;
+}
+.faq-question{
+  font-size: 18px;
+  font-weight: 600;
+  color: #145da0;
+}
+
+.carousel-section {
+  padding: 60px 0;
+  background-color: #b1d4e0;
+}
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.owl-nav {
+  display: none; /* Hide arrows */
+}
+
+.showcase-section {
+  padding: 60px 0;
+}
+
+.display-box {
+  background-color: #f0f2f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.display-box:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.feature-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.image-preview {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper {
+  text-align: center;
+}
+
+.footer {
+  background-color: #0c2d48;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer h5 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.footer-list li{
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ffffff;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer .contact-info i {
+  margin-right: 8px;
+}
+.copyrightarea{
+  background-color: #000;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+ 
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .section-heading{
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+  .section-subheading{
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000;
+  }
+  .card-product-title{
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .product-intro {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .custom-btn{
+    width: 100% !important;
+  }
+
+  .showcase-section {
+    padding: 20px 0;
+}
+.section-two-column {
+  padding: 20px 0;
+}
+.cover-heading{
+  text-align: center;
+  font-size: 45px;
+}
 }

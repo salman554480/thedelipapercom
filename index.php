@@ -30,7 +30,8 @@
                         US, Mexico and Canada.
 
                     </p>
-                    <a href="#" class="btn btn-primary primary-bg primary-border border-radius-30">SHOP NOW</a>
+                    <a href="#" class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn">SHOP
+                        NOW</a>
 
                     <div class="row justify-content-start mt-3">
                         <div class="col-auto">
@@ -93,7 +94,7 @@
                                         versatile for any
                                         kitchen.</p>
                                     <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30">Shop
+                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
                                 </div>
 
@@ -116,7 +117,7 @@
                                         versatile for any
                                         kitchen.</p>
                                     <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30">Shop
+                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
                                 </div>
 
@@ -140,7 +141,7 @@
                                         versatile for any
                                         kitchen.</p>
                                     <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30">Shop
+                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
                                 </div>
 
@@ -163,7 +164,7 @@
                                         versatile for any
                                         kitchen.</p>
                                     <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30">Shop
+                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
                                 </div>
 
@@ -189,7 +190,7 @@
                                         versatile for any
                                         kitchen.</p>
                                     <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30">Shop
+                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
                                 </div>
 
@@ -249,7 +250,7 @@
                                 Dolores maiores debitis aperiam voluptatum aliquam voluptas et.</p>
 
                             <center> <button
-                                    class="btn btn-primary primary-bg primary-border border-radius-30 w-50">Shop
+                                    class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Shop
                                     Now</button></center>
                         </div>
                     </div>
@@ -266,7 +267,7 @@
                                 Dolores maiores debitis aperiam voluptatum aliquam voluptas et.</p>
 
                             <center> <button
-                                    class="btn btn-primary primary-bg primary-border border-radius-30 w-50">Shop
+                                    class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Shop
                                     Now</button></center>
                         </div>
                     </div>
@@ -283,7 +284,7 @@
                                 Dolores maiores debitis aperiam voluptatum aliquam voluptas et.</p>
 
                             <center> <button
-                                    class="btn btn-primary primary-bg primary-border border-radius-30 w-50">Shop
+                                    class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Shop
                                     Now</button></center>
                         </div>
                     </div>
@@ -291,8 +292,273 @@
             </div>
         </section>
 
+        <section class="section-two-column bg-light">
+            <div class="container-fluid">
+                <div class="row no-gutters align-items-center">
+
+                    <!-- Image Column -->
+                    <div class="col-md-6">
+                        <img src="https://picsum.photos/800/600" alt="Section Image" class="section-image">
+                    </div>
+
+                    <!-- Text Content Column -->
+                    <div class="col-md-6 p-3">
+                        <div class="section-content">
+
+                            <h2 class="mb-3 section-heading ">wide range of premium branded greaseproof paper</h2>
+                            <h5 class=" mb-3 section-subheading">promote your brand and improve your food presentation
+                            </h5>
+                            <p class="mb-4 product-intro">
+                                Custom printed food paper has a host of features and benefits that add to the dining
+                                experience, not just for sit-in restaurants, but also for food trucks, takeouts,
+                                bakeries, bars, coffee shops, and more. <br><br>
+
+                                Not all greaseproof paper is created equal—what sets our high-quality branded
+                                greaseproof paper apart? <br><br>
+
+                                Our paper is food-safe, vegan-friendly, and Halal-certified. We offer extensive
+                                customization options, a free design service and free shipping. Versatile for any
+                                kitchen, our paper is microwavable, ovenproof, and freezeproof, suitable for both hot
+                                and cold food. <br>
+                            </p>
+                            <a href="#"
+                                class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25 custom-btn">Get
+                                a
+                                Quote</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase-section">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Left Column: Features -->
+                    <div class="col-md-6 ">
+                        <h2 class="section-heading"> Sample Showcase for our Products</h2>
+                        <p class="product-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+                            ipsam esse laudantium dicta doloribus eligendi voluptatum exercitationem, doloremque
+                            consequatur sed porro id aliquid non commodi explicabo ea sit distinctio consequuntur.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="row">
+
+                                <div class="col-6 col-md-4 p-2">
+                                    <!-- Feature Items -->
+                                    <div class="display-box" data-image="https://picsum.photos/600/600?random=1">
+                                        <div class="feature-title">Sample 1</div>
+                                        <div class="feature-text">Description for sample one.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4 p-2">
+                                    <div class=" display-box" data-image="https://picsum.photos/600/600?random=2">
+                                        <div class="feature-title">Sample 2</div>
+                                        <div class="feature-text">Description for sample two.</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-md-4 p-2">
+                                    <div class="display-box" data-image="https://picsum.photos/600/600?random=3">
+                                        <div class="feature-title">Sample 3</div>
+                                        <div class="feature-text">Description for sample three.</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-md-4 p-2">
+                                    <div class=" display-box" data-image="https://picsum.photos/600/600?random=4">
+                                        <div class="feature-title">Sample 4</div>
+                                        <div class="feature-text">Description for sample four.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4 p-2">
+                                    <div class="display-box" data-image="https://picsum.photos/600/600?random=5">
+                                        <div class="feature-title">Sample 5</div>
+                                        <div class="feature-text">Description for sample five.</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-md-4 p-2">
+                                    <div class=" display-box" data-image="https://picsum.photos/600/600?random=6">
+                                        <div class="feature-title">Sample 6</div>
+                                        <div class="feature-text">Description for sample six.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Image Preview -->
+                    <div class="col-md-6 image-wrapper">
+                        <img id="preview-image" src="https://picsum.photos/600/600?random=1" alt="Preview"
+                            class="image-preview">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="carousel-section text-center">
+            <div class="container">
+                <h2 class="mb-3 section-heading">Our Trusted Partners</h2>
+                <p class="mb-5 product-intro text-center">We proudly collaborate with industry leaders and innovators
+                    around the world.</p>
+
+                <div class="owl-carousel owl-theme">
+                    <div><img src="https://picsum.photos/300/300?random=1" class="carousel-image" alt="Logo 1"></div>
+                    <div><img src="https://picsum.photos/300/300?random=2" class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="https://picsum.photos/300/300?random=3" class="carousel-image" alt="Logo 3"></div>
+                    <div><img src="https://picsum.photos/300/300?random=4" class="carousel-image" alt="Logo 4"></div>
+                    <div><img src="https://picsum.photos/300/300?random=5" class="carousel-image" alt="Logo 5"></div>
+                    <div><img src="https://picsum.photos/300/300?random=6" class="carousel-image" alt="Logo 6"></div>
+                    <div><img src="https://picsum.photos/300/300?random=7" class="carousel-image" alt="Logo 7"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section bg-white">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Left Column: Heading and CTA -->
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt="">
+                        <div class="faq-left">
+                            <h2 class="mb-3 section-heading">Frequently Asked Questions</h2>
+                            <p class="mb-4 product-intro">Have a question? We've got answers to some of the most common
+                                questions below.</p>
+                            <a href="#"
+                                class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Contact
+                                Support</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: FAQs -->
+                    <div class="col-md-7">
+                        <div id="faqAccordion">
+
+                            <!-- FAQ 1 -->
+                            <div class="card faq-item">
+                                <div class="card-header" id="faqHeading1">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link faq-question" data-toggle="collapse"
+                                            data-target="#faqCollapse1" aria-expanded="true"
+                                            aria-controls="faqCollapse1">
+                                            What is your refund policy?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1"
+                                    data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        We offer a full refund within the first 30 days of purchase—no questions asked!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 2 -->
+                            <div class="card faq-item">
+                                <div class="card-header" id="faqHeading2">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed faq-question" data-toggle="collapse"
+                                            data-target="#faqCollapse2" aria-expanded="false"
+                                            aria-controls="faqCollapse2">
+                                            Can I upgrade my plan later?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2"
+                                    data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Absolutely! You can upgrade or downgrade your plan at any time from your
+                                        dashboard.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 -->
+                            <div class="card faq-item">
+                                <div class="card-header" id="faqHeading3">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed faq-question" data-toggle="collapse"
+                                            data-target="#faqCollapse3" aria-expanded="false"
+                                            aria-controls="faqCollapse3">
+                                            Do you offer support?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3"
+                                    data-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        Yes, we offer 24/7 email support and live chat during business hours.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
     </div>
 
 
 
+
     <?php require_once('parts/footer.php'); ?>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            nav: false,
+            autoplayTimeout: 2500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                992: {
+                    items: 5
+                }
+            }
+        });
+    });
+    </script>
+
+
+    <script>
+    $(document).ready(function() {
+        $('.display-box').hover(function() {
+            const newImage = $(this).attr('data-image');
+            $('#preview-image').css('opacity', '0');
+            setTimeout(function() {
+                $('#preview-image').attr('src', newImage).css('opacity', '1');
+            }, 200);
+        });
+    });
+    </script>
