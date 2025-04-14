@@ -15,9 +15,9 @@
 
                     <div class="page-header">
                         <div class="col-12 mt-4 mb-4">
-                            <h4 class="mb-3">View Calculator</h4>
+                            <h4 class="mb-3">View product</h4>
 
-                            <a href="calculator_trash.php" class="btn btn-sm  btn-outline-warning ">Record Trash</a>
+                            <a href="product_trash.php" class="btn btn-sm  btn-outline-warning ">Record Trash</a>
                         </div>
                     </div>
                     <div class="card mb-3 bg-white">
@@ -31,12 +31,12 @@
                             if (isset($_GET['del'])) {
                                 $del_id = $_GET['del'];
 
-                                $delete = "DELETE FROM calculator WHERE calculator_id='$del_id'";
+                                $delete = "DELETE FROM product WHERE product_id='$del_id'";
                                 $run = mysqli_query($conn, $delete);
 
                                 if ($run === true) {
                                     echo "<script>alert('Deleted');</script>";
-                                    echo "<script>window.open('calculator_view.php','_self');</script>";
+                                    echo "<script>window.open('product_view.php','_self');</script>";
                                 } else {
                                     echo "Failed,Try Again";
                                 }
@@ -48,7 +48,7 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Title</th>
+                                        <th>Product</th>
                                         <th>URL</th>
                                         <th>Action</th>
 
@@ -58,20 +58,19 @@
                                     <?php
 
                                     require_once('parts/db.php');
-                                    $select = "SELECT * FROM calculator";
+                                    $select = "SELECT * FROM product";
                                     $run = mysqli_query($conn, $select);
                                     while ($row = mysqli_fetch_array($run)) {
 
-                                        $calculator_id = $row['calculator_id'];
-                                        $calculator_title = $row['calculator_title'];
-                                        $calculator_url = $row['calculator_url'];
-                                        $calculator_code = $row['calculator_code'];
+                                        $product_id = $row['product_id'];
+                                        $product_name = $row['product_name'];
+                                        $product_url = $row['product_url'];
 
                                     ?>
                                     <tr>
-                                        <td><?php echo $calculator_id; ?></td>
-                                        <td><?php echo $calculator_title; ?></td>
-                                        <td><?php echo $calculator_url; ?></td>
+                                        <td><?php echo $product_id; ?></td>
+                                        <td><?php echo $product_name; ?></td>
+                                        <td><?php echo $product_url; ?></td>
                                         <td>
                                             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                                                 <li class="nav-item dropdown">
@@ -82,18 +81,18 @@
                                                         aria-labelledby="navbarDropdown">
 
                                                         <li> <a class="dropdown-item"
-                                                                href="calculator_view.php?del=<?php echo $calculator_id; ?>">Delete</a>
+                                                                href="product_view.php?del=<?php echo $product_id; ?>">Delete</a>
                                                         </li>
                                                         <li>
                                                             <hr class="dropdown-divider" />
                                                         </li>
                                                         <li> <a class="dropdown-item"
-                                                                href="calculator_edit.php?edit=<?php echo $calculator_id; ?>">Edit</a>
+                                                                href="product_edit.php?edit=<?php echo $product_id; ?>">Edit</a>
                                                         </li>
                                                         <hr class="dropdown-divider" />
                                                 </li>
                                                 <li> <a class="dropdown-item"
-                                                        href="../calculator_details.php?calculator_url=<?php echo $calculator_url; ?>">View
+                                                        href="../product_details.php?product_url=<?php echo $product_url; ?>">View
                                                         Page</a></li>
                                             </ul>
                                             </li>
