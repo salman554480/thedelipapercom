@@ -8,7 +8,7 @@
                 <i class='bx bx-x'></i>
             </div>
             <ul class="links">
-                <li><a href="#">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <!-- <li>
                     <a href="#">HTML & CSS</a>
                     <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
@@ -29,16 +29,26 @@
                     </ul>
                 </li> -->
                 <li>
+                    <a href="#">Products</a>
+                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                    <ul class="js-sub-menu sub-menu">
+                        <li><a href="product_details.php">Product 1</a></li>
+                        <li><a href="product_details.php">Product 2</a></li>
+                        <li><a href="product_details.php">Product 3</a></li>
+                        <li><a href="product_details.php">Product 4</a></li>
+                        <li><a href="product_details.php">Product 5</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a href="#">FAQ</a>
                     <i class='bx bxs-chevron-down js-arrow arrow '></i>
                     <ul class="js-sub-menu sub-menu">
-                        <li><a href="#">Why Greeseproof Paper</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.php">Privacy Policy</a></li>
+                        <li><a href="terms-and-condition.php">Terms & Conditions</a></li>
                     </ul>
                 </li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php">CONTACT US</a></li>
             </ul>
         </div>
         <div class="search-box">
