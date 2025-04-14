@@ -9,14 +9,152 @@
         <div class="w-90 py-5 ">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="https://brandedfoodwraps.com/wp-content/uploads/2024/08/Custom-Printed-Parchment-Paper.jpg"
-                        class="w-100 product-main-image" alt="">
+                    <img src="https://dummyimage.com/1000x1000/aaaaaa/fff" class="w-100 product-main-image" alt="">
                 </div>
                 <div class="col-md-6">
                     <h1 class="card-product-title">Custom Printed Paper</h1>
                     <p class="product-intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
                         distinctio illo, autem, quam magni, blanditiis id corporis facere ut labore magnam earum natus
                         delectus iste assumenda tempore quia incidunt dolores.</p>
+
+                    <form>
+                        <!-- Size Section -->
+                        <div class="section-title">Choose Size</div>
+                        <div class="custom-radio-block d-flex flex-wrap">
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size4x4" name="size" value="1x2">
+                                <label for="size4x4">4x4</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size6x6" name="size" value="1x3">
+                                <label for="size6x6">6x6</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size7x5" name="size" value="1x4">
+                                <label for="size7x5">7x5</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size8x6" name="size" value="1x2">
+                                <label for="size8x6">8x6</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size10x6" name="size" value="1x3">
+                                <label for="size10x6">10x6</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size10x8" name="size" value="1x4">
+                                <label for="size10x8">10x8</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size10x10" name="size" value="1x2">
+                                <label for="size10x10">10x10</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size1x2" name="size" value="1x2">
+                                <label for="size12x9">12x9</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size12x12" name="size" value="1x2">
+                                <label for="size12x12">12x12</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size13x10" name="size" value="1x2">
+                                <label for="size13x10">13x10</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size13x13" name="size" value="1x2">
+                                <label for="size13x13">13x13</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size16x12" name="size" value="1x2">
+                                <label for="size16x12">16x12</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size17x12" name="size" value="1x2">
+                                <label for="size17x12">17x12</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size18x12" name="size" value="1x2">
+                                <label for="size18x12">18x12</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size20x10" name="size" value="1x2">
+                                <label for="size20x10">20x10</label>
+                            </div>
+                            <div class="p-1 mr-1">
+                                <input type="radio" id="size20x13" name="size" value="1x2">
+                                <label for="size20x13">20x13</label>
+                            </div>
+                        </div>
+
+                        <!-- Paper Type Section -->
+                        <div class="section-title">Choose Paper Type</div>
+                        <div class="custom-radio-block row">
+                            <div class="col-md-6">
+                                <input type="radio" id="paper1" name="paper" value="papertype1">
+                                <label for="paper1">Kraft (Brown) 40gsm </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" id="paper2" name="paper" value="papertype2">
+                                <label for="paper2">White 38gsm</label>
+                            </div>
+                        </div>
+
+                        <!-- Color Section -->
+                        <div class="section-title">Choose Color</div>
+                        <div class="custom-radio-block row">
+                            <div class="col-md-4">
+                                <input type="radio" id="color1" name="color" value="1color">
+                                <label for="color1">1 color Print</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="radio" id="color2" name="color" value="2color">
+                                <label for="color2">2 color Print</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="radio" id="color4" name="color" value="4color">
+                                <label for="color4">4 color Print</label>
+                            </div>
+                        </div>
+
+                        <!-- Customer Info Section -->
+                        <div class="section-title">Customer Information</div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="customer_name">Customer Name</label>
+                                <input type="text" class="form-control" id="customer_name" name="customer_name"
+                                    placeholder="Enter name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="contact">Contact</label>
+                                <input type="tel" class="form-control" id="contact" name="contact"
+                                    placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <!-- File Upload -->
+                        <div class="file-upload">
+                            <input type="file" id="real-file" hidden>
+                            <button type="button" id="custom-button"><i class='bx bx-cloud-upload'></i> Choose
+                                File</button>
+                            <span id="file-name">No file chosen</span>
+                        </div>
+
+                        <!-- Comments Section -->
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -315,28 +453,46 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            autoplay: true,
-            nav: false,
-            dots: false,
-            autoplayTimeout: 2500,
-            responsive: {
-                0: {
-                    items: 2
-                },
-                576: {
-                    items: 3
-                },
-                768: {
-                    items: 4
-                },
-                992: {
-                    items: 4
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                autoplay: true,
+                nav: false,
+                dots: false,
+                autoplayTimeout: 2500,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    576: {
+                        items: 3
+                    },
+                    768: {
+                        items: 4
+                    },
+                    992: {
+                        items: 4
+                    }
                 }
+            });
+        });
+    </script>
+
+    <script>
+        const realFileBtn = document.getElementById("real-file");
+        const customBtn = document.getElementById("custom-button");
+        const fileName = document.getElementById("file-name");
+
+        customBtn.addEventListener("click", () => {
+            realFileBtn.click();
+        });
+
+        realFileBtn.addEventListener("change", () => {
+            if (realFileBtn.files.length > 0) {
+                fileName.textContent = realFileBtn.files[0].name;
+            } else {
+                fileName.textContent = "No file chosen";
             }
         });
-    });
     </script>

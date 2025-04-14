@@ -718,6 +718,114 @@ nav .navbar .links li .sub-menu li{
   color: #145da0;
 }
 
+.custom-radio-block input[type="radio"] {
+  display: none;
+}
+
+.custom-radio-block label {
+  display: block;
+  border: 2px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.custom-radio-block input[type="radio"]:checked + label {
+  border-color: #007bff;
+  background-color: #e9f5ff;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+
+.file-upload {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin:10px 0px ;
+}
+
+#custom-button {
+  padding: 10px 20px;
+  background-color: #145da0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+#custom-button:hover {
+  background-color: #145da0;
+}
+
+#file-name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* Blog 
+---------------------*/
+.blog-grid {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.blog-grid .blog-img {
+  position: relative;
+}
+.blog-grid .blog-img .date {
+  position: absolute;
+  background: #145da0;
+  color: #ffffff;
+  padding: 8px 15px;
+  left: 10px;
+  top: 10px;
+  border-radius: 4px;
+}
+.blog-grid .blog-img .date span {
+  font-size: 22px;
+  display: block;
+  line-height: 22px;
+  font-weight: 700;
+}
+.blog-grid .blog-img .date label {
+  font-size: 14px;
+  margin: 0;
+}
+.blog-grid .blog-info {
+  padding: 20px;
+}
+.blog-grid .blog-info h5 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.blog-grid .blog-info h5 a {
+  color: #20247b;
+}
+.blog-grid .blog-info p {
+  margin: 0;
+}
+.blog-grid .blog-info .btn-bar {
+  margin-top: 20px;
+}
+
+
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {

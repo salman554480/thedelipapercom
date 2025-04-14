@@ -233,12 +233,9 @@
             </div>
         </section>
 
-        <section class="custom-products-section">
+        <!-- <section class="custom-products-section">
             <div class="w-90">
-
-
                 <div class="row">
-                    <!-- Product 1 -->
                     <div class="col-md-4 mb-4">
                         <div class="product-box">
                             <img src="https://brandedfoodwraps.com/wp-content/uploads/2024/08/top-view-burger-parchment.jpg"
@@ -255,7 +252,6 @@
                         </div>
                     </div>
 
-                    <!-- Product 2 (Highlighted) -->
                     <div class="col-md-4 mb-4">
                         <div class="product-box">
                             <img src="https://brandedfoodwraps.com/wp-content/uploads/2024/09/BFW-website-8-of-9-1024x1024.jpg"
@@ -271,8 +267,6 @@
                                     Now</button></center>
                         </div>
                     </div>
-
-                    <!-- Product 3 -->
                     <div class="col-md-4 mb-4">
                         <div class="product-box">
                             <img src="https://brandedfoodwraps.com/wp-content/uploads/2024/08/chicken-on-custom-food-paper.jpg"
@@ -290,7 +284,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
 
         <section class="section-two-column bg-light">
             <div class="container-fluid">
@@ -328,6 +324,94 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-heading text-center">Our Latest Blogs</h2>
+                <p class="text-center product-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero autem
+                    non libero porro incidunt tenetur.</p>
+
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <div class="blog-grid">
+                            <div class="blog-img">
+                                <div class="date">
+                                    <span>04</span>
+                                    <label>FEB</label>
+                                </div>
+                                <a href="#">
+                                    <img src="https://picsum.photos/400/200" title="" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-info">
+                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="btn-bar">
+                                    <a href="#"
+                                        class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
+                                        <span>Read More</span>
+                                        <i class="arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="blog-grid">
+                            <div class="blog-img">
+                                <div class="date">
+                                    <span>04</span>
+                                    <label>FEB</label>
+                                </div>
+                                <a href="#">
+                                    <img src="https://picsum.photos/400/200?random=2" title="" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-info">
+                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="btn-bar">
+                                    <a href="#"
+                                        class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
+                                        <span>Read More</span>
+                                        <i class="arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="blog-grid">
+                            <div class="blog-img">
+                                <div class="date">
+                                    <span>04</span>
+                                    <label>FEB</label>
+                                </div>
+                                <a href="#">
+                                    <img src="https://picsum.photos/400/200?random=3" title="" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-info">
+                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="btn-bar">
+                                    <a href="#"
+                                        class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
+                                        <span>Read More</span>
+                                        <i class="arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
