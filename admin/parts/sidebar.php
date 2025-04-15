@@ -71,6 +71,10 @@
 
 
                      </ul>
+                     <a class="nav-link" href="image_add.php">
+                         <div class="sb-nav-link-icon"><i class="fas fa-image"></i></div>
+                         Images
+                     </a>
                      <a class="nav-link" href="setting.php">
                          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                          Settings

@@ -231,7 +231,8 @@
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="https://picsum.photos/800/600" alt="Section Image" class="section-image">
+                        <img src="https://dummyimage.com/800x600/a7a7a7/000000" alt="Section Image"
+                            class="section-image">
                     </div>
 
                     <!-- Text Content Column -->
@@ -300,7 +301,8 @@
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="https://picsum.photos/800/600" alt="Section Image" class="section-image">
+                        <img src="https://dummyimage.com/800x600/a7a7a7/000000" alt="Section Image"
+                            class="section-image">
                     </div>
 
                 </div>
@@ -434,7 +436,7 @@
         <div class="w-100">
 
             <div class="owl-carousel owl-theme">
-                <div><img src="https://picsum.photos/600/600?random=1" class="carousel-image2" alt="Logo 1"></div>
+                <div><img src="https://dummyimage.com/600x600/a7a7a7/000000" class="carousel-image2" alt="Logo 1"></div>
                 <div><img src="https://picsum.photos/600/600?random=2" class="carousel-image2" alt="Logo 2"></div>
                 <div><img src="https://picsum.photos/600/600?random=3" class="carousel-image2" alt="Logo 3"></div>
                 <div><img src="https://picsum.photos/600/600?random=4" class="carousel-image2" alt="Logo 4"></div>
@@ -453,46 +455,46 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 0,
-                autoplay: true,
-                nav: false,
-                dots: false,
-                autoplayTimeout: 2500,
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    576: {
-                        items: 3
-                    },
-                    768: {
-                        items: 4
-                    },
-                    992: {
-                        items: 4
-                    }
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            nav: false,
+            dots: false,
+            autoplayTimeout: 2500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                992: {
+                    items: 4
                 }
-            });
+            }
         });
+    });
     </script>
 
     <script>
-        const realFileBtn = document.getElementById("real-file");
-        const customBtn = document.getElementById("custom-button");
-        const fileName = document.getElementById("file-name");
+    const realFileBtn = document.getElementById("real-file");
+    const customBtn = document.getElementById("custom-button");
+    const fileName = document.getElementById("file-name");
 
-        customBtn.addEventListener("click", () => {
-            realFileBtn.click();
-        });
+    customBtn.addEventListener("click", () => {
+        realFileBtn.click();
+    });
 
-        realFileBtn.addEventListener("change", () => {
-            if (realFileBtn.files.length > 0) {
-                fileName.textContent = realFileBtn.files[0].name;
-            } else {
-                fileName.textContent = "No file chosen";
-            }
-        });
+    realFileBtn.addEventListener("change", () => {
+        if (realFileBtn.files.length > 0) {
+            fileName.textContent = realFileBtn.files[0].name;
+        } else {
+            fileName.textContent = "No file chosen";
+        }
+    });
     </script>

@@ -83,7 +83,7 @@
                     <div class="col-md-6 col-12 mb-3">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="https://picsum.photos/600/600?random=1" alt="Product"
+                                <img src="https://dummyimage.com/1000x1000/a7a7a7/000000" alt="Product"
                                     class="product-img w-100 mb-3">
                             </div>
                             <div class="col-md-6 d-flex align-items-center">
@@ -294,7 +294,8 @@
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="https://picsum.photos/800/600" alt="Section Image" class="section-image">
+                        <img src="https://dummyimage.com/800x600/a7a7a7/000000" alt="Section Image"
+                            class="section-image">
                     </div>
 
                     <!-- Text Content Column -->
@@ -343,7 +344,7 @@
                                     <label>FEB</label>
                                 </div>
                                 <a href="#">
-                                    <img src="https://picsum.photos/400/200" title="" alt="">
+                                    <img src="https://dummyimage.com/400x200/a7a7a7/000000" title="" alt="">
                                 </a>
                             </div>
                             <div class="blog-info">
@@ -432,14 +433,14 @@
 
                                 <div class="col-6 col-md-4 p-2">
                                     <!-- Feature Items -->
-                                    <div class="display-box" data-image="https://picsum.photos/600/600?random=1">
+                                    <div class="display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
                                         <div class="feature-title">Sample 1</div>
                                         <div class="feature-text">Description for sample one.</div>
                                     </div>
                                 </div>
 
                                 <div class="col-6 col-md-4 p-2">
-                                    <div class=" display-box" data-image="https://picsum.photos/600/600?random=2">
+                                    <div class=" display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
                                         <div class="feature-title">Sample 2</div>
                                         <div class="feature-text">Description for sample two.</div>
                                     </div>
@@ -447,7 +448,7 @@
 
 
                                 <div class="col-6 col-md-4 p-2">
-                                    <div class="display-box" data-image="https://picsum.photos/600/600?random=3">
+                                    <div class="display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
                                         <div class="feature-title">Sample 3</div>
                                         <div class="feature-text">Description for sample three.</div>
                                     </div>
@@ -455,14 +456,14 @@
 
 
                                 <div class="col-6 col-md-4 p-2">
-                                    <div class=" display-box" data-image="https://picsum.photos/600/600?random=4">
+                                    <div class=" display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
                                         <div class="feature-title">Sample 4</div>
                                         <div class="feature-text">Description for sample four.</div>
                                     </div>
                                 </div>
 
                                 <div class="col-6 col-md-4 p-2">
-                                    <div class="display-box" data-image="https://picsum.photos/600/600?random=5">
+                                    <div class="display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
                                         <div class="feature-title">Sample 5</div>
                                         <div class="feature-text">Description for sample five.</div>
                                     </div>
@@ -470,7 +471,7 @@
 
 
                                 <div class="col-6 col-md-4 p-2">
-                                    <div class=" display-box" data-image="https://picsum.photos/600/600?random=6">
+                                    <div class=" display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
                                         <div class="feature-title">Sample 6</div>
                                         <div class="feature-text">Description for sample six.</div>
                                     </div>
@@ -482,7 +483,7 @@
 
                     <!-- Right Column: Image Preview -->
                     <div class="col-md-6 image-wrapper">
-                        <img id="preview-image" src="https://picsum.photos/600/600?random=1" alt="Preview"
+                        <img id="preview-image" src="https://dummyimage.com/600x600/a7a7a7/000000" alt="Preview"
                             class="image-preview">
                     </div>
 
@@ -499,7 +500,8 @@
                     around the world.</p>
 
                 <div class="owl-carousel owl-theme">
-                    <div><img src="https://picsum.photos/300/300?random=1" class="carousel-image" alt="Logo 1"></div>
+                    <div><img src="https://dummyimage.com/300x300/a7a7a7/000000" class="carousel-image" alt="Logo 1">
+                    </div>
                     <div><img src="https://picsum.photos/300/300?random=2" class="carousel-image" alt="Logo 2"></div>
                     <div><img src="https://picsum.photos/300/300?random=3" class="carousel-image" alt="Logo 3"></div>
                     <div><img src="https://picsum.photos/300/300?random=4" class="carousel-image" alt="Logo 4"></div>

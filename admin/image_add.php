@@ -27,16 +27,16 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-3">Media</h4>
+                    <h4 class="mt-3">Media</h4>
 
 
-                        <form action="" method="POST" enctype="multipart/form-data">
-                            <label>Select Images to Upload:</label>
-                            <input type="file" name="images[]" multiple>
-                            <br><br>
-                            <button type="submit" class="btn btn-success" name="upload">Upload Images</button>
-                        </form>
-                        <?php
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <label>Select Images to Upload:</label>
+                        <input type="file" name="images[]" multiple>
+                        <br><br>
+                        <button type="submit" class="btn btn-success" name="upload">Upload Images</button>
+                    </form>
+                    <?php
 
                         if (isset($_POST['upload'])) {
                             $uploadDir = 'assets/img/';
@@ -75,7 +75,7 @@
                         }
                         ?>
 
-                        <?php
+                    <?php
                         // Handle delete request
                         if (isset($_GET['delete'])) {
                             $image_name = $_GET['delete'];
@@ -96,29 +96,29 @@
                         ?>
 
 
-                        <div class="row my-3">
-                            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <div class="col-md-2 img-card">
-                                <div class="card">
-                                    <img src="assets/img/<?php echo $row['image_name']; ?>"
-                                        class="card-img-top img-thumbnail" alt="">
-                                    <div class="card-body">
-                                        <small><b><?php echo htmlspecialchars($row['image_name']); ?></b></small>
-                                        <div class="d-flex justify-content-between">
-                                            <p class="card-text"><?php echo round($row['image_size'] / 1024, 2); ?> KB
-                                            </p>
-                                            <a href="?delete=<?php echo urlencode($row['image_name']); ?>"
-                                                onclick="return confirm('Delete this image?')"
-                                                class="delete-icon float-right">
-                                                🗑️
-                                            </a>
-                                        </div>
-
+                    <div class="row my-3">
+                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <div class="col-md-2 img-card">
+                            <div class="card">
+                                <img src="assets/img/<?php echo $row['image_name']; ?>"
+                                    class="card-img-top img-thumbnail" alt="">
+                                <div class="card-body">
+                                    <small><b><?php echo htmlspecialchars($row['image_name']); ?></b></small>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-text"><?php echo round($row['image_size'] / 1024, 2); ?> KB
+                                        </p>
+                                        <a href="?delete=<?php echo urlencode($row['image_name']); ?>"
+                                            onclick="return confirm('Delete this image?')"
+                                            class="delete-icon float-right">
+                                            🗑️
+                                        </a>
                                     </div>
+
                                 </div>
                             </div>
-                            <?php } ?>
                         </div>
+                        <?php } ?>
+                    </div>
 
 
 
