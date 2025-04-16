@@ -1,7 +1,7 @@
 <nav>
     <div class="navbar">
         <i class='bx bx-menu'></i>
-        <div class="logo"><a href="#"><img src="assets/img/logo2.png" height="50px" alt=""></a></div>
+        <div class="logo"><a href="#"><img src="assets/img/logo2.png" class="main-logo" alt=""></a></div>
         <div class="nav-links">
             <div class="sidebar-logo">
                 <span class="logo-name">Ereint</span>

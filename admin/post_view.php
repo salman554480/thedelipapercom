@@ -15,8 +15,9 @@
 
                     <div class="page-header">
                         <div class="col-12 mt-4 mb-4">
-                            <h4 class="mb-3">Products</h4>
+                            <h4 class="mb-3">Posts</h4>
 
+                            <a href="post_add.php" class="btn btn-sm  btn-outline-danger">Add Record</a>
                         </div>
                     </div>
                     <div class="card mb-3 bg-white">
@@ -30,12 +31,11 @@
                             if (isset($_GET['del'])) {
                                 $del_id = $_GET['del'];
 
-                                $delete = "DELETE FROM product WHERE product_id='$del_id'";
+                                $delete = "DELETE FROM post WHERE post_id='$del_id'";
                                 $run = mysqli_query($conn, $delete);
 
                                 if ($run === true) {
                                     echo "<script>alert('Deleted');</script>";
-                                    echo "<script>window.open('product_view.php','_self');</script>";
                                 } else {
                                     echo "Failed,Try Again";
                                 }
@@ -47,8 +47,7 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Product</th>
-                                        <th>URL</th>
+                                        <th>Title</th>
                                         <th>Status</th>
                                         <th>Action</th>
 
@@ -58,55 +57,48 @@
                                     <?php
 
                                     require_once('parts/db.php');
-                                    $select = "SELECT * FROM product";
+                                    $select = "SELECT * FROM post  ORDER BY post_id DESC";
                                     $run = mysqli_query($conn, $select);
                                     while ($row = mysqli_fetch_array($run)) {
 
-                                        $product_id = $row['product_id'];
-                                        $product_name = $row['product_name'];
-                                        $product_url = $row['product_url'];
-                                        $product_status = $row['product_status'];
+                                        $post_id = $row['post_id'];
+                                        $post_title = $row['post_title'];
+                                        $post_status = $row['post_status'];
 
-                                        if ($product_status == "active") {
+                                        if ($post_status == "publish") {
                                             $color = "success";
-                                        } else if ($product_status == "inactive") {
+                                        } else {
                                             $color = "danger";
                                         }
 
                                     ?>
                                     <tr>
-                                        <td><?php echo $product_id; ?></td>
-                                        <td><?php echo $product_name; ?></td>
-                                        <td><?php echo $product_url; ?></td>
-                                        <td>
-                                            <span
-                                                class="badge bg-<?php echo $color; ?>"><?php echo $product_status; ?></span>
+                                        <td><?php echo $post_id; ?></td>
+                                        <td><?php echo $post_title; ?></td>
+                                        <td><span
+                                                class="badge bg-<?php echo $color; ?>"><?php echo $post_status; ?></span>
                                         </td>
                                         <td>
                                             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                                                 <li class="nav-item dropdown">
-                                                    <button class="btn btn-danger dropdown-toggle" id="navbarDropdown"
-                                                        href="#" role="button" data-bs-toggle="dropdown"
+                                                    <button class="btn btn-danger btn-sm dropdown-toggle"
+                                                        id="navbarDropdown" href="#" role="button"
+                                                        data-bs-toggle="dropdown"
                                                         aria-expanded="false">Action</i></button>
                                                     <ul class="dropdown-menu dropdown-menu-end"
                                                         aria-labelledby="navbarDropdown">
 
                                                         <li> <a class="dropdown-item"
-                                                                href="product_view.php?del=<?php echo $product_id; ?>">Delete</a>
+                                                                href="post_view.php?del=<?php echo $post_id; ?>">Delete</a>
                                                         </li>
                                                         <li>
                                                             <hr class="dropdown-divider" />
                                                         </li>
                                                         <li> <a class="dropdown-item"
-                                                                href="product_edit.php?edit=<?php echo $product_id; ?>">Edit</a>
+                                                                href="post_edit.php?edit=<?php echo $post_id; ?>">Edit</a>
                                                         </li>
-                                                        <hr class="dropdown-divider" />
+                                                    </ul>
                                                 </li>
-                                                <li> <a class="dropdown-item"
-                                                        href="../product_details.php?product_url=<?php echo $product_url; ?>">View
-                                                        Page</a></li>
-                                            </ul>
-                                            </li>
                                             </ul>
                                         </td>
                                     </tr>

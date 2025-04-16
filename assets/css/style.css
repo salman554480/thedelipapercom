@@ -77,6 +77,10 @@ table {
 
 /* navbar */
 
+.main-logo{
+  height: 50px;
+}
+
 nav{
   position: fixed;
   top: 0;
@@ -84,7 +88,7 @@ nav{
   width: 100%;
   height: 100%;
   height: 70px;
-  background: #145da0;
+  background: #b1d4e0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
@@ -124,7 +128,7 @@ nav .navbar .links li a{
   height: 100%;
   text-decoration: none;
   white-space: nowrap;
-  color: #fff;
+  color: #000;
   font-size: 15px;
   font-weight: 500;
 }
@@ -139,7 +143,7 @@ nav .navbar .links li .arrow{
   line-height: 70px;
   text-align: center;
   display: inline-block;
-  color: #fff;
+  color: #000;
   transition: all 0.3s ease;
 }
 nav .navbar .links li .sub-menu{
@@ -147,7 +151,7 @@ nav .navbar .links li .sub-menu{
   top: 70px;
   left: 0;
   line-height: 40px;
-  background: #2e8bc0;
+  background: #b1d4e0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   display: none;
@@ -162,7 +166,7 @@ nav .navbar .links li:hover .js-sub-menu{
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .navbar .links li .sub-menu a{
-  color: #fff;
+  color: #000;
   font-size: 15px;
   font-weight: 500;
 }
@@ -195,7 +199,7 @@ nav .navbar .links li:hover .js-sub-menu{
   line-height: 40px;
   text-align: center;
   font-size: 22px;
-  color: #fff;
+  color: #000;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -206,7 +210,7 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 80px;
   height: 60px;
   width: 300px;
-  background: #2e8bc0;
+  background: #b1d4e0;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -216,14 +220,14 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 65px;
   opacity: 1;
   pointer-events: auto;
-  background: #2e8bc0;
+  background: #b1d4e0;
 }
 .search-box .input-box::before{
   content: '';
   position: absolute;
   height: 20px;
   width: 20px;
-  background: #2e8bc0;
+  background: #b1d4e0;
   right: 10px;
   top: -6px;
   transform: rotate(45deg);
@@ -277,7 +281,7 @@ nav .navbar .links li:hover .js-sub-menu{
     display: block;
     max-width: 270px;
     width: 100%;
-    background:  #827081;
+    background:  #b1d4e0;
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -291,12 +295,12 @@ nav .navbar .links li:hover .js-sub-menu{
   }
   .sidebar-logo .logo-name{
     font-size: 25px;
-    color: #fff;
+    color: #000;
   }
     .sidebar-logo  i,
     .navbar .bx-menu{
       font-size: 25px;
-      color: #fff;
+      color: #000;
     }
   nav .navbar .links{
     display: block;
@@ -378,7 +382,7 @@ nav .navbar .links li .sub-menu li{
 
  /* Ensure the right side image covers the full area */
  .right-section {
-  background-image: url('https://brandedfoodwraps.com/wp-content/uploads/2024/08/chicken-on-custom-food-wrap.jpg'); /* Add your image URL here */
+  background-image: url('https://dummyimage.com/1000x1000/a7a7a7/000000'); /* Add your image URL here */
   background-size: cover;
   background-position: center;
 }
@@ -386,13 +390,13 @@ nav .navbar .links li .sub-menu li{
   padding-left: 6%; /* Add some left margin to the text */
   padding-top: 13%;
   padding-bottom: 13%;
-  background-color: #b1d4e0;
+  background-color: #2e8bc0;
 }
 .cover-heading{
   font-size: 55px;
   line-height: 55px;
   font-weight:700;
-  color: #000;
+  color: #fff;
 
 }
 
@@ -404,20 +408,22 @@ nav .navbar .links li .sub-menu li{
 }
 .feature-box i {
   font-size: 24px;
-  color: #2e8bc0;
+  color: #0c2d48;
   margin-right: 10px;
 }
 .feature-box span{
   font-weight: bold;
+  color:#fff;
 }
 .cover-text{
   font-size: 18px;
   line-height: 27px;
+  color:#fff;
 }
 
 .payment-icon {
   font-size: 32px;
-  color: black;
+  color: #fff;
 }
 
 .center-wrapper {
@@ -837,6 +843,10 @@ nav .navbar .links li .sub-menu li{
   .section-heading{
     font-size: 30px;
     line-height: 30px;
+  }
+
+  .main-logo{
+    height: 30px;
   }
   
   .section-subheading{

@@ -1,10 +1,10 @@
-<?php	require_once('parts/top.php'); ?>
+<?php require_once('parts/top.php'); ?>
 </head>
 
 <body class="sb-nav-fixed">
-    <?php  require_once('parts/navbar.php');?>
+    <?php require_once('parts/navbar.php'); ?>
     <div id="layoutSidenav">
-        <?php require_once('parts/sidebar.php');?>
+        <?php require_once('parts/sidebar.php'); ?>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
@@ -12,34 +12,32 @@
                     <h2 class="mt-1">Dashboard</h2>
                     <hr>
                     <div class="row">
-                        <?php 
-                     require_once('parts/db.php');
-                     
-                     $select_calculator = "SELECT * FROM calculator ";
-                     $run_calculator = mysqli_query($conn,$select_calculator);
-                     $total_calculator = mysqli_num_rows($run_calculator);
-                     
-                     $select_category = "SELECT * FROM category ";
-                     $run_category = mysqli_query($conn,$select_category);
-                     $total_category = mysqli_num_rows($run_category);
-					 
-					 $select_views = "SELECT SUM(calculator_views) AS calculator_views FROM calculator ";
-                     $run_views = mysqli_query($conn,$select_views);
-                     $row_views =  mysqli_fetch_array($run_views);
-					 $total_views =  $row_views['calculator_views'];	
-                     
-                     
-                     
-                     ?>
+                        <?php
+                        require_once('parts/db.php');
+
+                        $select_product = "SELECT * FROM product ";
+                        $run_product = mysqli_query($conn, $select_product);
+                        $total_product = mysqli_num_rows($run_product);
+
+                        $select_post = "SELECT * FROM post ";
+                        $run_post = mysqli_query($conn, $select_post);
+                        $total_post = mysqli_num_rows($run_post);
+
+
+                        $total_views =  50;
+
+
+
+                        ?>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-primary text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <h4>Total Products</h4>
-                                    <h3><?php echo $total_calculator;?></h3>
+                                    <h3><?php echo $total_product; ?></h3>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a href="calculator_view.php"><small class="small text-white stretched-link">View
-                                            Calculator Details</small></a>
+                                    <a href="product_view.php"><small class="small text-white stretched-link">View
+                                            product Details</small></a>
                                     <div class="small text-white">
                                         <i class="fas fa-angle-right"></i>
                                     </div>
@@ -49,12 +47,12 @@
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-success text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
-                                    <h4>Total Categories</h4>
-                                    <h3><?php echo $total_category;?></h3>
+                                    <h4>Total Posts</h4>
+                                    <h3><?php echo $total_post; ?></h3>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a href="category_view.php"><small class="small text-white stretched-link">View
-                                            Category Details</small></a>
+                                    <a href="post_view.php"><small class="small text-white stretched-link">View
+                                            post Details</small></a>
                                     <div class="small text-white">
                                         <i class="fas fa-angle-right"></i>
                                     </div>
@@ -65,11 +63,11 @@
                             <div class="card bg-warning text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <h4>Total Views</h4>
-                                    <h3><?php echo $total_views;?></h3>
+                                    <h3><?php echo $total_views; ?></h3>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a href="calculator_view.php"><small class="small text-white stretched-link">View
-                                            Calculator Details</small></a>
+                                    <a href="product_view.php"><small class="small text-white stretched-link">View
+                                            product Details</small></a>
                                     <div class="small text-white">
                                         <i class="fas fa-angle-right"></i>
                                     </div>
@@ -83,8 +81,8 @@
                                     <h3>$319.05</h3>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a href="category_view.php"><small class="small text-white stretched-link">View
-                                            Category Details</small></a>
+                                    <a href="post_view.php"><small class="small text-white stretched-link">View
+                                            post Details</small></a>
                                     <div class="small text-white">
                                         <i class="fas fa-angle-right"></i>
                                     </div>
@@ -93,11 +91,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-8">
+                        <div class="col-xl-6">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    <i class="fas fa-calculator me-1"></i>
-                                    Latest Added Calculators
+                                    <i class="fas fa-product me-1"></i>
+                                    Latest Added Posts
                                 </div>
                                 <div class="card-body">
                                     <table class="table table-hover table-bordered">
@@ -108,59 +106,58 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
-                                    require_once('parts/db.php'); 
-                                     $select = "SELECT * FROM calculator ORDER BY calculator_id DESC LIMIT 10";
-                                     $run = mysqli_query($conn,$select);
-                                     while( $row = mysqli_fetch_array ($run)){
-                                    
-                                    $category_id = $row ['category_id'];
-                                    $calculator_title = $row ['calculator_title'];
-                                    $calculator_url = $row ['calculator_url'];
-                                    
-                                    ?>
+                                            <?php
+                                            require_once('parts/db.php');
+                                            $select = "SELECT * FROM post ORDER BY post_id DESC LIMIT 10";
+                                            $run = mysqli_query($conn, $select);
+                                            while ($row = mysqli_fetch_array($run)) {
+
+                                                $post_id = $row['post_id'];
+                                                $post_title = $row['post_title'];
+                                                $post_url = $row['post_url'];
+
+                                            ?>
                                             <tr>
-                                                <td><?php echo $calculator_title;?></td>
-                                                <td><?php echo $calculator_url;?></td>
+                                                <td><?php echo $post_title; ?></td>
+                                                <td><?php echo $post_url; ?></td>
                                             </tr>
-                                            <?php    }?>
+                                            <?php    } ?>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4">
+                        <div class="col-xl-6">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    <i class="fas fa-calculator me-1"></i>
-                                    Most Popular Calculators
+                                    <i class="fas fa-product me-1"></i>
+                                    Most Popular Products
                                 </div>
                                 <div class="card-body">
                                     <table class="table table-hover table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <th>View</th>
+                                                <th>URL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
-                                    require_once('parts/db.php'); 
-                                     $select = "SELECT * FROM calculator ORDER BY calculator_views DESC LIMIT 10";
-                                     $run = mysqli_query($conn,$select);
-                                     while( $row = mysqli_fetch_array ($run)){
-                                    
-                                    $category_id = $row ['category_id'];
-                                    $calculator_title = $row ['calculator_title'];
-                                    $calculator_url = $row ['calculator_url'];
-                                    $calculator_views = $row ['calculator_views'];
-                                    
-                                    ?>
+                                            <?php
+                                            require_once('parts/db.php');
+                                            $select = "SELECT * FROM product ";
+                                            $run = mysqli_query($conn, $select);
+                                            while ($row = mysqli_fetch_array($run)) {
+
+                                                $product_id = $row['product_id'];
+                                                $product_name = $row['product_name'];
+                                                $product_url = $row['product_url'];
+
+                                            ?>
                                             <tr>
-                                                <td><?php echo $calculator_title;?></td>
-                                                <td><?php echo $calculator_views;?></td>
+                                                <td><?php echo $product_name; ?></td>
+                                                <td><?php echo $product_url; ?></td>
                                             </tr>
-                                            <?php    }?>
+                                            <?php    } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -191,11 +188,11 @@
                   end chart--->
                 </div>
             </main>
-            <?php require_once('parts/footer.php');?>
+            <?php require_once('parts/footer.php'); ?>
         </div>
     </div>
     <!--Footercdn--->
-    <?php require_once('parts/footercdn.php');?>
+    <?php require_once('parts/footercdn.php'); ?>
 </body>
 
 </html>
