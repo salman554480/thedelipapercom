@@ -24,8 +24,9 @@
                         $total_post = mysqli_num_rows($run_post);
 
 
-                        $total_views =  50;
-
+                        $select_image = "SELECT * FROM image ";
+                        $run_image = mysqli_query($conn, $select_image);
+                        $total_image = mysqli_num_rows($run_image);
 
 
                         ?>
@@ -62,11 +63,11 @@
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-warning text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
-                                    <h4>Total Views</h4>
-                                    <h3><?php echo $total_views; ?></h3>
+                                    <h4>Gallery Images</h4>
+                                    <h3><?php echo $total_image; ?></h3>
                                 </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a href="product_view.php"><small class="small text-white stretched-link">View
+                                    <a href="image_add.php"><small class="small text-white stretched-link">View
                                             product Details</small></a>
                                     <div class="small text-white">
                                         <i class="fas fa-angle-right"></i>

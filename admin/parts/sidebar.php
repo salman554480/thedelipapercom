@@ -75,6 +75,11 @@
                          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                          Settings
                      </a>
+
+                     <a class="nav-link" href="../index.php">
+                         <div class="sb-nav-link-icon"><i class="fas fa-info"></i></div>
+                         Website
+                     </a>
                      <?php } ?>
 
                  </div>

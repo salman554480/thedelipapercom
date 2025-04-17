@@ -39,14 +39,14 @@
                         <li><a href="product_details.php">Product 5</a></li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">FAQ</a>
                     <i class='bx bxs-chevron-down js-arrow arrow '></i>
                     <ul class="js-sub-menu sub-menu">
                         <li><a href="privacy-policy.php">Privacy Policy</a></li>
                         <li><a href="terms-and-condition.php">Terms & Conditions</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">CONTACT US</a></li>
             </ul>

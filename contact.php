@@ -10,7 +10,7 @@
                 <!-- Contact Form -->
                 <div class="col-md-6">
                     <h3 class="section-heading">Contact Us</h3>
-                    <form>
+                    <form action="" method="post">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -28,6 +28,29 @@
                             class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Send
                             Message</button>
                     </form>
+
+                    <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $name    = htmlspecialchars($_POST['name']);
+                        $email   = htmlspecialchars($_POST['email']);
+                        $message = htmlspecialchars($_POST['message']);
+
+                        $to      = "your@email.com"; // Replace with your email address
+                        $subject = "New Message from Contact Form";
+                        $body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+                        $headers = "From: $email\r\n";
+                        $headers .= "Reply-To: $email\r\n";
+
+                        if (mail($to, $subject, $body, $headers)) {
+                            echo "Message sent successfully!";
+                        } else {
+                            echo "Failed to send message.";
+                        }
+                    } else {
+                        echo "Invalid request.";
+                    }
+                    ?>
                 </div>
 
                 <!-- Contact Information -->

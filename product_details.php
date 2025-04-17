@@ -18,102 +18,24 @@
                         delectus iste assumenda tempore quia incidunt dolores.</p>
 
                     <form>
-                        <!-- Size Section -->
-                        <div class="section-title">Choose Size</div>
-                        <div class="custom-radio-block d-flex flex-wrap">
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size4x4" name="size" value="1x2">
-                                <label for="size4x4">4x4</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size6x6" name="size" value="1x3">
-                                <label for="size6x6">6x6</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size7x5" name="size" value="1x4">
-                                <label for="size7x5">7x5</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size8x6" name="size" value="1x2">
-                                <label for="size8x6">8x6</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size10x6" name="size" value="1x3">
-                                <label for="size10x6">10x6</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size10x8" name="size" value="1x4">
-                                <label for="size10x8">10x8</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size10x10" name="size" value="1x2">
-                                <label for="size10x10">10x10</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size1x2" name="size" value="1x2">
-                                <label for="size12x9">12x9</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size12x12" name="size" value="1x2">
-                                <label for="size12x12">12x12</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size13x10" name="size" value="1x2">
-                                <label for="size13x10">13x10</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size13x13" name="size" value="1x2">
-                                <label for="size13x13">13x13</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size16x12" name="size" value="1x2">
-                                <label for="size16x12">16x12</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size17x12" name="size" value="1x2">
-                                <label for="size17x12">17x12</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size18x12" name="size" value="1x2">
-                                <label for="size18x12">18x12</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size20x10" name="size" value="1x2">
-                                <label for="size20x10">20x10</label>
-                            </div>
-                            <div class="p-1 mr-1">
-                                <input type="radio" id="size20x13" name="size" value="1x2">
-                                <label for="size20x13">20x13</label>
-                            </div>
-                        </div>
-
-                        <!-- Paper Type Section -->
-                        <div class="section-title">Choose Paper Type</div>
-                        <div class="custom-radio-block row">
-                            <div class="col-md-6">
-                                <input type="radio" id="paper1" name="paper" value="papertype1">
-                                <label for="paper1">Kraft (Brown) 40gsm </label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="radio" id="paper2" name="paper" value="papertype2">
-                                <label for="paper2">White 38gsm</label>
-                            </div>
-                        </div>
-
-                        <!-- Color Section -->
-                        <div class="section-title">Choose Color</div>
-                        <div class="custom-radio-block row">
+                        <div class="row">
                             <div class="col-md-4">
-                                <input type="radio" id="color1" name="color" value="1color">
-                                <label for="color1">1 color Print</label>
+                                <label for="size">Size:</label>
+                                <select class="form-control" id="size" name="size">
+                                    <option value="A4">A4</option>
+                                </select>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" id="color2" name="color" value="2color">
-                                <label for="color2">2 color Print</label>
+                                <label for="size">Size:</label>
+                                <select class="form-control" id="size" name="size">
+                                    <option value="A4">A4</option>
+                                </select>
                             </div>
                             <div class="col-md-4">
-                                <input type="radio" id="color4" name="color" value="4color">
-                                <label for="color4">4 color Print</label>
+                                <label for="size">Size:</label>
+                                <select class="form-control" id="size" name="size">
+                                    <option value="A4">A4</option>
+                                </select>
                             </div>
                         </div>
 
