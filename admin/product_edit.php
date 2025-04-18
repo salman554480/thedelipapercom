@@ -40,6 +40,16 @@
                                     </div>
                                 </div>
 
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label>Short Description</label>
+                                        <textarea name="product_short_description"
+                                            class="form-control"><?php echo $row['product_short_description']; ?></textarea>
+                                    </div>
+
+                                </div>
+
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <label>Product Content</label>
@@ -167,6 +177,7 @@
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $product_name = $_POST['product_name'];
                             $product_url = $_POST['product_url'];
+                            $product_short_description = $_POST['product_short_description'];
                             $epage_content = $_POST['content'];
                             $product_thumbnail = $_POST['product_thumbnail']; // Now just plain text
                             $product_meta_title = $_POST['product_meta_title'];
@@ -174,13 +185,14 @@
                             $product_meta_keywords = $_POST['product_meta_keywords'];
                             $product_status = $_POST['product_status'];
 
+                            $eproduct_short_description = str_replace("'", "`", $product_short_description);
                             $epage_content = str_replace("'", "\'", $epage_content);
                             $product_meta_title = str_replace("'", "\'", $product_meta_title);
                             $product_meta_desrciption = str_replace("'", "\'", $product_meta_desrciption);
 
 
                             // Insert query
-                            $sql = "Update product SET product_name='$product_name',product_url='$product_url',product_content='$epage_content',product_thumbnail='$product_thumbnail',product_status='$product_status',product_meta_title='$product_meta_title',product_meta_description='$product_meta_desrciption',product_meta_keywords='$product_meta_keywords' where product_id='$product_id'";
+                            $sql = "Update product SET product_name='$product_name',product_url='$product_url',product_short_description='$eproduct_short_description',product_content='$epage_content',product_thumbnail='$product_thumbnail',product_status='$product_status',product_meta_title='$product_meta_title',product_meta_description='$product_meta_desrciption',product_meta_keywords='$product_meta_keywords' where product_id='$product_id'";
 
                             if (mysqli_query($conn, $sql)) {
                                 echo "<script>alert('Query Succeed');</script>";

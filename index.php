@@ -80,7 +80,18 @@
         <section class="my-4">
             <div class="w-90">
                 <div class="row my-4">
-                    <div class="col-md-6 col-12 mb-3">
+                    <?php
+
+                    $select_product = "SELECT * FROM product where product_status='active'";
+                    $run_product = mysqli_query($conn, $select_product);
+                    while ($row_product = mysqli_fetch_array($run_product)) {
+
+                        $product_id = $row_product['product_id'];
+                        $product_name = $row_product['product_name'];
+                        $product_url = $row_product['product_url'];
+
+                    ?>
+                    <div class="col-md-6 col-12 mb-4">
                         <div class="row">
                             <div class="col-md-6">
                                 <img src="https://dummyimage.com/1000x1000/a7a7a7/000000" alt="Product"
@@ -88,12 +99,12 @@
                             </div>
                             <div class="col-md-6 d-flex align-items-center">
                                 <div>
-                                    <h5 class="mb-2 card-product-title">Custom printed food paper</h5>
+                                    <h5 class="mb-2 card-product-title"><?php echo $product_name; ?></h5>
                                     <p class="my-3 card-product-text">Suitable for oven cooking, microwaving, and
                                         freezing,
                                         versatile for any
                                         kitchen.</p>
-                                    <a href="#"
+                                    <a href="product_details.php?product_url=<?php echo $product_url; ?>"
                                         class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
                                 </div>
@@ -101,104 +112,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php } ?>
 
-                    <div class="col-md-6 col-12 mt-md-5 mt-3 mb-3">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="https://picsum.photos/600/600?random=2" alt="Product"
-                                    class="product-img w-100 mb-3">
-                            </div>
-                            <div class="col-md-6 d-flex align-items-center">
-                                <div>
-                                    <h5 class="mb-2 card-product-title">Custom printed Deli paper
-                                    </h5>
-                                    <p class="my-3 card-product-text">Suitable for oven cooking, microwaving, and
-                                        freezing,
-                                        versatile for any
-                                        kitchen.</p>
-                                    <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
-                                        Now</a>
-                                </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-md-6 col-12 mb-3">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="https://picsum.photos/600/600?random=3" alt="Product"
-                                    class="product-img w-100 mb-3">
-                            </div>
-                            <div class="col-md-6 d-flex align-items-center">
-                                <div>
-                                    <h5 class="mb-2 card-product-title">Custom printed greaseproof paper
-                                    </h5>
-                                    <p class="my-3 card-product-text">Suitable for oven cooking, microwaving, and
-                                        freezing,
-                                        versatile for any
-                                        kitchen.</p>
-                                    <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
-                                        Now</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-12 mt-md-5 mt-3 mb-3">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="https://picsum.photos/600/600?random=4" alt="Product"
-                                    class="product-img w-100 mb-3">
-                            </div>
-                            <div class="col-md-6 d-flex align-items-center">
-                                <div>
-                                    <h5 class="mb-2 card-product-title">Custom printed food basket liners
-                                    </h5>
-                                    <p class="my-3 card-product-text">Suitable for oven cooking, microwaving, and
-                                        freezing,
-                                        versatile for any
-                                        kitchen.</p>
-                                    <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
-                                        Now</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="row my-4">
-                    <div class="col-md-6 col-12 mb-3">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="https://picsum.photos/600/600?random=5" alt="Product"
-                                    class="product-img w-100 mb-3">
-                            </div>
-                            <div class="col-md-6 d-flex align-items-center">
-                                <div>
-                                    <h5 class="mb-2 card-product-title">Custom Printed Parchment Paper
-
-                                    </h5>
-                                    <p class="my-3 card-product-text">Suitable for oven cooking, microwaving, and
-                                        freezing,
-                                        versatile for any
-                                        kitchen.</p>
-                                    <a href="#"
-                                        class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
-                                        Now</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </section>
 

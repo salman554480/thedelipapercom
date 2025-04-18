@@ -1,3 +1,18 @@
+<?php
+require_once('admin/parts/db.php');
+if (isset($_GET['product_url'])) {
+    $product_url = $_GET['product_url'];
+    $select_product = "SELECT * FROM product WHERE product_url='$product_url'";
+    $run_product = mysqli_query($conn, $select_product);
+    $row_product = mysqli_fetch_array($run_product);
+    $product_id = $row_product['product_id'];
+    $product_name = $row_product['product_name'];
+    $product_short_description = $row_product['product_short_description'];
+    $meta_title = $row_product['product_meta_title'];
+    $meta_description = $row_product['product_meta_description'];
+    $meta_keywords = $row_product['product_meta_keywords'];
+}
+?>
 <?php require_once('parts/top.php'); ?>
 <!-- Elevate Zoom Plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
@@ -12,29 +27,27 @@
                     <img src="https://dummyimage.com/1000x1000/aaaaaa/fff" class="w-100 product-main-image" alt="">
                 </div>
                 <div class="col-md-6">
-                    <h1 class="card-product-title">Custom Printed Paper</h1>
-                    <p class="product-intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
-                        distinctio illo, autem, quam magni, blanditiis id corporis facere ut labore magnam earum natus
-                        delectus iste assumenda tempore quia incidunt dolores.</p>
+                    <h1 class="card-product-title"><?php echo $product_name; ?></h1>
+                    <p class="product-intro"><?php echo $product_short_description; ?></p>
 
-                    <form>
+                    <form action="quote-form.php" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="size">Size:</label>
                                 <select class="form-control" id="size" name="size">
-                                    <option value="A4">A4</option>
+                                    <option value="size">Size</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="size">Size:</label>
-                                <select class="form-control" id="size" name="size">
-                                    <option value="A4">A4</option>
+                                <label for="size">Type:</label>
+                                <select class="form-control" id="type" name="type">
+                                    <option value="type">Type</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="size">Size:</label>
-                                <select class="form-control" id="size" name="size">
-                                    <option value="A4">A4</option>
+                                <label for="size">Color:</label>
+                                <select class="form-control" id="color" name="color">
+                                    <option value="color">Color</option>
                                 </select>
                             </div>
                         </div>
@@ -61,7 +74,7 @@
 
                         <!-- File Upload -->
                         <div class="file-upload">
-                            <input type="file" id="real-file" hidden>
+                            <input type="file" id="real-file" name="file" hidden>
                             <button type="button" id="custom-button"><i class='bx bx-cloud-upload'></i> Choose
                                 File</button>
                             <span id="file-name">No file chosen</span>
@@ -293,66 +306,59 @@
                 <div class="col-md-7">
                     <div id="faqAccordion">
 
-                        <!-- FAQ 1 -->
-                        <div class="card faq-item">
-                            <div class="card-header" id="faqHeading1">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link faq-question" data-toggle="collapse"
-                                        data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                                        What is your refund policy?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    We offer a full refund within the first 30 days of purchase—no questions asked!
-                                </div>
-                            </div>
-                        </div>
+                        <?php
 
-                        <!-- FAQ 2 -->
-                        <div class="card faq-item">
-                            <div class="card-header" id="faqHeading2">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed faq-question" data-toggle="collapse"
-                                        data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                        Can I upgrade my plan later?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Absolutely! You can upgrade or downgrade your plan at any time from your
-                                    dashboard.
-                                </div>
-                            </div>
-                        </div>
+                        // Fetch FAQs for the product
+                        $query_faq = "SELECT * FROM faq WHERE product_id = $product_id";
+                        $result_faq = mysqli_query($conn, $query_faq);
 
-                        <!-- FAQ 3 -->
-                        <div class="card faq-item">
-                            <div class="card-header" id="faqHeading3">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed faq-question" data-toggle="collapse"
-                                        data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                                        Do you offer support?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Yes, we offer 24/7 email support and live chat during business hours.
-                                </div>
-                            </div>
-                        </div>
+                        // Start FAQ accordion
+                        echo '<div class="accordion" id="faqAccordion">';
+
+                        $faq_count = 1;
+
+                        if (mysqli_num_rows($result_faq) > 0) {
+                            while ($row_faq = mysqli_fetch_assoc($result_faq)) {
+                                $question = htmlspecialchars($row_faq['faq_question']);
+                                $answer = htmlspecialchars($row_faq['faq_answer']);
+                                $collapseId = "faqCollapse" . $faq_count;
+                                $headingId = "faqHeading" . $faq_count;
+                                $showClass = ($faq_count == 1) ? 'show' : '';
+                                $collapsedClass = ($faq_count == 1) ? '' : 'collapsed';
+                                $ariaExpanded = ($faq_count == 1) ? 'true' : 'false';
+
+                                echo '
+                                    <div class="card faq-item">
+                                        <div class="card-header" id="' . $headingId . '">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
+                                                    data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
+                                                    ' . $question . '
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="' . $collapseId . '" class="collapse ' . $showClass . '" aria-labelledby="' . $headingId . '"
+                                            data-parent="#faqAccordion">
+                                            <div class="card-body">
+                                                ' . $answer . '
+                                            </div>
+                                        </div>
+                                    </div>';
+                                $faq_count++;
+                            }
+                        } else {
+                            echo "<p>No FAQs available for this product.</p>";
+                        }
+
+                        // End FAQ accordion
+                        echo '</div>';
+
+                        ?>
 
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
     </section>
     <section class="">
         <div class="w-100">

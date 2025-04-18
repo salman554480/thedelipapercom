@@ -31,6 +31,14 @@
 
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
+                                        <label>Short Description</label>
+                                        <textarea name="product_short_description" class="form-control"></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
                                         <label>Product Content</label>
                                         <div id="editor" style="height: 300px;"></div>
                                         <textarea name="product_content" id="content" style="display:none;"></textarea>
@@ -120,6 +128,7 @@
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $product_name = $_POST['product_name'];
                             $product_url = $_POST['product_url'];
+                            $product_short_description = $_POST['product_short_description'];
                             $product_content = $_POST['product_content'];
                             $product_thumbnail = $_POST['product_thumbnail']; // Now just plain text
                             $product_meta_title = $_POST['product_meta_title'];
@@ -129,6 +138,7 @@
 
 
 
+                            $product_short_description = str_replace("'", "`", $product_short_description);
                             $product_content = str_replace("'", "\'", $product_content);
                             $product_meta_title = str_replace("'", "\'", $product_meta_title);
                             $product_meta_desrciption = str_replace("'", "\'", $product_meta_desrciption);
@@ -137,6 +147,7 @@
                             $sql = "INSERT INTO product (
         product_name,
         product_url,
+        product_short_description,
         product_content,
         product_thumbnail,
         product_meta_title,
@@ -146,6 +157,7 @@
     ) VALUES (
         '$product_name',
         '$product_url',
+        '$product_short_description',
         '$product_content',
         '$product_thumbnail',
         '$product_meta_title',

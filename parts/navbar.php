@@ -32,11 +32,21 @@
                     <a href="#">Products</a>
                     <i class='bx bxs-chevron-down js-arrow arrow '></i>
                     <ul class="js-sub-menu sub-menu">
-                        <li><a href="product_details.php">Product 1</a></li>
-                        <li><a href="product_details.php">Product 2</a></li>
-                        <li><a href="product_details.php">Product 3</a></li>
-                        <li><a href="product_details.php">Product 4</a></li>
-                        <li><a href="product_details.php">Product 5</a></li>
+                        <?php
+
+                        $select_navbar_product = "SELECT * FROM product where product_status='active'";
+                        $run_navbar_product = mysqli_query($conn, $select_navbar_product);
+                        while ($row_navbar_product = mysqli_fetch_array($run_navbar_product)) {
+
+                            $navbar_product_id = $row_navbar_product['product_id'];
+                            $navbar_product_name = $row_navbar_product['product_name'];
+                            $navbar_product_url = $row_navbar_product['product_url'];
+
+                        ?>
+                        <li><a
+                                href="product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
+                        </li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <!-- <li>

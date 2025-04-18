@@ -1,4 +1,7 @@
-<?php require_once('admin/parts/db.php'); ?>
+<?php require_once('admin/parts/db.php');
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,25 +12,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Your Page Title | Brand Name</title>
-    <meta name="description" content="A short, compelling description of the page (150-160 characters).">
-    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <title><?php echo $meta_title; ?></title>
+    <meta name="description" content="<?php echo $meta_description; ?>">
+    <meta name="keywords" content="<?php echo $meta_keywords; ?>">
     <meta name="author" content="Your Name or Company">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.example.com/your-page">
+    <link rel="canonical" href="<?php echo $currentUrl; ?>">
 
     <!-- Open Graph Meta Tags (for social media sharing, especially Facebook) -->
-    <meta property="og:title" content="Your Page Title">
-    <meta property="og:description" content="Same or slightly adjusted description for social media.">
+    <meta property="og:title" content="<?php echo $meta_title; ?>">
+    <meta property="og:description" content="<?php echo $meta_description; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.example.com/your-page">
+    <meta property="og:url" content="<?php echo $currentUrl; ?>">
     <meta property="og:image" content="https://www.example.com/images/preview.jpg">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Your Page Title">
-    <meta name="twitter:description" content="A compelling description for Twitter.">
+    <meta name="twitter:title" content="<?php echo $meta_title; ?>">
+    <meta name="twitter:description" content="<?php echo $meta_description; ?>.">
     <meta name="twitter:image" content="https://www.example.com/images/preview.jpg">
     <meta name="twitter:site" content="@yourhandle">
 
