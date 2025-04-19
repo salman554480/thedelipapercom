@@ -1,4 +1,6 @@
-<?php require_once('parts/top.php'); ?>
+<?php
+$page = "post";
+require_once('parts/top.php'); ?>
 
 <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>

@@ -1,4 +1,6 @@
-<?php require_once('parts/top.php'); ?>
+<?php
+$page = "page";
+require_once('parts/top.php'); ?>
 </head>
 
 <body class="sb-nav-fixed">

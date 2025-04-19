@@ -1,4 +1,6 @@
-<?php require_once('parts/top.php'); ?>
+<?php
+$page = "product";
+require_once('parts/top.php'); ?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 
@@ -65,6 +67,7 @@
                                         <label>Product Thumbnail (filename only)</label>
                                         <input type="text" value="<?php echo $row['product_thumbnail']; ?>"
                                             name="product_thumbnail" class="form-control" placeholder="example.jpg">
+                                        <img src="assets/img/<?php echo $row['product_thumbnail']; ?>" height="50px">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label>Status</label>

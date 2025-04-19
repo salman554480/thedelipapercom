@@ -12,8 +12,10 @@
                          <?php
                             if ($admin_role == "admin") {
                             ?>
-                         <li class="nav-item dropdown">
-                             <a class="nav-link dropdown " id="navbarDropdown" href="#" role="button"
+                         <li class="nav-item  dropdown">
+                             <a class="nav-link <?php if ($page == "admin") {
+                                                        echo "active";
+                                                    } ?> dropdown " id="navbarDropdown" href="#" role="button"
                                  data-bs-toggle="dropdown" aria-expanded="false">Admin<div
                                      class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -25,7 +27,9 @@
 
 
                          <li class="nav-item dropdown">
-                             <a class="nav-link dropdown " id="navbarDropdown" href="#" role="button"
+                             <a class="nav-link <?php if ($page == "product") {
+                                                        echo "active";
+                                                    } ?> dropdown " id="navbarDropdown" href="#" role="button"
                                  data-bs-toggle="dropdown" aria-expanded="false">Products<div
                                      class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -35,7 +39,9 @@
                          </li>
 
                          <li class="nav-item dropdown">
-                             <a class="nav-link dropdown " id="navbarDropdown" href="#" role="button"
+                             <a class="nav-link <?php if ($page == "page") {
+                                                        echo "active";
+                                                    } ?> dropdown " id="navbarDropdown" href="#" role="button"
                                  data-bs-toggle="dropdown" aria-expanded="false">Page<div
                                      class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -49,7 +55,9 @@
 
                          <!--Blog-->
                          <li class="nav-item dropdown">
-                             <a class="nav-link dropdown" id="navbarDropdown" href="#" role="button"
+                             <a class="nav-link <?php if ($page == "post") {
+                                                    echo "active";
+                                                } ?> dropdown" id="navbarDropdown" href="#" role="button"
                                  data-bs-toggle="dropdown" aria-expanded="false">Blog<div
                                      class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -60,18 +68,24 @@
                          <!--End Category-->
 
                      </ul>
-                     <a class="nav-link" href="image_add.php">
+                     <a class="nav-link <?php if ($page == "image") {
+                                            echo "active";
+                                        } ?>" href="image_add.php">
                          <div class="sb-nav-link-icon"><i class="fas fa-image"></i></div>
                          Images
                      </a>
                      <?php
                         if ($admin_role == "admin") {
                         ?>
-                     <a class="nav-link" href="faq.php">
+                     <a class="nav-link <?php if ($page == "faq") {
+                                                echo "active";
+                                            } ?>" href="faq.php">
                          <div class="sb-nav-link-icon"><i class="fas fa-info"></i></div>
                          FAQs
                      </a>
-                     <a class="nav-link" href="setting.php">
+                     <a class="nav-link <?php if ($page == "setting") {
+                                                echo "active";
+                                            } ?>" href="setting.php">
                          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                          Settings
                      </a>

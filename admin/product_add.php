@@ -1,4 +1,6 @@
-<?php require_once('parts/top.php'); ?>
+<?php
+$page = "product";
+require_once('parts/top.php'); ?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 

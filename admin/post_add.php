@@ -1,4 +1,6 @@
-<?php require_once('parts/top.php'); ?>
+<?php
+$page = "post";
+require_once('parts/top.php'); ?>
 
 <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>
@@ -130,24 +132,24 @@
 
 
                 <?php
-        require_once('parts/db.php');
-        if (isset($_POST['insert_btn'])) {
+                require_once('parts/db.php');
+                if (isset($_POST['insert_btn'])) {
 
-          $post_title = $_POST['post_title'];
-          $post_url = $_POST['post_url'];
-          $post_content = $_POST['content'];
-          $post_content = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8');
-          $post_status = $_POST['post_status'];
-          $post_thumbnail = $_POST['post_thumbnail'];
+                    $post_title = $_POST['post_title'];
+                    $post_url = $_POST['post_url'];
+                    $post_content = $_POST['content'];
+                    $post_content = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8');
+                    $post_status = $_POST['post_status'];
+                    $post_thumbnail = $_POST['post_thumbnail'];
 
-          $post_title = htmlspecialchars($_POST['post_title'], ENT_QUOTES, 'UTF-8');
-          $meta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
-          $meta_description = htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8');
-          $meta_keyword = htmlspecialchars($_POST['meta_keyword'], ENT_QUOTES, 'UTF-8');
+                    $post_title = htmlspecialchars($_POST['post_title'], ENT_QUOTES, 'UTF-8');
+                    $meta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
+                    $meta_description = htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8');
+                    $meta_keyword = htmlspecialchars($_POST['meta_keyword'], ENT_QUOTES, 'UTF-8');
 
-          $post_date =  date('Y-m-d');
+                    $post_date =  date('Y-m-d');
 
-          $insert_admin = "INSERT INTO post(
+                    $insert_admin = "INSERT INTO post(
             post_title,
             post_content,
             post_url,
@@ -162,27 +164,27 @@
             '$post_date',
             '$post_status')";
 
-          $run_admin = mysqli_query($conn, $insert_admin);
+                    $run_admin = mysqli_query($conn, $insert_admin);
 
-          if ($run_admin == true) {
+                    if ($run_admin == true) {
 
-            $select_latest = "SELECT * FROM post where post_url='$post_url'";
-            $run_latest = mysqli_query($conn, $select_latest);
-            $row_latest_post =  mysqli_fetch_array($run_latest);
-            $post_id = $row_latest_post['post_id'];
+                        $select_latest = "SELECT * FROM post where post_url='$post_url'";
+                        $run_latest = mysqli_query($conn, $select_latest);
+                        $row_latest_post =  mysqli_fetch_array($run_latest);
+                        $post_id = $row_latest_post['post_id'];
 
-            $insert_meta = "INSERT INTO meta(meta_title,meta_description,meta_keyword,meta_source,meta_source_id) VALUES('$meta_title','$meta_description','$meta_keyword','post','$post_id')";
-            $run_meta = mysqli_query($conn, $insert_meta);
+                        $insert_meta = "INSERT INTO meta(meta_title,meta_description,meta_keyword,meta_source,meta_source_id) VALUES('$meta_title','$meta_description','$meta_keyword','post','$post_id')";
+                        $run_meta = mysqli_query($conn, $insert_meta);
 
-            echo "<script>alert('Record Added');</script>";
-            echo "<script>window.open('post_view.php','_self');</script>";
-          } else {
-            //echo "fail";
-            echo "<script>alert('Failed');</script>";
-          }
-        }
+                        echo "<script>alert('Record Added');</script>";
+                        echo "<script>window.open('post_view.php','_self');</script>";
+                    } else {
+                        //echo "fail";
+                        echo "<script>alert('Failed');</script>";
+                    }
+                }
 
-        ?>
+                ?>
 
 
 

@@ -1,4 +1,6 @@
-<?php require_once('parts/top.php'); ?>
+<?php
+$page = "image";
+require_once('parts/top.php'); ?>
 <style>
 .img-card {
     margin-bottom: 20px;
@@ -38,62 +40,62 @@
                     </form>
                     <?php
 
-                        if (isset($_POST['upload'])) {
-                            $uploadDir = 'assets/img/';
+                    if (isset($_POST['upload'])) {
+                        $uploadDir = 'assets/img/';
 
-                            foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
-                                $originalName = $_FILES['images']['name'][$key];
-                                $fileSizeBytes = $_FILES['images']['size'][$key];
-                                $tmpFile = $_FILES['images']['tmp_name'][$key];
+                        foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
+                            $originalName = $_FILES['images']['name'][$key];
+                            $fileSizeBytes = $_FILES['images']['size'][$key];
+                            $tmpFile = $_FILES['images']['tmp_name'][$key];
 
-                                // Convert file size to KB (rounded to 2 decimal places)
-                                $fileSizeKB = round($fileSizeBytes / 1024, 2);
+                            // Convert file size to KB (rounded to 2 decimal places)
+                            $fileSizeKB = round($fileSizeBytes / 1024, 2);
 
-                                // Get file extension
-                                $fileExtension = pathinfo($originalName, PATHINFO_EXTENSION);
+                            // Get file extension
+                            $fileExtension = pathinfo($originalName, PATHINFO_EXTENSION);
 
-                                // Generate unique file name: timestamp + original name
-                                $uniqueID = time() . '_' . rand(1000, 9999);
-                                $newFileName = $uniqueID . '_' . basename($originalName);
+                            // Generate unique file name: timestamp + original name
+                            $uniqueID = time() . '_' . rand(1000, 9999);
+                            $newFileName = $uniqueID . '_' . basename($originalName);
 
-                                // Full path to save
-                                $destination = $uploadDir . $newFileName;
+                            // Full path to save
+                            $destination = $uploadDir . $newFileName;
 
-                                // Move the file
-                                if (move_uploaded_file($tmpFile, $destination)) {
-                                    // Insert into DB
-                                    $sql = "INSERT INTO image (image_name, image_size) VALUES ('$newFileName', '$fileSizeKB')";
-                                    $run_add_image = mysqli_query($conn, $sql);
-                                    if ($run_add_image === true) {
-                                        echo "<p>Image uploaded successfully!</p>";
-                                        echo "<script>window.open('image_add.php','_self');</script>";
-                                    }
+                            // Move the file
+                            if (move_uploaded_file($tmpFile, $destination)) {
+                                // Insert into DB
+                                $sql = "INSERT INTO image (image_name, image_size) VALUES ('$newFileName', '$fileSizeKB')";
+                                $run_add_image = mysqli_query($conn, $sql);
+                                if ($run_add_image === true) {
+                                    echo "<p>Image uploaded successfully!</p>";
+                                    echo "<script>window.open('image_add.php','_self');</script>";
                                 }
                             }
-
-                            echo "Images uploaded successfully!";
                         }
-                        ?>
+
+                        echo "Images uploaded successfully!";
+                    }
+                    ?>
 
                     <?php
-                        // Handle delete request
-                        if (isset($_GET['delete'])) {
-                            $image_name = $_GET['delete'];
-                            $image_path = 'assets/img/' . $image_name;
+                    // Handle delete request
+                    if (isset($_GET['delete'])) {
+                        $image_name = $_GET['delete'];
+                        $image_path = 'assets/img/' . $image_name;
 
-                            // Delete image file
-                            if (file_exists($image_path)) {
-                                unlink($image_path);
-                            }
-
-                            // Delete from database
-                            $sql = "DELETE FROM image WHERE image_name = '$image_name'";
-                            mysqli_query($conn, $sql);
+                        // Delete image file
+                        if (file_exists($image_path)) {
+                            unlink($image_path);
                         }
 
-                        // Get all images
-                        $result = mysqli_query($conn, "SELECT * FROM image order by image_id DESC");
-                        ?>
+                        // Delete from database
+                        $sql = "DELETE FROM image WHERE image_name = '$image_name'";
+                        mysqli_query($conn, $sql);
+                    }
+
+                    // Get all images
+                    $result = mysqli_query($conn, "SELECT * FROM image order by image_id DESC");
+                    ?>
 
 
                     <div class="row my-3">
