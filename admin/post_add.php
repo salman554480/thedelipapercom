@@ -74,11 +74,18 @@ require_once('parts/top.php'); ?>
                                 <input type="text" name="post_thumbnail" class="form-control">
 
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <label class="form-label">Status</label>
                                 <select name="post_status" class="form-control">
                                     <option value="publish">Publish</option>
                                     <option value="draft">Draft</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Index</label>
+                                <select name="post_index" class="form-control">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
                                 </select>
                             </div>
 
@@ -140,6 +147,7 @@ require_once('parts/top.php'); ?>
                     $post_content = $_POST['content'];
                     $post_content = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8');
                     $post_status = $_POST['post_status'];
+                    $post_index = $_POST['post_index'];
                     $post_thumbnail = $_POST['post_thumbnail'];
 
                     $post_title = htmlspecialchars($_POST['post_title'], ENT_QUOTES, 'UTF-8');
@@ -155,6 +163,7 @@ require_once('parts/top.php'); ?>
             post_url,
             post_thumbnail,
             post_date,
+            post_status,
             post_status
             )VALUES(
             '$post_title',
@@ -162,7 +171,9 @@ require_once('parts/top.php'); ?>
             '$post_url',
             '$post_thumbnail',
             '$post_date',
-            '$post_status')";
+            '$post_status',
+            '$post_index'
+            )";
 
                     $run_admin = mysqli_query($conn, $insert_admin);
 

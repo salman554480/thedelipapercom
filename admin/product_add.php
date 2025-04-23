@@ -53,11 +53,18 @@ require_once('parts/top.php'); ?>
                                         <input type="text" name="product_thumbnail" class="form-control"
                                             placeholder="example.jpg">
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-3 mb-3">
                                         <label>Status</label>
                                         <select name="product_status" class="form-control">
                                             <option value="active">Active</option>
                                             <option value="inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label>Index</label>
+                                        <select name="product_index" class="form-control">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">NoInactiveN</option>
                                         </select>
                                     </div>
                                 </div>
@@ -137,6 +144,7 @@ require_once('parts/top.php'); ?>
                             $product_meta_desrciption = $_POST['product_meta_desrciption'];
                             $product_meta_keywords = $_POST['product_meta_keywords'];
                             $product_status = $_POST['product_status'];
+                            $product_index = $_POST['product_index'];
 
 
 
@@ -155,6 +163,7 @@ require_once('parts/top.php'); ?>
         product_meta_title,
         product_meta_description,
         product_meta_keywords,
+        product_status,
         product_status
     ) VALUES (
         '$product_name',
@@ -165,7 +174,8 @@ require_once('parts/top.php'); ?>
         '$product_meta_title',
         '$product_meta_desrciption',
         '$product_meta_keywords',
-        '$product_status'
+        '$product_status',
+        '$product_index'
     )";
 
                             if (mysqli_query($conn, $sql)) {

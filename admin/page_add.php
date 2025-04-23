@@ -2,7 +2,7 @@
 $page = "page";
 require_once('parts/top.php'); ?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-<?php echo require_once('parts/top.php'); ?>
+<?php require_once('parts/top.php'); ?>
 </head>
 
 <body class="sb-nav-fixed">

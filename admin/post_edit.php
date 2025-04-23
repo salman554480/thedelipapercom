@@ -37,6 +37,7 @@ require_once('parts/top.php'); ?>
                     $post_content = $row['post_content'];
                     $post_content = $row['post_content'];
                     $post_status = $row['post_status'];
+                    $post_index = $row['post_index'];
                     $post_url = $row['post_url'];
                     $post_thumbnail = $row['post_thumbnail'];
 
@@ -102,13 +103,23 @@ require_once('parts/top.php'); ?>
                                     class="form-control">
 
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <label class="form-label">Status</label>
                                 <select name="post_status" class="form-control">
                                     <option value="<?php echo $post_status; ?>"><?php echo $post_status; ?>
                                     </option>
                                     <option value="publish">Publish</option>
                                     <option value="draft">Draft</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="form-label">Index</label>
+                                <select name="post_index" class="form-control">
+                                    <option value="<?php echo $post_index; ?>"><?php echo $post_index; ?>
+                                    </option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
                                 </select>
                             </div>
 
@@ -170,6 +181,7 @@ require_once('parts/top.php'); ?>
                     $epost_url = $_POST['post_url'];
                     $epost_content = $_POST['content'];
                     $epost_status = $_POST['post_status'];
+                    $epost_index = $_POST['post_index'];
                     $epost_thumbnail = $_POST['post_thumbnail'];
 
                     $emeta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
@@ -183,7 +195,8 @@ require_once('parts/top.php'); ?>
           post_url='$epost_url',
           post_content='$epost_content',
           post_thumbnail='$post_thumbnail',
-          post_status='$epost_status' 
+          post_status='$epost_status', 
+          post_index='$epost_index' 
           WHERE post_id='$post_id'";
 
                     $run_update = mysqli_query($conn, $update_post);
