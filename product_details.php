@@ -7,6 +7,7 @@ if (isset($_GET['product_url'])) {
     $row_product = mysqli_fetch_array($run_product);
     $product_id = $row_product['product_id'];
     $product_name = $row_product['product_name'];
+    $product_thumbnail = $row_product['product_thumbnail'];
     $product_short_description = $row_product['product_short_description'];
     $meta_title = $row_product['product_meta_title'];
     $meta_description = $row_product['product_meta_description'];
@@ -24,7 +25,8 @@ if (isset($_GET['product_url'])) {
         <div class="w-90 py-5 ">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="https://dummyimage.com/1000x1000/aaaaaa/fff" class="w-100 product-main-image" alt="">
+                    <img src="admin/assets/img/<?php echo $product_thumbnail;?>" class="w-100 product-main-image"
+                        alt="">
                 </div>
                 <div class="col-md-6">
                     <h1 class="card-product-title"><?php echo $product_name; ?></h1>

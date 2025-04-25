@@ -89,13 +89,17 @@
                         $product_id = $row_product['product_id'];
                         $product_name = $row_product['product_name'];
                         $product_url = $row_product['product_url'];
+                        $product_thumbnail = $row_product['product_thumbnail'];
 
                     ?>
                     <div class="col-md-6 col-12 mb-4">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="https://dummyimage.com/1000x1000/a7a7a7/000000" alt="Product"
-                                    class="product-img w-100 mb-3">
+                                <a href="product_details.php?product_url=<?php echo $product_url; ?>">
+                                    <img src="admin/assets/img/<?php echo $product_thumbnail;?>" alt="Product"
+                                        class="product-img w-100 mb-3">
+                                </a>
+
                             </div>
                             <div class="col-md-6 d-flex align-items-center">
                                 <div>
@@ -254,7 +258,7 @@
                     non libero porro incidunt tenetur.</p>
 
                 <div class="row">
-                    <div class="col-6 col-md-4">
+                    <div class="col-md-4">
                         <div class="blog-grid">
                             <div class="blog-img">
                                 <div class="date">
@@ -280,7 +284,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
+                    <div class="col-md-4">
                         <div class="blog-grid">
                             <div class="blog-img">
                                 <div class="date">
@@ -306,7 +310,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
+                    <div class="col-md-4">
                         <div class="blog-grid">
                             <div class="blog-img">
                                 <div class="date">
