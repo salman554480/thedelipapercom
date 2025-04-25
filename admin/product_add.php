@@ -49,9 +49,13 @@ require_once('parts/top.php'); ?>
 
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label>Product Thumbnail (filename only)</label>
-                                        <input type="text" name="product_thumbnail" class="form-control"
-                                            placeholder="example.jpg">
+                                        <label class="form-label">Thumbnail</label>
+                                        <input type="text" name="post_thumbnail" id="post_thumbnail"
+                                            class="form-control">
+                                        <!-- Button to open modal -->
+                                        <a class="mt-2" data-bs-toggle="modal" data-bs-target="#mediaModal">
+                                            Choose Image
+                                        </a>
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label>Status</label>
@@ -99,38 +103,38 @@ require_once('parts/top.php'); ?>
                         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
                         <script>
-                        // Initialize Quill Editor
-                        var quill = new Quill('#editor', {
-                            theme: 'snow'
-                        });
+                            // Initialize Quill Editor
+                            var quill = new Quill('#editor', {
+                                theme: 'snow'
+                            });
 
-                        // Listen for the text-change event in Quill to update the hidden textarea
-                        quill.on('text-change', function(delta, oldDelta, source) {
-                            // Update the hidden textarea with the current HTML content of the editor
-                            document.querySelector('#content').value = quill.root.innerHTML;
-                        });
+                            // Listen for the text-change event in Quill to update the hidden textarea
+                            quill.on('text-change', function(delta, oldDelta, source) {
+                                // Update the hidden textarea with the current HTML content of the editor
+                                document.querySelector('#content').value = quill.root.innerHTML;
+                            });
                         </script>
 
                         <script>
-                        // Function to generate a slug from a string
-                        function generateSlug(title) {
-                            return title
-                                .toLowerCase() // Convert to lowercase
-                                .replace(/\s+/g, '-') // Replace spaces with dashes
-                                .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
-                                .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
-                        }
+                            // Function to generate a slug from a string
+                            function generateSlug(title) {
+                                return title
+                                    .toLowerCase() // Convert to lowercase
+                                    .replace(/\s+/g, '-') // Replace spaces with dashes
+                                    .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
+                                    .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
+                            }
 
-                        // Get references to the title and URL input fields
-                        const titleInput = document.getElementById('product_name');
-                        const urlInput = document.getElementById('product_url');
+                            // Get references to the title and URL input fields
+                            const titleInput = document.getElementById('product_name');
+                            const urlInput = document.getElementById('product_url');
 
-                        // Add event listener to the title input field
-                        titleInput.addEventListener('input', function() {
-                            const titleValue = titleInput.value;
-                            const slug = generateSlug(titleValue);
-                            urlInput.value = slug;
-                        });
+                            // Add event listener to the title input field
+                            titleInput.addEventListener('input', function() {
+                                const titleValue = titleInput.value;
+                                const slug = generateSlug(titleValue);
+                                urlInput.value = slug;
+                            });
                         </script>
                         <?php
 
@@ -194,6 +198,52 @@ require_once('parts/top.php'); ?>
         </div>
 
     </div>
+
+    <!-- Modal -->
+    <div class="modal" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mediaModalLabel">Select an Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="max-height:400px; overflow-y:auto;">
+                    <div class="row">
+                        <?php
+
+
+                        $result = mysqli_query($conn, "SELECT * FROM image");
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo '
+                        <div class="col-md-2 mb-3">
+                            <img src="assets/img/' . $row['image_name'] . '" 
+                                 data-name="' . $row['image_name'] . '"
+                                 class="img-thumbnail select-image" 
+                                 style="cursor:pointer; height:100px; object-fit:cover;">
+                        </div>';
+                        }
+
+                        mysqli_close($conn);
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle image selection -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.select-image').click(function() {
+                var imageName = $(this).data('name');
+                $('#post_thumbnail').val(imageName);
+                var modal = bootstrap.Modal.getInstance(document.getElementById('mediaModal'));
+                modal.hide();
+            });
+        });
+    </script>
     <!--Footercdn--->
     <?php require_once('parts/footercdn.php'); ?>
 

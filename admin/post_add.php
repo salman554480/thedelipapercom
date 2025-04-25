@@ -102,33 +102,33 @@ require_once('parts/top.php'); ?>
                         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
                         <script>
-                        ClassicEditor
-                            .create(document.querySelector('#editor'))
-                            .catch(error => {
-                                console.error(error);
-                            });
+                            ClassicEditor
+                                .create(document.querySelector('#editor'))
+                                .catch(error => {
+                                    console.error(error);
+                                });
                         </script>
 
                         <script>
-                        // Function to generate a slug from a string
-                        function generateSlug(title) {
-                            return title
-                                .toLowerCase() // Convert to lowercase
-                                .replace(/\s+/g, '-') // Replace spaces with dashes
-                                .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
-                                .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
-                        }
+                            // Function to generate a slug from a string
+                            function generateSlug(title) {
+                                return title
+                                    .toLowerCase() // Convert to lowercase
+                                    .replace(/\s+/g, '-') // Replace spaces with dashes
+                                    .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
+                                    .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
+                            }
 
-                        // Get references to the title and URL input fields
-                        const titleInput = document.getElementById('post_title');
-                        const urlInput = document.getElementById('post_url');
+                            // Get references to the title and URL input fields
+                            const titleInput = document.getElementById('post_title');
+                            const urlInput = document.getElementById('post_url');
 
-                        // Add event listener to the title input field
-                        titleInput.addEventListener('input', function() {
-                            const titleValue = titleInput.value;
-                            const slug = generateSlug(titleValue);
-                            urlInput.value = slug;
-                        });
+                            // Add event listener to the title input field
+                            titleInput.addEventListener('input', function() {
+                                const titleValue = titleInput.value;
+                                const slug = generateSlug(titleValue);
+                                urlInput.value = slug;
+                            });
                         </script>
 
 
