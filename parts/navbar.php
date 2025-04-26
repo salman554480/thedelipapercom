@@ -61,11 +61,9 @@
                 <li><a href="contact.php">CONTACT US</a></li>
             </ul>
         </div>
-        <div class="search-box">
-            <i class='bx bx-search'></i>
-            <div class="input-box">
-                <input type="text" placeholder="Search...">
-            </div>
+        <div class="search-box d-flex">
+            <a href="tel:447366426960"> +447366426960</a>
+            <a href="tel:447366426960" class="ml-3"> sales@delipaper.co.uk</a>
         </div>
     </div>
 </nav>

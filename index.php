@@ -9,31 +9,33 @@
             <div class="row cover-area">
                 <!-- Left Section: Text and Button -->
                 <div class="col-md-6 left-section">
-                    <h2 class="cover-heading">Branded food paper</h2>
-                    <div class="mt-2">
+                    <h2 class="cover-heading text-center">Branded food paper</h2>
+                    <div class="mt-4">
                         <div class="row">
-                            <div class="col-6 col-md-3 feature-box">
-                                <i class='bx bx-check-circle'></i>
-                                <span>Eco Friendly</span>
+                            <div class="col-6 col-md-4 feature-box">
+                                <i class='bx bx-shape-square'></i>
+                                <span>Custom Sizes</span>
                             </div>
-                            <div class="col-6 col-md-3 feature-box">
-                                <i class='bx bx-check-circle'></i>
-                                <span>Food Safe</span>
+                            <div class="col-6 col-md-4 feature-box">
+                                <i class='bx bx-timer'></i>
+                                <span>Fastest Turn Around</span>
                             </div>
-                            <div class="col-6 col-md-3 feature-box">
-                                <i class='bx bx-check-circle'></i>
-                                <span>FDA Approved</span>
+                            <div class="col-6 col-md-4 feature-box">
+                                <i class='bx bxs-tree'></i>
+                                <span>Plant Base Material </span>
                             </div>
                         </div>
                     </div>
-                    <p class="cover-text">Custom printed food papers, perfect for restaurants, delis and bars across the
+                    <p class="cover-text my-4">Custom printed food papers, perfect for restaurants, delis and bars
+                        across the
                         US, Mexico and Canada.
 
                     </p>
-                    <a href="#" class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn">SHOP
-                        NOW</a>
+                    <a href="#" data-toggle="modal" data-target="#myModal"
+                        class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn">Get a
+                        Quote</a>
 
-                    <div class="row justify-content-start mt-3">
+                    <!-- <div class="row justify-content-start mt-3">
                         <div class="col-auto">
                             <i class="fab fa-apple-pay payment-icon"></i>
                         </div>
@@ -49,7 +51,7 @@
                         <div class="col-auto">
                             <i class="fab fa-cc-amex payment-icon"></i>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Right Section: Full Cover Image -->
@@ -90,6 +92,7 @@
                         $product_name = $row_product['product_name'];
                         $product_url = $row_product['product_url'];
                         $product_thumbnail = $row_product['product_thumbnail'];
+                        $product_short_description = $row_product['product_short_description'];
 
                     ?>
                     <div class="col-md-6 col-12 mb-4">
@@ -104,10 +107,8 @@
                             <div class="col-md-6 d-flex align-items-center">
                                 <div>
                                     <h5 class="mb-2 card-product-title"><?php echo $product_name; ?></h5>
-                                    <p class="my-3 card-product-text">Suitable for oven cooking, microwaving, and
-                                        freezing,
-                                        versatile for any
-                                        kitchen.</p>
+                                    <p class="my-3 card-product-text">
+                                        <?php echo substr($product_short_description,0,115);?>...</p>
                                     <a href="product_details.php?product_url=<?php echo $product_url; ?>"
                                         class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
@@ -524,6 +525,90 @@
 
     </div>
 
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Get a Quote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="quote-form.php" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="size">Size:</label>
+                                <select class="form-control" id="size" name="size">
+                                    <option value="size">Size</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="size">Type:</label>
+                                <select class="form-control" id="type" name="type">
+                                    <option value="type">Type</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="size">Color:</label>
+                                <select class="form-control" id="color" name="color">
+                                    <option value="color">Color</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Customer Info Section -->
+                        <div class="section-title">Customer Information</div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="customer_name"> Name</label>
+                                <input type="text" class="form-control" id="customer_name" name="customer_name"
+                                    placeholder="Enter name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="contact">Contact</label>
+                                <input type="tel" class="form-control" id="contact" name="contact"
+                                    placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <!-- File Upload -->
+                        <div class="file-upload">
+                            <input type="file" id="real-file" name="file" hidden>
+                            <button type="button" id="custom-button"><i class='bx bx-cloud-upload'></i> Choose
+                                File</button>
+                            <span id="file-name">No file chosen</span>
+                        </div>
+
+                        <!-- Comments Section -->
+                        <div class="form-group">
+                            <label for="comments">Message</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
