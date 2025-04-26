@@ -32,50 +32,86 @@ require_once('parts/top.php'); ?>
                     <h4 class="mt-3">Media</h4>
 
 
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <label>Select Images to Upload:</label>
-                        <input type="file" name="images[]" multiple>
-                        <br><br>
-                        <button type="submit" class="btn btn-success" name="upload">Upload Images</button>
+                    <form id="uploadForm">
+                        <label class="form-label">Select Images to Upload:</label>
+                        <input type="file" class="form-control" name="images[]" id="imageInput" multiple>
+                        <br>
+                        <button type="submit" class="btn btn-success">Upload Images</button>
                     </form>
-                    <?php
 
-                    if (isset($_POST['upload'])) {
-                        $uploadDir = 'assets/img/';
+                    <center>
+                        <div id="uploadStatus" class="mt-4 w-75"></div>
+                    </center>
 
-                        foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
-                            $originalName = $_FILES['images']['name'][$key];
-                            $fileSizeBytes = $_FILES['images']['size'][$key];
-                            $tmpFile = $_FILES['images']['tmp_name'][$key];
+                    <script>
+                    document.getElementById('uploadForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
 
-                            // Convert file size to KB (rounded to 2 decimal places)
-                            $fileSizeKB = round($fileSizeBytes / 1024, 2);
+                        const files = document.getElementById('imageInput').files;
+                        const statusContainer = document.getElementById('uploadStatus');
+                        statusContainer.innerHTML = '';
 
-                            // Get file extension
-                            $fileExtension = pathinfo($originalName, PATHINFO_EXTENSION);
+                        Array.from(files).forEach((file, index) => {
+                            const formData = new FormData();
+                            formData.append('image', file);
 
-                            // Generate unique file name: timestamp + original name
-                            $uniqueID = time() . '_' . rand(1000, 9999);
-                            $newFileName = $uniqueID . '_' . basename($originalName);
+                            // Create status box
+                            const uploadBox = document.createElement('div');
+                            uploadBox.classList.add('upload-box', 'uploading');
 
-                            // Full path to save
-                            $destination = $uploadDir . $newFileName;
+                            uploadBox.innerHTML = `
+            <div><strong>${file.name}</strong></div>
+            <div class="progress my-2">
+                <div id="bar-${index}" class="progress-bar progress-bar-striped progress-bar-animated" 
+                     role="progressbar" style="width: 0%">0%</div>
+            </div>
+            <div id="result-${index}" class="text-muted">Uploading...</div>
+        `;
+                            statusContainer.appendChild(uploadBox);
 
-                            // Move the file
-                            if (move_uploaded_file($tmpFile, $destination)) {
-                                // Insert into DB
-                                $sql = "INSERT INTO image (image_name, image_size) VALUES ('$newFileName', '$fileSizeKB')";
-                                $run_add_image = mysqli_query($conn, $sql);
-                                if ($run_add_image === true) {
-                                    echo "<p>Image uploaded successfully!</p>";
-                                    echo "<script>window.open('image_add.php','_self');</script>";
+                            // Simulate progress animation
+                            let progress = 0;
+                            const interval = setInterval(() => {
+                                if (progress < 95) {
+                                    progress += Math.floor(Math.random() * 10) + 1;
+                                    document.getElementById(`bar-${index}`).style.width =
+                                        `${progress}%`;
+                                    document.getElementById(`bar-${index}`).innerText =
+                                        `${progress}%`;
+                                } else {
+                                    clearInterval(interval);
                                 }
-                            }
-                        }
+                            }, 200);
 
-                        echo "Images uploaded successfully!";
-                    }
-                    ?>
+                            // Perform actual upload
+                            fetch('upload_ajax.php', {
+                                    method: 'POST',
+                                    body: formData
+                                }).then(response => response.text())
+                                .then(result => {
+                                    clearInterval(interval);
+                                    uploadBox.classList.remove('uploading');
+                                    document.getElementById(`bar-${index}`).style.width = `100%`;
+                                    document.getElementById(`bar-${index}`).classList.remove(
+                                        'progress-bar-animated');
+                                    document.getElementById(`bar-${index}`).innerText = `100%`;
+
+                                    const resultText = document.getElementById(`result-${index}`);
+                                    if (result.trim().toLowerCase() === 'uploaded') {
+                                        resultText.innerHTML =
+                                            `<span class="upload-success">Upload Successful!</span>`;
+                                    } else {
+                                        resultText.innerHTML =
+                                            `<span class="upload-error">Error: ${result}</span>`;
+                                    }
+                                }).catch(error => {
+                                    clearInterval(interval);
+                                    document.getElementById(`result-${index}`).innerHTML =
+                                        `<span class="upload-error">Upload failed</span>`;
+                                });
+                        });
+                    });
+                    </script>
 
                     <?php
                     // Handle delete request
