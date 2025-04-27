@@ -89,7 +89,7 @@ require_once('parts/top.php'); ?>
                         <div class="form-group mb-2">
                             <label>Product</label>
                             <select name="product_id" class="form-control" required>
-                                <option value="">Select Product</option>
+                                <option value="0">Home</option>
                                 <?php while ($p = mysqli_fetch_assoc($products)): ?>
                                 <option value="<?= $p['product_id'] ?>"
                                     <?= $edit_data['product_id'] == $p['product_id'] ? 'selected' : '' ?>>

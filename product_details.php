@@ -58,7 +58,7 @@ if (isset($_GET['product_url'])) {
                         <div class="section-title">Customer Information</div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label for="customer_name">Customer Name</label>
+                                <label for="customer_name"> Name</label>
                                 <input type="text" class="form-control" id="customer_name" name="customer_name"
                                     placeholder="Enter name">
                             </div>

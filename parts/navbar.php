@@ -1,14 +1,15 @@
 <nav>
     <div class="navbar">
         <i class='bx bx-menu'></i>
-        <div class="logo"><a href="#"><img src="assets/img/logo2.png" class="main-logo" alt=""></a></div>
+        <div class="logo"><a href="<?php echo $website_url;?>"><img src="assets/img/logo2.png" class="main-logo"
+                    alt=""></a></div>
         <div class="nav-links">
             <div class="sidebar-logo">
                 <span class="logo-name">Ereint</span>
                 <i class='bx bx-x'></i>
             </div>
             <ul class="links">
-                <li><a href="index.php">HOME</a></li>
+                <li><a href="<?php echo $website_url;?>">HOME</a></li>
                 <!-- <li>
                     <a href="#">HTML & CSS</a>
                     <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
@@ -57,13 +58,13 @@
                         <li><a href="terms-and-condition.php">Terms & Conditions</a></li>
                     </ul>
                 </li> -->
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="contact.php">CONTACT US</a></li>
+                <li><a href="page.php?page_url=blog">Blog</a></li>
+                <li><a href="page.php?page_url=contact-us">CONTACT US</a></li>
             </ul>
         </div>
         <div class="search-box d-flex">
-            <a href="tel:447366426960"> +447366426960</a>
-            <a href="tel:447366426960" class="ml-3"> sales@delipaper.co.uk</a>
+            <!-- <a href="tel:447366426960"> +447366426960</a>
+            <a href="tel:447366426960" class="ml-3"> sales@delipaper.co.uk</a> -->
         </div>
     </div>
 </nav>

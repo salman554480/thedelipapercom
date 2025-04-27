@@ -24,10 +24,10 @@
             <div class="col-md-3 mb-4">
                 <h5>Useful Links</h5>
                 <ul class="list-unstyled footer-list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="page.php?page_url=about-us">About Us</a></li>
+                    <li><a href="page.php?page_url=faq">FAQs</a></li>
+                    <li><a href="page.php?page_url=privacy-policy">Privacy Policy</a></li>
+                    <li><a href="page.php?page_url=terms-and-conditions">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -35,9 +35,10 @@
             <div class="col-md-3 mb-4">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled  contact-info">
-                    <li><i class='bx bx-map'></i>123 Main Street, City</li>
-                    <li><i class='bx bx-phone'></i>+1 234 567 890</li>
-                    <li><i class='bx bx-envelope'></i>support@mybrand.com</li>
+                    <li><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</li>
+                    <li><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></li>
+                    <li><i class='bx bx-envelope'></i><a href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk </a>
+                    </li>
                 </ul>
                 <div class="social-icons mt-3">
                     <a href="#"><i class='bx bxl-facebook'></i></a>

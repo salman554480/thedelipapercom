@@ -80,36 +80,51 @@ if (isset($_GET['page_url'])) {
                 <!-- Contact Information -->
                 <div class="col-md-6 contact-info">
                     <h3 class="section-subheading">Get in Touch</h3>
-                    <p><i class='bx bx-map'></i>123 Main Street, City, Country</p>
-                    <p><i class='bx bx-phone'></i>+1 (555) 123-4567</p>
-                    <p><i class='bx bx-envelope'></i>info@example.com</p>
-                    <p><i class='bx bx-time-five'></i>Mon - Fri: 9:00 AM to 6:00 PM</p>
+                    <p><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</p>
+                    <p><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></p>
+                    <p><i class='bx bx-envelope'></i><a href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk </a>
+                    </p>
+                    <!-- <p><i class='bx bx-time-five'></i>Mon - Fri: 9:00 AM to 6:00 PM</p> -->
                 </div>
             </div>
             <?php } else if ($page_url == "blog") { ?>
             <div class="row my-3">
                 <?php
-                    $i = 1;
-                    while ($i < 20) {
-                    ?>
+          
+          $select_post = "SELECT * FROM post where post_status='publish' ORDER BY post_id DESC";
+          $run_post = mysqli_query($conn, $select_post);
+          while ($row_post= mysqli_fetch_array($run_post)) {
+
+              $post_id = $row_post['post_id'];
+              $post_title = $row_post['post_title'];
+              $post_url = $row_post['post_url'];
+              $post_status = $row_post['post_status'];
+              $post_thumbnail = $row_post['post_thumbnail'];
+              $post_content = $row_post['post_content'];
+              $post_date = $row_post['post_date'];
+
+              $day = date('d', strtotime($post_date));      // "27"
+              $month = date('M', strtotime($post_date));    // "Apr"
+
+          ?>
                 <div class="col-6 col-md-3 mb-4">
                     <div class="blog-grid">
                         <div class="blog-img">
                             <div class="date">
-                                <span><?php echo $i; ?></span>
-                                <label>FEB</label>
+                                <span><?php echo $day;?></span>
+                                <label><?php echo $month;?></label>
                             </div>
-                            <a href="#">
-                                <img src="https://picsum.photos/400/200?random=<?php echo $i; ?>" class="w-100" title=""
-                                    alt="">
+                            <a href="blog_details.php?post_url=<?php echo $post_url ?>">
+                                <img src="admin/assets/img/<?php echo $post_thumbnail;?>" class="w-100" title="" alt="">
                             </a>
                         </div>
                         <div class="blog-info">
-                            <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h5><a
+                                    href="blog_details.php?post_url=<?php echo $post_url ?>"><?php echo $post_title;?></a>
+                            </h5>
+                            <p><?php echo substr($post_content,0,150);?>...</p>
                             <div class="btn-bar">
-                                <a href="#"
+                                <a href="blog_details.php?post_url=<?php echo $post_url ?>"
                                     class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
                                     <span>Read More</span>
                                     <i class="arrow"></i>
@@ -118,8 +133,7 @@ if (isset($_GET['page_url'])) {
                         </div>
                     </div>
                 </div>
-                <?php $i++;
-                    } ?>
+                <?php } ?>
 
             </div>
             <?php } ?>

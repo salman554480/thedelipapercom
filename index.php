@@ -217,30 +217,41 @@
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="https://dummyimage.com/800x600/a7a7a7/000000" alt="Section Image"
-                            class="section-image">
+                        <img src="admin/assets/img/1745740714_9661_Premium Branded Greasproof Paper (800 x 600).jpg
+" alt="Section Image" class="section-image">
                     </div>
 
                     <!-- Text Content Column -->
                     <div class="col-md-6 p-3">
                         <div class="section-content">
 
-                            <h2 class="mb-3 section-heading ">wide range of premium branded greaseproof paper</h2>
-                            <h5 class=" mb-3 section-subheading">promote your brand and improve your food presentation
-                            </h5>
-                            <p class="mb-4 product-intro">
-                                Custom printed food paper has a host of features and benefits that add to the dining
-                                experience, not just for sit-in restaurants, but also for food trucks, takeouts,
-                                bakeries, bars, coffee shops, and more. <br><br>
-
-                                Not all greaseproof paper is created equal—what sets our high-quality branded
-                                greaseproof paper apart? <br><br>
-
-                                Our paper is food-safe, vegan-friendly, and Halal-certified. We offer extensive
-                                customization options, a free design service and free shipping. Versatile for any
-                                kitchen, our paper is microwavable, ovenproof, and freezeproof, suitable for both hot
-                                and cold food. <br>
+                            <h2 class="mb-3 section-heading ">Why Greaseproof paper</h2>
+                            <p class=" mb-3 font-weight-bold">Experience the unparalleled benefits of Deli Paper’s
+                                greaseproof paper and elevate your packaging solutions with innovation and excellence.
+                                <br>
+                                Greaseproof paper offers the advantage of no art plate or setup costs.Delivery time: 2
+                                to 3 weeks.
+                                </h5>
+                            <p><i class='bx bx-badge-check'></i> Deal for microwave cooking safety.</p>
+                            <p><i class='bx bx-badge-check'></i> Ideal for keeping frozen meals fresh.</p>
+                            <p><i class='bx bx-badge-check'></i> Materials are 100% biodegradable and recyclable.</p>
+                            <p><i class='bx bx-badge-check'></i> There are no limitations on visuals or design layouts.
                             </p>
+                            <p><i class='bx bx-badge-check'></i> Durable and long lasting, perfect for heavy-duty food
+                                packaging.</p>
+                            <p><i class='bx bx-badge-check'></i> It prevents greasy foods from spilling, ensuring
+                                freshness.</p>
+                            <p><i class='bx bx-badge-check'></i> Elegant texture and appearance, adding a touch of
+                                sophistication to any use.</p>
+                            <p><i class='bx bx-badge-check'></i> Ensures food safety with its high hygiene standards.
+                            </p>
+                            <p><i class='bx bx-badge-check'></i> Customised to increase your brand's visibility and
+                                appeal.</p>
+                            <p><i class='bx bx-badge-check'></i> Easy to use and handle, making it ideal for everyday
+                                tasks.</p>
+                            <p><i class='bx bx-badge-check'></i> Reusable and recyclable materials result in long-term
+                                cost reductions.</p>
+
                             <a href="#"
                                 class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25 custom-btn">Get
                                 a
@@ -259,75 +270,43 @@
                     non libero porro incidunt tenetur.</p>
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="blog-grid">
-                            <div class="blog-img">
-                                <div class="date">
-                                    <span>04</span>
-                                    <label>FEB</label>
-                                </div>
-                                <a href="#">
-                                    <img src="https://dummyimage.com/400x200/a7a7a7/000000" title="" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-info">
-                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="btn-bar">
-                                    <a href="#"
-                                        class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
-                                        <span>Read More</span>
-                                        <i class="arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+          
+          $select_post = "SELECT * FROM post where post_status='publish' ORDER BY post_id DESC LIMIT 3";
+          $run_post = mysqli_query($conn, $select_post);
+          while ($row_post= mysqli_fetch_array($run_post)) {
 
-                    <div class="col-md-4">
-                        <div class="blog-grid">
-                            <div class="blog-img">
-                                <div class="date">
-                                    <span>04</span>
-                                    <label>FEB</label>
-                                </div>
-                                <a href="#">
-                                    <img src="https://picsum.photos/400/200?random=2" title="" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-info">
-                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="btn-bar">
-                                    <a href="#"
-                                        class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
-                                        <span>Read More</span>
-                                        <i class="arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              $post_id = $row_post['post_id'];
+              $post_title = $row_post['post_title'];
+              $post_url = $row_post['post_url'];
+              $post_status = $row_post['post_status'];
+              $post_thumbnail = $row_post['post_thumbnail'];
+              $post_content = $row_post['post_content'];
+              $post_date = $row_post['post_date'];
 
-                    <div class="col-md-4">
+              $day = date('d', strtotime($post_date));      // "27"
+              $month = date('M', strtotime($post_date));    // "Apr"
+
+          ?>
+                    <div class="col-6 col-md-4 mb-4">
                         <div class="blog-grid">
                             <div class="blog-img">
                                 <div class="date">
-                                    <span>04</span>
-                                    <label>FEB</label>
+                                    <span><?php echo $day;?></span>
+                                    <label><?php echo $month;?></label>
                                 </div>
-                                <a href="#">
-                                    <img src="https://picsum.photos/400/200?random=3" title="" alt="">
+                                <a href="blog_details.php?post_url=<?php echo $post_url ?>">
+                                    <img src="admin/assets/img/<?php echo $post_thumbnail;?>" class="w-100" title=""
+                                        alt="">
                                 </a>
                             </div>
                             <div class="blog-info">
-                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h5><a
+                                        href="blog_details.php?post_url=<?php echo $post_url ?>"><?php echo $post_title;?></a>
+                                </h5>
+                                <p><?php echo substr($post_content,0,150);?>...</p>
                                 <div class="btn-bar">
-                                    <a href="#"
+                                    <a href="blog_details.php?post_url=<?php echo $post_url ?>"
                                         class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
                                         <span>Read More</span>
                                         <i class="arrow"></i>
@@ -336,6 +315,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -456,63 +436,54 @@
                     <div class="col-md-7">
                         <div id="faqAccordion">
 
-                            <!-- FAQ 1 -->
-                            <div class="card faq-item">
-                                <div class="card-header" id="faqHeading1">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link faq-question" data-toggle="collapse"
-                                            data-target="#faqCollapse1" aria-expanded="true"
-                                            aria-controls="faqCollapse1">
-                                            What is your refund policy?
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1"
-                                    data-parent="#faqAccordion">
-                                    <div class="card-body">
-                                        We offer a full refund within the first 30 days of purchase—no questions asked!
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
 
-                            <!-- FAQ 2 -->
-                            <div class="card faq-item">
-                                <div class="card-header" id="faqHeading2">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed faq-question" data-toggle="collapse"
-                                            data-target="#faqCollapse2" aria-expanded="false"
-                                            aria-controls="faqCollapse2">
-                                            Can I upgrade my plan later?
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2"
-                                    data-parent="#faqAccordion">
-                                    <div class="card-body">
-                                        Absolutely! You can upgrade or downgrade your plan at any time from your
-                                        dashboard.
-                                    </div>
-                                </div>
-                            </div>
+                            // Fetch FAQs for the product
+                            $query_faq = "SELECT * FROM faq WHERE product_id = 0";
+                            $result_faq = mysqli_query($conn, $query_faq);
 
-                            <!-- FAQ 3 -->
-                            <div class="card faq-item">
-                                <div class="card-header" id="faqHeading3">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed faq-question" data-toggle="collapse"
-                                            data-target="#faqCollapse3" aria-expanded="false"
-                                            aria-controls="faqCollapse3">
-                                            Do you offer support?
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3"
-                                    data-parent="#faqAccordion">
-                                    <div class="card-body">
-                                        Yes, we offer 24/7 email support and live chat during business hours.
-                                    </div>
-                                </div>
-                            </div>
+                            // Start FAQ accordion
+                            echo '<div class="accordion" id="faqAccordion">';
+
+                            $faq_count = 1;
+
+                            if (mysqli_num_rows($result_faq) > 0) {
+                                while ($row_faq = mysqli_fetch_assoc($result_faq)) {
+                                    $question = htmlspecialchars($row_faq['faq_question']);
+                                    $answer = htmlspecialchars($row_faq['faq_answer']);
+                                    $collapseId = "faqCollapse" . $faq_count;
+                                    $headingId = "faqHeading" . $faq_count;
+                                    $showClass = ($faq_count == 1) ? 'show' : '';
+                                    $collapsedClass = ($faq_count == 1) ? '' : 'collapsed';
+                                    $ariaExpanded = ($faq_count == 1) ? 'true' : 'false';
+
+                                    echo '
+                                        <div class="card faq-item">
+                                            <div class="card-header" id="' . $headingId . '">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
+                                                        data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
+                                                        ' . $question . '
+                                                    </button>
+                                                </h5>
+                                            </div>
+                                            <div id="' . $collapseId . '" class="collapse ' . $showClass . '" aria-labelledby="' . $headingId . '"
+                                                data-parent="#faqAccordion">
+                                                <div class="card-body">
+                                                    ' . $answer . '
+                                                </div>
+                                            </div>
+                                        </div>';
+                                    $faq_count++;
+                                }
+                            } else {
+                                echo "<p>No FAQs available for this product.</p>";
+                            }
+
+                            // End FAQ accordion
+                            echo '</div>';
+
+                            ?>
 
                         </div>
                     </div>

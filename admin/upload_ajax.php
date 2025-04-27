@@ -4,6 +4,7 @@ include 'parts/db.php'; // your database connection file
 if (isset($_FILES['image'])) {
     $uploadDir = 'assets/img/';
     $originalName = $_FILES['image']['name'];
+    $originalName = strtolower(str_replace(' ', '_', $originalName)); // Replace spaces with underscores & convert to lowercase
     $fileSizeBytes = $_FILES['image']['size'];
     $tmpFile = $_FILES['image']['tmp_name'];
 

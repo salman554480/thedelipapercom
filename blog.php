@@ -10,36 +10,45 @@
             <h1 class="section-heading text-center">Blogs</h1>
             <div class="row my-3">
                 <?php
-                $i = 1;
-                while ($i < 20) {
+          
+                $select_post = "SELECT * FROM post where post_status='publish' ORDER BY post_id DESC";
+                $run_post = mysqli_query($conn, $select_post);
+                while ($row_post= mysqli_fetch_array($run_post)) {
+
+                    $post_id = $row_post['post_id'];
+                    $post_title = $row_post['post_title'];
+                    $post_status = $row_post['post_status'];
+                    $post_thumbnail = $row_post['post_thumbnail'];
+                    $post_content = $row_post['post_content'];
+
+                   
+
                 ?>
-                    <div class="col-6 col-md-3 mb-4">
-                        <div class="blog-grid">
-                            <div class="blog-img">
-                                <div class="date">
-                                    <span><?php echo $i; ?></span>
-                                    <label>FEB</label>
-                                </div>
-                                <a href="#">
-                                    <img src="https://picsum.photos/400/200?random=<?php echo $i; ?>" class="w-100" title=""
-                                        alt="">
-                                </a>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="blog-grid">
+                        <div class="blog-img">
+                            <div class="date">
+                                <span>4</span>
+                                <label>FEB</label>
                             </div>
-                            <div class="blog-info">
-                                <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="btn-bar">
-                                    <a href="#"
-                                        class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
-                                        <span>Read More</span>
-                                        <i class="arrow"></i>
-                                    </a>
-                                </div>
+                            <a href="#">
+                                <img src="admin/assets/img/<?php echo $post_thumbnail;?>" class="w-100" title="" alt="">
+                            </a>
+                        </div>
+                        <div class="blog-info">
+                            <h5><a href="#"><?php echo $post_title;?></a></h5>
+                            <p><?php echo $post_content;?></p>
+                            <div class="btn-bar">
+                                <a href="#"
+                                    class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
+                                    <span>Read More</span>
+                                    <i class="arrow"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                <?php $i++;
+                </div>
+                <?php 
                 } ?>
 
             </div>
