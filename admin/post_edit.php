@@ -194,7 +194,7 @@ require_once('parts/top.php'); ?>
           post_title='$epost_title',
           post_url='$epost_url',
           post_content='$epost_content',
-          post_thumbnail='$post_thumbnail',
+          post_thumbnail='$epost_thumbnail',
           post_status='$epost_status', 
           post_index='$epost_index' 
           WHERE post_id='$post_id'";
