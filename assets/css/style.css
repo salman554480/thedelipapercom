@@ -423,6 +423,25 @@ nav .navbar .links li .sub-menu li{
   color:#fff;
   font-size: 17px;
 }
+
+.feature-box2 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+}
+.feature-box2 i {
+  font-size: 24px;
+  color: #0c2d48;
+  margin-right: 10px;
+}
+
+.feature-box2 span{
+  font-weight: bold;
+  color:#000000;
+  font-size: 17px;
+}
+
 .cover-text{
   font-size: 18px;
   line-height: 27px;
@@ -849,6 +868,7 @@ nav .navbar .links li .sub-menu li{
   border-radius: 50%;
   padding: 15px;
   font-size: 24px;
+  
   z-index: 100;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
@@ -866,18 +886,54 @@ nav .navbar .links li .sub-menu li{
   justify-content: center;
 }
 
-
-#google_translate_element {
+.translate-dropup {
   position: fixed;
-  bottom: 30px; /* adjust if you also have a WhatsApp button */
+  bottom: 30px;
   left: 20px;
   z-index: 1000;
+  font-family: sans-serif;
+}
+
+.dropup-button {
   background: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
   border-radius: 5px;
-  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+.dropup-content {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dropup-content div {
+  color: black;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropup-content div:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropup on hover */
+.translate-dropup:hover .dropup-content {
+  display: block;
+}
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {

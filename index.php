@@ -27,8 +27,7 @@
                         </div>
                     </div>
                     <p class="cover-text my-4">Custom printed food papers, perfect for restaurants, delis and bars
-                        across the
-                        US, Mexico and Canada.
+                        across the UK, EU, USA, AUSTRALIA, CANADA with  <b>FREE SHIPPING.</b>
 
                     </p>
                     <a href="#" data-toggle="modal" data-target="#myModal"
@@ -84,7 +83,7 @@
                 <div class="row my-4">
                     <?php
 
-                    $select_product = "SELECT * FROM product where product_status='active'";
+                    $select_product = "SELECT * FROM product where product_status='active' and  product_id != 4";
                     $run_product = mysqli_query($conn, $select_product);
                     while ($row_product = mysqli_fetch_array($run_product)) {
 
@@ -127,8 +126,18 @@
 
         <section class="steps-section text-center">
             <div class="container">
-                <h2>Get Started with Your Custom Food Wrap</h2>
-                <p class="lead">Just three easy steps to personalized perfection</p>
+                <h2>Get Your Own Custom Greaseproof Deli Paper in 3 Simple Steps.</h2>
+                <p class="lead my-4">Discover the ultimate in branding with our Eco-Friendly Custom Greaseproof Deli
+                    Paper.
+                    Tailor made to fit your needs, our paper is not only versatile in size but also champions
+                    sustainability with recyclable and plant based materials. Fast turnaround, free artwork, and a
+                    simple 3-step design tool transform your packaging into a statement piece. Choose from our premium
+                    selection <a class="text-light" href="https://delipaper.co.uk/butcher-paper-in-uk/"><b>Butcher
+                            Paper</b></a>, <a class="text-light"
+                        href="https://delipaper.co.uk/parchment-paper/"><b>Parchment Paper</b></a>, <a
+                        href="https://delipaper.co.uk/wax-paper/" class="text-light"><b>Wax Paper</b></a> or Deli
+                    Paper and make your brand
+                    unforgettable.</p>
 
                 <div class="row mt-5">
                     <div class="col-md-4">
@@ -211,7 +220,7 @@
 
 
 
-        <section class="section-two-column bg-light">
+        <section class="pt-5 bg-light">
             <div class="container-fluid">
                 <div class="row no-gutters align-items-center">
 
@@ -252,11 +261,53 @@
                             <p><i class='bx bx-badge-check'></i> Reusable and recyclable materials result in long-term
                                 cost reductions.</p>
 
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light">
+            <div class="container-fluid">
+                <div class="row no-gutters align-items-center">
+
+
+
+                    <!-- Text Content Column -->
+                    <div class="col-md-6 p-3">
+                        <div class="section-content">
+
+                            <h2 class="mb-3 section-heading ">PRODUCT HIGHLIGHTS </h2>
+
+                            <p><i class='bx bx-badge-check'></i> Made with high-quality materials.</p>
+                            <p><i class='bx bx-badge-check'></i> Designed to improve environmental sustainability.</p>
+                            <p><i class='bx bx-badge-check'></i> Ideal for a variety of applications</p>
+                            <p><i class='bx bx-badge-check'></i> We offer bright printing that fits to your specific
+                                needs.
+                            </p>
+                            <p><i class='bx bx-badge-check'></i> Ideal for wrapping without spills or mess.</p>
+                            <p><i class='bx bx-badge-check'></i> Ideal for use in a freezer, microwave, and oven</p>
+                            <p><i class='bx bx-badge-check'></i> Comes in both standard and custom sizes to meet your
+                                specific needs.</p>
+                            <p><i class='bx bx-badge-check'></i> Featuring stunning designs that elevate all activities.
+                            </p>
+                            <p><i class='bx bx-badge-check'></i> We provide excellent service with every order.</p>
+                            <p><i class='bx bx-badge-check'></i> Suitable for reheating and freezing.</p>
+                            <p><i class='bx bx-badge-check'></i> Produced without the use of artificial coatings.</p>
+
                             <a href="#"
                                 class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25 custom-btn">Get
                                 a
                                 Quote</a>
                         </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="col-md-6">
+                        <img src="admin/assets/img/1745740714_9661_Premium Branded Greasproof Paper (800 x 600).jpg
+" alt="Section Image" class="section-image">
                     </div>
 
                 </div>
@@ -266,13 +317,13 @@
         <section class="py-5">
             <div class="container">
                 <h2 class="section-heading text-center">Our Latest Blogs</h2>
-                <p class="text-center product-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero autem
-                    non libero porro incidunt tenetur.</p>
+                <!-- <p class="text-center product-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero autem
+                    non libero porro incidunt tenetur.</p> -->
 
                 <div class="row">
                     <?php
           
-          $select_post = "SELECT * FROM post where post_status='publish' ORDER BY post_id DESC LIMIT 3";
+          $select_post = "SELECT * FROM post where post_status='publish'  ORDER BY post_id DESC LIMIT 3";
           $run_post = mysqli_query($conn, $select_post);
           while ($row_post= mysqli_fetch_array($run_post)) {
 
