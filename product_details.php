@@ -27,6 +27,24 @@ if (isset($_GET['product_url'])) {
                 <div class="col-md-6">
                     <img src="admin/assets/img/<?php echo $product_thumbnail;?>" class="w-100 product-main-image"
                         alt="">
+                    <div class="mt-5">
+                        <div class="row ">
+                            <div class="col-6 col-md-4 feature-box2 ">
+                                <i class='bx bx-shape-square'></i>
+                                <span>Custom Sizes</span>
+                            </div>
+
+                            <div class="col-6 col-md-4 feature-box2">
+                                <i class='bx bxs-tree'></i>
+                                <span>Plant Base Material </span>
+                            </div>
+
+                            <div class="col-6 col-md-4 feature-box2">
+                                <i class='bx bx-timer'></i>
+                                <span>Fastest Turn Around</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <h1 class="card-product-title"><?php echo $product_name; ?></h1>
@@ -37,26 +55,69 @@ if (isset($_GET['product_url'])) {
                             <div class="col-md-4">
                                 <label for="size">Size:</label>
                                 <select class="form-control" id="size" name="size">
-                                    <option value="size">Size</option>
+                                    <option value="NaN">Select Size</option>
+                                    <option value="4x4">4″ x 4″</option>
+                                    <option value="5x5">5″ x 5″</option>
+                                    <option value="6x5">6″ x 5″</option>
+                                    <option value="6x6">6″ x 6″</option>
+                                    <option value="7x5">7″ x 5″</option>
+                                    <option value="7x7">7″ x 7″</option>
+                                    <option value="8x5">8″ x 5″</option>
+                                    <option value="8x6">8″ x 6″</option>
+                                    <option value="8x8">8″ x 8″</option>
+                                    <option value="8.5x11">8.5″ x 11″</option>
+                                    <option value="9x5">9″ x 5″</option>
+                                    <option value="9x6">9″ x 6″</option>
+                                    <option value="9x9">9″ x 9″</option>
+                                    <option value="10x5">10″ x 5″</option>
+                                    <option value="10x6">10″ x 6″</option>
+                                    <option value="10x8">10″ x 8″</option>
+                                    <option value="10x10">10″ x 10″</option>
+                                    <option value="10.75x10">10.75″ x 10″</option>
+                                    <option value="12x6">12″ x 6″</option>
+                                    <option value="12x8">12″ x 8″</option>
+                                    <option value="12x9">12″ x 9″</option>
+                                    <option value="12x10">12″ x 10″</option>
+                                    <option value="12x12">12″ x 12″</option>
+                                    <option value="13x6">13″ x 6″</option>
+                                    <option value="13x9">13″ x 9″</option>
+                                    <option value="13x10">13″ x 10″</option>
+                                    <option value="13x13">13″ x 13″</option>
+                                    <option value="14x12">14″ x 12″</option>
+                                    <option value="15x9">15″ x 9″</option>
+                                    <option value="15x10.75">15″ x 10.75″</option>
+                                    <option value="15x12">15″ x 12″</option>
+                                    <option value="15x13">15″ x 13″</option>
+                                    <option value="16x12">16″ x 12″</option>
+                                    <option value="17x11">17″ x 11″</option>
+                                    <option value="18x10">18″ x 10″</option>
+                                    <option value="18x12">18″ x 12″</option>
+                                    <option value="18x13">18″ x 13″</option>
+                                    <option value="20x10">20″ x 10″</option>
+                                    <option value="20x12">20″ x 12″</option>
+                                    <option value="20x13">20″ x 13″</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="size">Type:</label>
+                                <label for="size">Paper Type:</label>
                                 <select class="form-control" id="type" name="type">
-                                    <option value="type">Type</option>
+                                    <option>White</option>
+                                    <option>Brown</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="size">Color:</label>
+                                <label for="size">Printing:</label>
                                 <select class="form-control" id="color" name="color">
-                                    <option value="color">Color</option>
+                                    <option value="1color">1 Color</option>
+                                    <option value="2color">2 Color</option>
+                                    <option value="4color">4 Color</option>
                                 </select>
                             </div>
                         </div>
 
                         <!-- Customer Info Section -->
                         <div class="section-title">Customer Information</div>
-                        <div class="form-row">
+                        <div class="form-row mt-3">
                             <div class="form-group col-md-4">
                                 <label for="customer_name"> Name</label>
                                 <input type="text" class="form-control" id="customer_name" name="customer_name"
@@ -77,8 +138,8 @@ if (isset($_GET['product_url'])) {
                         <!-- File Upload -->
                         <div class="file-upload">
                             <input type="file" id="real-file" name="file" hidden>
-                            <button type="button" id="custom-button"><i class='bx bx-cloud-upload'></i> Choose
-                                File</button>
+                            <button type="button" id="custom-button"><i class='bx bx-cloud-upload'></i> Upload your
+                                Artwork</button>
                             <span id="file-name">No file chosen</span>
                         </div>
 
@@ -96,7 +157,7 @@ if (isset($_GET['product_url'])) {
             </div>
         </div>
 
-        <section class="py-4">
+        <!-- <section class="py-4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 d-flex align-items-center">
@@ -160,7 +221,7 @@ if (isset($_GET['product_url'])) {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="">
             <div class="container-fluid">
@@ -192,10 +253,7 @@ if (isset($_GET['product_url'])) {
                                 kitchen, our paper is microwavable, ovenproof, and freezeproof, suitable for both hot
                                 and cold food. <br>
                             </p>
-                            <a href="#"
-                                class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25 custom-btn">Get
-                                a
-                                Quote</a>
+
                         </div>
                     </div>
 
@@ -213,26 +271,82 @@ if (isset($_GET['product_url'])) {
                     <div class="col-md-6 p-3">
                         <div class="section-content">
 
-                            <h2 class="mb-3 section-heading ">wide range of premium branded greaseproof paper</h2>
-                            <h5 class=" mb-3 section-subheading">promote your brand and improve your food presentation
-                            </h5>
-                            <p class="mb-4 product-intro">
-                                Custom printed food paper has a host of features and benefits that add to the dining
-                                experience, not just for sit-in restaurants, but also for food trucks, takeouts,
-                                bakeries, bars, coffee shops, and more. <br><br>
-
-                                Not all greaseproof paper is created equal—what sets our high-quality branded
-                                greaseproof paper apart? <br><br>
-
-                                Our paper is food-safe, vegan-friendly, and Halal-certified. We offer extensive
-                                customization options, a free design service and free shipping. Versatile for any
-                                kitchen, our paper is microwavable, ovenproof, and freezeproof, suitable for both hot
-                                and cold food. <br>
-                            </p>
-                            <a href="#"
-                                class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25 custom-btn">Get
-                                a
-                                Quote</a>
+                            <h2 class="mb-3 section-heading">Specifications</h2>
+                            <table class="table table-bordered table-striped  small">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><b>Paper Type</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">White Paper</span></p>
+                                        </td>
+                                        <td>
+                                            <p><b>Product Name</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Wax Paper</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><b>Coating</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Uncoated</span></p>
+                                        </td>
+                                        <td>
+                                            <p><b>Compatible Printing</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Offset Printing</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><b>Feature</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Greaseproof</span></p>
+                                        </td>
+                                        <td>
+                                            <p><b>Material</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Plant Based Material</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><b>Pulp Style</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Recycled</span></p>
+                                        </td>
+                                        <td>
+                                            <p><b>Color print</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">Custom Printing. 1 , 2 , 4 Color</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><b>Safety</b></p>
+                                        </td>
+                                        <td>
+                                            <p><span style="font-weight: 400;">non-hazardous</span></p>
+                                        </td>
+                                        <td>
+                                            <p><b>Usage</b></p>
+                                        </td>
+                                        <td>
+                                            <p>Food wrapping, Non-stick surface, Crafts or DIY projects</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 

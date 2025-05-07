@@ -5,8 +5,13 @@
 
             <!-- Logo & About -->
             <div class="col-md-3 mb-4">
-                <div class="footer-logo mb-3">MyBrand</div>
-                <p>We deliver quality products and exceptional service to customers around the globe.</p>
+                <div class="footer-logo mb-3">
+                    <img src="assets/img/logo2.png" height="40px" alt="">
+                </div>
+                <p>Welcome to Deli Paper, where creativity meets elegance. Our paper products are more than just
+                    functional; they show your company’s commitment to excellence. Deli Paper is made to be both stylish
+                    and functional.From protecting your culinary pleasures to enhancing your company’s image, our
+                    solutions seamlessly combine durability and design.</p>
             </div>
 
             <!-- Popular Products -->
@@ -61,19 +66,52 @@
 
 
 
-<div id="google_translate_element"></div>
+<!-- Hidden default Google Translate -->
+<div id="google_translate_element" style="display: none;"></div>
 
+<!-- Custom Dropup -->
+<div class="translate-dropup">
+    <button class="dropup-button">
+        🌐 Translate
+    </button>
+    <div class="dropup-content">
+        <div onclick="translateLanguage('en|fr')">
+            <img src="https://flagcdn.com/fr.svg" width="20"> French
+        </div>
+        <div onclick="translateLanguage('en|es')">
+            <img src="https://flagcdn.com/es.svg" width="20"> Spanish
+        </div>
+        <div onclick="translateLanguage('en|de')">
+            <img src="https://flagcdn.com/de.svg" width="20"> German
+        </div>
+        <div onclick="translateLanguage('en|it')">
+            <img src="https://flagcdn.com/it.svg" width="20"> Italian
+        </div>
+        <div onclick="translateLanguage('en|pt')">
+            <img src="https://flagcdn.com/pt.svg" width="20"> Portuguese
+        </div>
+    </div>
+</div>
+
+<!-- Google Translate script -->
 <script type="text/javascript">
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        pageLanguage: 'en'
     }, 'google_translate_element');
+}
+
+function translateLanguage(langPair) {
+    var select = document.querySelector("select.goog-te-combo");
+    if (!select) return;
+    select.value = langPair.split('|')[1];
+    select.dispatchEvent(new Event('change'));
 }
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
+
 
 <!-- WhatsApp Sticky Button -->
 <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
