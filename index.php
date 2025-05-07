@@ -1,3 +1,12 @@
+<?php
+require_once('admin/parts/db.php');
+$select_meta = "SELECT * FROM page where page_url='index'";
+$run_meta =  mysqli_query($conn, $select_meta);
+$row_meta = mysqli_fetch_array($run_meta);
+$meta_title =  $row_meta['meta_title'];
+$meta_title =  $row_meta['meta_description'];
+$meta_keywords =  $row_meta['meta_keywords'];
+?>
 <?php require_once('parts/top.php'); ?>
 </head>
 
@@ -98,7 +107,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <a href="product_details.php?product_url=<?php echo $product_url; ?>">
-                                    <img src="admin/assets/img/<?php echo $product_thumbnail;?>" alt="Product"
+                                    <img src="admin/assets/img/<?php echo $product_thumbnail; ?>" alt="Product"
                                         class="product-img w-100 mb-3">
                                 </a>
 
@@ -107,7 +116,7 @@
                                 <div>
                                     <h5 class="mb-2 card-product-title"><?php echo $product_name; ?></h5>
                                     <p class="my-3 card-product-text">
-                                        <?php echo substr($product_short_description,0,115);?>...</p>
+                                        <?php echo substr($product_short_description, 0, 115); ?>...</p>
                                     <a href="product_details.php?product_url=<?php echo $product_url; ?>"
                                         class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
@@ -322,40 +331,40 @@
 
                 <div class="row">
                     <?php
-          
-          $select_post = "SELECT * FROM post where post_status='publish'  ORDER BY post_id DESC LIMIT 3";
-          $run_post = mysqli_query($conn, $select_post);
-          while ($row_post= mysqli_fetch_array($run_post)) {
 
-              $post_id = $row_post['post_id'];
-              $post_title = $row_post['post_title'];
-              $post_url = $row_post['post_url'];
-              $post_status = $row_post['post_status'];
-              $post_thumbnail = $row_post['post_thumbnail'];
-              $post_content = $row_post['post_content'];
-              $post_date = $row_post['post_date'];
+                    $select_post = "SELECT * FROM post where post_status='publish'  ORDER BY post_id DESC LIMIT 3";
+                    $run_post = mysqli_query($conn, $select_post);
+                    while ($row_post = mysqli_fetch_array($run_post)) {
 
-              $day = date('d', strtotime($post_date));      // "27"
-              $month = date('M', strtotime($post_date));    // "Apr"
+                        $post_id = $row_post['post_id'];
+                        $post_title = $row_post['post_title'];
+                        $post_url = $row_post['post_url'];
+                        $post_status = $row_post['post_status'];
+                        $post_thumbnail = $row_post['post_thumbnail'];
+                        $post_content = $row_post['post_content'];
+                        $post_date = $row_post['post_date'];
 
-          ?>
+                        $day = date('d', strtotime($post_date));      // "27"
+                        $month = date('M', strtotime($post_date));    // "Apr"
+
+                    ?>
                     <div class="col-6 col-md-4 mb-4">
                         <div class="blog-grid">
                             <div class="blog-img">
                                 <div class="date">
-                                    <span><?php echo $day;?></span>
-                                    <label><?php echo $month;?></label>
+                                    <span><?php echo $day; ?></span>
+                                    <label><?php echo $month; ?></label>
                                 </div>
                                 <a href="blog_details.php?post_url=<?php echo $post_url ?>">
-                                    <img src="admin/assets/img/<?php echo $post_thumbnail;?>" class="w-100" title=""
+                                    <img src="admin/assets/img/<?php echo $post_thumbnail; ?>" class="w-100" title=""
                                         alt="">
                                 </a>
                             </div>
                             <div class="blog-info">
                                 <h5><a
-                                        href="blog_details.php?post_url=<?php echo $post_url ?>"><?php echo $post_title;?></a>
+                                        href="blog_details.php?post_url=<?php echo $post_url ?>"><?php echo $post_title; ?></a>
                                 </h5>
-                                <p><?php echo substr($post_content,0,150);?>...</p>
+                                <p><?php echo substr($post_content, 0, 150); ?>...</p>
                                 <div class="btn-bar">
                                     <a href="blog_details.php?post_url=<?php echo $post_url ?>"
                                         class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">

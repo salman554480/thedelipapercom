@@ -743,10 +743,25 @@ nav .navbar .links li .sub-menu li{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .product-main-image:hover {
   transform: scale(1.05); /* Zoom effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
+
+.product-intro {
+  max-height: 60vh; /* Adjust this value based on your layout */
+  overflow-y: auto;
+  padding-right: 10px; /* Optional: prevent scrollbar overlap with content */
+}
+
+/* Optional: make it more responsive on smaller screens */
+@media (max-width: 768px) {
+  .product-intro {
+      max-height: 40vh;
+  }
+}
+
 .blue-tick{
   color: #145da0;
 }

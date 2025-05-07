@@ -63,13 +63,30 @@ require_once('parts/top.php'); ?>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-4 mb-3">
                                         <label>Product Thumbnail (filename only)</label>
                                         <input type="text" value="<?php echo $row['product_thumbnail']; ?>"
                                             name="product_thumbnail" class="form-control" placeholder="example.jpg">
                                         <img src="assets/img/<?php echo $row['product_thumbnail']; ?>" height="50px">
                                     </div>
-                                    <div class="col-md-3 mb-3">
+
+                                    <div class="col-md-4 mb-3">
+                                        <label>Section 1 Image (filename only)</label>
+                                        <input type="text" value="<?php echo $row['product_image1']; ?>"
+                                            name="product_image1" class="form-control" placeholder="example.jpg">
+                                        <img src="assets/img/<?php echo $row['product_image1']; ?>" height="50px">
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <label>Section 2 Image (filename only)</label>
+                                        <input type="text" value="<?php echo $row['product_image2']; ?>"
+                                            name="product_image2" class="form-control" placeholder="example.jpg">
+                                        <img src="assets/img/<?php echo $row['product_image2']; ?>" height="50px">
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
                                         <label>Status</label>
                                         <select name="product_status" class="form-control">
                                             <option <?php if ($row['product_status'] == "active") {
@@ -80,7 +97,7 @@ require_once('parts/top.php'); ?>
                                                     } ?> value="inactive">Inactive</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label>Index</label>
                                         <select name="product_index" class="form-control">
                                             <option <?php if ($row['product_index'] == "yes") {
@@ -194,6 +211,8 @@ require_once('parts/top.php'); ?>
                             $product_short_description = $_POST['product_short_description'];
                             $epage_content = $_POST['content'];
                             $product_thumbnail = $_POST['product_thumbnail']; // Now just plain text
+                            $product_image1 = $_POST['product_image1']; // Now just plain text
+                            $product_image2 = $_POST['product_image2']; // Now just plain text
                             $product_meta_title = $_POST['product_meta_title'];
                             $product_meta_desrciption = $_POST['product_meta_desrciption'];
                             $product_meta_keywords = $_POST['product_meta_keywords'];
@@ -207,7 +226,18 @@ require_once('parts/top.php'); ?>
 
 
                             // Insert query
-                            $sql = "Update product SET product_name='$product_name',product_url='$product_url',product_short_description='$eproduct_short_description',product_content='$epage_content',product_thumbnail='$product_thumbnail',product_status='$product_status',product_index='$product_index',product_meta_title='$product_meta_title',product_meta_description='$product_meta_desrciption',product_meta_keywords='$product_meta_keywords' where product_id='$product_id'";
+                            $sql = "Update product SET
+                             product_name='$product_name',
+                             product_url='$product_url',
+                             product_short_description='$eproduct_short_description',
+                             product_content='$epage_content',
+                             product_thumbnail='$product_thumbnail',
+                             product_image1='$product_image1',
+                             product_image2='$product_image2',
+                             product_status='$product_status',
+                             product_index='$product_index',
+                             product_meta_title='$product_meta_title',product_meta_description='$product_meta_desrciption',product_meta_keywords='$product_meta_keywords' 
+                             where product_id='$product_id'";
 
                             if (mysqli_query($conn, $sql)) {
                                 echo "<script>alert('Query Succeed');</script>";

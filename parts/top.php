@@ -1,24 +1,24 @@
 <?php require_once('admin/parts/db.php');
 
 $select_setting = "SELECT * FROM setting ";
-				$run_setting = mysqli_query($conn,$select_setting);
-				$row_setting = mysqli_fetch_array($run_setting);
-				
-					$setting_id = $row_setting['setting_id'];
-					$website_title = $row_setting['website_title'];
-					$website_url = $row_setting['website_url'];
-					$website_logo = $row_setting['website_logo'];
-					$website_favicon = $row_setting['website_favicon'];
-					$website_head_code = $row_setting['website_head_code'];
-					$ad_code_one = $row_setting['ad_code_one'];
-					$ad_code_two = $row_setting['ad_code_two'];
-					$ad_code_three = $row_setting['ad_code_three'];
-					
-					$footer_text = $row_setting['footer_text'];
-					$facebook = $row_setting['facebook'];
-					$twitter = $row_setting['twitter'];
-					$instagram = $row_setting['instagram'];
-					$pinterest = $row_setting['pinterest'];
+$run_setting = mysqli_query($conn, $select_setting);
+$row_setting = mysqli_fetch_array($run_setting);
+
+$setting_id = $row_setting['setting_id'];
+$website_title = $row_setting['website_title'];
+$website_url = $row_setting['website_url'];
+$website_logo = $row_setting['website_logo'];
+$website_favicon = $row_setting['website_favicon'];
+$website_head_code = $row_setting['website_head_code'];
+$ad_code_one = $row_setting['ad_code_one'];
+$ad_code_two = $row_setting['ad_code_two'];
+$ad_code_three = $row_setting['ad_code_three'];
+
+$footer_text = $row_setting['footer_text'];
+$facebook = $row_setting['facebook'];
+$twitter = $row_setting['twitter'];
+$instagram = $row_setting['instagram'];
+$pinterest = $row_setting['pinterest'];
 
 
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
