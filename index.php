@@ -570,66 +570,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="quote-form.php" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="size">Size:</label>
-                                <select class="form-control" id="size" name="size">
-                                    <option value="size">Size</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="size">Type:</label>
-                                <select class="form-control" id="type" name="type">
-                                    <option value="type">Type</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="size">Color:</label>
-                                <select class="form-control" id="color" name="color">
-                                    <option value="color">Color</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Customer Info Section -->
-                        <div class="section-title">Customer Information</div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="customer_name"> Name</label>
-                                <input type="text" class="form-control" id="customer_name" name="customer_name"
-                                    placeholder="Enter name">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Enter email">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="contact">Contact</label>
-                                <input type="tel" class="form-control" id="contact" name="contact"
-                                    placeholder="Enter phone number">
-                            </div>
-                        </div>
-
-                        <!-- File Upload -->
-                        <div class="file-upload">
-                            <input type="file" id="real-file" name="file" hidden>
-                            <button type="button" id="custom-button"><i class='bx bx-cloud-upload'></i> Choose
-                                File</button>
-                            <span id="file-name">No file chosen</span>
-                        </div>
-
-                        <!-- Comments Section -->
-                        <div class="form-group">
-                            <label for="comments">Message</label>
-                            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit"
-                            class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25">Submit</button>
-                    </form>
+                    <?php require_once('parts/quote.php'); ?>
                 </div>
 
                 <!-- Modal footer -->
