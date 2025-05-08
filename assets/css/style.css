@@ -389,7 +389,7 @@ nav .navbar .links li .sub-menu li{
 
  /* Ensure the right side image covers the full area */
  .right-section {
-  background-image: url('http://localhost/delipaper/admin/assets/img/1745690987_5126_Main Banner Pic (1000 x 1000 ).jpg'); /* Add your image URL here */
+  background-image: url('../../admin/assets/img/1745690987_5126_Main Banner Pic (1000 x 1000 ).jpg'); /* Add your image URL here */
   background-size: cover;
   background-position: center;
 }
@@ -823,6 +823,17 @@ nav .navbar .links li .sub-menu li{
 }
 
 
+/* Pages 
+---------------------*/
+.page-content-area p{
+  line-height: normal;
+}
+.page-content-area ul{
+  list-style:square;
+}
+.page-content-area ul li{
+  line-height: normal;
+}
 /* Blog 
 ---------------------*/
 .blog-grid {

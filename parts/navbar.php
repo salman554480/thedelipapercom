@@ -1,7 +1,7 @@
 <nav>
     <div class="navbar">
         <i class='bx bx-menu'></i>
-        <div class="logo"><a href="<?php echo $website_url;?>"><img src="assets/img/logo2.png" class="main-logo"
+        <div class="logo"><a href="<?php echo $website_url; ?>"><img src="assets/img/logo2.png" class="main-logo"
                     alt=""></a></div>
         <div class="nav-links">
             <div class="sidebar-logo">
@@ -9,7 +9,7 @@
                 <i class='bx bx-x'></i>
             </div>
             <ul class="links">
-                <li><a href="<?php echo $website_url;?>">HOME</a></li>
+                <li><a href="<?php echo $website_url; ?>">HOME</a></li>
                 <!-- <li>
                     <a href="#">HTML & CSS</a>
                     <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
@@ -44,9 +44,9 @@
                             $navbar_product_url = $row_navbar_product['product_url'];
 
                         ?>
-                        <li><a
-                                href="product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
-                        </li>
+                            <li><a
+                                    href="product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
+                            </li>
                         <?php } ?>
                     </ul>
                 </li>
@@ -62,9 +62,17 @@
                 <li><a href="page.php?page_url=contact-us">CONTACT US</a></li>
             </ul>
         </div>
-        <div class="search-box d-flex">
-            <!-- <a href="tel:447366426960"> +447366426960</a>
-            <a href="tel:447366426960" class="ml-3"> sales@delipaper.co.uk</a> -->
-        </div>
+        <a href="https://wa.me/+447366426960">
+            <div class="search-box d-flex">
+                <i data-toggle="tooltip" title="+447366426960" class='bx bxl-whatsapp js-arrow arrow '></i>
+            </div>
+        </a>
     </div>
 </nav>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

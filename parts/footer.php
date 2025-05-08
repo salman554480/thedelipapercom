@@ -18,10 +18,21 @@
             <div class="col-md-3 mb-4">
                 <h5>Popular Products</h5>
                 <ul class="list-unstyled footer-list">
-                    <li><a href="#">Product One</a></li>
-                    <li><a href="#">Product Two</a></li>
-                    <li><a href="#">Product Three</a></li>
-                    <li><a href="#">Product Four</a></li>
+                    <?php
+
+                    $select_footer_product = "SELECT * FROM product where product_status='active' ";
+                    $run_footer_product = mysqli_query($conn, $select_footer_product);
+                    while ($row_footer_product = mysqli_fetch_array($run_footer_product)) {
+
+                        $footer_product_id = $row_footer_product['product_id'];
+                        $footer_product_name = $row_footer_product['product_name'];
+                        $footer_product_url = $row_footer_product['product_url'];
+
+                    ?>
+                        <li><a
+                                href="product_details.php?product_url=<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
 
@@ -30,7 +41,7 @@
                 <h5>Useful Links</h5>
                 <ul class="list-unstyled footer-list">
                     <li><a href="page.php?page_url=about-us">About Us</a></li>
-                    <li><a href="page.php?page_url=faq">FAQs</a></li>
+                    <!-- <li><a href="page.php?page_url=faq">FAQs</a></li> -->
                     <li><a href="page.php?page_url=privacy-policy">Privacy Policy</a></li>
                     <li><a href="page.php?page_url=terms-and-conditions">Terms & Conditions</a></li>
                 </ul>
@@ -40,9 +51,10 @@
             <div class="col-md-3 mb-4">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled  contact-info">
-                    <li><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</li>
-                    <li><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></li>
-                    <li><i class='bx bx-envelope'></i><a href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk </a>
+                    <li class="mb-3"><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</li>
+                    <li class="mb-3"><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></li>
+                    <li class="mb-3"><i class='bx bx-envelope'></i><a
+                            href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk </a>
                     </li>
                 </ul>
                 <div class="social-icons mt-3">
@@ -95,18 +107,18 @@
 
 <!-- Google Translate script -->
 <script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en'
-    }, 'google_translate_element');
-}
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en'
+        }, 'google_translate_element');
+    }
 
-function translateLanguage(langPair) {
-    var select = document.querySelector("select.goog-te-combo");
-    if (!select) return;
-    select.value = langPair.split('|')[1];
-    select.dispatchEvent(new Event('change'));
-}
+    function translateLanguage(langPair) {
+        var select = document.querySelector("select.goog-te-combo");
+        if (!select) return;
+        select.value = langPair.split('|')[1];
+        select.dispatchEvent(new Event('change'));
+    }
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
@@ -114,7 +126,7 @@ function translateLanguage(langPair) {
 
 
 <!-- WhatsApp Sticky Button -->
-<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/+447366426960" class="whatsapp-float" target="_blank">
     <i class='bx bxl-whatsapp whatsapp-icon'></i>
 </a>
 
