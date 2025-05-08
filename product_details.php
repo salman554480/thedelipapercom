@@ -337,7 +337,7 @@ if (isset($_GET['product_url'])) {
                                     <div class="card faq-item">
                                         <div class="card-header" id="' . $headingId . '">
                                             <h5 class="mb-0">
-                                                <button class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
+                                                <button style="text-align:left;" class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
                                                     data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
                                                     ' . $question . '
                                                 </button>
@@ -389,46 +389,46 @@ if (isset($_GET['product_url'])) {
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            autoplay: true,
-            nav: false,
-            dots: false,
-            autoplayTimeout: 2500,
-            responsive: {
-                0: {
-                    items: 2
-                },
-                576: {
-                    items: 3
-                },
-                768: {
-                    items: 4
-                },
-                992: {
-                    items: 4
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                autoplay: true,
+                nav: false,
+                dots: false,
+                autoplayTimeout: 2500,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    576: {
+                        items: 3
+                    },
+                    768: {
+                        items: 4
+                    },
+                    992: {
+                        items: 4
+                    }
                 }
-            }
+            });
         });
-    });
     </script>
 
     <script>
-    const realFileBtn = document.getElementById("real-file");
-    const customBtn = document.getElementById("custom-button");
-    const fileName = document.getElementById("file-name");
+        const realFileBtn = document.getElementById("real-file");
+        const customBtn = document.getElementById("custom-button");
+        const fileName = document.getElementById("file-name");
 
-    customBtn.addEventListener("click", () => {
-        realFileBtn.click();
-    });
+        customBtn.addEventListener("click", () => {
+            realFileBtn.click();
+        });
 
-    realFileBtn.addEventListener("change", () => {
-        if (realFileBtn.files.length > 0) {
-            fileName.textContent = realFileBtn.files[0].name;
-        } else {
-            fileName.textContent = "No file chosen";
-        }
-    });
+        realFileBtn.addEventListener("change", () => {
+            if (realFileBtn.files.length > 0) {
+                fileName.textContent = realFileBtn.files[0].name;
+            } else {
+                fileName.textContent = "No file chosen";
+            }
+        });
     </script>
