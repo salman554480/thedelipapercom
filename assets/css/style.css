@@ -406,7 +406,11 @@ nav .navbar .links li .sub-menu li{
   color: #fff;
 
 }
+.section-meta-text{
+  line-height: 22px;
+  font-weight: 500;
 
+}
 .feature-box {
   display: flex;
   align-items: center;
@@ -692,6 +696,10 @@ nav .navbar .links li .sub-menu li{
   color: #fff;
   padding: 60px 0;
 }
+.footertext{
+  font-size: 13px;
+  line-height: 17px;
+}
 
 .footer a {
   color: #fff;
@@ -735,6 +743,15 @@ nav .navbar .links li .sub-menu li{
   background-color: #000;
 }
 
+.footer-payment-icons{
+  height: 60px;
+  width: 60px;
+}
+
+.footer-payment-icons2{
+  height: 40px;
+  width: 40px;
+}
 
 /* Product Page */
 
@@ -1007,4 +1024,9 @@ nav .navbar .links li .sub-menu li{
   text-align: center;
   font-size: 45px;
 }
+
+.footer-payment-icons{
+  height: 40px;
+  width: 40px;
+  }
 }

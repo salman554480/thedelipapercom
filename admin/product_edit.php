@@ -15,7 +15,7 @@ require_once('parts/top.php'); ?>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h4 class="mt-3">Add Product</h1>
+                    <h4 class="mt-3">Product Edit</h1>
                         <?php
                         if (isset($_GET['edit'])) {
                             $product_id =  $_GET['edit'];

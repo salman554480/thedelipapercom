@@ -68,6 +68,7 @@ require_once('parts/top.php'); ?>
                                         $product_name = $row['product_name'];
                                         $product_url = $row['product_url'];
                                         $product_status = $row['product_status'];
+                                        $product_thumbnail = $row['product_thumbnail'];
 
                                         if ($product_status == "active") {
                                             $color = "success";
@@ -77,6 +78,8 @@ require_once('parts/top.php'); ?>
 
                                     ?>
                                     <tr>
+                                        <td><img src="assets/img/<?php echo $product_thumbnail;?>" height="35px" alt="">
+                                        </td>
                                         <td><?php echo $product_id; ?></td>
                                         <td><?php echo $product_name; ?></td>
                                         <td><?php echo $product_url; ?></td>

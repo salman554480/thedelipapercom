@@ -8,14 +8,16 @@
                 <div class="footer-logo mb-3">
                     <img src="assets/img/logo2.png" height="40px" alt="">
                 </div>
-                <p>Welcome to Deli Paper, where creativity meets elegance. Our paper products are more than just
+                <p class="footertext"">Welcome to Deli Paper, where creativity meets elegance. Our
+                    paper products are more
+                    than just
                     functional; they show your company’s commitment to excellence. Deli Paper is made to be both stylish
                     and functional.From protecting your culinary pleasures to enhancing your company’s image, our
                     solutions seamlessly combine durability and design.</p>
             </div>
 
             <!-- Popular Products -->
-            <div class="col-md-3 mb-4">
+            <div class=" col-md-3 mb-4">
                 <h5>Popular Products</h5>
                 <ul class="list-unstyled footer-list">
                     <?php
@@ -51,13 +53,13 @@
             <div class="col-md-3 mb-4">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled  contact-info">
-                    <li class="mb-3"><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</li>
-                    <li class="mb-3"><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></li>
                     <li class="mb-3"><i class='bx bx-envelope'></i><a
                             href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk </a>
                     </li>
+                    <li class="mb-3"><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></li>
+                    <li class="mb-3"><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</li>
                 </ul>
-                <div class="social-icons mt-3">
+                <div class="social-icons mt-4">
                     <a href="https://www.facebook.com/delipaperuk/"><i class='bx bxl-facebook'></i></a>
                     <a href="https://uk.pinterest.com/delipaperuk/"><i class='bx bxl-pinterest'></i></a>
                     <a href="https://www.facebook.com/delipaperuk/"><i class='bx bxl-instagram'></i></a>
@@ -65,6 +67,33 @@
                 </div>
             </div>
 
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-5">
+                <img class="footer-payment-icons " src="https://img.icons8.com/color/60/mastercard.png"
+                    title="mastercard" alt="mastercard" />
+                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/color/60/google-pay.png"
+                    alt="google-pay" title="google-pay" />
+                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/color/60/visa.png" title="visa"
+                    alt="visa" />
+                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/nolan/60/apple-pay.png"
+                    alt="apple-pay" />
+
+                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/fluency/60/bank-building.png"
+                    alt="bank-building" />
+            </div>
+            <div class="col-md-4">
+                <h5 class="font-weight-bold">Free Shipping</h5>
+                <img class="footer-payment-icons2 " src="https://img.icons8.com/color/96/great-britain.png"
+                    alt="great-britain" />
+                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/fluency/48/flag-of-europe.png"
+                    alt="flag-of-europe" />
+                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/color/96/usa.png" alt="usa" />
+                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/color/96/australia-flag--v1.png"
+                    alt="australia-flag--v1" />
+                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/color/96/canada.png" alt="canada" />
+
+            </div>
         </div>
     </div>
 </footer>

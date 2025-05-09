@@ -4,7 +4,7 @@ $select_meta = "SELECT * FROM page where page_url='index'";
 $run_meta =  mysqli_query($conn, $select_meta);
 $row_meta = mysqli_fetch_array($run_meta);
 $meta_title =  $row_meta['meta_title'];
-$meta_title =  $row_meta['meta_description'];
+$meta_description =  $row_meta['meta_description'];
 $meta_keywords =  $row_meta['meta_keywords'];
 ?>
 <?php require_once('parts/top.php'); ?>
@@ -136,7 +136,8 @@ $meta_keywords =  $row_meta['meta_keywords'];
         <section class="steps-section text-center">
             <div class="container">
                 <h2>Get Your Own Custom Greaseproof Deli Paper in 3 Simple Steps.</h2>
-                <p class="lead my-4">Discover the ultimate in branding with our Eco-Friendly Custom Greaseproof Deli
+                <p class="my-4 section-meta-text">Discover the ultimate in branding with our Eco-Friendly Custom
+                    Greaseproof Deli
                     Paper.
                     Tailor made to fit your needs, our paper is not only versatile in size but also champions
                     sustainability with recyclable and plant based materials. Fast turnaround, free artwork, and a
@@ -235,8 +236,8 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="admin/assets/img/1745740714_9661_Premium Branded Greasproof Paper (800 x 600).jpg
-" alt="Section Image" class="section-image">
+                        <img src="admin/assets/img/1746808393_1591_premium_branded_greaseproof_paper_(800_x_600).jpg"
+                            alt="Section Image" class="section-image">
                     </div>
 
                     <!-- Text Content Column -->
@@ -315,8 +316,8 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="admin/assets/img/1745740714_9661_Premium Branded Greasproof Paper (800 x 600).jpg
-" alt="Section Image" class="section-image">
+                        <img src="admin/assets/img/1746808393_9059_premium_branded_greaseproof_paper_b_(800_x_600).jpg"
+                            alt="Section Image" class="section-image">
                     </div>
 
                 </div>
@@ -457,20 +458,30 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
 
         <section class="carousel-section text-center">
-            <div class="container">
+            <div class="container-fluid">
                 <h2 class="mb-3 section-heading">Our Trusted Partners</h2>
                 <p class="mb-5 product-intro text-center">We proudly collaborate with industry leaders and innovators
                     around the world.</p>
 
                 <div class="owl-carousel owl-theme">
-                    <div><img src="https://dummyimage.com/300x300/a7a7a7/000000" class="carousel-image" alt="Logo 1">
+                    <div><img src="admin/assets/img/1746808891_4133_wimpy-logo.png" class="carousel-image" alt="Logo 1">
                     </div>
-                    <div><img src="https://picsum.photos/300/300?random=2" class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="https://picsum.photos/300/300?random=3" class="carousel-image" alt="Logo 3"></div>
-                    <div><img src="https://picsum.photos/300/300?random=4" class="carousel-image" alt="Logo 4"></div>
-                    <div><img src="https://picsum.photos/300/300?random=5" class="carousel-image" alt="Logo 5"></div>
-                    <div><img src="https://picsum.photos/300/300?random=6" class="carousel-image" alt="Logo 6"></div>
-                    <div><img src="https://picsum.photos/300/300?random=7" class="carousel-image" alt="Logo 7"></div>
+                    <div><img src="admin/assets/img/1746808891_7397_408-0-0-0-10000-10000-140.png"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_6564_406-0-0-0-10000-10000-140.png"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_9408_404-0-0-0-10000-10000-140.png"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_5620_403-0-0-0-10000-10000-140.png"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_8999_395-0-0-0-10000-10000-140.jpg"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_1499_401-0-0-0-10000-10000-140.png"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_8675_398-0-0-0-10000-10000-140.png"
+                            class="carousel-image" alt="Logo 2"></div>
+                    <div><img src="admin/assets/img/1746808891_3745_390-0-0-0-10000-10000-140.jpg"
+                            class="carousel-image" alt="Logo 2"></div>
                 </div>
             </div>
         </section>
@@ -593,7 +604,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
     $(document).ready(function() {
         $('.owl-carousel').owlCarousel({
             loop: true,
-            margin: 20,
+            margin: 90,
             autoplay: true,
             nav: false,
             autoplayTimeout: 2500,
@@ -608,7 +619,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
                     items: 4
                 },
                 992: {
-                    items: 5
+                    items: 8
                 }
             }
         });

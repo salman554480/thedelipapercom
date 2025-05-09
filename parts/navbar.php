@@ -44,9 +44,9 @@
                             $navbar_product_url = $row_navbar_product['product_url'];
 
                         ?>
-                            <li><a
-                                    href="product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
-                            </li>
+                        <li><a
+                                href="product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
+                        </li>
                         <?php } ?>
                     </ul>
                 </li>
@@ -62,17 +62,17 @@
                 <li><a href="page.php?page_url=contact-us">CONTACT US</a></li>
             </ul>
         </div>
-        <a href="https://wa.me/+447366426960">
+        <!-- <a href="https://wa.me/+447366426960">
             <div class="search-box d-flex">
                 <i data-toggle="tooltip" title="+447366426960" class='bx bxl-whatsapp js-arrow arrow '></i>
             </div>
-        </a>
+        </a> -->
     </div>
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
 </script>

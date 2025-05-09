@@ -124,131 +124,130 @@ if (isset($_GET['product_url'])) {
             </div>
         </section> -->
 
-        <section class="">
-            <div class="container-fluid">
-                <div class="row no-gutters align-items-center">
 
-                    <!-- Image Column -->
-                    <div class="col-md-6">
-                        <img src="admin/assets/img/<?php echo $product_image1; ?>" alt="Section Image"
-                            class="section-image">
-                    </div>
+        <div class="container-fluid">
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" id="productTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#description" role="tab"
+                        aria-controls="description" aria-selected="true">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="spec-tab" data-toggle="tab" href="#specification" role="tab"
+                        aria-controls="specification" aria-selected="false">Specification</a>
+                </li>
+            </ul>
 
-                    <!-- Text Content Column -->
-                    <div class="col-md-6 p-3">
-                        <div class="section-content">
-                            <!-- <h2 class="mb-3 section-heading ">wide range of premium branded greaseproof paper</h2>
-                            <h5 class=" mb-3 section-subheading">promote your brand and improve your food presentation
-                            </h5> -->
-                            <div class="mb-4 product-intro">
-                                <?php echo $product_content; ?>
+            <!-- Tab panes -->
+            <div class="tab-content border border-0 p-3" id="productTabContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="desc-tab">
+                    <div class="row no-gutters align-items-center">
+
+                        <!-- Image Column -->
+                        <div class="col-md-6">
+                            <img src="admin/assets/img/<?php echo $product_image1; ?>" alt="Section Image"
+                                class="section-image">
+                        </div>
+
+                        <!-- Text Content Column -->
+                        <div class="col-md-6 p-3">
+                            <div class="section-content">
+                                <!-- <h2 class="mb-3 section-heading ">wide range of premium branded greaseproof paper</h2>
+        <h5 class=" mb-3 section-subheading">promote your brand and improve your food presentation
+        </h5> -->
+                                <div class="mb-4 product-intro">
+                                    <?php echo $product_content; ?>
+                                </div>
+
                             </div>
-
                         </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="spec-tab">
+                    <!-- <h2 class="mb-3 section-heading">Specifications</h2> -->
+                    <div class="container">
+                        <table class="table table-bordered table-striped  small">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p><b>Paper Type</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">White Paper</span></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Product Name</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Wax Paper</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Coating</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Uncoated</span></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Compatible Printing</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Offset Printing</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Feature</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Greaseproof</span></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Material</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Plant Based Material</span></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Pulp Style</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Recycled</span></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Color print</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">Custom Printing. 1 , 2 , 4 Color</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Safety</b></p>
+                                    </td>
+                                    <td>
+                                        <p><span style="font-weight: 400;">non-hazardous</span></p>
+                                    </td>
+                                    <td>
+                                        <p><b>Usage</b></p>
+                                    </td>
+                                    <td>
+                                        <p>Food wrapping, Non-stick surface, Crafts or DIY projects</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="">
-            <div class="container-fluid">
-                <div class="row no-gutters align-items-center">
-
-
-
-                    <!-- Text Content Column -->
-                    <div class="col-md-6 p-3">
-                        <div class="section-content">
-
-                            <h2 class="mb-3 section-heading">Specifications</h2>
-                            <table class="table table-bordered table-striped  small">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <p><b>Paper Type</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">White Paper</span></p>
-                                        </td>
-                                        <td>
-                                            <p><b>Product Name</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Wax Paper</span></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p><b>Coating</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Uncoated</span></p>
-                                        </td>
-                                        <td>
-                                            <p><b>Compatible Printing</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Offset Printing</span></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p><b>Feature</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Greaseproof</span></p>
-                                        </td>
-                                        <td>
-                                            <p><b>Material</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Plant Based Material</span></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p><b>Pulp Style</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Recycled</span></p>
-                                        </td>
-                                        <td>
-                                            <p><b>Color print</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">Custom Printing. 1 , 2 , 4 Color</span>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p><b>Safety</b></p>
-                                        </td>
-                                        <td>
-                                            <p><span style="font-weight: 400;">non-hazardous</span></p>
-                                        </td>
-                                        <td>
-                                            <p><b>Usage</b></p>
-                                        </td>
-                                        <td>
-                                            <p>Food wrapping, Non-stick surface, Crafts or DIY projects</p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Image Column -->
-                    <div class="col-md-6">
-                        <img src="admin/assets/img/<?php echo $product_image2; ?>" alt="Section Image"
-                            class="section-image">
-                    </div>
-
-                </div>
-            </div>
-        </section>
 
 
         <section class="steps-section text-center">
@@ -296,72 +295,84 @@ if (isset($_GET['product_url'])) {
             <div class="row">
 
                 <!-- Left Column: Heading and CTA -->
-                <div class="col-md-5 mb-4 mb-md-0">
-                    <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt="">
+                <div class="col-md-12  mb-4 mb-md-0">
+                    <!-- <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt=""> -->
                     <div class="faq-left">
-                        <h2 class="mb-3 section-heading">Frequently Asked Questions</h2>
-                        <p class="mb-4 product-intro">Have a question? We've got answers to some of the most common
+                        <h2 class="mb-3 section-heading text-center">Frequently Asked Questions</h2>
+                        <p class="mb-4 product-intro text-center">Have a question? We've got answers to some of the most
+                            common
                             questions below.</p>
-                        <a href="#"
-                            class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Contact
-                            Support</a>
+
                     </div>
                 </div>
 
                 <!-- Right Column: FAQs -->
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <div id="faqAccordion">
 
                         <?php
+// Fetch FAQs for the product
+$query_faq = "SELECT * FROM faq WHERE product_id = $product_id";
+$result_faq = mysqli_query($conn, $query_faq);
 
-                        // Fetch FAQs for the product
-                        $query_faq = "SELECT * FROM faq WHERE product_id = $product_id";
-                        $result_faq = mysqli_query($conn, $query_faq);
+if (mysqli_num_rows($result_faq) > 0) {
+    $faq_count = 0;
+    echo '<div class="accordion">';
 
-                        // Start FAQ accordion
-                        echo '<div class="accordion" id="faqAccordion">';
+    while ($row_faq = mysqli_fetch_assoc($result_faq)) {
+        $question = htmlspecialchars($row_faq['faq_question']);
+        $answer = htmlspecialchars($row_faq['faq_answer']);
+        $collapseId = "faqCollapse" . $faq_count;
+        $headingId = "faqHeading" . $faq_count;
+        $showClass = '';
+        $collapsedClass = 'collapsed';
+        $ariaExpanded = 'false';
 
-                        $faq_count = 1;
+        // Open new row every 2 FAQs
+        if ($faq_count % 2 == 0) {
+            echo '<div class="row">';
+        }
 
-                        if (mysqli_num_rows($result_faq) > 0) {
-                            while ($row_faq = mysqli_fetch_assoc($result_faq)) {
-                                $question = htmlspecialchars($row_faq['faq_question']);
-                                $answer = htmlspecialchars($row_faq['faq_answer']);
-                                $collapseId = "faqCollapse" . $faq_count;
-                                $headingId = "faqHeading" . $faq_count;
-                                $showClass = ($faq_count == 1) ? 'show' : '';
-                                $collapsedClass = ($faq_count == 1) ? '' : 'collapsed';
-                                $ariaExpanded = ($faq_count == 1) ? 'true' : 'false';
-
-                                echo '
-                                    <div class="card faq-item">
-                                        <div class="card-header" id="' . $headingId . '">
-                                            <h5 class="mb-0">
-                                                <button style="text-align:left;" class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
-                                                    data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
-                                                    ' . $question . '
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="' . $collapseId . '" class="collapse ' . $showClass . '" aria-labelledby="' . $headingId . '"
-                                            data-parent="#faqAccordion">
-                                            <div class="card-body">
-                                                ' . $answer . '
-                                            </div>
-                                        </div>
-                                    </div>';
-                                $faq_count++;
-                            }
-                        } else {
-                            echo "<p>No FAQs available for this product.</p>";
-                        }
-
-                        // End FAQ accordion
-                        echo '</div>';
-
-                        ?>
-
+        echo '
+            <div class="col-md-6 mb-3">
+                <div class="card faq-item">
+                    <div class="card-header" id="' . $headingId . '">
+                        <h5 class="mb-0">
+                            <button style="text-align:left;" class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
+                                data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
+                                ' . $question . '
+                            </button>
+                        </h5>
                     </div>
+                    <div id="' . $collapseId . '" class="collapse ' . $showClass . '" aria-labelledby="' . $headingId . '"
+                        data-parent="#faqAccordion">
+                        <div class="card-body">
+                            ' . $answer . '
+                        </div>
+                    </div>
+                </div>
+            </div>';
+
+        // Close row every 2 FAQs or at the end
+        if ($faq_count % 2 == 1) {
+            echo '</div>'; // close row
+        }
+
+        $faq_count++;
+    }
+
+    // Close last row if it wasn't closed
+    if ($faq_count % 2 != 0) {
+        echo '</div>';
+    }
+
+    echo '</div>'; // close accordion
+} else {
+    echo "<p>No FAQs available for this product.</p>";
+}
+?>
+                    </div>
+
 
                 </div>
             </div>
