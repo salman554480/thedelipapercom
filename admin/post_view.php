@@ -48,6 +48,7 @@ require_once('parts/top.php'); ?>
                             <table id="datatablesSimple" class="table table-hover table-sm table-responsive">
                                 <thead>
                                     <tr>
+                                        <th>Image</th>
                                         <th>Id</th>
                                         <th>Title</th>
                                         <th>Status</th>
@@ -66,6 +67,7 @@ require_once('parts/top.php'); ?>
                                         $post_id = $row['post_id'];
                                         $post_title = $row['post_title'];
                                         $post_status = $row['post_status'];
+                                        $post_thumbnail = $row['post_thumbnail'];
 
                                         if ($post_status == "publish") {
                                             $color = "success";
@@ -75,6 +77,8 @@ require_once('parts/top.php'); ?>
 
                                     ?>
                                     <tr>
+                                        <td><img src="assets/img/<?php echo $post_thumbnail;?>" height="35px" alt="">
+                                        </td>
                                         <td><?php echo $post_id; ?></td>
                                         <td><?php echo $post_title; ?></td>
                                         <td><span

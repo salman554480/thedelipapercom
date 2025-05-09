@@ -29,9 +29,9 @@
                         $footer_product_url = $row_footer_product['product_url'];
 
                     ?>
-                        <li><a
-                                href="product_details.php?product_url=<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
-                        </li>
+                    <li><a
+                            href="product_details.php?product_url=<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
+                    </li>
                     <?php } ?>
                 </ul>
             </div>
@@ -58,10 +58,10 @@
                     </li>
                 </ul>
                 <div class="social-icons mt-3">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.facebook.com/delipaperuk/"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://uk.pinterest.com/delipaperuk/"><i class='bx bxl-pinterest'></i></a>
+                    <a href="https://www.facebook.com/delipaperuk/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.linkedin.com/company/deli-paper-uk/"><i class='bx bxl-linkedin'></i></a>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
 
 <!-- Copyright -->
 <div class="copyrightarea text-white text-center py-3">
-    &copy; 2025 MyBrand. All rights reserved.
+    &copy; 2025 Delipaper. All rights reserved.
 </div>
 
 
@@ -107,18 +107,18 @@
 
 <!-- Google Translate script -->
 <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en'
-        }, 'google_translate_element');
-    }
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
+}
 
-    function translateLanguage(langPair) {
-        var select = document.querySelector("select.goog-te-combo");
-        if (!select) return;
-        select.value = langPair.split('|')[1];
-        select.dispatchEvent(new Event('change'));
-    }
+function translateLanguage(langPair) {
+    var select = document.querySelector("select.goog-te-combo");
+    if (!select) return;
+    select.value = langPair.split('|')[1];
+    select.dispatchEvent(new Event('change'));
+}
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
