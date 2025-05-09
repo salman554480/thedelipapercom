@@ -370,13 +370,25 @@ if (isset($_GET['product_url'])) {
         <div class="w-100">
 
             <div class="owl-carousel owl-theme">
-                <div><img src="https://dummyimage.com/600x600/a7a7a7/000000" class="carousel-image2" alt="Logo 1"></div>
-                <div><img src="https://picsum.photos/600/600?random=2" class="carousel-image2" alt="Logo 2"></div>
-                <div><img src="https://picsum.photos/600/600?random=3" class="carousel-image2" alt="Logo 3"></div>
-                <div><img src="https://picsum.photos/600/600?random=4" class="carousel-image2" alt="Logo 4"></div>
-                <div><img src="https://picsum.photos/600/600?random=5" class="carousel-image2" alt="Logo 5"></div>
-                <div><img src="https://picsum.photos/600/600?random=6" class="carousel-image2" alt="Logo 6"></div>
-                <div><img src="https://picsum.photos/600/600?random=7" class="carousel-image2" alt="Logo 7"></div>
+                <?php
+
+                    $select_related_product = "SELECT * FROM product where product_status='active' ";
+                    $run_related_product = mysqli_query($conn, $select_related_product);
+                    while ($row_related_product = mysqli_fetch_array($run_related_product)) {
+
+                        $related_product_id = $row_related_product['product_id'];
+                        $related_product_name = $row_related_product['product_name'];
+                        $related_product_url = $row_related_product['product_url'];
+                        $related_product_thumbnail = $row_related_product['product_thumbnail'];
+
+                    ?>
+                <div>
+                    <a href="product_details.php?product_url=<?php echo $related_product_url?>">
+                        <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>" class="carousel-image2"
+                            alt="<?php echo $related_product_name;?>">
+                    </a>
+                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -389,46 +401,46 @@ if (isset($_GET['product_url'])) {
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 0,
-                autoplay: true,
-                nav: false,
-                dots: false,
-                autoplayTimeout: 2500,
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    576: {
-                        items: 3
-                    },
-                    768: {
-                        items: 4
-                    },
-                    992: {
-                        items: 4
-                    }
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            nav: false,
+            dots: false,
+            autoplayTimeout: 2500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                992: {
+                    items: 4
                 }
-            });
+            }
         });
+    });
     </script>
 
     <script>
-        const realFileBtn = document.getElementById("real-file");
-        const customBtn = document.getElementById("custom-button");
-        const fileName = document.getElementById("file-name");
+    const realFileBtn = document.getElementById("real-file");
+    const customBtn = document.getElementById("custom-button");
+    const fileName = document.getElementById("file-name");
 
-        customBtn.addEventListener("click", () => {
-            realFileBtn.click();
-        });
+    customBtn.addEventListener("click", () => {
+        realFileBtn.click();
+    });
 
-        realFileBtn.addEventListener("change", () => {
-            if (realFileBtn.files.length > 0) {
-                fileName.textContent = realFileBtn.files[0].name;
-            } else {
-                fileName.textContent = "No file chosen";
-            }
-        });
+    realFileBtn.addEventListener("change", () => {
+        if (realFileBtn.files.length > 0) {
+            fileName.textContent = realFileBtn.files[0].name;
+        } else {
+            fileName.textContent = "No file chosen";
+        }
+    });
     </script>
