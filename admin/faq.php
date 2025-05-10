@@ -96,10 +96,10 @@ require_once('parts/top.php'); ?>
                             <select name="product_id" class="form-control" required>
                                 <option value="0">Home</option>
                                 <?php while ($p = mysqli_fetch_assoc($products)): ?>
-                                    <option value="<?= $p['product_id'] ?>"
-                                        <?= $edit_data['product_id'] == $p['product_id'] ? 'selected' : '' ?>>
-                                        <?= htmlspecialchars($p['product_name']) ?>
-                                    </option>
+                                <option value="<?= $p['product_id'] ?>"
+                                    <?= $edit_data['product_id'] == $p['product_id'] ? 'selected' : '' ?>>
+                                    <?= htmlspecialchars($p['product_name']) ?>
+                                </option>
                                 <?php endwhile; ?>
                             </select>
                         </div>
@@ -108,14 +108,14 @@ require_once('parts/top.php'); ?>
                             <?= $edit ? 'Update' : 'Add' ?>
                         </button>
                         <?php if ($edit): ?>
-                            <a href="faq.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="faq.php" class="btn btn-secondary ml-2">Cancel</a>
                         <?php endif; ?>
                     </form>
 
 
 
                     <!-- List -->
-                    <table class="table table-bordered my-3">
+                    <table class="table table-bordered table-sm my-3" style="font-size: 13px;">
                         <thead>
                             <tr>
                                 <th>Question</th>
@@ -126,16 +126,16 @@ require_once('parts/top.php'); ?>
                         </thead>
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($faqs)): ?>
-                                <tr>
-                                    <td><?= htmlspecialchars($row['faq_question']) ?></td>
-                                    <td><?= htmlspecialchars($row['faq_answer']) ?></td>
-                                    <td><?= htmlspecialchars($row['product_name']) ?></td>
-                                    <td>
-                                        <a href="faq.php?edit=<?= $row['faq_id'] ?>" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="faq.php?delete=<?= $row['faq_id'] ?>" class="btn btn-sm btn-danger"
-                                            onclick="return confirm('Delete this FAQ?')">Delete</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td><?= htmlspecialchars($row['faq_question']) ?></td>
+                                <td><?= htmlspecialchars($row['faq_answer']) ?></td>
+                                <td><?= htmlspecialchars($row['product_name']) ?></td>
+                                <td>
+                                    <a href="faq.php?edit=<?= $row['faq_id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="faq.php?delete=<?= $row['faq_id'] ?>" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Delete this FAQ?')">Delete</a>
+                                </td>
+                            </tr>
                             <?php endwhile; ?>
                         </tbody>
                     </table>
