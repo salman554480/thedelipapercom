@@ -167,7 +167,7 @@ if (isset($_GET['product_url'])) {
                 <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="spec-tab">
                     <!-- <h2 class="mb-3 section-heading">Specifications</h2> -->
                     <div class="container">
-                        <table class="table table-bordered table-striped  small">
+                        <table class="table table-bordered table-striped  table-responsive">
                             <tbody>
                                 <tr>
                                     <td>
@@ -311,29 +311,29 @@ if (isset($_GET['product_url'])) {
                     <div id="faqAccordion">
 
                         <?php
-// Fetch FAQs for the product
-$query_faq = "SELECT * FROM faq WHERE product_id = $product_id";
-$result_faq = mysqli_query($conn, $query_faq);
+                        // Fetch FAQs for the product
+                        $query_faq = "SELECT * FROM faq WHERE product_id = $product_id";
+                        $result_faq = mysqli_query($conn, $query_faq);
 
-if (mysqli_num_rows($result_faq) > 0) {
-    $faq_count = 0;
-    echo '<div class="accordion">';
+                        if (mysqli_num_rows($result_faq) > 0) {
+                            $faq_count = 0;
+                            echo '<div class="accordion">';
 
-    while ($row_faq = mysqli_fetch_assoc($result_faq)) {
-        $question = htmlspecialchars($row_faq['faq_question']);
-        $answer = htmlspecialchars($row_faq['faq_answer']);
-        $collapseId = "faqCollapse" . $faq_count;
-        $headingId = "faqHeading" . $faq_count;
-        $showClass = '';
-        $collapsedClass = 'collapsed';
-        $ariaExpanded = 'false';
+                            while ($row_faq = mysqli_fetch_assoc($result_faq)) {
+                                $question = htmlspecialchars($row_faq['faq_question']);
+                                $answer = htmlspecialchars($row_faq['faq_answer']);
+                                $collapseId = "faqCollapse" . $faq_count;
+                                $headingId = "faqHeading" . $faq_count;
+                                $showClass = '';
+                                $collapsedClass = 'collapsed';
+                                $ariaExpanded = 'false';
 
-        // Open new row every 2 FAQs
-        if ($faq_count % 2 == 0) {
-            echo '<div class="row">';
-        }
+                                // Open new row every 2 FAQs
+                                if ($faq_count % 2 == 0) {
+                                    echo '<div class="row">';
+                                }
 
-        echo '
+                                echo '
             <div class="col-md-6 mb-3">
                 <div class="card faq-item">
                     <div class="card-header" id="' . $headingId . '">
@@ -353,24 +353,24 @@ if (mysqli_num_rows($result_faq) > 0) {
                 </div>
             </div>';
 
-        // Close row every 2 FAQs or at the end
-        if ($faq_count % 2 == 1) {
-            echo '</div>'; // close row
-        }
+                                // Close row every 2 FAQs or at the end
+                                if ($faq_count % 2 == 1) {
+                                    echo '</div>'; // close row
+                                }
 
-        $faq_count++;
-    }
+                                $faq_count++;
+                            }
 
-    // Close last row if it wasn't closed
-    if ($faq_count % 2 != 0) {
-        echo '</div>';
-    }
+                            // Close last row if it wasn't closed
+                            if ($faq_count % 2 != 0) {
+                                echo '</div>';
+                            }
 
-    echo '</div>'; // close accordion
-} else {
-    echo "<p>No FAQs available for this product.</p>";
-}
-?>
+                            echo '</div>'; // close accordion
+                        } else {
+                            echo "<p>No FAQs available for this product.</p>";
+                        }
+                        ?>
                     </div>
 
 
@@ -383,20 +383,20 @@ if (mysqli_num_rows($result_faq) > 0) {
             <div class="owl-carousel owl-theme">
                 <?php
 
-                    $select_related_product = "SELECT * FROM product where product_status='active' ";
-                    $run_related_product = mysqli_query($conn, $select_related_product);
-                    while ($row_related_product = mysqli_fetch_array($run_related_product)) {
+                $select_related_product = "SELECT * FROM product where product_status='active' ";
+                $run_related_product = mysqli_query($conn, $select_related_product);
+                while ($row_related_product = mysqli_fetch_array($run_related_product)) {
 
-                        $related_product_id = $row_related_product['product_id'];
-                        $related_product_name = $row_related_product['product_name'];
-                        $related_product_url = $row_related_product['product_url'];
-                        $related_product_thumbnail = $row_related_product['product_thumbnail'];
+                    $related_product_id = $row_related_product['product_id'];
+                    $related_product_name = $row_related_product['product_name'];
+                    $related_product_url = $row_related_product['product_url'];
+                    $related_product_thumbnail = $row_related_product['product_thumbnail'];
 
-                    ?>
+                ?>
                 <div>
-                    <a href="product_details.php?product_url=<?php echo $related_product_url?>">
+                    <a href="product_details.php?product_url=<?php echo $related_product_url ?>">
                         <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>" class="carousel-image2"
-                            alt="<?php echo $related_product_name;?>">
+                            alt="<?php echo $related_product_name; ?>">
                     </a>
                 </div>
                 <?php } ?>
