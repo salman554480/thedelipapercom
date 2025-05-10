@@ -40,6 +40,12 @@ color: #b1d4e0 ;
 *{
   font-family: "Montserrat", sans-serif;
 }
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -776,6 +782,7 @@ nav .navbar .links li .sub-menu li{
 }
 
 /* Product Page */
+
 
 .product-main-image {
   border-radius: 12px; /* Adjust radius as needed */

@@ -180,7 +180,7 @@ if (isset($_GET['product_url'])) {
                                         <p><b>Product Name</b></p>
                                     </td>
                                     <td>
-                                        <p><span style="font-weight: 400;">Wax Paper</span></p>
+                                        <p><span style="font-weight: 400;"><?php echo $product_name; ?></span></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -377,7 +377,7 @@ if (isset($_GET['product_url'])) {
                 </div>
             </div>
     </section>
-    <section class="">
+    <section class="py-5">
         <div class="w-100">
 
             <div class="owl-carousel owl-theme">
@@ -393,12 +393,14 @@ if (isset($_GET['product_url'])) {
                     $related_product_thumbnail = $row_related_product['product_thumbnail'];
 
                 ?>
-                <div>
-                    <a href="product_details.php?product_url=<?php echo $related_product_url ?>">
+                <a href="product_details.php?product_url=<?php echo $related_product_url ?>">
+                    <div class="border">
                         <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>" class="carousel-image2"
                             alt="<?php echo $related_product_name; ?>">
-                    </a>
-                </div>
+                        <h5 class="text-center my-2 font-weight-bold secondary-color">
+                            <?php echo $related_product_name; ?></h5>
+                    </div>
+                </a>
                 <?php } ?>
             </div>
         </div>
