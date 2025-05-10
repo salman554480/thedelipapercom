@@ -61,11 +61,11 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/bootstrap/bootstrap.min.css">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/css/style.css">
     <!-- Fonf Awesome -->
-    <script src="assets/js/cbffea6533.js" crossorigin="anonymous"></script>
+    <script src="<?php echo $website_url; ?>/assets/js/cbffea6533.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Owl Carousel CSS -->

@@ -6,7 +6,7 @@
             <!-- Logo & About -->
             <div class="col-md-3 mb-4">
                 <div class="footer-logo mb-3">
-                    <img src="assets/img/logo2.png" height="40px" alt="">
+                    <img src="<?php echo $website_url; ?>/assets/img/logo2.png" height="40px" alt="">
                 </div>
                 <p class="footertext"">Welcome to Deli Paper, where creativity meets elegance. Our
                     paper products are more
@@ -32,7 +32,7 @@
 
                     ?>
                     <li><a
-                            href="product_details.php?product_url=<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
+                            href="<?php echo $website_url; ?>/product_details.php?product_url=<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
                     </li>
                     <?php } ?>
                 </ul>
@@ -42,10 +42,11 @@
             <div class="col-md-3 mb-4">
                 <h5>Useful Links</h5>
                 <ul class="list-unstyled footer-list">
-                    <li><a href="page.php?page_url=about-us">About Us</a></li>
+                    <li><a href="<?php echo $website_url; ?>/page.php?page_url=about-us">About Us</a></li>
                     <!-- <li><a href="page.php?page_url=faq">FAQs</a></li> -->
-                    <li><a href="page.php?page_url=privacy-policy">Privacy Policy</a></li>
-                    <li><a href="page.php?page_url=terms-and-conditions">Terms & Conditions</a></li>
+                    <li><a href="<?php echo $website_url; ?>/page.php?page_url=privacy-policy">Privacy Policy</a></li>
+                    <li><a href="<?php echo $website_url; ?>/page.php?page_url=terms-and-conditions">Terms &
+                            Conditions</a></li>
                 </ul>
             </div>
 
@@ -173,11 +174,11 @@ function translateLanguage(langPair, langCode) {
     <i class='bx bxl-whatsapp whatsapp-icon'></i>
 </a>
 
-<script src="assets/bootstrap/jquery-3.7.1.min.js"></script>
-<script src="assets/bootstrap/bootstrap.min.js"></script>
-<script src="assets/bootstrap/popper.min.js"></script>
+<script src="<?php echo $website_url; ?>/assets/bootstrap/jquery-3.7.1.min.js"></script>
+<script src="<?php echo $website_url; ?>/assets/bootstrap/bootstrap.min.js"></script>
+<script src="<?php echo $website_url; ?>/assets/bootstrap/popper.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-<script src="assets/js/script.js"></script>
+<script src="<?php echo $website_url; ?>/assets/js/script.js"></script>
 </body>
 </body>
 

@@ -5,7 +5,7 @@
                     alt=""></a></div>
         <div class="nav-links">
             <div class="sidebar-logo">
-                <span class="logo-name">Ereint</span>
+                <span class="logo-name"><?php echo $website_title; ?></span>
                 <i class='bx bx-x'></i>
             </div>
             <ul class="links">
@@ -45,7 +45,7 @@
 
                         ?>
                         <li><a
-                                href="product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
+                                href="<?php echo $website_url; ?>/product_details.php?product_url=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
                         </li>
                         <?php } ?>
                     </ul>
@@ -58,8 +58,8 @@
                         <li><a href="terms-and-condition.php">Terms & Conditions</a></li>
                     </ul>
                 </li> -->
-                <li><a href="page.php?page_url=blog">Blog</a></li>
-                <li><a href="page.php?page_url=contact-us">CONTACT US</a></li>
+                <li><a href="<?php echo $website_url; ?>/page.php?page_url=blog">Blog</a></li>
+                <li><a href="<?php echo $website_url; ?>/page.php?page_url=contact-us">CONTACT US</a></li>
             </ul>
         </div>
         <!-- <a href="https://wa.me/+447366426960">

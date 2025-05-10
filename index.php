@@ -72,14 +72,14 @@ $meta_keywords =  $row_meta['meta_keywords'];
         <div class="center-wrapper py-4">
             <div class="ti-widget-container">
                 <div class="ti-small-logo">
-                    <img src="assets/img/google.svg" alt="Google">
+                    <img src="<?php echo $website_url; ?>/assets/img/google.svg" alt="Google">
                 </div>
                 <div class="ti-stars d-flex align-items-center">
-                    <img src="assets/img/star.svg" alt="Star">
-                    <img src="assets/img/star.svg" alt="Star">
-                    <img src="assets/img/star.svg" alt="Star">
-                    <img src="assets/img/star.svg" alt="Star">
-                    <img src="assets/img/star.svg" alt="Star">
+                    <img src="<?php echo $website_url; ?>/assets/img/star.svg" alt="Star">
+                    <img src="<?php echo $website_url; ?>/assets/img/star.svg" alt="Star">
+                    <img src="<?php echo $website_url; ?>/assets/img/star.svg" alt="Star">
+                    <img src="<?php echo $website_url; ?>/assets/img/star.svg" alt="Star">
+                    <img src="<?php echo $website_url; ?>/assets/img/star.svg" alt="Star">
                 </div>
                 <div class="ti-review-count">
                     20 reviews
@@ -107,8 +107,8 @@ $meta_keywords =  $row_meta['meta_keywords'];
                         <div class="row">
                             <div class="col-md-6">
                                 <a href="product_details.php?product_url=<?php echo $product_url; ?>">
-                                    <img src="admin/assets/img/<?php echo $product_thumbnail; ?>" alt="Product"
-                                        class="product-img w-100 mb-3">
+                                    <img src="<?php echo $website_url; ?>/admin/assets/img/<?php echo $product_thumbnail; ?>"
+                                        alt="Product" class="product-img w-100 mb-3">
                                 </a>
 
                             </div>
@@ -236,7 +236,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="admin/assets/img/1746808393_1591_premium_branded_greaseproof_paper_(800_x_600).jpg"
+                        <img src="<?php echo $website_url; ?>/admin/assets/img/1746808393_1591_premium_branded_greaseproof_paper_(800_x_600).jpg"
                             alt="Section Image" class="section-image">
                     </div>
 
@@ -316,7 +316,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="admin/assets/img/1746808393_9059_premium_branded_greaseproof_paper_b_(800_x_600).jpg"
+                        <img src="<?php echo $website_url; ?>/admin/assets/img/1746808393_9059_premium_branded_greaseproof_paper_b_(800_x_600).jpg"
                             alt="Section Image" class="section-image">
                     </div>
 
@@ -353,8 +353,8 @@ $meta_keywords =  $row_meta['meta_keywords'];
                         <div class="card h-100">
                             <div class="blog-img-container">
                                 <a href="blog_details.php?post_url=<?php echo $post_url ?>">
-                                    <img src="admin/assets/img/<?php echo $post_thumbnail; ?>" alt="Blog Image"
-                                        class="card-img-top">
+                                    <img src="<?php echo $website_url; ?>/admin/assets/img/<?php echo $post_thumbnail; ?>"
+                                        alt="Blog Image" class="card-img-top">
                                 </a>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -460,23 +460,32 @@ $meta_keywords =  $row_meta['meta_keywords'];
                     around the world.</p>
 
                 <div class="owl-carousel owl-theme">
-                    <div><img src="admin/assets/img/1746808891_4133_wimpy-logo.png" class="carousel-image" alt="Logo 1">
+                    <div><img src="<?php echo $website_url; ?>/admin/assets/img/1746808891_4133_wimpy-logo.png"
+                            class="carousel-image" alt="Logo 1">
                     </div>
-                    <div><img src="admin/assets/img/1746808891_7397_408-0-0-0-10000-10000-140.png"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_7397_408-0-0-0-10000-10000-140.png"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_6564_406-0-0-0-10000-10000-140.png"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_6564_406-0-0-0-10000-10000-140.png"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_9408_404-0-0-0-10000-10000-140.png"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_9408_404-0-0-0-10000-10000-140.png"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_5620_403-0-0-0-10000-10000-140.png"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_5620_403-0-0-0-10000-10000-140.png"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_8999_395-0-0-0-10000-10000-140.jpg"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_8999_395-0-0-0-10000-10000-140.jpg"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_1499_401-0-0-0-10000-10000-140.png"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_1499_401-0-0-0-10000-10000-140.png"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_8675_398-0-0-0-10000-10000-140.png"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_8675_398-0-0-0-10000-10000-140.png"
                             class="carousel-image" alt="Logo 2"></div>
-                    <div><img src="admin/assets/img/1746808891_3745_390-0-0-0-10000-10000-140.jpg"
+                    <div><img
+                            src="<?php echo $website_url; ?>/admin/assets/img/1746808891_3745_390-0-0-0-10000-10000-140.jpg"
                             class="carousel-image" alt="Logo 2"></div>
                 </div>
             </div>
@@ -488,7 +497,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Left Column: Heading and CTA -->
                     <div class="col-md-5 mb-4 mb-md-0">
-                        <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt="">
+                        <img src="<?php echo $website_url; ?>/assets/img/faq.gif" class="d-block mx-auto my-3" alt="">
                         <div class="faq-left">
                             <h2 class="mb-3 section-heading">Frequently Asked Questions</h2>
                             <p class="mb-4 product-intro">Have a question? We've got answers to some of the most common

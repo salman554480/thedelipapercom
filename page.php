@@ -156,18 +156,18 @@ if (isset($_GET['page_url'])) {
                 <div class="col-12 col-md-4 mb-4 mb-4">
                     <div class="card h-100">
                         <div class="blog-img-container">
-                            <a href="blog_details.php?post_url=<?php echo $post_url ?>">
+                            <a href="<?php echo $website_url; ?>/blog_details.php?post_url=<?php echo $post_url ?>">
                                 <img src="admin/assets/img/<?php echo $post_thumbnail; ?>" alt="Blog Image"
                                     class="card-img-top">
                             </a>
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5><a
-                                    href="blog_details.php?post_url=<?php echo $post_url ?>"><?php echo $post_title; ?></a>
+                                    href="<?php echo $website_url; ?>/blog_details.php?post_url=<?php echo $post_url ?>"><?php echo $post_title; ?></a>
                             </h5>
                             <p><?php echo substr($post_content, 0, 150); ?>...</p>
                             <div class="mt-auto">
-                                <a href="blog_details.php?post_url=<?php echo $post_url ?>"
+                                <a href="<?php echo $website_url; ?>/blog_details.php?post_url=<?php echo $post_url ?>"
                                     class="btn btn-secondary secondary-bg secondary-border border-radius-30 custom-btn w-50">
                                     <span>Read More</span>
                                     <i class="arrow"></i>
