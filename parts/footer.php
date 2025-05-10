@@ -112,23 +112,23 @@
 
 <!-- Custom Dropup -->
 <div class="translate-dropup">
-    <button class="dropup-button">
-        🌐 Translate
+    <button class="dropup-button" id="translateButton">
+        <img src="https://flagcdn.com/gb.svg" width="20" style="vertical-align: middle;"> English
     </button>
     <div class="dropup-content">
-        <div onclick="translateLanguage('en|fr')">
+        <div onclick="translateLanguage('en|fr', 'fr')">
             <img src="https://flagcdn.com/fr.svg" width="20"> French
         </div>
-        <div onclick="translateLanguage('en|es')">
+        <div onclick="translateLanguage('en|es', 'es')">
             <img src="https://flagcdn.com/es.svg" width="20"> Spanish
         </div>
-        <div onclick="translateLanguage('en|de')">
+        <div onclick="translateLanguage('en|de', 'de')">
             <img src="https://flagcdn.com/de.svg" width="20"> German
         </div>
-        <div onclick="translateLanguage('en|it')">
+        <div onclick="translateLanguage('en|it', 'it')">
             <img src="https://flagcdn.com/it.svg" width="20"> Italian
         </div>
-        <div onclick="translateLanguage('en|pt')">
+        <div onclick="translateLanguage('en|pt', 'pt')">
             <img src="https://flagcdn.com/pt.svg" width="20"> Portuguese
         </div>
     </div>
@@ -142,16 +142,30 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
-function translateLanguage(langPair) {
+function translateLanguage(langPair, langCode) {
     var select = document.querySelector("select.goog-te-combo");
     if (!select) return;
     select.value = langPair.split('|')[1];
     select.dispatchEvent(new Event('change'));
+
+    // Update button to reflect the selected language and flag
+    const flagUrl = `https://flagcdn.com/${langCode}.svg`;
+    const languageNameMap = {
+        en: 'English',
+        fr: 'French',
+        es: 'Spanish',
+        de: 'German',
+        it: 'Italian',
+        pt: 'Portuguese'
+    };
+    document.getElementById("translateButton").innerHTML =
+        `<img src="${flagUrl}" width="20" style="vertical-align: middle; margin-right:4px"> ${languageNameMap[langCode]}`;
 }
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
+
 
 
 <!-- WhatsApp Sticky Button -->
