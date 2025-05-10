@@ -292,7 +292,7 @@ nav .navbar .links li:hover .js-sub-menu{
     top: 0;
     left: -100%;
     display: block;
-    max-width: 270px;
+    max-width: 100%;
     width: 100%;
     background:  #b1d4e0;
     line-height: 40px;

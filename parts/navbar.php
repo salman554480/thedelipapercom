@@ -69,10 +69,3 @@
 
     </div>
 </nav>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('[data-toggle="tooltip"]').tooltip();
-});
-</script>

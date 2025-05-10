@@ -378,6 +378,14 @@ if (isset($_GET['product_url'])) {
             </div>
     </section>
     <section class="py-5">
+        <div class="row">
+            <div class="col-md-12  mb-4 mb-md-0">
+                <!-- <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt=""> -->
+                <div class="faq-left">
+                    <h2 class="mb-3 section-heading text-center">Related Products</h2>
+                </div>
+            </div>
+        </div>
         <div class="w-100">
 
             <div class="owl-carousel owl-theme">
@@ -424,10 +432,10 @@ if (isset($_GET['product_url'])) {
             autoplayTimeout: 2500,
             responsive: {
                 0: {
-                    items: 2
+                    items: 1
                 },
                 576: {
-                    items: 3
+                    items: 2
                 },
                 768: {
                     items: 4
