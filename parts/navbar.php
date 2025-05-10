@@ -62,11 +62,11 @@
                 <li><a href="<?php echo $website_url; ?>/page.php?page_url=contact-us">CONTACT US</a></li>
             </ul>
         </div>
-        <!-- <a href="https://wa.me/+447366426960">
-            <div class="search-box d-flex">
-                <i data-toggle="tooltip" title="+447366426960" class='bx bxl-whatsapp js-arrow arrow '></i>
-            </div>
-        </a> -->
+
+        <div class="search-box d-flex">
+            <!-- <i data-toggle="tooltip" title="+447366426960" class='bx bxl-whatsapp js-arrow arrow '></i> -->
+        </div>
+
     </div>
 </nav>
 

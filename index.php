@@ -537,7 +537,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
                                         <div class="card faq-item">
                                             <div class="card-header" id="' . $headingId . '">
                                                 <h5 class="mb-0">
-                                                    <button class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
+                                                    <button style="text-align:left" class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
                                                         data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
                                                         ' . $question . '
                                                     </button>

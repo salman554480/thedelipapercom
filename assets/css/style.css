@@ -196,7 +196,7 @@ nav .navbar .links li:hover .js-sub-menu{
 .navbar .search-box{
   position: relative;
    height: 40px;
-  width: 150px;
+  /* width: 150px; */
   display: flex;
   justify-content: start;
   align-items: center;
