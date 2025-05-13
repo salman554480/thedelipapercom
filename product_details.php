@@ -386,10 +386,11 @@ if (isset($_GET['product_url'])) {
                 </div>
             </div>
         </div>
-        <div class="w-100">
-
-            <div class="owl-carousel owl-theme">
-                <?php
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <?php
 
                 $select_related_product = "SELECT * FROM product where product_status='active' ";
                 $run_related_product = mysqli_query($conn, $select_related_product);
@@ -401,16 +402,25 @@ if (isset($_GET['product_url'])) {
                     $related_product_thumbnail = $row_related_product['product_thumbnail'];
 
                 ?>
-                <a href="product_details.php?product_url=<?php echo $related_product_url ?>">
-                    <div class="border">
-                        <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>" class="carousel-image2"
-                            alt="<?php echo $related_product_name; ?>">
-                        <h5 class="text-center my-2 font-weight-bold secondary-color">
-                            <?php echo $related_product_name; ?></h5>
+                        <a href="product_details.php?product_url=<?php echo $related_product_url ?>">
+                            <div class="card">
+                                <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>"
+                                    class="carousel-image2" alt="<?php echo $related_product_name; ?>">
+                                <div class="card-body">
+                                    <h5 class="text-center my-2 font-weight-bold secondary-color">
+                                        <?php echo $related_product_name; ?></h5>
+                                    <p class="my-3 card-text text-dark text-center">
+                                        <?php echo substr($product_short_description, 0, 140); ?>...</p>
+                                </div>
+                            </div>
+
+                        </a>
+                        <?php } ?>
                     </div>
-                </a>
-                <?php } ?>
+                </div>
             </div>
+
+
         </div>
     </section>
 
@@ -425,7 +435,7 @@ if (isset($_GET['product_url'])) {
     $(document).ready(function() {
         $('.owl-carousel').owlCarousel({
             loop: true,
-            margin: 0,
+            margin: 20,
             autoplay: true,
             nav: false,
             dots: false,

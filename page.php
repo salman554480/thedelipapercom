@@ -79,7 +79,7 @@ if (isset($_GET['page_url'])) {
                                 <div class="card-body d-flex flex-column">
                                     <i class='bx bx-envelope contact-icon'></i>
                                     <h6 class="card-title">Email</h6>
-                                    <p class="card-text">
+                                    <p class="card-text" style="font-size:15px;">
                                         <a href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk</a>
                                     </p>
                                 </div>
@@ -104,11 +104,51 @@ if (isset($_GET['page_url'])) {
                             <textarea class="form-control" id="message" rows="5"
                                 placeholder="Type your message"></textarea>
                         </div>
-                        <button type="submit"
-                            class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Send
-                            Message</button>
+                        <div class="mb-3">
+                            <label for="quizAnswer" id="quizQuestion" class="form-label"></label>
+                            <input type="text" id="quizAnswer" class="form-control w-25" placeholder="Your answer">
+                            <div id="quizFeedback" style="color: red; display: none;">Incorrect answer. Please try
+                                again.</div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn"
+                            class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25"
+                            disabled>Submit</button>
                     </form>
 
+                    <script>
+                    const quizQuestion = document.getElementById('quizQuestion');
+                    const quizAnswerInput = document.getElementById('quizAnswer');
+                    const submitBtn = document.getElementById('submitBtn');
+                    const feedback = document.getElementById('quizFeedback');
+
+                    // Generate two random numbers (1 to 10)
+                    const num1 = Math.floor(Math.random() * 10) + 1;
+                    const num2 = Math.floor(Math.random() * 10) + 1;
+                    const correctAnswer = num1 + num2;
+
+                    // Display the question
+                    quizQuestion.textContent = `What is ${num1} + ${num2}?`;
+
+                    // Check answer
+                    quizAnswerInput.addEventListener('input', () => {
+                        if (parseInt(quizAnswerInput.value.trim()) === correctAnswer) {
+                            submitBtn.disabled = false;
+                            feedback.style.display = 'none';
+                        } else {
+                            submitBtn.disabled = true;
+                            feedback.style.display = 'block';
+                        }
+                    });
+
+                    // Optional: prevent form submission if answer is wrong
+                    document.getElementById('quizForm').addEventListener('submit', function(e) {
+                        if (submitBtn.disabled) {
+                            e.preventDefault();
+                        }
+                    });
+                    </script>
                     <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $name    = htmlspecialchars($_POST['name']);
