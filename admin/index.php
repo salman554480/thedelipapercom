@@ -30,7 +30,7 @@
 
 
                         ?>
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-6">
                             <div class="card bg-primary text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <h4>Total Products</h4>
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-6">
                             <div class="card bg-success text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <h4>Total Posts</h4>
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-6">
                             <div class="card bg-warning text-white mb-4">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <h4>Gallery Images</h4>
@@ -75,21 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-danger text-white mb-4">
-                                <div class="card-body d-flex justify-content-between align-items-center">
-                                    <h4>Earning</h4>
-                                    <h3>$319.05</h3>
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a href="post_view.php"><small class="small text-white stretched-link">View
-                                            post Details</small></a>
-                                    <div class="small text-white">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="row">
                         <div class="col-xl-6">

@@ -2,11 +2,14 @@
          <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
              <div class="sb-sidenav-menu">
                  <div class="nav">
-
+                     <?php
+                            if ($admin_role == "admin") {
+                            ?>
                      <a class="nav-link" href="index.php">
                          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                          Dashboard
                      </a>
+                     <?php }?>
                      <!--Admin-->
                      <ul class="navbar-nav p-3 btn ">
                          <?php
