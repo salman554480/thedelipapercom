@@ -378,30 +378,30 @@ if (isset($_GET['product_url'])) {
             </div>
     </section>
     <section class="py-5">
-        <div class="row">
-            <div class="col-md-12  mb-4 mb-md-0">
-                <!-- <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt=""> -->
-                <div class="faq-left">
-                    <h2 class="mb-3 section-heading text-center">Related Products</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12  mb-4 mb-md-0">
+                    <!-- <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt=""> -->
+                    <div class="faq-left">
+                        <h2 class="mb-3 section-heading text-center">Related Products</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <?php
 
-                $select_related_product = "SELECT * FROM product where product_status='active' ";
-                $run_related_product = mysqli_query($conn, $select_related_product);
-                while ($row_related_product = mysqli_fetch_array($run_related_product)) {
+                        $select_related_product = "SELECT * FROM product where product_status='active' ";
+                        $run_related_product = mysqli_query($conn, $select_related_product);
+                        while ($row_related_product = mysqli_fetch_array($run_related_product)) {
 
-                    $related_product_id = $row_related_product['product_id'];
-                    $related_product_name = $row_related_product['product_name'];
-                    $related_product_url = $row_related_product['product_url'];
-                    $related_product_thumbnail = $row_related_product['product_thumbnail'];
+                            $related_product_id = $row_related_product['product_id'];
+                            $related_product_name = $row_related_product['product_name'];
+                            $related_product_url = $row_related_product['product_url'];
+                            $related_product_thumbnail = $row_related_product['product_thumbnail'];
 
-                ?>
+                        ?>
                         <a href="product_details.php?product_url=<?php echo $related_product_url ?>">
                             <div class="card">
                                 <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>"

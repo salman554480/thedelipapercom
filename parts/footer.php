@@ -117,6 +117,9 @@
         <img src="https://flagcdn.com/gb.svg" width="20" style="vertical-align: middle;"> English
     </button>
     <div class="dropup-content">
+        <div onclick="translateLanguage('en|en', 'en')">
+            <img src="https://flagcdn.com/gb.svg" width="20"> English
+        </div>
         <div onclick="translateLanguage('en|fr', 'fr')">
             <img src="https://flagcdn.com/fr.svg" width="20"> French
         </div>
