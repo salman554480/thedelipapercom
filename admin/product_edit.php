@@ -220,7 +220,9 @@ require_once('parts/top.php'); ?>
                             $product_index = $_POST['product_index'];
 
                             $eproduct_short_description = str_replace("'", "`", $product_short_description);
-                            $epage_content = str_replace("'", "\'", $epage_content);
+                            $product_name       = str_replace("'", "`'", $product_name);
+                            $epage_content = str_replace("'", "`'", $epage_content);
+                            $epage_content = str_replace("’", "`", $epage_content);
                             $product_meta_title = str_replace("'", "\'", $product_meta_title);
                             $product_meta_desrciption = str_replace("'", "\'", $product_meta_desrciption);
 

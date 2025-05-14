@@ -185,6 +185,8 @@ require_once('parts/top.php'); ?>
                     $epost_thumbnail = $_POST['post_thumbnail'];
 
                     $epost_title = str_replace("'", "`", $epost_title);
+                    $epost_content = str_replace("'", "`", $epost_content);
+                    $epost_content = str_replace("’", "`", $epost_content);
                     $emeta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
                     $emeta_description = htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8');
                     $emeta_keyword = htmlspecialchars($_POST['meta_keyword'], ENT_QUOTES, 'UTF-8');
@@ -210,7 +212,7 @@ require_once('parts/top.php'); ?>
                         $run_meta = mysqli_query($conn, $update_meta);
 
                         echo "<script>alert('Record UPDATED');</script>";
-                        echo "<script>window.open('post_view.php','_self');</script>";
+                        echo "<script>window.open('post_edit.php?edit=$post_id','_self');</script>";
                     } else {
                         echo "<script>alert('Failed');</script>";
                     }
