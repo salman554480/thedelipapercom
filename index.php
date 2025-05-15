@@ -236,7 +236,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Image Column -->
                     <div class="col-md-6">
-                        <img src="<?php echo $website_url; ?>/admin/assets/img/1746808393_1591_premium_branded_greaseproof_paper_(800_x_600).jpg"
+                        <img src="<?php echo $website_url; ?>/admin/assets/img/1745740714_9661_Premium Branded Greasproof Paper (800 x 600).jpg"
                             alt="Section Image" class="section-image">
                     </div>
 
@@ -384,56 +384,62 @@ $meta_keywords =  $row_meta['meta_keywords'];
                     <!-- Left Column: Features -->
                     <div class="col-md-6 ">
                         <h2 class="section-heading"> Sample Showcase for our Products</h2>
-                        <p class="product-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
-                            ipsam esse laudantium dicta doloribus eligendi voluptatum exercitationem, doloremque
-                            consequatur sed porro id aliquid non commodi explicabo ea sit distinctio consequuntur.
+                        <p class="product-intro">Explore Deli Paper, featuring high-quality wrapping papers designed for
+                            efficiency and creativity. Each paper is designed to satisfy industry standards, ensuring
+                            enhanced utility, finer appearance and long-term solutions.
                         </p>
                         <div class="d-flex align-items-center">
                             <div class="row">
 
-                                <div class="col-6 col-md-4 p-2">
+                                <div class="col-6 col-md-6 p-2">
                                     <!-- Feature Items -->
-                                    <div class="display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
-                                        <div class="feature-title">Sample 1</div>
-                                        <div class="feature-text">Description for sample one.</div>
+                                    <div class="display-box"
+                                        data-image="<?php echo $website_url; ?>/admin/assets/img/1747334150_2997_waxpapersample.jpg">
+                                        <div class="feature-title">Wax Paper</div>
+                                        <!-- <div class="feature-text">Description for sample one.</div> -->
                                     </div>
                                 </div>
 
-                                <div class="col-6 col-md-4 p-2">
-                                    <div class=" display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
-                                        <div class="feature-title">Sample 2</div>
-                                        <div class="feature-text">Description for sample two.</div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-6 col-md-4 p-2">
-                                    <div class="display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
-                                        <div class="feature-title">Sample 3</div>
-                                        <div class="feature-text">Description for sample three.</div>
+                                <div class="col-6 col-md-6 p-2">
+                                    <div class=" display-box"
+                                        data-image="<?php echo $website_url; ?>/admin/assets/img/1747334318_5276_butchersample.jpg">
+                                        <div class="feature-title">Butcher Paper</div>
+                                        <!-- <div class="feature-text">Description for sample two.</div> -->
                                     </div>
                                 </div>
 
 
-                                <div class="col-6 col-md-4 p-2">
-                                    <div class=" display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
-                                        <div class="feature-title">Sample 4</div>
-                                        <div class="feature-text">Description for sample four.</div>
-                                    </div>
-                                </div>
-
-                                <div class="col-6 col-md-4 p-2">
-                                    <div class="display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
-                                        <div class="feature-title">Sample 5</div>
-                                        <div class="feature-text">Description for sample five.</div>
+                                <div class="col-6 col-md-6 p-2">
+                                    <div class="display-box"
+                                        data-image="<?php echo $website_url; ?>/admin/assets/img/1747334452_8927_foodwrappingsample.jpg">
+                                        <div class="feature-title">Food Wrapping Paper</div>
+                                        <!-- <div class="feature-text">Description for sample three.</div> -->
                                     </div>
                                 </div>
 
 
-                                <div class="col-6 col-md-4 p-2">
-                                    <div class=" display-box" data-image="https://dummyimage.com/600x600/a7a7a7/000000">
-                                        <div class="feature-title">Sample 6</div>
-                                        <div class="feature-text">Description for sample six.</div>
+                                <div class="col-6 col-md-6 p-2">
+                                    <div class=" display-box"
+                                        data-image="<?php echo $website_url; ?>/admin/assets/img/1747332558_9985_custompaperbags.jpg">
+                                        <div class="feature-title">Paper Bags</div>
+                                        <!-- <div class="feature-text">Description for sample four.</div> -->
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-6 p-2">
+                                    <div class="display-box"
+                                        data-image="<?php echo $website_url; ?>/admin/assets/img/1747334577_2369_parchentsample.jpg">
+                                        <div class="feature-title">Parchment Paper</div>
+                                        <!-- <div class="feature-text">Description for sample five.</div> -->
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-md-6 p-2">
+                                    <div class=" display-box"
+                                        data-image="<?php echo $website_url; ?>/admin/assets/img/1747334734_5861_greaseproofsample.jpg">
+                                        <div class="feature-title">Greaseproof Paper</div>
+                                        <!-- <div class="feature-text">Description for sample six.</div> -->
                                     </div>
                                 </div>
 
@@ -443,8 +449,9 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Right Column: Image Preview -->
                     <div class="col-md-6 image-wrapper">
-                        <img id="preview-image" src="https://dummyimage.com/600x600/a7a7a7/000000" alt="Preview"
-                            class="image-preview">
+                        <img id="preview-image"
+                            src="<?php echo $website_url; ?>/admin/assets/img/1747334150_2997_waxpapersample.jpg"
+                            alt="Preview" class="image-preview">
                     </div>
 
                 </div>
