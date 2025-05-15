@@ -226,7 +226,6 @@ require_once('parts/top.php'); ?>
                             $product_meta_title = str_replace("'", "\'", $product_meta_title);
                             $product_meta_desrciption = str_replace("'", "\'", $product_meta_desrciption);
 
-
                             // Insert query
                             $sql = "Update product SET
                              product_name='$product_name',
