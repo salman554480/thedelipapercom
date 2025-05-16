@@ -52,7 +52,7 @@ if (isset($_GET['product_url'])) {
                 <div class="col-md-6">
                     <h1 class="card-product-title"><?php echo $product_name; ?></h1>
                     <p class="product-intro"><?php echo $product_short_description; ?></p>
-
+                    <h3 class="my-3">Request a Quote</h3>
                     <?php require_once('parts/quote.php'); ?>
                 </div>
             </div>

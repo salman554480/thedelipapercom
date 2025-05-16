@@ -307,7 +307,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
                             <p><i class='bx bx-badge-check'></i> Suitable for reheating and freezing.</p>
                             <p><i class='bx bx-badge-check'></i> Produced without the use of artificial coatings.</p>
 
-                            <a href="#"
+                            <a href="#" data-toggle="modal" data-target="#myModal"
                                 class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25 custom-btn">Get
                                 a
                                 Quote</a>
@@ -509,7 +509,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
                             <h2 class="mb-3 section-heading">Frequently Asked Questions</h2>
                             <p class="mb-4 product-intro">Have a question? We've got answers to some of the most common
                                 questions below.</p>
-                            <a href="#"
+                            <a href="<?php echo $website_url; ?>/page.php?page_url=contact-us"
                                 class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-50">Contact
                                 Support</a>
                         </div>
