@@ -142,66 +142,66 @@ require_once('parts/top.php'); ?>
 
                         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
                         <script>
-                        // Initialize Quill editor
-                        var quill = new Quill('#editor-container', {
-                            theme: 'snow',
-                            modules: {
-                                toolbar: [
-                                    [{
-                                        'header': '1'
-                                    }, {
-                                        'header': '2'
-                                    }, {
-                                        'font': []
-                                    }],
-                                    [{
-                                        'list': 'ordered'
-                                    }, {
-                                        'list': 'bullet'
-                                    }],
-                                    ['bold', 'italic', 'underline'],
-                                    ['link'],
-                                    [{
-                                        'align': []
-                                    }],
-                                    ['image']
-                                ]
-                            }
-                        });
+                            // Initialize Quill editor
+                            var quill = new Quill('#editor-container', {
+                                theme: 'snow',
+                                modules: {
+                                    toolbar: [
+                                        [{
+                                            'header': '1'
+                                        }, {
+                                            'header': '2'
+                                        }, {
+                                            'font': []
+                                        }],
+                                        [{
+                                            'list': 'ordered'
+                                        }, {
+                                            'list': 'bullet'
+                                        }],
+                                        ['bold', 'italic', 'underline'],
+                                        ['link'],
+                                        [{
+                                            'align': []
+                                        }],
+                                        ['image']
+                                    ]
+                                }
+                            });
 
-                        // Set existing content from PHP variable ($product_content) into the Quill editor
-                        var pageContent = <?php echo json_encode($product_content); ?>;
-                        quill.clipboard.dangerouslyPasteHTML(pageContent);
+                            // Set existing content from PHP variable ($product_content) into the Quill editor
+                            var pageContent = <?php echo json_encode($product_content); ?>;
+                            quill.clipboard.dangerouslyPasteHTML(pageContent);
 
-                        // Initially populate the hidden textarea
-                        document.querySelector('#content').value = pageContent;
+                            // Initially populate the hidden textarea
+                            document.querySelector('#content').value = pageContent;
 
-                        // Listen for the text-change event in Quill to update the hidden textarea
-                        quill.on('text-change', function(delta, oldDelta, source) {
-                            document.querySelector('#content').value = quill.root.innerHTML;
-                        });
+                            // Listen for the text-change event in Quill to update the hidden textarea
+                            quill.on('text-change', function(delta, oldDelta, source) {
+                                document.querySelector('#content').value = quill.root.innerHTML;
+                            });
                         </script>
 
                         <script>
-                        // Function to generate a slug from a string
-                        function generateSlug(title) {
-                            return title
-                                .toLowerCase() // Convert to lowercase
-                                .replace(/\s+/g, '-') // Replace spaces with dashes
-                                .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
-                                .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
-                        }
+                            // Function to generate a slug from a string
+                            function generateSlug(title) {
+                                return title
+                                    .toLowerCase() // Convert to lowercase
+                                    .replace(/\s+/g, '-') // Replace spaces with dashes
+                                    .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
+                                    .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
+                            }
 
-                        // Get references to the title and URL input fields
-                        const titleInput = document.getElementById('product_name');
-                        const urlInput = document.getElementById('product_url');
+                            // Get references to the title and URL input fields
+                            const titleInput = document.getElementById('product_name');
+                            const urlInput = document.getElementById('product_url');
 
-                        // Add event listener to the title input field
-                        titleInput.addEventListener('input', function() {
-                            const titleValue = titleInput.value;
-                            const slug = generateSlug(titleValue);
-                            urlInput.value = slug;
-                        });
+                            // Add event listener to the title input field
+                            titleInput.addEventListener('input', function() {
+                                const titleValue = titleInput.value;
+                                const slug = generateSlug(titleValue);
+                                urlInput.value = slug;
+                            });
                         </script>
                         <?php
 
@@ -219,10 +219,11 @@ require_once('parts/top.php'); ?>
                             $product_status = $_POST['product_status'];
                             $product_index = $_POST['product_index'];
 
-                            $eproduct_short_description = str_replace("'", "`", $product_short_description);
+                            $eproduct_short_description = str_replace("'", "\'", $product_short_description);
+                            $eproduct_short_description = str_replace("`", "\'", $product_short_description);
                             $product_name       = str_replace("'", "`'", $product_name);
-                            $epage_content = str_replace("'", "`'", $epage_content);
-                            $epage_content = str_replace("’", "`", $epage_content);
+                            $epage_content = str_replace("'", "\'", $epage_content);
+                            $epage_content = str_replace("’", "\'", $epage_content);
                             $product_meta_title = str_replace("'", "\'", $product_meta_title);
                             $product_meta_desrciption = str_replace("'", "\'", $product_meta_desrciption);
 
