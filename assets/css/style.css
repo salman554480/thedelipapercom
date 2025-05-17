@@ -974,7 +974,7 @@ nav .navbar .links li .sub-menu li{
 
 .translate-dropup {
   position: fixed;
-  bottom: 30px;
+  bottom: 7px;
   left: 20px;
   z-index: 1000;
   font-family: sans-serif;
