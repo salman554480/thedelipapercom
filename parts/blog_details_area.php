@@ -56,7 +56,7 @@ $meta_keyword = $row_meta['meta_keyword'];
 
 
                         ?>
-                    <a href="webpage.php?slug=<?php echo $other_post_url; ?>"
+                    <a href="<?php echo $other_post_url; ?>"
                         class="list-group-item list-group-item-action"><?php echo $other_post_title; ?></a>
                     <?php } ?>
                 </div>

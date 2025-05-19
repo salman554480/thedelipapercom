@@ -1,11 +1,11 @@
 <?php
 require_once('admin/parts/db.php');
 $select_meta = "SELECT * FROM page where page_url='index'";
-$run_meta =  mysqli_query($conn, $select_meta);
+$run_meta = mysqli_query($conn, $select_meta);
 $row_meta = mysqli_fetch_array($run_meta);
-$meta_title =  $row_meta['meta_title'];
-$meta_description =  $row_meta['meta_description'];
-$meta_keywords =  $row_meta['meta_keywords'];
+$meta_title = $row_meta['meta_title'];
+$meta_description = $row_meta['meta_description'];
+$meta_keywords = $row_meta['meta_keywords'];
 ?>
 <?php require_once('parts/top.php'); ?>
 </head>
@@ -18,7 +18,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
             <div class="row cover-area">
                 <!-- Left Section: Text and Button -->
                 <div class="col-md-6 left-section">
-                    <h2 class="cover-heading text-center">Branded food paper</h2>
+                    <h1 class="cover-heading text-center">Branded food paper</h1>
                     <div class="mt-4">
                         <div class="row">
                             <div class="col-6 col-md-4 feature-box">
@@ -102,7 +102,7 @@ $meta_keywords =  $row_meta['meta_keywords'];
                         $product_thumbnail = $row_product['product_thumbnail'];
                         $product_short_description = $row_product['product_short_description'];
 
-                    ?>
+                        ?>
                     <div class="col-md-6 col-12 mb-4">
                         <div class="row">
                             <div class="col-md-6">
@@ -114,9 +114,10 @@ $meta_keywords =  $row_meta['meta_keywords'];
                             </div>
                             <div class="col-md-6 d-flex align-items-center">
                                 <div>
-                                    <h5 class="mb-2 card-product-title"><?php echo $product_name; ?></h5>
+                                    <h3 class="mb-2 card-product-title"><?php echo $product_name; ?></h3>
                                     <p class="my-3 card-product-text">
-                                        <?php echo substr($product_short_description, 0, 115); ?>...</p>
+                                        <?php echo substr($product_short_description, 0, 115); ?>...
+                                    </p>
                                     <a href="product_details.php?product_url=<?php echo $product_url; ?>"
                                         class="btn btn-primary secondary-bg secondary-border border-radius-30 custom-btn">Shop
                                         Now</a>
@@ -347,8 +348,8 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                         $day = date('d', strtotime($post_date));      // "27"
                         $month = date('M', strtotime($post_date));    // "Apr"
-
-                    ?>
+                    
+                        ?>
                     <div class="col-12 col-md-4 mb-4 mb-4">
                         <div class="card h-100">
                             <div class="blog-img-container">
@@ -383,9 +384,9 @@ $meta_keywords =  $row_meta['meta_keywords'];
 
                     <!-- Left Column: Features -->
                     <div class="col-md-6 ">
-                        <h2 class="section-heading"> Sample Showcase for our Products</h2>
+                        <h3 class="section-heading"> Sample Showcase for our Products</h3>
                         <p class="product-intro">Explore Deli Paper, featuring high-quality wrapping papers designed for
-                            efficiency and creativity. Each paper is designed to satisfy industry standards, ensuring
+                            efficiency and creatiesty. Each paper is designed to satisfy industry standards, ensuring
                             enhanced utility, finer appearance and long-term solutions.
                         </p>
                         <div class="d-flex align-items-center">

@@ -45,7 +45,7 @@
 
                             ?>
                         <li><a
-                                href="<?php echo $website_url; ?>/webpage.php?slug=<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
+                                href="<?php echo $website_url; ?>/<?php echo $navbar_product_url ?>"><?php echo $navbar_product_name; ?></a>
                         </li>
                         <?php } ?>
                     </ul>
@@ -58,8 +58,8 @@
                         <li><a href="terms-and-condition.php">Terms & Conditions</a></li>
                     </ul>
                 </li> -->
-                <li><a href="<?php echo $website_url; ?>/webpage.php?slug=blog-deli-paper">Blog</a></li>
-                <li><a href="<?php echo $website_url; ?>/webpage.php?slug=contact-deli-paper-in-uk">CONTACT US</a></li>
+                <li><a href="<?php echo $website_url; ?>/blog-deli-paper">Blog</a></li>
+                <li><a href="<?php echo $website_url; ?>/contact-deli-paper-in-uk">CONTACT US</a></li>
             </ul>
         </div>
 

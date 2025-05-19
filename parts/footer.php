@@ -32,7 +32,7 @@
 
                         ?>
                     <li><a
-                            href="<?php echo $website_url; ?>/webpage.php?slug=<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
+                            href="<?php echo $website_url; ?>/<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
                     </li>
                     <?php } ?>
                 </ul>
@@ -42,10 +42,10 @@
             <div class="col-md-3 mb-4">
                 <h5>Useful Links</h5>
                 <ul class="list-unstyled footer-list">
-                    <li><a href="<?php echo $website_url; ?>/webpage.php?slug=about-us">About Us</a></li>
-                    <!-- <li><a href="webpage.php?slug=faq">FAQs</a></li> -->
-                    <li><a href="<?php echo $website_url; ?>/webpage.php?slug=privacy-policy">Privacy Policy</a></li>
-                    <li><a href="<?php echo $website_url; ?>/webpage.php?slug=terms-and-conditions">Terms &
+                    <li><a href="<?php echo $website_url; ?>/about-us">About Us</a></li>
+                    <!-- <li><a href="faq">FAQs</a></li> -->
+                    <li><a href="<?php echo $website_url; ?>/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="<?php echo $website_url; ?>/terms-and-conditions">Terms &
                             Conditions</a></li>
                 </ul>
             </div>
