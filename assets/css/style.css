@@ -888,9 +888,16 @@ nav .navbar .links li .sub-menu li{
 ---------------------*/
 .content-area{
   line-height: normal;
+  
+}
+.content-area h1,h2,h3,h4,h5,p,ul,li,strong{
+font-family: Arial, Helvetica, sans-serif !important;
 }
 .content-area ul{
   list-style: square;
+}
+.content-area ul li{
+  margin-bottom: 1%;
 }
 
 .blog-grid {
