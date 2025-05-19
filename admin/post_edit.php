@@ -184,9 +184,8 @@ require_once('parts/top.php'); ?>
                     $epost_index = $_POST['post_index'];
                     $epost_thumbnail = $_POST['post_thumbnail'];
 
-                    $epost_title = str_replace("'", "`", $epost_title);
-                    $epost_content = str_replace("'", "`", $epost_content);
-                    $epost_content = str_replace("’", "`", $epost_content);
+                    $epost_title = str_replace("'", "\'",$epost_title);
+                    $epost_content = str_replace("’", "\'", $epost_content);
                     $emeta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
                     $emeta_description = htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8');
                     $emeta_keyword = htmlspecialchars($_POST['meta_keyword'], ENT_QUOTES, 'UTF-8');

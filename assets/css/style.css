@@ -886,6 +886,13 @@ nav .navbar .links li .sub-menu li{
 }
 /* Blog 
 ---------------------*/
+.content-area{
+  line-height: normal;
+}
+.content-area ul{
+  list-style: square;
+}
+
 .blog-grid {
   box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
   border-radius: 5px;
