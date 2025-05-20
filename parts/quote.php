@@ -105,6 +105,81 @@
         class="btn btn-primary primary-bg primary-border border-radius-30 custom-btn w-25" disabled>Submit</button>
 </form>
 
+<?php
+// Admin email
+$admin_email = "sales@delipaper.co.uk";
+
+// Collect form data
+$size     = $_POST['size'] ?? '';
+$type     = $_POST['type'] ?? '';
+$color    = $_POST['color'] ?? '';
+$name     = $_POST['customer_name'] ?? '';
+$email    = $_POST['email'] ?? '';
+$contact  = $_POST['contact'] ?? '';
+$comments = $_POST['comments'] ?? '';
+
+// Email subject
+$subject = "New Quote Request from $name";
+
+// Email message body
+$message = "You have received a new quote request:\n\n";
+$message .= "Size: $size\n";
+$message .= "Paper Type: $type\n";
+$message .= "Printing: $color\n\n";
+$message .= "Customer Name: $name\n";
+$message .= "Email: $email\n";
+$message .= "Contact: $contact\n\n";
+$message .= "Comments:\n$comments\n";
+
+// File attachment handling
+$headers = "From: $email\r\n";
+
+if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
+    $file_tmp = $_FILES['file']['tmp_name'];
+    $file_name = $_FILES['file']['name'];
+    $file_type = $_FILES['file']['type'];
+    $file_size = $_FILES['file']['size'];
+
+    $handle = fopen($file_tmp, "rb");
+    $content = fread($handle, $file_size);
+    fclose($handle);
+    $content = chunk_split(base64_encode($content));
+
+    $separator = md5(time());
+    $eol = "\r\n";
+
+    // Headers for attachment
+    $headers .= "MIME-Version: 1.0" . $eol;
+    $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"" . $eol . $eol;
+    $headers .= "This is a MIME encoded message." . $eol;
+
+    // Message body
+    $body = "--" . $separator . $eol;
+    $body .= "Content-Type: text/plain; charset=\"utf-8\"" . $eol;
+    $body .= "Content-Transfer-Encoding: 7bit" . $eol . $eol;
+    $body .= $message . $eol;
+
+    // Attachment
+    $body .= "--" . $separator . $eol;
+    $body .= "Content-Type: $file_type; name=\"$file_name\"" . $eol;
+    $body .= "Content-Transfer-Encoding: base64" . $eol;
+    $body .= "Content-Disposition: attachment; filename=\"$file_name\"" . $eol . $eol;
+    $body .= $content . $eol;
+    $body .= "--" . $separator . "--";
+
+    // Send email with attachment
+    mail($admin_email, $subject, $body, $headers);
+
+} else {
+    // No file attached, simple plain text email
+    mail($admin_email, $subject, $message, $headers);
+}
+
+// Redirect or show confirmation
+echo "Thank you! Your quote request has been sent.";
+?>
+
+
 <script>
 const quizQuestion = document.getElementById('quizQuestion');
 const quizAnswerInput = document.getElementById('quizAnswer');

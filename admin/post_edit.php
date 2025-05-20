@@ -207,7 +207,7 @@ require_once('parts/top.php'); ?>
 
 
 
-                        $update_meta = "UPDATE meta SET meta_title='$emeta_title',meta_description='$emeta_description',meta_keyword='$emeta_keyword' WHERE meta_source='post' and meta_source_id='$post_id'";
+                        $update_meta = "UPDATE meta SET slug='$epost_url',meta_title='$emeta_title',meta_description='$emeta_description',meta_keyword='$emeta_keyword' WHERE slug='$post_url'";
                         $run_meta = mysqli_query($conn, $update_meta);
 
                         echo "<script>alert('Record UPDATED');</script>";

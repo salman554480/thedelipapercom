@@ -135,12 +135,17 @@ require_once('parts/top.php'); ?>
                         $meta_description = str_replace("'", "\'", $meta_description);
 
 
-                        $update_page = "INSERT INTO page(page_title, page_url, page_content, meta_title, meta_description, meta_keywords) 
-                VALUES('$page_title', '$page_url', '$page_content', '$meta_title', '$meta_description', '$meta_keywords')";
+                        $update_page = "INSERT INTO page(page_title, page_url, page_content) 
+                VALUES('$page_title', '$page_url', '$page_content')";
 
                         $run_page = mysqli_query($conn, $update_page);
 
                         if ($run_page == true) {
+
+                            $insert_meta = "INSERT INTO meta(slug,meta_title,meta_description,meta_source) VALUES('$page_url','$meta_title','$meta_description','page')";
+                            $run_meta = mysqli_query($conn, $insert_meta);
+
+
                             // Get the last inserted page_id
                             $last_page_id = mysqli_insert_id($conn);
 

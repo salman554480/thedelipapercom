@@ -164,9 +164,6 @@ require_once('parts/top.php'); ?>
         product_short_description,
         product_content,
         product_thumbnail,
-        product_meta_title,
-        product_meta_description,
-        product_meta_keywords,
         product_status,
         product_status
     ) VALUES (
@@ -175,14 +172,13 @@ require_once('parts/top.php'); ?>
         '$product_short_description',
         '$product_content',
         '$product_thumbnail',
-        '$product_meta_title',
-        '$product_meta_desrciption',
-        '$product_meta_keywords',
         '$product_status',
         '$product_index'
     )";
 
                             if (mysqli_query($conn, $sql)) {
+                                $insert_meta = "INSERT INTO meta(slug,meta_title,meta_description,meta_keyword,meta_source) VALUES('$product_url','$product_meta_title','$product_meta_desrciption','$product_meta_keywords','product')";
+                        $run_meta = mysqli_query($conn, $insert_meta);
                                 echo "<div class='alert alert-success'>Product added successfully!</div>";
                             } else {
                                 echo "<div class='alert alert-danger'>Error: " . mysqli_error($conn) . "</div>";

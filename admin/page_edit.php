@@ -176,7 +176,7 @@ require_once('parts/top.php'); ?>
                     if (isset($_POST['insert_btn'])) {
                         // Capture all input fields
                         $epage_title = $_POST['page_title'];
-                        $page_url = $_POST['page_url'];
+                        $epage_url = $_POST['page_url'];
                         $epage_content = $_POST['content']; // This should now have the correct HTML content
                         $emeta_title = $_POST['meta_title'];
                         $emeta_description = $_POST['meta_description'];
@@ -188,11 +188,13 @@ require_once('parts/top.php'); ?>
                         $emeta_description = str_replace("'", "\'", $emeta_description);
 
                         // Prepare and execute the update query
-                        $update_page = "UPDATE page SET page_title='$epage_title', page_url='$page_url', page_content='$epage_content', meta_title='$emeta_title', meta_description='$emeta_description', meta_keywords='$emeta_keywords' WHERE page_id='$edit_id'";
+                        $update_page = "UPDATE page SET page_title='$epage_title', page_url='$epage_url', page_content='$epage_content' WHERE page_id='$edit_id'";
 
                         $run_page = mysqli_query($conn, $update_page);
 
                         if ($run_page) {
+                            $update_meta = "UPDATE meta SET slug='$epage_url',meta_title='$emeta_title',meta_description='$emeta_description',meta_keyword='$emeta_keywords' where slug='$page_url'";
+                            $run_meta = mysqli_query($conn, $update_meta);
                             echo "<script>alert('Record updated successfully');</script>";
                             echo "<script>window.open('page_edit.php?edit=$edit_id','_self');</script>";
                         } else {

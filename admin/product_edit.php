@@ -206,8 +206,8 @@ require_once('parts/top.php'); ?>
                         <?php
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $product_name = $_POST['product_name'];
-                            $product_url = $_POST['product_url'];
+                            $eproduct_name = $_POST['product_name'];
+                            $eproduct_url = $_POST['product_url'];
                             $product_short_description = $_POST['product_short_description'];
                             $epage_content = $_POST['content'];
                             $product_thumbnail = $_POST['product_thumbnail']; // Now just plain text
@@ -229,8 +229,8 @@ require_once('parts/top.php'); ?>
 
                             // Insert query
                             $sql = "Update product SET
-                             product_name='$product_name',
-                             product_url='$product_url',
+                             product_name='$eproduct_name',
+                             product_url='$eproduct_url',
                              product_short_description='$eproduct_short_description',
                              product_content='$epage_content',
                              product_thumbnail='$product_thumbnail',
@@ -238,10 +238,13 @@ require_once('parts/top.php'); ?>
                              product_image2='$product_image2',
                              product_status='$product_status',
                              product_index='$product_index',
-                             product_meta_title='$product_meta_title',product_meta_description='$product_meta_desrciption',product_meta_keywords='$product_meta_keywords' 
                              where product_id='$product_id'";
 
                             if (mysqli_query($conn, $sql)) {
+
+                                $update_meta = "UPDATE meta SET slug='$eproduct_url',meta_title='$product_meta_title',meta_description='$product_meta_desrciption',meta_keyword='$product_meta_keywords' WHERE slug='$eproduct_url'";
+                                 $run_meta = mysqli_query($conn, $update_meta);
+
                                 echo "<script>alert('Query Succeed');</script>";
                                 echo "<script>window.open('product_edit.php?edit=$product_id','_self');</script>";
                             } else {

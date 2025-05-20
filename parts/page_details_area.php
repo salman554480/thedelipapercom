@@ -146,7 +146,7 @@ $meta_keywords = $row_page['meta_keywords'];
                             $email = htmlspecialchars($_POST['email']);
                             $message = htmlspecialchars($_POST['message']);
 
-                            $to = "your@email.com"; // Replace with your email address
+                            $to = "sales@delipaper.co.uk"; // Replace with your email address
                             $subject = "New Message from Contact Form";
                             $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 

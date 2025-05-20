@@ -184,7 +184,7 @@ require_once('parts/top.php'); ?>
                         $row_latest_post =  mysqli_fetch_array($run_latest);
                         $post_id = $row_latest_post['post_id'];
 
-                        $insert_meta = "INSERT INTO meta(meta_title,meta_description,meta_keyword,meta_source,meta_source_id) VALUES('$meta_title','$meta_description','$meta_keyword','post','$post_id')";
+                        $insert_meta = "INSERT INTO meta(slug,meta_title,meta_description,meta_keyword,meta_source,meta_source_id) VALUES('$post_url','$meta_title','$meta_description','$meta_keyword','post','$post_id')";
                         $run_meta = mysqli_query($conn, $insert_meta);
 
                         echo "<script>alert('Record Added');</script>";
