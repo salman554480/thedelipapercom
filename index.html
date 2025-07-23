@@ -4,10 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Title</title>
+	<title>The Deli Paper- Custom Printed Wrapping Paper</title>
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="assets/bootstrap/fontawesome-free-5.13.0-web/css/all.min.css	">
 	<!-- Owl Carousel CSS -->
 	<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -23,6 +25,11 @@
 </head>
 
 <body>
+
+	<div id="scrollUp">
+  <i class="bx bx-chevron-up"></i>
+</div>
+
 	<div class="ticker-wrapper py-2">
 		<div class="ticker-content">
 			<div class="ticker-item"><span class="star">✻</span>FREE SHIPPING ON ALL ORDERS <span class="star">✻</span>
@@ -41,19 +48,18 @@
 	</div>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand d-flex align-items-center logo-text" href="#"><img src="assets/images/logo-img.png"
+		<a class="navbar-brand d-flex align-items-center logo-text" href="index.html"><img src="assets/images/logo-img.png"
 				class="img-fluid" alt=""> &nbsp; The Deli Paper
 
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" >
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav m-auto">
+			<ul class="navbar-nav list-navbar m-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link" href="index.html">Home</a>
 				</li>
 
 				<li class="nav-item dropdown">
@@ -62,20 +68,21 @@
 						Products
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
+						<a class="dropdown-item" href="#">Wax Paper</a>
+						<a class="dropdown-item" href="#">Butcher Paper</a>
+						<a class="dropdown-item" href="#">Food Wrapping Paper</a>
+						<a class="dropdown-item" href="#">Paper Bags</a>
+						<a class="dropdown-item" href="#">Gift Wrapping Paper</a>
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link " href="#">Get a Quote</a>
+					<a class="nav-link " href="get-quote.html">Get a Quote</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link " href="#">Blog</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link " href="#">Contact</a>
+					<a class="nav-link " href="contact-us.html">Contact</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link " href="#">Portfolio</a>
@@ -87,6 +94,51 @@
 		</div>
 	</nav>
 
+	<!-- sidebar-mobile-Nav Start -->
+	<div class="sidebar">
+  <i class="bx bx-x close-sidebar"></i>
+<a class="navbar-brand d-flex align-items-center logo-text" href="index.html"><img src="assets/images/logo-img.png"
+				class="img-fluid" alt=""> &nbsp; The Deli Paper
+
+		</a>
+  <ul class="navbar-nav m-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Products
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Wax Paper</a>
+						<a class="dropdown-item" href="#">Butcher Paper</a>
+						<a class="dropdown-item" href="#">Food Wrapping Paper</a>
+						<a class="dropdown-item" href="#">Paper Bags</a>
+						<a class="dropdown-item" href="#">Gift Wrapping Paper</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="get-quote.html">Get a Quote</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact-us.html">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Portfolio</a>
+    </li>
+  </ul>
+  <div class="social-link-icon">
+	<i class="bx bxl-instagram"></i>
+	<i class="bx bxl-linkedin-square"></i>
+	<i class="bx bxl-facebook"></i>
+	<i class="bx bxl-pinterest"></i>
+  </div>
+</div>
+	<!-- sidebar-mobile-Nav End -->
 
 	<!-- hero-section -->
 	<section class="hero-section"></section>
@@ -316,8 +368,10 @@
 						<img src="assets/images/slide-img-04.jpg" alt="">
 						<img src="assets/images/slide-img-05.jpg" alt="">
 					</div>
-					<button class="btn btn-email d-flex w-100 align-items-center mt-3"><i class="bx bx-envelope"></i> sales@thedelipaper.com</button>
-					<button class="btn btn-email d-flex w-100 align-items-center mt-3"><i class="bx bxs-phone"></i> 832-900-9245</button>
+					<button class="btn btn-email d-flex w-100 align-items-center mt-3"><i class="bx bx-envelope"></i>
+						sales@thedelipaper.com</button>
+					<button class="btn btn-email d-flex w-100 align-items-center mt-3"><i class="bx bxs-phone"></i>
+						832-900-9245</button>
 				</div>
 				<div class="col-xl-7 col-lg-7 col-md-7 col-12">
 					<h1 class="text-center text-quote">Get A Quote</h1>
@@ -438,7 +492,8 @@
 								</div>
 							</div>
 							<div class="col-xl-12">
-								<button class="btn btn-send col-xl-8 d-flex justify-content-center mt-3	 m-auto">Send</button>
+								<button
+									class="btn btn-send col-xl-8 d-flex justify-content-center mt-3	 m-auto">Send</button>
 							</div>
 						</div>
 					</form>
@@ -451,10 +506,12 @@
 			<div class="row mt-5 ml-5 mr-5">
 				<div class="col-xl-7">
 					<h1 class="text-why mb-5 pb-5">Why Greaseproof paper</h1>
-					<p class="para-grease"><a href="#"> Greaseproof paper </a> offers the advantage of no art plate or setup costs.Delivery time: 2 to 3 weeks.</p>
+					<p class="para-grease"><a href="#"> Greaseproof paper </a> offers the advantage of no art plate or
+						setup costs.Delivery time: 2 to 3 weeks.</p>
 					<ul class="pl-0 list-grease">
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; Free shipping to the United States, Canada, and Mexico.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; Free shipping to the United States, Canada,
+								and Mexico.</a>
 						</li>
 						<li>
 							<a href="#"><i class="bx bx-check"></i> &nbsp; Process printing in 1, 2, or 4 colors.</a>
@@ -463,13 +520,16 @@
 							<a href="#"><i class="bx bx-check"></i> &nbsp; Full ink coverage is possible.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; All are available in both standard and customized sizes.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; All are available in both standard and
+								customized sizes.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; The product is 100% compostable and recyclable.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; The product is 100% compostable and
+								recyclable.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; Paper stocks are available in white or Kraft brown.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; Paper stocks are available in white or Kraft
+								brown.</a>
 						</li>
 						<li>
 							<a href="#"><i class="bx bx-check"></i> &nbsp; Microwave-safe heating.</a>
@@ -478,7 +538,8 @@
 							<a href="#"><i class="bx bx-check"></i> &nbsp; Freezer-friendly storage</a>
 						</li>
 					</ul>
-					<button class="btn-slide-loop mb-10 d-flex align-items-center	"><span>Get a Quote <i class="bx bx-chevron-right"></i></span></button>
+					<button class="btn-slide-loop mb-10 d-flex align-items-center	"><span>Get a Quote <i
+								class="bx bx-chevron-right"></i></span></button>
 				</div>
 				<div class="col-xl-5">
 					<img src="assets/images/greaseproof-paper.jpg" class="img-fluid" alt="">
@@ -490,7 +551,7 @@
 		<div class="container-fluid">
 			<div class="row pt-5 mt-5">
 				<div class="col-xl-12">
-					<h1 class="text-why text-center">PRODUCT HIGHLIGHTS</h1>
+					<h1 class="text-why text-center mb-4">PRODUCT HIGHLIGHTS</h1>
 					<hr>
 				</div>
 			</div>
@@ -498,46 +559,566 @@
 				<div class="col-md-6 mt-2">
 					<ul class="pl-0 list-grease">
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; Approved as safe for contact directly with meals.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; Approved as safe for contact directly with
+								meals.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; 
-Ideal for meals that are both hot and cold.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp;
+								Ideal for meals that are both hot and cold.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; 
-The paper has multiple uses.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp;
+								The paper has multiple uses.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; High quality, high wet strength multipurpose paper.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; High quality, high wet strength multipurpose
+								paper.</a>
 						</li>
 						<li>
 							<a href="#"><i class="bx bx-check"></i> &nbsp; Ceases using oily foods.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; Manufactured organically without the use of coatings.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; Manufactured organically without the use of
+								coatings.</a>
 						</li>
 						<li>
 							<a href="#"><i class="bx bx-check"></i> &nbsp; Printer ink made from vegetables.</a>
 						</li>
 						<li>
-							<a href="#"><i class="bx bx-check"></i> &nbsp; Safe to use in the oven, microwave, and freezer.</a>
+							<a href="#"><i class="bx bx-check"></i> &nbsp; Safe to use in the oven, microwave, and
+								freezer.</a>
 						</li>
-					</ul>	
+					</ul>
 				</div>
 				<div class="col-md-6 mt-2">
 					<img src="assets/images/Deli-Paper.jpg" class="img-fluid" alt="">
-					
+
 				</div>
 			</div>
 		</div>
 	</section>
+	<section class="standard-section">
+		<div class="container-fluid">
+			<div class="row ml-5 mr-5 mt-5 pt-5">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-12">
+					<div class="row">
+						<div class="col-xl-6 col-lg-12 col-md-12 col-12 p-1">
+							<img src="assets/images/img-001.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="col-xl-6 col-lg-12 col-md-12 col-12 p-1">
+							<img src="assets/images/img-002.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="col-xl-6 col-lg-12 col-md-12 col-12 p-1">
+							<img src="assets/images/img-003.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="col-xl-6 col-lg-12 col-md-12 col-12 p-1">
+							<img src="assets/images/img-004.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="col-xl-6 col-lg-12 col-md-12 col-12 p-1">
+							<img src="assets/images/img-005.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="col-xl-6 col-lg-12 col-md-12 col-12 p-1">
+							<img src="assets/images/img-006.jpg" class="img-fluid" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-12">
+					<h1 class="text-standard mt-5">Standard Sizes</h1>
+					<div class="row mt-5 pt-4">
+						<div class="col-xl-3 col-lg-4 col-md-6 col-6 pt-10">
+							<ul class="pl-0 mb-0 list-count">
+								<li>
+									4″ x 4″
+								</li>
+								<li>
+									5″ x 5″
+								</li>
+								<li>
+									6” x 5”
+								</li>
+								<li>
+									6″ x 6″
+								</li>
+								<li>
+									7” x 5”
+								</li>
+								<li>
+									7” x 7”
+								</li>
+								<li>
+									8” x 5”
+								</li>
+								<li>
+									8” x 6”
+								</li>
+								<li>
+									8” x 8”
+								</li>
+								<li>
+									8.5” x 11”
+								</li>
+								<li>
+									9″ x 5″
+								</li>
+								<li>
+									9″ x 6″
+								</li>
+								<li>
+									9″ x 9″
+								</li>
+							</ul>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-md-6 col-6 pt-10">
+							<ul class="pl-0 mb-0 list-count">
+								<li>
+									10″ x 5″
+								</li>
+								<li>
+									10″ x 6″
+								</li>
+								<li>
+									10″ x 8″
+								</li>
+								<li>
+									10″ x 10″
+								</li>
+								<li>
+									10.75″ x 10″
+								</li>
+								<li>
+									12″ x 6″
+								</li>
+								<li>
+									12″ x 8″
+								</li>
+								<li>
+									12″ x 9″
+								</li>
+								<li>
+									12″ x 10″
+								</li>
+								<li>
+									12″ x 12″
+								</li>
+								<li>
+									13″ x 6″
+								</li>
+								<li>
+									13″ x 9″
+								</li>
+								<li>
+									13″ x 10″
+								</li>
+							</ul>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-md-6 col-12 pt-10">
+							<ul class="pl-0 mb-0 list-count">
+								<li>
+									13″ x 13″
+								</li>
+								<li>
+									14” x 12”
+								</li>
+								<li>
+									15″ x 9″
+								</li>
+								<li>
+									15″ x 10.75″
+								</li>
+								<li>
+									15″ x 12″
+								</li>
+								<li>
+									15″ x 13″
+								</li>
+								<li>
+									16” x 12”
+								</li>
+								<li>
+									17” x 11″
+								</li>
+								<li>
+									18” x 10”
+								</li>
+								<li>
+									18” x 12”
+								</li>
+								<li>
+									18” x 13”
+								</li>
+								<li>
+									20″ x 10″
+								</li>
+								<li>
+									20” x 12”
+								</li>
+								<li>
+									20″ x 13″
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="standard-section">
+		<div class="container">
+			<div class="row mt-5">
+				<div class="col-md-12 text-center">
+					<h1 class="text-find">Find an answer to all your questions below.</h1>
+				</div>
+				<div class="col-xl-5 col-lg-6 col-md-6 col-12 m-auto">
+					<p class="text-quick">Quick answers to questions you may have. Can’t find what you’re looking for?
+						Check out our full documentation.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row ml-5 mr-5 mt-5">
+				<div class="col-xl-6 col-lg-8 col-md-8 col-12">
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>What types of wrapping paper does The Deli Paper Company offer?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">We offer a wide range of wrapping paper, including options for
+							Christmas, floral designs, and personalized options for any occasion. Our selection includes
+							gift wrap and bulk options for businesses.</p>
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>Can I get wrapping paper that's suitable for items <br> like sandwiches or flowers?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">Our website features a detailed guide on each type of paper we
+							offer. Plus, our customer service team is always ready to help you make the perfect choice.
+						</p>
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>What are the advantages of using parchment paper from The Deli Paper Company?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">Our <a href="#">parchment paper </a> is ideal for all your
+							baking needs, available in sheets or rolls, and comes in bleached or unbleached varieties.
+							It’s perfect for non-stick baking and cooking, and we also offer custom-printed options.</p>
+						<p class="accordion-para d-none"> The Deli paper provides free shipping on all orders across the
+							United States. There are no minimum purchase requirements, so you can enjoy our products
+							delivered to your doorstep at no extra cost</p>
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>How does custom packaging benefit my business?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+
+						<p class="accordion-para d-none"> Custom packaging with your branding can significantly enhance
+							your product’s appeal, provide better protection, and contribute to a memorable unboxing
+							experience for your customers. </p>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-8 col-md-8 col-12">
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>Can I order custom sizes or designs?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">Absolutely! We understand that one size doesn’t fit all.
+							Contact us with your specifications, and we’ll tailor our paper to your unique requirements.
+						</p>
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>Does The Deli Paper Company offer butcher paper?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">Absolutely! We understand that one size doesn’t fit all. Contact us with your specifications, and we’ll tailor our paper to your unique requirements.
+						</p>
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>Can I order custom sizes or designs?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">Yes, we supply high-quality butcher wrapping paper in various sizes, including 24-inch and 36-inch rolls. Whether you’re barbecuing or freezing meat, our butcher paper has you covered.
+						</p>
+						<p class="accordion-para d-none">Absolutely! We understand that one size doesn’t fit all. Contact us with your specifications, and we’ll tailor our paper to your unique requirements.
+						</p>
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>How can I get in touch for more questions?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">We’re here for you! Reach out to us via our <a href="#"> contact page, </a> and we’ll get back to you as soon as possible
+						</p>
+						
+					</div>
+					<div class="accordion-wrapper mt-3">
+						<div class="accordion-text d-flex justify-content-between align-items-center">
+							<h3>why should I choose it for my business?</h3>
+							<i class="bx bx-chevron-right right-icon"></i>
+						</div>
+						<p class="accordion-para d-none">Custom  Deli Paper is a versatile, eco-friendly packaging solution tailored to your brand. Made from recyclable and compostable materials, it’s ideal for wrapping food items while maintaining sustainability. With no setup costs, full ink coverage, and customizable designs, it provides an excellent opportunity to showcase your branding. Perfect for both hot and cold meals, it’s safe for use in ovens, microwaves, and freezers.
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="blog-section">
+		<div class="container">
+			<div class="row mt-5 pt-5">
+				<div class="col-md-6 text-center m-auto">
+					<h1 class="text-blog">Our Blog</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row justify-content-center ml-5 mr-5 mt-5">
+				<div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-3">
+					<div class="card-wrapper border">
+						<div class="card-img position-relative">
+							<div class="overlay">
+								<div class="d-flex justify-content-center align-items-center arrow-icon">
+									<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+								</div>
+							</div>
+							<img src="assets/images/card-img-01.png" class="img-fluid w-100" alt="">
+						</div>
+						<div class="card-body">
+							<h4>What is Deli Paper Everything You Need to Know About This Food Service Essential</h4>
+							<p class="mb-0">Introduction: In the frantic food service industry hygiene and presentation...	</p>
+							<a href="#" class="text-read">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-3">
+					<div class="card-wrapper border">
+						<div class="card-img position-relative">
+							<div class="overlay">
+								<div class="d-flex justify-content-center align-items-center arrow-icon">
+									<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+								</div>
+							</div>
+							<img src="assets/images/card-img-02.jpg" class="img-fluid w-100" alt="">
+						</div>
+						<div class="card-body">
+							<h4>The Best Food Wrapping Paper for Freshness and Style</h4>
+							<p class="mb-0">When it is about the presentation of food and its...	</p>
+							<a href="#" class="text-read">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-3">
+					<div class="card-wrapper border">
+						<div class="card-img position-relative">
+							<div class="overlay">
+								<div class="d-flex justify-content-center align-items-center arrow-icon">
+									<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+								</div>
+							</div>
+							<img src="assets/images/card-img-03.png" class="img-fluid w-100" alt="">
+						</div>
+						<div class="card-body">
+							<h4>Greaseproof Paper – A Complete Guide for Home and Commercial Use</h4>
+							<p class="mb-0">Greaseproof papers are a form of non-stick paper specifically formulated...	</p>
+							<a href="#" class="text-read">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-3">
+					<div class="card-wrapper border">
+						<div class="card-img position-relative">
+							<div class="overlay">
+								<div class="d-flex justify-content-center align-items-center arrow-icon">
+									<i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+								</div>
+							</div>
+							<img src="assets/images/card-img-04.png" class="img-fluid w-100" alt="">
+						</div>
+						<div class="card-body">
+							<h4>How to Buy Deli Paper for Your Food Business</h4>
+							<p class="mb-0">If you are in charge of an eatery then you...</p>
+							<a href="#" class="text-read">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="ticker-wrapper py-4 mt-5" style="background: #2757FF !important;">
+		<div class="ticker-content">
+			<div class="ticker-item text-white"><span class="star text-dark">✻</span>FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span>
+			</div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+			<div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-4 col-lg-6 col-md-7 col-12">
+							<a class="navbar-brand d-flex align-items-center logo-text-footer" href="#"><img src="assets/images/logo-img.png"
+				class="img-fluid" alt=""> &nbsp; The Deli Paper
+
+		</a>
+		<p class="footer-para mt-3">
+			Welcome to The Deli Paper, where your culinary designs are elegantly displayed. Our deli paper is more than just a protective layer; it’s a statement of quality and commitment to your brand’s image.
+		</p>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-5 col-12">
+					<h5 class="text-product">Our Products</h5>
+					<ul class="mt-3 list-footer pl-0">
+						<li>
+							<a href="#">Wax Paper</a>
+						</li>
+						<li>
+							<a href="#">Food Wrapping Paper</a>
+						</li>
+						<li>
+							<a href="#">Butcher Paper</a>
+						</li>
+						<li>
+							<a href="#">Parchment Paper</a>
+						</li>
+						<li>
+							<a href="#">Paper Bags</a>
+						</li>
+						<li>
+							<a href="#">Gift Wrapping Paper</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-12">
+				<p class="space-text">&nbsp;</p>
+				<p class="space-text">&nbsp;</p>
+				<p class="space-text">&nbsp;</p>
+				<p class="space-text">&nbsp;</p>
+				<p class="space-text">&nbsp;</p>
+				<!-- <p class="space-text">&nbsp;</p>
+				<p class="space-text">&nbsp;</p>
+				<p class="space-text">&nbsp;</p> -->
+				</div>
+				<div class="col-md-12">
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+					<div class="social-link d-flex align-items-center flex-wrap">
+						<h5 class="mb-0">Connect with us!</h5>
+						<div class="social-icons d-flex">
+							<i class="bx bxl-instagram"></i>
+							<i class='bx bxl-linkedin-square' ></i>
+							<i class='bx bxl-facebook' ></i>
+							<i class='bx bxl-pinterest' ></i>
+						</div>
+					</div>
+					<div class="footer-logo-images d-flex align-items-center flex-wrap">
+						<img src="assets/images/footer-img-01.png" alt="">
+						<img src="assets/images/footer-img-02.png" alt="">
+						<img src="assets/images/footer-img-03.png" alt="">
+						<img src="assets/images/footer-img-04.png" alt="">
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<footer class="footer-bottom">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="d-flex justify-content-between align-items-center flex-wrap">
+					<div class="footer-div-inner">
+						<p class="mb-0 text-white" style="visibility: hidden;">© 2025 The Deli Paper. All Rights Reserved</p>
+
+					</div>
+					<div class="footer-img-card">
+						<img src="assets/images/payment.png" class="img-fluid" alt="">
+					</div>
+					<div class="footer-div">
+						<p class="mb-0 text-white">© 2025 The Deli Paper. All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
 	<script src="assets/bootstrap/jquery/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/popper.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<!-- Owl Carousel JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+$(document).ready(function () {
+  $('.navbar-toggler').click(function () {
+    $('.sidebar').toggleClass('active');
+  });
+
+  $('.close-sidebar').click(function () {
+    $('.sidebar').removeClass('active');
+  });
+});
+</script>
+	<script>
+		$(document).ready(function () {
+  // Show button after scrolling 200px
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $('#scrollUp').fadeIn();
+    } else {
+      $('#scrollUp').fadeOut();
+    }
+  });
+
+  // Scroll to top on click
+  $('#scrollUp').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 800); // 800ms smooth scroll
+    return false;
+  });
+});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('.accordion-wrapper').click(function () {
+				const $this = $(this);
+
+				// Close all other accordions
+				$('.accordion-wrapper').not($this).each(function () {
+					$(this).find('.accordion-para').addClass('d-none');
+					$(this).find('.right-icon')
+						.removeClass('bx-chevron-down')
+						.addClass('bx-chevron-right');
+				});
+
+				// Toggle current accordion content
+				const $para = $this.find('.accordion-para');
+				$para.toggleClass('d-none');
+
+				// Toggle icon class
+				const $icon = $this.find('.right-icon');
+				if ($para.hasClass('d-none')) {
+					$icon.removeClass('bx-chevron-down').addClass('bx-chevron-right');
+				} else {
+					$icon.removeClass('bx-chevron-right').addClass('bx-chevron-down');
+				}
+			});
+		});
+
+
+	</script>
+
 	<script>
 		$(document).ready(function () {
 			$('.owl-carousel').owlCarousel({
