@@ -1318,6 +1318,36 @@ text-decoration: none;
   border: 1px solid #000;
   text-decoration: none   ;
 }
+.btn-quote{
+  display: none;
+}
+.pagination-list{
+  list-style: none;
+  gap: 10px;
+}
+.pagination-list li a{
+  padding: 15px 30px;
+      padding: 12px 15px;
+    font-size: 20px;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    color: #000;
+  
+}
+.pagination-list li a:hover{
+   background: #000;
+   border: none;
+  color: #fff; 
+  text-decoration: none; 
+}
+.pagination-list li a.active-pagination{
+  background: #000;
+  color: #fff;
+   border: none;
+
+  
+}
+
   @media screen and (max-width:1030px) {
     .list-navbar {
       display: none;
@@ -1341,6 +1371,16 @@ text-decoration: none;
   @media screen and (max-width:991px) {
     .flex-product-items {
       gap: 40px;
+    }
+    .entry-title {
+      font-size: 18px;
+    }
+    .wax-product-section .row{
+      margin-top: 0px !important;
+    }
+    .tab-section .row{
+      margin-top: 0px !important;
+      padding-top: 30px !important;
     }
     .quote-section .row{
       margin-left: 0px !important;
@@ -1703,6 +1743,29 @@ text-decoration: none;
     .flex-product-items {
       justify-content: center !important;
     }
+    .pagination-list li a {
+    /* padding: 15px 30px; */
+    padding: 10px 12px;
+    font-size: 15px;
+    }
+    .pagination-list {
+      gap: 5px;
+    }
+    .btn-quote{
+      background-color: #C2D0FD;
+      border-top: 1px solid #2757FF;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      padding: 15px;
+      z-index: 111  ;
+      border-radius: 0px;
+      display: block;
+       font-family: "Marcellus", Sans-serif;
+    font-weight: 400;
+      color: #000;
+      font-size: 24px;
+  }
     .text-offer {
       font-size: 22px;
     }
