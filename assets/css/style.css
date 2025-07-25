@@ -1703,6 +1703,9 @@ text-decoration: none;
     .flex-product-items {
       justify-content: center !important;
     }
+    .text-offer {
+      font-size: 22px;
+    }
     .icon-img {
     padding: 14px;
     margin-bottom: 5px;
