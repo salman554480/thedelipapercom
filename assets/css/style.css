@@ -1186,6 +1186,138 @@ bottom: 0px;
   color: #000;
   font-size: 16px;
 }
+.blog-wrapper{
+  overflow: hidden;
+  border-radius: 12px;
+
+}
+.blog-img{
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+      aspect-ratio: 150 / 90;
+    object-fit: cover;
+}
+.blog-wrapper:hover .blog-img{
+  transform: scale(1.1);
+}
+.text-blog-product{
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #2757FF;
+}
+.entry-title{
+  font-family: "Marcellus", Sans-serif;
+    font-weight: 400;
+}
+.para-blog-product{
+  color: #999;
+  font-weight: 400;
+}
+.span-paper{
+  color: #000;
+}
+.para-blog-product{
+  color: #999;
+  font-weight: 400;
+}
+.text-search{
+  font-weight: 600;
+  color: #000;
+}
+.input-field-blog{
+  height: 50px;
+  padding-left: 30px;
+  padding-right: 45px;
+}
+.input-field-blog:focus{
+ border: 1px solid #2757FF;
+ box-shadow: none;
+}
+.text-found{
+   font-family: "Marcellus", Sans-serif;
+    font-weight: 400;
+  color: #2757FF;
+  font-size: 45px;
+}
+.para-found{
+  font-weight: 400;
+  color: #555;
+}
+.text-category{
+  font-weight: 600;
+  color: #000;
+}
+.search-icon{
+
+      position: absolute;
+    right: 0px;
+    transform: translate(-15px, -37px);
+    font-size: 25px;
+
+}
+.list-category{
+  list-style: none;
+  /* line-height: 40px; */
+}
+.list-category li a{
+  color: #555;
+  font-weight: 400;
+text-decoration: none;
+}
+.list-category li a .txt-count{
+   /* padding: 8px 12px; */
+   padding: 2px 4px;
+   border-radius: 8px;
+}
+.list-category li a:hover{
+  color: #2757ff;
+}
+.list-category li a:hover .txt-count{
+  color: #fff;
+ 
+  background: #2757ff;
+}
+.thumbnail-img{
+      margin-right: 16px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.detail-blog-recent h5{
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+}
+.detail-blog-recent p{
+    font-weight: 400;
+    color: #555;
+}
+.list-tag{
+  display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    line-height: 40px;
+}
+.list-tag li a{
+      border: 1px solid;
+        padding: 4px 9px;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    border-radius: 20px;
+        font-weight: 500;
+        color: #999;
+            border: 1px solid #e7e7e7;
+    background-color: #fff0;
+    text-transform: capitalize;
+}
+.list-tag li a:hover{
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  text-decoration: none   ;
+}
   @media screen and (max-width:1030px) {
     .list-navbar {
       display: none;
