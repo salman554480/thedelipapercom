@@ -1790,6 +1790,9 @@ body.body-darkened::before {
     .flex-product-items {
       justify-content: center !important;
     }
+    .right-side-search-section{
+      display: none;
+    }
     .form-slide-panel.open {
     
       width: -webkit-fill-available;
@@ -1811,6 +1814,7 @@ body.body-darkened::before {
     }
     .pagination-list {
       gap: 5px;
+      padding-left: 0px;
     }
     .btn-quote{
       background-color: #C2D0FD;
