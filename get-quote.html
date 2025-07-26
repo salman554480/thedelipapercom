@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         
             .text-form-quote {
@@ -156,10 +157,13 @@
             <div class="row pt-5 pb-5">
 
                 <div class="col-xl-10 col-lg-7 col-md-7 col-12 m-auto">
+                    <div data-aos="fade-up"
+     data-aos-duration="3000">
                     <h1 class="text-center text-quote text-form-quote">Get A Quote</h1>
                     <p class="text-center para-quote mt-3">Let’s get started! Simply fill out the form below, and one of our
                         dedicated team members will reach out to you shortly with a personalized quote tailored to your
                         specific needs.</p>
+                        </div>
                     <form action="#" class="mt-5">
                         <div class="row justify-content-start quote-content ml-5">
                             <div class="col-xl-6">
@@ -304,6 +308,10 @@
         </div>
         <div class="container">
             <div class="row justify-content-center pb-5">
+                <div data-aos="fade-right"
+ data-aos-offset="300"
+ data-aos-easing="ease-in-sine">
+ <div class="row justify-content-cente">
                 <div class="col-xl-6 col-lg-10 col-md-10 col-12">
                     <div class="bg-white round-clock mt-3">
                         <svg aria-hidden="true" class="e-font-icon-svg e-far-clock" viewBox="0 0 512 512"
@@ -326,6 +334,13 @@
                         <!-- <p class="mb-0">&nbsp;</p> -->
                     </div>
                 </div>
+                </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div data-aos="fade-right"
+ data-aos-offset="300"
+ data-aos-easing="ease-in-sine">
+ <div class="row justify-content-cente">
                 <div class="col-xl-6 col-lg-10 col-md-10 col-12">
                     <div class="bg-white round-clock mt-3">
                      <svg aria-hidden="true" class="e-font-icon-svg e-fab-paypal" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"></path></svg>    
@@ -341,6 +356,8 @@
                         <p class="mb-0">Sustainability is a top priority for Deli Paper Company. Our creative method blends environmentally friendly materials.</p>
                         <!-- <p class="mb-0">&nbsp;</p> -->
                     </div>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -369,10 +386,14 @@
 </section>
 <section class="testimonial-section product-slider-section pb-5">
     <div class="container">
-        <div class="row">
+        <div class="row pt-5">
             <div class="col-md-12 m-auto">
+                <div data-aos="fade-up"
+     data-aos-duration="3000">
+
                 <h1 class="text-center text-product"> Other Products</h1>
                 <p class="text-center para-product">Diving deeper into our catalogue, you’ll uncover an array of offerings designed to enhance your experience beyond our core range.</p>
+            </div>
             </div>
 
         </div>
@@ -663,7 +684,11 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+  AOS.init();
+</script>
     <script>
         $('.product-slide').owlCarousel({
     loop:true,

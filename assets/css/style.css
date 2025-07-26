@@ -1348,6 +1348,52 @@ text-decoration: none;
   
 }
 
+/* .form-slide-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1050;
+  transition: right .9s ease;
+  border-left: 3px solid #8c30f5;
+  overflow-y: auto;
+} */
+/* .form-slide-panel.show {
+  right: 0;
+} */
+
+/* Right-side form */
+.form-slide-panel {
+  position: fixed;
+  top: 0;
+  right: -660px;
+  width: 610px;
+  height: 100%;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 1051;
+  overflow-y: auto;
+  transition: right 0.8s ease;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+}
+
+/* Slide-in visible state */
+.form-slide-panel.open {
+  right: 0;
+}
+
+/* Dimmed background using body */
+body.body-darkened::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1050;
+}
+
+
   @media screen and (max-width:1030px) {
     .list-navbar {
       display: none;
@@ -1743,6 +1789,10 @@ text-decoration: none;
   @media screen and (max-width:767px) {
     .flex-product-items {
       justify-content: center !important;
+    }
+    .form-slide-panel.open {
+    
+      width: -webkit-fill-available;
     }
     .footer {
       padding-top: 0px !important;
