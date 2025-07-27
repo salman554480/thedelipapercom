@@ -26,8 +26,40 @@
 		@media screen and (max-width:767px) {
 			.owl-carousel .owl-item img {
     display: block;
-    width: 75%;
+    width: 100%;
     margin: auto;
+}
+.text-product {
+    margin-top: 35px;
+            font-size: 30px;
+}
+.text-offer {
+        font-size: 35px;
+    }
+    .text-faq {
+    font-size: 30px;
+    }
+.social-media-link i {
+    font-size: 18px;
+    padding: 8px 8px;
+}   
+.para-wax {
+    font-size: 18px;
+}
+    .list-order {
+        margin-left: 35px !important;
+    }
+    .text-wax {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+.social-media-link{
+    gap: 8px;
+    display: flex;
+}
+.nav-tabs .nav-item {
+    width: -webkit-fill-available;
+    text-align: center;
 }
 .testimonial-section .row{
 	margin-bottom: 0px !important;
@@ -111,6 +143,8 @@
 </head>
 
 <body>
+
+    <button class="btn btn-quote" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">Get A Free Quote</button>
 
     <div id="scrollUp">
         <i class="bx bx-chevron-up"></i>
@@ -231,10 +265,10 @@
         <div class="container-fluid">
             <div class="row pt-5 pb-5 ml-5 mr-5">
 
-                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
                     <img src="assets/images/wax-paper.jpg" class="img-fluid" alt="">
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
                     <div class="ml-5 wax-right-content">
                     <h1 class="text-wax">Wax Paper</h1>
                     <p class="para-wax">
@@ -258,7 +292,7 @@
     <section class="work-section work-column-section">
 		<div class="container-fluid">
 			<div class="row mt-5 pt-5 ml-5 mr-5">
-				<div class="col-md-12">
+				<div class="col-md-12 flex-padding">
 					<div class="d-flex justify-content-between flex-product-items flex-wrap">
 						<div class="product-item">
 							<div class="icon-img rounded-circle">
@@ -308,7 +342,7 @@
     <section class="tab-section">
         <div class="container-fluid">
             <div class="row ml-5 mr-5 mt-5 pt-5">
-                <div class="col-xl-8 mt-3">
+                <div class="col-xl-8 flex-padding mt-3">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
@@ -398,7 +432,7 @@
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
                 </div>
-                <div class="col-xl-4 mt-3">
+                <div class="col-xl-4 flex-padding mt-3">
                     <img src="assets/images/tab-img-01.png" class="img-fluid tab-img" alt="">
                     <img src="assets/images/tab-img-02.png" class="img-fluid tab-img mt-3 mb-3" alt="">
                     <div class="position-relative">
@@ -417,7 +451,7 @@
    <section class="standard-section">
 		<div class="container">
 			<div class="row mt-5">
-				<div class="col-md-12 text-center">
+				<div class="col-md-12 text-center flex-padding">
 					<h1 class="text-faq">Frequently Asked Questions</h1>
 				</div>
 				
@@ -425,7 +459,7 @@
 		</div>
 		<div class="container-fluid">
 			<div class="row ml-5 mr-5 mt-5">
-				<div class="col-xl-6 col-lg-8 col-md-8 col-12">
+				<div class="col-xl-6 col-lg-8 col-md-8 col-12 flex-padding">
 					<div class="accordion-wrapper mt-3">
 						<div class="accordion-text d-flex justify-content-between align-items-center">
 							<h3>What is the Wax Paper logo's significance?</h3>
@@ -450,7 +484,7 @@
 					</div>
 					
 				</div>
-				<div class="col-xl-6 col-lg-8 col-md-8 col-12">
+				<div class="col-xl-6 col-lg-8 col-md-8 col-12 flex-padding">
 					<div class="accordion-wrapper mt-3">
 						<div class="accordion-text d-flex justify-content-between align-items-center">
 							<h3>Can I get personalized wax paper for my kitchen?</h3>
@@ -545,7 +579,7 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-7 col-12">
+                <div class="col-xl-4 col-lg-6 col-md-7 col-12 flex-padding">
                     <a class="navbar-brand d-flex align-items-center logo-text-footer" href="#"><img
                             src="assets/images/logo-img.png" class="img-fluid" alt=""> &nbsp; The Deli Paper
 
@@ -556,7 +590,7 @@
                         image.
                     </p>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-5 col-12">
+                <div class="col-xl-6 col-lg-6 col-md-5 col-12 flex-padding">
                     <h5 class="text-product">Our Products</h5>
                     <ul class="mt-3 list-footer pl-0">
                         <li>
@@ -579,7 +613,41 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
+                    <h5 class="text-product">Useful links</h5>
+                    <ul class="mt-1 list-footer pl-0">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Condition</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
+                    <h5 class="text-product">Contact</h5>
+                    <ul class="mt-1 list-footer pl-0">
+                        <li>
+                            <a href="#"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bx bx-envelope icon-phone"></i>sales@thedelipaper.com</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bx bx-map icon-phone"></i>3302 burke rd Pasadena TX. 77504</a>
+                        </li>
+                        
+                       
+                    </ul>
+                </div>
+                <div class="col-md-12 flex-padding">
                     <p class="space-text">&nbsp;</p>
                     <p class="space-text">&nbsp;</p>
                     <p class="space-text">&nbsp;</p>
@@ -589,7 +657,10 @@
 				<p class="space-text">&nbsp;</p>
 				<p class="space-text">&nbsp;</p> -->
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 flex-padding footer-flex-column">
+                    <img src="assets/images/google-img.png" class="img-fluid" style="width: 50%;" alt="">
+                </div>
+                <div class="col-md-12 flex-padding">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                         <div class="social-link d-flex align-items-center flex-wrap">
                             <h5 class="mb-0">Connect with us!</h5>
@@ -614,8 +685,8 @@
     <footer class="footer-bottom">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div class="col-md-12 flex-padding">
+                    <div class="d-flex justify-content-between align-items-center flex-bottom-footer flex-wrap">
                         <div class="footer-div-inner">
                             <p class="mb-0 text-white" style="visibility: hidden;">© 2025 The Deli Paper. All Rights
                                 Reserved</p>
