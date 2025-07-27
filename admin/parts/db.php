@@ -1,3 +1,1 @@
-<?php
-$conn =  mysqli_connect('localhost','vauldkga_delipaperuser','delipaperpassword','vauldkga_delipaperdb');
-?>
+<?php $conn = mysqli_connect('localhost', 'root', '', 'delipapercom') ?>

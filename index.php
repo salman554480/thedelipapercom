@@ -1,29 +1,31 @@
 <?php require_once('parts/db.php');
 
-$select_setting = "SELECT * FROM setting ";
-$run_setting = mysqli_query($conn, $select_setting);
-$row_setting = mysqli_fetch_array($run_setting);
+// $select_setting = "SELECT * FROM setting ";
+// $run_setting = mysqli_query($conn, $select_setting);
+// $row_setting = mysqli_fetch_array($run_setting);
 
-$setting_id = $row_setting['setting_id'];
-$website_title = $row_setting['website_title'];
-$website_url = $row_setting['website_url'];
-$website_logo = $row_setting['website_logo'];
-$website_favicon = $row_setting['website_favicon'];
-$website_head_code = $row_setting['website_head_code'];
-$ad_code_one = $row_setting['ad_code_one'];
-$ad_code_two = $row_setting['ad_code_two'];
-$ad_code_three = $row_setting['ad_code_three'];
+// $setting_id = $row_setting['setting_id'];
+// $website_title = $row_setting['website_title'];
+// $website_url = $row_setting['website_url'];
+// $website_logo = $row_setting['website_logo'];
+// $website_favicon = $row_setting['website_favicon'];
+// $website_head_code = $row_setting['website_head_code'];
+// $ad_code_one = $row_setting['ad_code_one'];
+// $ad_code_two = $row_setting['ad_code_two'];
+// $ad_code_three = $row_setting['ad_code_three'];
 
-$footer_text = $row_setting['footer_text'];
-$facebook = $row_setting['facebook'];
-$twitter = $row_setting['twitter'];
-$instagram = $row_setting['instagram'];
-$pinterest = $row_setting['pinterest'];
+// $footer_text = $row_setting['footer_text'];
+// $facebook = $row_setting['facebook'];
+// $twitter = $row_setting['twitter'];
+// $instagram = $row_setting['instagram'];
+// $pinterest = $row_setting['pinterest'];
 
 
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-$currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+// $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+// $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
+
+$website_url = "http://localhost/thedelipapercom/";
 
 ?>
 <!DOCTYPE html>
@@ -1305,8 +1307,8 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                     <p class="space-text">&nbsp;</p>
                     <p class="space-text">&nbsp;</p>
                     <!-- <p class="space-text">&nbsp;</p>
-				<p class="space-text">&nbsp;</p>
-				<p class="space-text">&nbsp;</p> -->
+                <p class="space-text">&nbsp;</p>
+                <p class="space-text">&nbsp;</p> -->
                 </div>
                 <div class="col-md-12 flex-padding footer-flex-column">
                     <img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid"
@@ -1368,11 +1370,11 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
                     </button>
                 </div>
                 <div class="modal-body mt-3" style="
-				padding: 17px 17px 17px 17px;
-				border-style: solid;
-				border-color: #942BEF;
-				border-radius: 7px 7px 7px 7px; 
-				">
+                padding: 17px 17px 17px 17px;
+                border-style: solid;
+                border-color: #942BEF;
+                border-radius: 7px 7px 7px 7px; 
+                ">
                     <form action="<?php echo $website_url ?>/">
                         <div class="row justify-content-start quote-content">
                             <div class="col-xl-6">

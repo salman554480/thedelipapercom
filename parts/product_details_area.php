@@ -24,25 +24,26 @@ $meta_keywords = $row_product['product_meta_keywords'];
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
                 <div class="ml-5 wax-right-content">
-                    <h1 class="text-wax">Wax Paper</h1>
-                    <p class="para-wax">
-                        When it comes to food packaging in restaurants, presentation is key. This is where custom wax
-                        paper from The Deli Paper comes into play. Whether you need patty paper, branded wax paper, or
-                        personalized wax paper, having a tailor-made solution can make all the difference in elevating
-                        your brand and enhancing customer experience.
-                    </p>
-                    <button class="btn-slide-loop btn-get-qoute"><span>Get a Quote</span></button>
-                    <h3 class="text-follow mt-3">Follow Us</h3>
-                    <div class="social-media-link">
-                        <i class="bx bxl-instagram rounded-pill"></i>
-                        <i class="bx bxl-linkedin-square rounded-pill"></i>
-                        <i class="bx bxl-facebook rounded-pill"></i>
-                        <i class="bx bxl-pinterest rounded-pill"></i>
+                    <h1 class="text-wax"><?php echo $product_name; ?></h1>
+                    <div class="para-wax">
+                        <?php echo $product_short_description; ?>
+                        </p>
+                        <button class="btn-slide-loop btn-get-qoute"><span>Get a Quote</span></button>
+                        <h3 class="text-follow mt-3">Follow Us</h3>
+                        <div class="social-media-link">
+                            <a href="https://www.instagram.com/the.delipaper/"><i
+                                    class="bx bxl-instagram rounded-pill"></i></a>
+                            <a href="https://www.linkedin.com/company/the-deli-paper/"><i
+                                    class="bx bxl-linkedin-square rounded-pill"></i></a>
+                            <a href="https://www.facebook.com/thedelipaper"><i
+                                    class="bx bxl-facebook rounded-pill"></i></a>
+                            <a href="https://www.pinterest.com/thedelip/"><i
+                                    class="bx bxl-pinterest rounded-pill"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </section>
 
@@ -237,7 +238,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
                 <img src="assets/images/tab-img-02.png" class="img-fluid tab-img mt-3 mb-3" alt="">
                 <div class="position-relative">
                     <div class="overlay-img">
-                        <div class="d-flex justify-content-center align-items-center flex-column"
+                        <div class="d-flex justify-content-center align-items-center flex-column  p-1"
                             style="height: -webkit-fill-available;">
                             <h1 class="text-center text-white text-offer">Contact Now To Get 20% Off</h1>
                             <button class="btn btn-order mt-3">Order Now</button>
