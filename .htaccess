@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /thedelipapercom/
+
+# If file or directory doesn't exist, redirect to webpage.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ webpage.php?page=$1 [L,QSA]
