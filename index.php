@@ -78,151 +78,11 @@ $website_url = "http://localhost/thedelipapercom/";
 
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-    @media screen and (max-width:767px) {
-        .owl-carousel .owl-item img {
-            display: block;
-            width: 75%;
-            margin: auto;
-        }
-
-        .work-section .row {
-            margin-top: 15px !important;
-        }
-
-        .fs-50 {
-            font-size: 40px !important;
-        }
-
-        .para-paper {
-            font-size: 22px;
-            line-height: 28px;
-        }
-
-        .text-embark {
-            font-weight: 400;
-            letter-spacing: 4px;
-            font-size: .875rem;
-        }
-
-        .para-discover {
-            font-weight: 400;
-            color: #555;
-            font-size: 18px;
-        }
-
-        .text-paper {
-            font-size: 30px !important;
-            line-height: 40px !important;
-        }
-
-        .product-img-section .row {
-            margin-top: 30px !important;
-        }
-
-        .hero-section {
-            height: 190px;
-            background-position: left;
-        }
-
-        .testimonial-section .row {
-            margin-bottom: 0px !important;
-        }
-
-        .text-why {
-            margin-bottom: 10px !important;
-            font-size: 30px;
-            text-align: center;
-            color: #000;
-        }
-
-        .list-grease li a {
-            font-size: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 26px;
-            display: flex;
-            align-items: baseline;
-            margin-top: calc(20px / 2);
-            padding-bottom: calc(20px / 2);
-        }
-
-        .greaseproof-section .row {
-            /* margin-top: 20px !important; */
-        }
-
-        .list-grease li a i {
-            color: #942BEF;
-            font-size: 24px;
-        }
-
-        .para-grease {
-            font-weight: 400;
-            color: #000;
-            margin-top: 50px;
-        }
-
-        .btn-slide-loop {
-            margin: auto;
-        }
-
-        .paper-img {
-            margin-top: 60px;
-        }
-
-        .mt-20 {
-            margin-top: 20px;
-        }
-
-        .deli-paper {
-            padding-bottom: 35px;
-        }
-
-        .standard-section .row {
-            padding-top: 0px !important;
-        }
-
-        .text-find {
-            font-size: 30px;
-            line-height: 40px;
-        }
-
-        .text-quick {
-            font-size: 22px;
-        }
-
-        .accordion-text i {
-            display: none;
-        }
-
-        .accordion-text h3 {
-            font-size: 23px;
-        }
-
-        .flex-padding-01 {
-            padding: 5px !important;
-        }
-
-        .card-body h4 {
-            font-size: 14px;
-            line-height: 1.4em;
-        }
-    }
-
-    .text-paper {
-        font-size: 40px;
-    }
-
-    .text-embark {
-        font-weight: 400;
-        letter-spacing: 2px;
-    }
-
-    .fs-50 {
-        font-size: 50px;
-    }
+    
     </style>
 </head>
 
@@ -431,7 +291,8 @@ $website_url = "http://localhost/thedelipapercom/";
                         <img src="<?php echo $website_url ?>/assets/images/img-01.jpg" class="img-fluid w-50 img-01"
                             alt="">
                         <div class="left-content-side">
-                            <h1>Wax Paper</h1>
+                            <!-- <h1>Wax Paper</h1> -->
+                            <h2>Wax Paper</h2>
                             <p>Whether you need patty paper, branded wax paper, or personalized wax paper.</p>
                             <a href="<?php echo $website_url ?>/product.php" class="btn btn-view"><span>View
                                     Product</span></a>
@@ -443,7 +304,8 @@ $website_url = "http://localhost/thedelipapercom/";
                         <img src="<?php echo $website_url ?>/assets/images/img-02.jpg" class="img-fluid w-50 img-01"
                             alt="">
                         <div class="left-content-side">
-                            <h1>Parchment Paper</h1>
+                            <!-- <h1>Parchment Paper</h1> -->
+                            <h2>Parchment Paper</h2>
                             <p>Elevate your baking game with Deli Paper, especially our premium Parchment Paper. </p>
                             <button class="btn btn-view"><span>View Product</span></button>
                         </div>
@@ -454,7 +316,8 @@ $website_url = "http://localhost/thedelipapercom/";
                         <img src="<?php echo $website_url ?>/assets/images/img-03.jpg" class="img-fluid w-50 img-01"
                             alt="">
                         <div class="left-content-side">
-                            <h1>Butcher Paper</h1>
+                            <!-- <h1>Butcher Paper</h1> -->
+                            <h2>Butcher Paper</h3>
                             <p>Our butcher paper is also popular among BBQ enthusiasts for wrapping and smoking meat.
                             </p>
                             <button class="btn btn-view"><span>View Product</span></button>
@@ -466,7 +329,8 @@ $website_url = "http://localhost/thedelipapercom/";
                         <img src="<?php echo $website_url ?>/assets/images/img-04.jpg" class="img-fluid w-50 img-01"
                             alt="">
                         <div class="left-content-side">
-                            <h1>Food Wrapping Paper</h1>
+                            <!-- <h1>Food Wrapping Paper</h1> -->
+                            <h2>Food Wrapping Paper</h2>
                             <p>From the kitchen to the gift table, our wrapping papers are designed to impress and
                                 protect</p>
                             <button class="btn btn-view"><span>View Product</span></button>
@@ -482,7 +346,7 @@ $website_url = "http://localhost/thedelipapercom/";
             <div class="row mt-5 pt-5">
                 <div class="col-md-12 m-auto text-center flex-padding">
                     <h1 class="text-paper fs-50">The Deli Paper</h1>
-                    <h4 class="para-paper">Get Your Own Custom Greaseproof Deli Paper in 3 Simple Steps.</h4>
+                    <h3 class="para-paper">Get Your Own Custom Greaseproof Deli Paper in 3 Simple Steps.</h4>
                     <p class="mt-4 para-discover">Discover the ultimate in branding with our Eco-Friendly Custom
                         Greaseproof Deli
                         Paper. Tailor made to fit your needs, our paper is not only versatile in size but also champions
@@ -504,7 +368,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 class="two_elementor_element"></path>
                         </svg>
                         <div class="left-content ml-3">
-                            <h3>SUBMIT YOUR LOGO</h3>
+                            <h3><span>SUBMIT YOUR LOGO</span></h3>
                             <p>Upload vector image file – .pdf, .png, <br> .jpg, or .eps vector graphic.</p>
                         </div>
                     </div>
@@ -521,7 +385,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 fill="#F865DC" class="two_elementor_element"></path>
                         </svg>
                         <div class="left-content ml-3">
-                            <h3>ARTWORK APPROVAL</h3>
+                            <h3><span>ARTWORK APPROVAL</span></h3>
                             <p>Review and confirm the finalized design..</p>
                         </div>
                     </div>
@@ -547,7 +411,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 fill="#F865DC" class="two_elementor_element_02"></path>
                         </svg>
                         <div class="left-content ml-3">
-                            <h3>PRINTING & SHIPPING</h3>
+                            <h3><span>PRINTING & SHIPPING </span></h3>
                             <p>
                                 Transforming your approved design into tangible products and delivering them to your
                                 doorstep. </p>
@@ -561,8 +425,8 @@ $website_url = "http://localhost/thedelipapercom/";
         <div class="container">
             <div class="row mt-5 pt-5">
                 <div class="col-md-12 m-auto text-center flex-padding">
-                    <h5 class="text-embark">Embark On Your</h5>
-                    <h4 class="text-paper text-create">Creative Journey With Us</h4>
+                    <div class="text-embark">Embark On Your</div>
+                    <h2 class="text-paper text-create">Creative Journey With Us</h2>
                     <p class="mt-4 para-discover">Your vision deserves the best execution, and we’re here to make it a
                         reality. If you’re curious about the complexities of our printing techniques, the art of file
                         preparation, the specifics of pricing structures, or the flexibility of order volumes, we’re all
@@ -591,7 +455,7 @@ $website_url = "http://localhost/thedelipapercom/";
                         832-900-9245</a>
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-7 col-12">
-                    <h1 class="text-center text-quote">Get A Quote</h1>
+                    <h2 class="text-center text-quote">Get A Quote</h2>
                     <form action="<?php echo $website_url ?>/">
                         <div class="row justify-content-start quote-content ml-5">
                             <div class="col-xl-6">
@@ -723,7 +587,7 @@ $website_url = "http://localhost/thedelipapercom/";
         <div class="container-fluid">
             <div class="row mt-5 ml-5 mr-5">
                 <div class="col-xl-6 flex-padding">
-                    <h1 class="text-why mb-5 pb-5" style="color: #2757FF;">Why Greaseproof paper</h1>
+                    <p class="text-why mb-5 pb-5" style="color: #2757FF;">Why Greaseproof paper</p>
                     <p class="para-grease"><a href="<?php echo $website_url ?>/"> Greaseproof paper </a> offers the
                         advantage of no art plate or
                         setup costs.Delivery time: 2 <br> to 3 weeks.</p>
@@ -782,7 +646,7 @@ $website_url = "http://localhost/thedelipapercom/";
         <div class="container-fluid">
             <div class="row pt-5 mt-5">
                 <div class="col-xl-12">
-                    <h1 class="text-why text-center mb-4 mt-20">PRODUCT HIGHLIGHTS</h1>
+                    <h2 class="text-why text-center mb-4 mt-20">PRODUCT HIGHLIGHTS</h2>
                     <hr>
                 </div>
             </div>
@@ -862,139 +726,139 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-12">
-                    <h1 class="text-standard mt-5">Standard Sizes</h1>
+                    <h2 class="text-standard mt-5">Standard Sizes</h2>
                     <div class="row mt-5 pt-4">
                         <div class="col-xl-3 col-lg-4 col-md-6 col-4 pt-10">
-                            <ul class="pl-0 mb-0 list-count">
-                                <li>
+                            <div class="pl-0 mb-0 list-count">
+                                <p class="mb-0">
                                     4″ x 4″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     5″ x 5″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     6” x 5”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     6″ x 6″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     7” x 5”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     7” x 7”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     8” x 5”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     8” x 6”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     8” x 8”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     8.5” x 11”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     9″ x 5″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     9″ x 6″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     9″ x 9″
-                                </li>
-                            </ul>
+                                </p>
+                            </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 col-4 pt-10">
-                            <ul class="pl-0 mb-0 list-count">
-                                <li>
+                            <div class="pl-0 mb-0 list-count">
+                                <p class="mb-0">
                                     10″ x 5″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     10″ x 6″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     10″ x 8″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     10″ x 10″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     10.75″ x 10″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     12″ x 6″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     12″ x 8″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     12″ x 9″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     12″ x 10″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     12″ x 12″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     13″ x 6″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     13″ x 9″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     13″ x 10″
-                                </li>
-                            </ul>
+                                </p>
+                            </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6 col-4 pt-10">
-                            <ul class="pl-0 mb-0 list-count">
-                                <li>
+                            <div class="pl-0 mb-0 list-count">
+                                <p class="mb-0">
                                     13″ x 13″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     14” x 12”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     15″ x 9″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     15″ x 10.75″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     15″ x 12″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     15″ x 13″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     16” x 12”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     17” x 11″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     18” x 10”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     18” x 12”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     18” x 13”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     20″ x 10″
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     20” x 12”
-                                </li>
-                                <li>
+                                </p>
+                                <p class="mb-0">
                                     20″ x 13″
-                                </li>
-                            </ul>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1005,7 +869,7 @@ $website_url = "http://localhost/thedelipapercom/";
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-12 text-center flex-padding">
-                    <h1 class="text-find">Find an answer to all your questions below.</h1>
+                    <h2 class="text-find">Find an answer to all your questions below.</h2>
                 </div>
                 <div class="col-xl-5 col-lg-6 col-md-6 col-12 m-auto">
                     <p class="text-quick">Quick answers to questions you may have. Can’t find what you’re looking for?
@@ -1018,7 +882,7 @@ $website_url = "http://localhost/thedelipapercom/";
                 <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>What types of wrapping paper does The Deli Paper Company offer?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">What types of wrapping paper does The Deli Paper Company offer?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">We offer a wide range of wrapping paper, including options for
@@ -1027,7 +891,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>Can I get wrapping paper that's suitable for items <br> like sandwiches or flowers?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">Can I get wrapping paper that's suitable for items <br> like sandwiches or flowers?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">Our website features a detailed guide on each type of paper we
@@ -1036,7 +900,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>What are the advantages of using parchment paper from The Deli Paper Company?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">What are the advantages of using parchment paper from The Deli Paper Company?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">Our <a href="<?php echo $website_url ?>/">parchment paper </a>
@@ -1049,7 +913,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>How does custom packaging benefit my business?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">How does custom packaging benefit my business?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
 
@@ -1061,7 +925,17 @@ $website_url = "http://localhost/thedelipapercom/";
                 <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>Can I order custom sizes or designs?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">Can I order custom sizes or designs?</d>
+                            <i class="bx bx-chevron-right right-icon"></i>
+                        </div>
+                        <p class="accordion-para d-none">Absolutely! We understand that one size doesn’t fit all.
+                            Contact us with your specifications, and we’ll tailor our paper to your unique requirements.
+                        </p>
+                    </div>
+                    </div>
+                    <div class="accordion-wrapper mt-3">
+                        <div class="accordion-text d-flex justify-content-between align-items-center">
+                            <div class="accordion-text d-flex justify-content-between align-items-center">Does The Deli Paper Company offer butcher paper?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">Absolutely! We understand that one size doesn’t fit all.
@@ -1070,16 +944,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>Does The Deli Paper Company offer butcher paper?</h3>
-                            <i class="bx bx-chevron-right right-icon"></i>
-                        </div>
-                        <p class="accordion-para d-none">Absolutely! We understand that one size doesn’t fit all.
-                            Contact us with your specifications, and we’ll tailor our paper to your unique requirements.
-                        </p>
-                    </div>
-                    <div class="accordion-wrapper mt-3">
-                        <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>Can I order custom sizes or designs?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">Can I order custom sizes or designs?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">Yes, we supply high-quality butcher wrapping paper in various
@@ -1092,7 +957,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>How can I get in touch for more questions?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">How can I get in touch for more questions?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">We’re here for you! Reach out to us via our <a
@@ -1103,7 +968,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </div>
                     <div class="accordion-wrapper mt-3">
                         <div class="accordion-text d-flex justify-content-between align-items-center">
-                            <h3>why should I choose it for my business?</h3>
+                            <div class="accordion-text d-flex justify-content-between align-items-center">why should I choose it for my business?</div>
                             <i class="bx bx-chevron-right right-icon"></i>
                         </div>
                         <p class="accordion-para d-none">Custom Deli Paper is a versatile, eco-friendly packaging
@@ -1123,7 +988,7 @@ $website_url = "http://localhost/thedelipapercom/";
         <div class="container">
             <div class="row mt-5 pt-5">
                 <div class="col-md-6 text-center m-auto">
-                    <h1 class="text-blog">Our Blog</h1>
+                    <h2 class="text-blog">Our Blog</h2>
                 </div>
             </div>
         </div>
@@ -1141,7 +1006,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 alt="">
                         </div>
                         <div class="card-body">
-                            <h4>What is Deli Paper Everything You Need to Know About This Food Service Essential</h4>
+                            <h2>What is Deli Paper Everything You Need to Know About This Food Service Essential</h4>
                             <p class="mb-0">Introduction: In the frantic food service industry hygiene and
                                 presentation... </p>
                             <a href="<?php echo $website_url ?>/" class="text-read">Read More</a>
@@ -1160,7 +1025,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 alt="">
                         </div>
                         <div class="card-body">
-                            <h4>The Best Food Wrapping Paper for Freshness and Style</h4>
+                            <h2>The Best Food Wrapping Paper for Freshness and Style</h2>
                             <p class="mb-0">When it is about the presentation of food and its... </p>
                             <a href="<?php echo $website_url ?>/" class="text-read">Read More</a>
                         </div>
@@ -1178,7 +1043,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 alt="">
                         </div>
                         <div class="card-body">
-                            <h4>Greaseproof Paper – A Complete Guide for Home and Commercial Use</h4>
+                            <h2>Greaseproof Paper – A Complete Guide for Home and Commercial Use</h2>
                             <p class="mb-0">Greaseproof papers are a form of non-stick paper specifically formulated...
                             </p>
                             <a href="<?php echo $website_url ?>/" class="text-read">Read More</a>
@@ -1197,7 +1062,7 @@ $website_url = "http://localhost/thedelipapercom/";
                                 alt="">
                         </div>
                         <div class="card-body">
-                            <h4>How to Buy Deli Paper for Your Food Business</h4>
+                            <h2>How to Buy Deli Paper for Your Food Business</h2>
                             <p class="mb-0">If you are in charge of an eatery then you...</p>
                             <a href="<?php echo $website_url ?>/" class="text-read">Read More</a>
                         </div>
@@ -1206,8 +1071,8 @@ $website_url = "http://localhost/thedelipapercom/";
             </div>
         </div>
     </section>
-
-    <div class="ticker-wrapper py-4 mt-5" style="background: #2757FF !important;">
+<section>
+    <div class="ticker-wrapper py-4 mt-5" style="background: #2757FF !important;     margin-top: 380px !important;">
         <div class="ticker-content">
             <div class="ticker-item text-white"><span class="star text-dark">✻</span>FREE SHIPPING ON ALL ORDERS <span
                     class="star text-dark">✻</span>
@@ -1224,7 +1089,7 @@ $website_url = "http://localhost/thedelipapercom/";
             <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
         </div>
     </div>
-
+</section>
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
@@ -1232,7 +1097,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     <a class="navbar-brand d-flex align-items-center logo-text-footer"
                         href="<?php echo $website_url ?>/"><img
                             src="<?php echo $website_url ?>/assets/images/logo-img.png" class="img-fluid" alt=""> &nbsp;
-                        The Deli Paper
+                        <h4> The Deli Paper </h4>   
 
                     </a>
                     <p class="footer-para mt-3">
@@ -1242,7 +1107,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </p>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-5 col-12 flex-padding">
-                    <h5 class="text-product">Our Products</h5>
+                    <h4 class="text-product">Our Products</h4>
                     <ul class="mt-3 list-footer pl-0">
                         <li>
                             <a href="<?php echo $website_url ?>/">Wax Paper</a>
@@ -1265,7 +1130,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </ul>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
-                    <h5 class="text-product">Useful links</h5>
+                    <h4 class="text-product">Useful links</h4>
                     <ul class="mt-1 list-footer pl-0">
                         <li>
                             <a href="<?php echo $website_url ?>/">Privacy Policy</a>
@@ -1283,7 +1148,7 @@ $website_url = "http://localhost/thedelipapercom/";
                     </ul>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
-                    <h5 class="text-product">Contact</h5>
+                    <h4 class="text-product">Contact</h4>
                     <ul class="mt-1 list-footer pl-0">
                         <li>
                             <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
@@ -1317,7 +1182,7 @@ $website_url = "http://localhost/thedelipapercom/";
                 <div class="col-md-12 flex-padding">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                         <div class="social-link d-flex align-items-center flex-wrap">
-                            <h5 class="mb-0">Connect with us!</h5>
+                            <p class="mb-0">Connect with us!</p>
                             <div class="social-icons d-flex">
                                 <a href="https://www.instagram.com/the.delipaper/"><i class="bx bxl-instagram"></i></a>
                                 <a href="https://www.linkedin.com/company/the-deli-paper/"><i

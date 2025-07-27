@@ -1,0 +1,156 @@
+@media screen and (max-width:767px) {
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 75%;
+            margin: auto;
+        }
+
+        .work-section .row {
+            margin-top: 15px !important;
+        }
+
+        .fs-50 {
+            font-size: 40px !important;
+        }
+
+        .para-paper {
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        .text-embark {
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-size: .875rem;
+        }
+
+        .para-discover {
+            font-weight: 400;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .text-paper {
+            font-size: 30px !important;
+            line-height: 40px !important;
+        }
+
+        .product-img-section .row {
+            margin-top: 30px !important;
+        }
+
+        .hero-section {
+            height: 190px;
+            background-position: left;
+        }
+
+        .testimonial-section .row {
+            margin-bottom: 0px !important;
+        }
+
+        .text-why {
+            margin-bottom: 10px !important;
+            font-size: 30px;
+            text-align: center;
+            color: #000;
+        }
+
+        .list-grease li a {
+            font-size: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 26px;
+            display: flex;
+            align-items: baseline;
+            margin-top: calc(20px / 2);
+            padding-bottom: calc(20px / 2);
+        }
+
+        .greaseproof-section .row {
+            /* margin-top: 20px !important; */
+        }
+
+        .list-grease li a i {
+            color: #942BEF;
+            font-size: 24px;
+        }
+
+        .para-grease {
+            font-weight: 400;
+            color: #000;
+            margin-top: 50px;
+        }
+
+        .btn-slide-loop {
+            margin: auto;
+        }
+
+        .paper-img {
+            margin-top: 60px;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .deli-paper {
+            padding-bottom: 35px;
+        }
+
+        .standard-section .row {
+            padding-top: 0px !important;
+        }
+
+        .text-find {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        .text-quick {
+            font-size: 22px;
+        }
+
+        .accordion-text i {
+            display: none;
+        }
+
+        .accordion-text h3 {
+            font-size: 23px;
+        }
+
+        .flex-padding-01 {
+            padding: 5px !important;
+        }
+
+        .card-body h4 {
+            font-size: 14px;
+            line-height: 1.4em;
+        }
+    }
+
+    .text-paper {
+        font-size: 40px;
+    }
+
+    .text-embark {
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .fs-50 {
+        font-size: 50px;
+    }
+    .text-product {
+        font-family: 'Figtree';
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+}
+.social-link p{
+        font-family: "Figtree", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.social-icons i{
+    color: #000;
+}
