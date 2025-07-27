@@ -374,20 +374,3 @@ $meta_keywords = $row_product['product_meta_keywords'];
         </div>
     </div>
 </section>
-<div class="ticker-wrapper py-4" style="background: #2757FF !important;">
-    <div class="ticker-content">
-        <div class="ticker-item text-white"><span class="star text-dark">✻</span>FREE SHIPPING ON ALL ORDERS <span
-                class="star text-dark">✻</span>
-        </div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
-    </div>
-</div>

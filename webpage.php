@@ -39,6 +39,8 @@ if (mysqli_num_rows($resultcheck_product) > 0) {
     if (mysqli_num_rows($resultcheck_product) > 0) {
 
         require_once('parts/product_details_area.php');
+    } else if ($slug == "blog") {
+        require_once('parts/blog_area.php');
     } else {
         $check_post = "SELECT * FROM post where post_url='$slug'";
         $resultcheck_post = mysqli_query($conn, $check_post);
