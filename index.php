@@ -1090,139 +1090,139 @@ $website_url = "http://localhost/thedelipapercom/";
         </div>
     </div>
 </section>
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-7 col-12 flex-padding">
-                    <a class="navbar-brand d-flex align-items-center logo-text-footer"
-                        href="<?php echo $website_url ?>/"><img
-                            src="<?php echo $website_url ?>/assets/images/logo-img.png" class="img-fluid" alt=""> &nbsp;
-                        <h4> The Deli Paper </h4>   
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-7 col-12 flex-padding">
+                        <a class="navbar-brand d-flex align-items-center logo-text-footer"
+                            href="<?php echo $website_url ?>/"><img
+                                src="<?php echo $website_url ?>/assets/images/logo-img.png" class="img-fluid" alt=""> &nbsp;
+                            <h4> The Deli Paper </h4>   
 
-                    </a>
-                    <p class="footer-para mt-3">
-                        Welcome to The Deli Paper, where your culinary designs are elegantly displayed. Our deli paper
-                        is more than just a protective layer; it’s a statement of quality and commitment to your brand’s
-                        image.
-                    </p>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-5 col-12 flex-padding">
-                    <h4 class="text-product">Our Products</h4>
-                    <ul class="mt-3 list-footer pl-0">
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Wax Paper</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Food Wrapping Paper</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Butcher Paper</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Parchment Paper</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Paper Bags</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Gift Wrapping Paper</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
-                    <h4 class="text-product">Useful links</h4>
-                    <ul class="mt-1 list-footer pl-0">
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Terms & Condition</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">About Us</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/">Contact Us</a>
-                        </li>
+                        </a>
+                        <p class="footer-para mt-3">
+                            Welcome to The Deli Paper, where your culinary designs are elegantly displayed. Our deli paper
+                            is more than just a protective layer; it’s a statement of quality and commitment to your brand’s
+                            image.
+                        </p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-12 flex-padding">
+                        <h4 class="text-product">Our Products</h4>
+                        <ul class="mt-3 list-footer pl-0">
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Wax Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Food Wrapping Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Butcher Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Parchment Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Paper Bags</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Gift Wrapping Paper</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
+                        <h4 class="text-product">Useful links</h4>
+                        <ul class="mt-1 list-footer pl-0">
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Terms & Condition</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">About Us</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/">Contact Us</a>
+                            </li>
 
-                    </ul>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
-                    <h4 class="text-product">Contact</h4>
-                    <ul class="mt-1 list-footer pl-0">
-                        <li>
-                            <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/"><i
-                                    class="bx bx-envelope icon-phone"></i>sales@thedelipaper.com</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $website_url ?>/"><i class="bx bx-map icon-phone"></i>3302 burke rd
-                                Pasadena TX. 77504</a>
-                        </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
+                        <h4 class="text-product">Contact</h4>
+                        <ul class="mt-1 list-footer pl-0">
+                            <li>
+                                <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/"><i
+                                        class="bx bx-envelope icon-phone"></i>sales@thedelipaper.com</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/"><i class="bx bx-map icon-phone"></i>3302 burke rd
+                                    Pasadena TX. 77504</a>
+                            </li>
 
 
-                    </ul>
-                </div>
-                <div class="col-md-12 flex-padding">
+                        </ul>
+                    </div>
+                    <div class="col-md-12 flex-padding">
+                        <p class="space-text">&nbsp;</p>
+                        <p class="space-text">&nbsp;</p>
+                        <p class="space-text">&nbsp;</p>
+                        <p class="space-text">&nbsp;</p>
+                        <p class="space-text">&nbsp;</p>
+                        <!-- <p class="space-text">&nbsp;</p>
                     <p class="space-text">&nbsp;</p>
-                    <p class="space-text">&nbsp;</p>
-                    <p class="space-text">&nbsp;</p>
-                    <p class="space-text">&nbsp;</p>
-                    <p class="space-text">&nbsp;</p>
-                    <!-- <p class="space-text">&nbsp;</p>
-                <p class="space-text">&nbsp;</p>
-                <p class="space-text">&nbsp;</p> -->
-                </div>
-                <div class="col-md-12 flex-padding footer-flex-column">
-                    <img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid"
-                        style="width: 50%;" alt="">
-                </div>
-                <div class="col-md-12 flex-padding">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="social-link d-flex align-items-center flex-wrap">
-                            <p class="mb-0">Connect with us!</p>
-                            <div class="social-icons d-flex">
-                                <a href="https://www.instagram.com/the.delipaper/"><i class="bx bxl-instagram"></i></a>
-                                <a href="https://www.linkedin.com/company/the-deli-paper/"><i
-                                        class='bx bxl-linkedin-square'></i></a>
-                                <a href="https://www.facebook.com/thedelipaper"><i class='bx bxl-facebook'></i></a>
-                                <a href="https://www.pinterest.com/thedelip/"><i class='bx bxl-pinterest'></i></a>
+                    <p class="space-text">&nbsp;</p> -->
+                    </div>
+                    <div class="col-md-12 flex-padding footer-flex-column">
+                        <img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid"
+                            style="width: 50%;" alt="">
+                    </div>
+                    <div class="col-md-12 flex-padding">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <div class="social-link d-flex align-items-center flex-wrap">
+                                <p class="mb-0">Connect with us!</p>
+                                <div class="social-icons d-flex">
+                                    <a href="https://www.instagram.com/the.delipaper/"><i class="bx bxl-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/company/the-deli-paper/"><i
+                                            class='bx bxl-linkedin-square'></i></a>
+                                    <a href="https://www.facebook.com/thedelipaper"><i class='bx bxl-facebook'></i></a>
+                                    <a href="https://www.pinterest.com/thedelip/"><i class='bx bxl-pinterest'></i></a>
+                                </div>
+                            </div>
+                            <div class="footer-logo-images d-flex align-items-center flex-wrap">
+                                <img src="<?php echo $website_url ?>/assets/images/footer-img-01.png" alt="">
+                                <img src="<?php echo $website_url ?>/assets/images/footer-img-02.png" alt="">
+                                <img src="<?php echo $website_url ?>/assets/images/footer-img-03.png" alt="">
+                                <img src="<?php echo $website_url ?>/assets/images/footer-img-04.png" alt="">
                             </div>
                         </div>
-                        <div class="footer-logo-images d-flex align-items-center flex-wrap">
-                            <img src="<?php echo $website_url ?>/assets/images/footer-img-01.png" alt="">
-                            <img src="<?php echo $website_url ?>/assets/images/footer-img-02.png" alt="">
-                            <img src="<?php echo $website_url ?>/assets/images/footer-img-03.png" alt="">
-                            <img src="<?php echo $website_url ?>/assets/images/footer-img-04.png" alt="">
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <footer class="footer-bottom">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 flex-padding">
-                    <div class="d-flex justify-content-between align-items-center flex-bottom-footer flex-wrap">
-                        <div class="footer-div-inner">
-                            <p class="mb-0 text-white" style="visibility: hidden;">© 2025 The Deli Paper. All Rights
-                                Reserved</p>
+        </footer>
+        <footer class="footer-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 flex-padding">
+                        <div class="d-flex justify-content-between align-items-center flex-bottom-footer flex-wrap">
+                            <div class="footer-div-inner">
+                                <p class="mb-0 text-white" style="visibility: hidden;">© 2025 The Deli Paper. All Rights
+                                    Reserved</p>
 
-                        </div>
-                        <div class="footer-img-card">
-                            <img src="<?php echo $website_url ?>/assets/images/payment.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="footer-div">
-                            <p class="mb-0 text-white">© 2025 The Deli Paper. All Rights Reserved</p>
+                            </div>
+                            <div class="footer-img-card">
+                                <img src="<?php echo $website_url ?>/assets/images/payment.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="footer-div">
+                                <p class="mb-0 text-white">© 2025 The Deli Paper. All Rights Reserved</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
