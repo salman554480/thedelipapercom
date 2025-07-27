@@ -1403,6 +1403,12 @@ input[type=checkbox]{
   width: 25px;
   height: 25px;
 }
+.btn-email:hover{
+  color: #fff;
+}
+.badge-icon{
+  color: #865DFF;
+}
 
   @media screen and (max-width:1030px) {
     .list-navbar {
