@@ -42,7 +42,7 @@
                 <a class="navbar-brand d-flex align-items-center logo-text-footer"
                     href="<?php echo $website_url ?>/"><img src="<?php echo $website_url ?>/assets/images/logo-img.png"
                         class="img-fluid" alt=""> &nbsp;
-                    The Deli Paper
+                    <h4 class="text-footer-paper mb-0"> The Deli Paper </h4>
 
                 </a>
                 <p class="footer-para mt-3">

@@ -1717,6 +1717,18 @@
 
   }
 
+  .text-footer-paper{
+        font-family: "Figtree", Sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+  }
+  .text-product-footer{
+    font-family: "Figtree", Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+  }
+
   @media screen and (max-width:1030px) {
     .list-navbar {
       display: none;

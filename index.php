@@ -975,7 +975,7 @@ $website_url = "http://localhost/thedelipapercom/";
                         <a class="navbar-brand d-flex align-items-center logo-text-footer"
                             href="<?php echo $website_url ?>/"><img
                                 src="<?php echo $website_url ?>/assets/images/logo-img.png" class="img-fluid" alt=""> &nbsp;
-                            <h4> The Deli Paper </h4>   
+                           <h4 class="text-footer-paper mb-0">The Deli Paper</h4> 
 
                         </a>
                         <p class="footer-para mt-3">
@@ -985,7 +985,7 @@ $website_url = "http://localhost/thedelipapercom/";
                         </p>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-5 col-12 flex-padding">
-                        <h4 class="text-product">Our Products</h4>
+                        <h4 class="text-product-footer">Our Products</h4>
                         <ul class="mt-3 list-footer pl-0">
                             <li>
                                 <a href="<?php echo $website_url ?>/">Wax Paper</a>
@@ -1008,7 +1008,7 @@ $website_url = "http://localhost/thedelipapercom/";
                         </ul>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
-                        <h4 class="text-product">Useful links</h4>
+                        <h4 class="text-product-footer">Useful links</h4>
                         <ul class="mt-1 list-footer pl-0">
                             <li>
                                 <a href="<?php echo $website_url ?>/">Privacy Policy</a>
@@ -1026,7 +1026,7 @@ $website_url = "http://localhost/thedelipapercom/";
                         </ul>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-5 col-12 footer-flex-column flex-padding">
-                        <h4 class="text-product">Contact</h4>
+                        <h4 class="text-product-footer">Contact</h4>
                         <ul class="mt-1 list-footer pl-0">
                             <li>
                                 <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
