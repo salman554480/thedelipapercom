@@ -1,4 +1,4 @@
-<?php
+ <?php
 // Get the current full URL
 $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http");
 $currentUrl .= "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -13,6 +13,7 @@ echo $slug = trim(basename($path), '/');
 
 <?php
 require_once('parts/db.php');
+
 echo $check_product = "SELECT * FROM meta where slug='$slug'";
 $resultcheck_product = mysqli_query($conn, $check_product);
 if (mysqli_num_rows($resultcheck_product) > 0) {

@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /thedelipapercom/
+RewriteBase /extras/thedelipapercom/
 
 # If file or directory doesn't exist, redirect to webpage.php
 RewriteCond %{REQUEST_FILENAME} !-f
