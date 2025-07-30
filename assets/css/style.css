@@ -1746,25 +1746,30 @@
   .content-area h1{
     font-size: 2.5rem;
     font-family: Marcellus, sans-serif;
+    font-weight: 400;
   }
   .content-area h2{
         font-size: 3rem;
     line-height: 54px;
     font-family: Marcellus, sans-serif;
+    font-weight: 400;
     color: #2757FF;
   }
   .content-area h3{
     font-size: 2.5rem;
     line-height: 46px;
     font-family: Marcellus, sans-serif;
+    font-weight: 400;
   }
   .content-area h4{
     font-size: 1.5rem;
     font-family: Marcellus, sans-serif;
+    font-weight: 400;
   }
   .content-area h5{
     font-size: 1.25rem;
     font-family: Marcellus, sans-serif;
+    font-weight: 400;
   }
   .content-area ul{
     padding-left: 20px;
