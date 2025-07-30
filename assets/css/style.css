@@ -1729,6 +1729,55 @@
     color: #000;
   }
 
+  .content-area {
+    /* padding: 0px 30px; */
+  }
+  .content-area a{
+    color: #ff0000;
+    text-decoration: none;
+  }
+  .content-area p{
+    font-family: 'Figtree';
+    font-weight: 400;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .content-area h1{
+    font-size: 2.5rem;
+    font-family: Marcellus, sans-serif;
+  }
+  .content-area h2{
+        font-size: 3rem;
+    line-height: 54px;
+    font-family: Marcellus, sans-serif;
+    color: #2757FF;
+  }
+  .content-area h3{
+    font-size: 2.5rem;
+    line-height: 46px;
+    font-family: Marcellus, sans-serif;
+  }
+  .content-area h4{
+    font-size: 1.5rem;
+    font-family: Marcellus, sans-serif;
+  }
+  .content-area h5{
+    font-size: 1.25rem;
+    font-family: Marcellus, sans-serif;
+  }
+  .content-area ul{
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .content-area ul li{
+    font-family: 'Figtree';
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+
   @media screen and (max-width:1030px) {
     .list-navbar {
       display: none;
