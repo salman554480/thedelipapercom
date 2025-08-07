@@ -40,7 +40,7 @@
 
   .ticker-content {
     display: inline-block;
-    padding-left: 100%;
+    /* padding-left: 100%; */
     animation: scroll-left 90s linear infinite;
   }
 
@@ -643,6 +643,8 @@
 
   .card-wrapper .card-img img {
     border-radius: 8px;
+        aspect-ratio: 150 / 100;
+    object-fit: cover;
   }
 
   .card-body h2 {
