@@ -1,0 +1,42 @@
+RewriteEngine On
+RewriteBase /extras/delipaper/
+
+# Redirect to trailing slash if missing (for single slug)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ /extras/delipaper/$1/ [R=301,L]
+
+# Redirect to trailing slash if missing (for /category/slug)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^category/([a-zA-Z0-9_-]+)$ /extras/delipaper/category/$1/ [R=301,L]
+
+# Redirect to trailing slash if missing (for /blog/page/X)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/page/([0-9]+)$ /extras/delipaper/blog/page/$1/ [R=301,L]
+
+# Redirect to trailing slash if missing (for /tag/slug)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tag/([a-zA-Z0-9_-]+)$ /extras/delipaper/tag/$1/ [R=301,L]
+
+# Internally rewrite /category/slug/ to webpage.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^category/([a-zA-Z0-9_-]+)/$ webpage.php [L,QSA]
+
+# Internally rewrite /blog/page/X/ to webpage.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/page/([0-9]+)/$ webpage.php [L,QSA]
+
+# Internally rewrite /tag/slug/ to webpage.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tag/([a-zA-Z0-9_-]+)/$ webpage.php [L,QSA]
+
+# Internally rewrite /slug/ to webpage.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)/$ webpage.php [L,QSA]

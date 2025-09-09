@@ -1,6 +1,11 @@
 <?php
 $page = "product";
 require_once('parts/top.php'); ?>
+<?php 
+if($admin_role != "admin"){
+    	echo "<script>window.open('post_view.php','_self');</script>";
+}
+?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 
@@ -50,12 +55,12 @@ require_once('parts/top.php'); ?>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">Thumbnail</label>
-                                        <input type="text" name="post_thumbnail" id="post_thumbnail"
+                                        <input type="text" name="product_thumbnail" id=""
                                             class="form-control">
-                                        <!-- Button to open modal -->
+                                        <!-- Button to open modal 
                                         <a class="mt-2" data-bs-toggle="modal" data-bs-target="#mediaModal">
                                             Choose Image
-                                        </a>
+                                        </a>-->
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label>Status</label>
@@ -74,6 +79,16 @@ require_once('parts/top.php'); ?>
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label>Image 1</label>
+                                        <input type="text" name="product_image1" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>Image 2</label>
+                                        <input type="text" name="product_image2" class="form-control">
+                                    </div>
+                                </div>
+                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label>Meta Title</label>
                                         <input type="text" name="product_meta_title" class="form-control">
@@ -149,6 +164,8 @@ require_once('parts/top.php'); ?>
                             $product_meta_keywords = $_POST['product_meta_keywords'];
                             $product_status = $_POST['product_status'];
                             $product_index = $_POST['product_index'];
+                            $product_image1 = $_POST['product_image1'];
+                            $product_image2 = $_POST['product_image2'];
 
 
 
@@ -165,7 +182,9 @@ require_once('parts/top.php'); ?>
         product_content,
         product_thumbnail,
         product_status,
-        product_status
+        product_index,
+        product_image1,
+        product_image2
     ) VALUES (
         '$product_name',
         '$product_url',
@@ -173,7 +192,9 @@ require_once('parts/top.php'); ?>
         '$product_content',
         '$product_thumbnail',
         '$product_status',
-        '$product_index'
+        '$product_index',
+        '$product_image1',
+        '$product_image2'
     )";
 
                             if (mysqli_query($conn, $sql)) {

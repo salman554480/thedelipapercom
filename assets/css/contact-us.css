@@ -1,0 +1,67 @@
+ @media screen and (max-width:767px) {
+            .text-form-quote{
+                padding-bottom: 0px;
+                margin-top: 0px !important;
+                text-align: center;
+            }
+            .text-embark-01{
+                margin-bottom: 0px !important;
+                text-align: center;
+                margin-top: 50px;
+                font-size: .875rem;
+                letter-spacing: 4px;
+            }
+            .para-quote-01{
+                text-align: center;
+            }
+                .text-contact-choose {
+        font-size: 28px;
+        line-height: normal;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .para-contact-choose {
+        text-align: center;
+    }
+        .para-contact-choose {
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .box-icon {
+        display: flex;
+        margin: auto;
+    }
+    .border-box h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .border-box-01 h3 {
+         font-size: 20px;
+        text-align: center;
+    }
+    .border-box-02 h3 {
+         font-size: 20px;
+        text-align: center;
+    }
+    .border-box p {
+        text-align: center;
+        font-size: 14px;
+    }
+    .border-box-01 p {
+        text-align: center;
+        font-size: 14px;
+    }
+    .border-box-02 p {
+        text-align: center;
+        font-size: 14px;
+    }
+    .box-icon-02 {
+        padding: 15px 20px;
+        display: flex;
+        margin: auto;
+    }
+    .para-contact-choose br {
+        display: none;
+    }
+        }

@@ -1,4 +1,5 @@
-<?php require_once('admin/parts/db.php');
+<?php require_once('parts/db.php');
+require_once('parts/path.php');
 
 $select_setting = "SELECT * FROM setting ";
 $run_setting = mysqli_query($conn, $select_setting);
@@ -7,6 +8,12 @@ $row_setting = mysqli_fetch_array($run_setting);
 $setting_id = $row_setting['setting_id'];
 $website_title = $row_setting['website_title'];
 $website_url = $row_setting['website_url'];
+
+// Override for localhost development
+if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+    $website_url = 'http://localhost/extras/delipaper';
+}
+
 $website_logo = $row_setting['website_logo'];
 $website_favicon = $row_setting['website_favicon'];
 $website_head_code = $row_setting['website_head_code'];
@@ -27,10 +34,9 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,26 +55,36 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <meta property="og:description" content="<?php echo $meta_description; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo $currentUrl; ?>">
-    <meta property="og:image" content="https://www.example.com/images/preview.jpg">
+    <meta property="og:image" content="https://thedelipaper.com/assets/img/1748238542_2249_delipaper-icon.png">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $meta_title; ?>">
     <meta name="twitter:description" content="<?php echo $meta_description; ?>.">
-    <meta name="twitter:image" content="https://www.example.com/images/preview.jpg">
-    <meta name="twitter:site" content="@yourhandle">
+    <meta name="twitter:image" content="https://thedelipaper.com/assets/img/1748238542_2249_delipaper-icon.png">
+    <meta name="twitter:site" content="@<?php echo $website_title; ?>">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/bootstrap/bootstrap.min.css">
-    <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/css/style.css">
-    <!-- Fonf Awesome -->
-    <script src="<?php echo $website_url; ?>/assets/js/cbffea6533.js" crossorigin="anonymous"></script>
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- site Favicon -->
+    <link rel="icon" href="https://thedelipaper.com/assets/images/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="https://thedelipaper.com/assets/images/favicon.png" />
+    <meta name="msapplication-TileImage" content="https://thedelipaper.com/assets/images/favicon.png" />
+
+
+    <link rel="shortcut icon" href="<?php echo $website_url;?>/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="<?php echo $website_url;?>/assets/bootstrap/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="<?php echo $website_url;?>/assets/bootstrap/fontawesome-free-5.13.0-web/css/all.min.css	">
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Owl Carousel Theme -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+    <link rel="stylesheet" href="<?php echo $website_url;?>/assets/css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

@@ -1,0 +1,8 @@
+ @media screen and (max-width:767px) {
+            .flex-padding-blog{
+                padding: 0px 5px;
+            }
+            .pagination-list{
+                padding-bottom: 130px;
+            }
+        }

@@ -1,6 +1,11 @@
 <?php
 $page = "product";
 require_once('parts/top.php'); ?>
+<?php 
+if($admin_role != "admin"){
+    	echo "<script>window.open('post_view.php','_self');</script>";
+}
+?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 
@@ -23,6 +28,13 @@ require_once('parts/top.php'); ?>
                             $run = mysqli_query($conn, $select);
                             $row = mysqli_fetch_array($run);
                             $product_content = $row['product_content'];
+                            $slug = $row['product_url'];
+                            
+                            
+                            $select_meta = "SELECT * FROM meta WHERE meta_source='product' and slug='$slug'";
+                            $run_meta =  mysqli_query($conn,$select_meta);
+                            $row_meta =  mysqli_fetch_array($run_meta);
+                            
                         }
 
                         ?>
@@ -113,12 +125,12 @@ require_once('parts/top.php'); ?>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label>Meta Title</label>
-                                        <input type="text" value="<?php echo $row['product_meta_title']; ?>"
+                                        <input type="text" value="<?php echo $row_meta['meta_title']; ?>"
                                             name="product_meta_title" class="form-control">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label>Meta Keywords</label>
-                                        <input type="text" value="<?php echo $row['product_meta_keywords']; ?>"
+                                        <input type="text" value="<?php echo $row_meta['meta_keywords']; ?>"
                                             name="product_meta_keywords" class="form-control">
                                     </div>
                                 </div>
@@ -127,7 +139,7 @@ require_once('parts/top.php'); ?>
                                     <div class="col-md-12 mb-3">
                                         <label>Meta Description</label>
                                         <textarea name="product_meta_desrciption"
-                                            class="form-control"><?php echo $row['product_meta_description']; ?></textarea>
+                                            class="form-control"><?php echo $row_meta['meta_description']; ?></textarea>
                                     </div>
                                 </div>
 
@@ -204,54 +216,55 @@ require_once('parts/top.php'); ?>
                             });
                         </script>
                         <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get product ID from form (must be included in your form)
+ 
+    // Escape all inputs properly
+    $eproduct_name = mysqli_real_escape_string($conn, $_POST['product_name']);
+    $eproduct_url = mysqli_real_escape_string($conn, $_POST['product_url']);
+    $product_short_description = mysqli_real_escape_string($conn, $_POST['product_short_description']);
+    $epage_content = mysqli_real_escape_string($conn, $_POST['content']);
+    $product_thumbnail = mysqli_real_escape_string($conn, $_POST['product_thumbnail']);
+    $product_image1 = mysqli_real_escape_string($conn, $_POST['product_image1']);
+    $product_image2 = mysqli_real_escape_string($conn, $_POST['product_image2']);
+    $product_meta_title = mysqli_real_escape_string($conn, $_POST['product_meta_title']);
+    $product_meta_desrciption = mysqli_real_escape_string($conn, $_POST['product_meta_desrciption']);
+    $product_meta_keywords = mysqli_real_escape_string($conn, $_POST['product_meta_keywords']);
+    $product_status = mysqli_real_escape_string($conn, $_POST['product_status']);
+    $product_index = mysqli_real_escape_string($conn, $_POST['product_index']);
 
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $eproduct_name = $_POST['product_name'];
-                            $eproduct_url = $_POST['product_url'];
-                            $product_short_description = $_POST['product_short_description'];
-                            $epage_content = $_POST['content'];
-                            $product_thumbnail = $_POST['product_thumbnail']; // Now just plain text
-                            $product_image1 = $_POST['product_image1']; // Now just plain text
-                            $product_image2 = $_POST['product_image2']; // Now just plain text
-                            $product_meta_title = $_POST['product_meta_title'];
-                            $product_meta_desrciption = $_POST['product_meta_desrciption'];
-                            $product_meta_keywords = $_POST['product_meta_keywords'];
-                            $product_status = $_POST['product_status'];
-                            $product_index = $_POST['product_index'];
+    // Update product query
+    $sql = "UPDATE product SET
+        product_name = '$eproduct_name',
+        product_thumbnail = '$product_thumbnail',
+        product_image1 = '$product_image1',
+        product_image2 = '$product_image2',
+        product_url = '$eproduct_url',
+        product_short_description = '$product_short_description',
+        product_content = '$epage_content',
+        product_status = '$product_status',
+        product_index = '$product_index'
+        WHERE product_id = '$product_id'";
 
-                            $eproduct_short_description = str_replace("'", "\'", $product_short_description);
-                            $eproduct_short_description = str_replace("`", "\'", $product_short_description);
-                            $product_name       = str_replace("'", "`'", $product_name);
-                            $epage_content = str_replace("'", "\'", $epage_content);
-                            $epage_content = str_replace("’", "\'", $epage_content);
-                            $product_meta_title = str_replace("'", "\'", $product_meta_title);
-                            $product_meta_desrciption = str_replace("'", "\'", $product_meta_desrciption);
+    if (mysqli_query($conn, $sql)) {
+        // Update meta info
+        $update_meta = "UPDATE meta SET 
+            slug = '$eproduct_url',
+            meta_title = '$product_meta_title',
+            meta_description = '$product_meta_desrciption',
+            meta_keyword = '$product_meta_keywords'
+            WHERE slug = '$eproduct_url'";
+        
+        $run_meta = mysqli_query($conn, $update_meta);
 
-                            // Insert query
-                            $sql = "Update product SET
-                             product_name='$eproduct_name',
-                             product_url='$eproduct_url',
-                             product_short_description='$eproduct_short_description',
-                             product_content='$epage_content',
-                             product_thumbnail='$product_thumbnail',
-                             product_image1='$product_image1',
-                             product_image2='$product_image2',
-                             product_status='$product_status',
-                             product_index='$product_index',
-                             where product_id='$product_id'";
+        echo "<script>alert('Query Succeeded');</script>";
+        echo "<script>window.open('product_edit.php?edit=$product_id','_self');</script>";
+    } else {
+        echo "<div class='alert alert-danger'>Error: " . mysqli_error($conn) . "</div>";
+    }
+}
+?>
 
-                            if (mysqli_query($conn, $sql)) {
-
-                                $update_meta = "UPDATE meta SET slug='$eproduct_url',meta_title='$product_meta_title',meta_description='$product_meta_desrciption',meta_keyword='$product_meta_keywords' WHERE slug='$eproduct_url'";
-                                 $run_meta = mysqli_query($conn, $update_meta);
-
-                                echo "<script>alert('Query Succeed');</script>";
-                                echo "<script>window.open('product_edit.php?edit=$product_id','_self');</script>";
-                            } else {
-                                echo "<div class='alert alert-danger'>Error: " . mysqli_error($conn) . "</div>";
-                            }
-                        }
-                        ?>
 
 
             </main>

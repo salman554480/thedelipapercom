@@ -1,112 +1,127 @@
 <?php
-// Get the current URL
-$currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http");
-$currentUrl .= "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// Get current URL path (excluding domain)
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-$slug = basename($currentUrl);
-parse_str(parse_url($currentUrl, PHP_URL_QUERY), $params);
-$slug = $params['slug']; // "food-wrapping-paper"
-?>
+// Remove the base path (/extras/delipaper/)
+$basePath = '/extras/delipaper/';
+if (strpos($path, $basePath) === 0) {
+    $path = substr($path, strlen($basePath));
+}
 
+// Remove any trailing slash
+$path = rtrim($path, '/');
 
-<?php
-require_once('admin/parts/db.php');
-$check_product = "SELECT * FROM meta where slug='$slug'";
-$resultcheck_product = mysqli_query($conn, $check_product);
-if (mysqli_num_rows($resultcheck_product) > 0) {
-   $resultcheck_meta = mysqli_fetch_array($resultcheck_product);
-   $meta_title = $resultcheck_meta["meta_title"];
-   $meta_description = $resultcheck_meta["meta_description"];
-   $meta_keyword = $resultcheck_meta["meta_keyword"];
+// Split path parts
+$parts = explode('/', $path);
+
+$slug = '';
+$category = '';
+$page = 1;
+$tag = '';
+
+// Check if it's a category URL
+if (count($parts) == 2 && $parts[0] === 'category') {
+    $category = $parts[1];  // e.g., "delimainproducts"
+} elseif (count($parts) == 2 && $parts[0] === 'tag') {
+    $tag = $parts[1];       // e.g., "uses-of-wax-paper"
+} elseif (count($parts) == 3 && $parts[0] === 'blog' && $parts[1] === 'page') {
+    $slug = $parts[0];      // "blog"
+    $page = intval($parts[2]); // page number
+} elseif (count($parts) == 1) {
+    $slug = $parts[0];      // e.g., "blog"
 }
 ?>
-
-
-
-<?php require_once('parts/top.php'); ?>
-<!-- Elevate Zoom Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
-</head>
-
-<body>
-    <?php require_once('parts/navbar.php'); ?>
-
-    <!-- Check product -->
-    <?php
-   $check_product = "SELECT * FROM product where product_url='$slug'";
+<?php
+   require_once('parts/db.php');
+   if (!empty($category)) {
+    $check_product = "SELECT * FROM meta where slug='$category'";
+   }else{
+        $check_product = "SELECT * FROM meta where slug='$slug'";
+   }
    $resultcheck_product = mysqli_query($conn, $check_product);
    if (mysqli_num_rows($resultcheck_product) > 0) {
-
-      require_once('parts/product_details_area.php');
-   } else {
-      $check_post = "SELECT * FROM post where post_url='$slug'";
-      $resultcheck_post = mysqli_query($conn, $check_post);
-      if (mysqli_num_rows($resultcheck_post) > 0) {
-         require_once('parts/blog_details_area.php');
-      } else {
-         $check_page = "SELECT * FROM page where page_url='$slug'";
-         $resultcheck_page = mysqli_query($conn, $check_page);
-         if (mysqli_num_rows($resultcheck_page) > 0) {
-
-            require_once('parts/page_details_area.php');
-         }
-      }
+       $resultcheck_meta = mysqli_fetch_array($resultcheck_product);
+       $meta_title = $resultcheck_meta["meta_title"];
+       $meta_description = $resultcheck_meta["meta_description"];
+       $meta_keyword = $resultcheck_meta["meta_keyword"];
    }
    ?>
-
-
-
-
-
-
-
-
-    <?php require_once('parts/footer.php'); ?>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 20,
-            autoplay: true,
-            nav: false,
-            dots: false,
-            autoplayTimeout: 2500,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                576: {
-                    items: 2
-                },
-                768: {
-                    items: 4
-                },
-                992: {
-                    items: 4
-                }
-            }
-        });
-    });
-    </script>
-
-    <script>
-    const realFileBtn = document.getElementById("real-file");
-    const customBtn = document.getElementById("custom-button");
-    const fileName = document.getElementById("file-name");
-
-    customBtn.addEventListener("click", () => {
-        realFileBtn.click();
-    });
-
-    realFileBtn.addEventListener("change", () => {
-        if (realFileBtn.files.length > 0) {
-            fileName.textContent = realFileBtn.files[0].name;
-        } else {
-            fileName.textContent = "No file chosen";
-        }
-    });
-    </script>
+<?php require_once('parts/top.php'); ?>
+</head>
+<body>
+   <?php require_once('parts/navbar.php'); ?>
+   <!-- Check product -->
+   <?php
+      $check_product = "SELECT * FROM product where product_url='$slug'";
+      $resultcheck_product = mysqli_query($conn, $check_product);
+      if (mysqli_num_rows($resultcheck_product) > 0) {
+      
+          require_once('parts/product_details_area.php');
+      } else if ($slug == "blog") {
+          // Pass page number to blog area
+          $current_page = $page;
+          require_once('parts/blog_area.php');
+      } else if (!empty($tag)) {
+          // Tag page logic
+          require_once('parts/tag_area.php');
+      } else if (!empty($category)) {
+    // Category page logic
+    require_once('parts/category_area.php');
+} else {
+          $check_post = "SELECT * FROM post where post_url='$slug'";
+          $resultcheck_post = mysqli_query($conn, $check_post);
+          if (mysqli_num_rows($resultcheck_post) > 0) {
+              require_once('parts/blog_details_area.php');
+          } else {
+              $check_page = "SELECT * FROM page where page_url='$slug'";
+              $resultcheck_page = mysqli_query($conn, $check_page);
+              if (mysqli_num_rows($resultcheck_page) > 0) {
+                  
+                  require_once('parts/page_details_area.php');
+              }
+          }
+      }
+      ?>
+   <?php require_once('parts/footer.php'); ?>
+   <script>
+      $(document).ready(function() {
+          $('.btn-get-qoute').on('click', function() {
+              $('body').addClass('body-darkened'); // dark background
+              $('.form-slide-panel').addClass('open'); // show panel
+              // $('body').css('overflow', 'hidden');
+              // sdsdsdsds///                  // optional: prevent scroll
+          });
+      
+          $('.close-form').on('click', function() {
+              $('.form-slide-panel').removeClass('open'); // hide panel
+              $('body').removeClass('body-darkened'); // remove dark bg
+              // $('body').css('overflow', 'auto');                    // restore scroll
+          });
+      });
+   </script>
+   <script>
+      $('.product-slide').owlCarousel({
+          loop: true,
+          margin: 10,
+          responsiveClass: true,
+          navText: [
+              '<span class="custom-prev"><i class="bx bx-chevron-left"></i></span>',
+              '<span class="custom-next"><i class="bx bx-chevron-right"></i></span></span>'
+          ],
+          responsive: {
+              0: {
+                  items: 1,
+                  nav: true
+              },
+              600: {
+                  items: 3,
+                  nav: false
+              },
+              1000: {
+                  items: 4,
+                  nav: true,
+                  loop: false
+              }
+          }
+      })
+   </script>

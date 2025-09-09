@@ -2,6 +2,7 @@
 $page = "post";
 require_once('parts/top.php'); ?>
 
+
 <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>
 
@@ -98,11 +99,15 @@ require_once('parts/top.php'); ?>
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">Thumbnail</label>
-                                <input type="text" value="<?php echo $post_thumbnail; ?>" name="post_thumbnail"
-                                    class="form-control">
-
+                                <label class="form-label">Thumbnail</label><br>
+                                <?php if (!empty($post_thumbnail)): ?>
+                                    <img src="assets/img/<?php echo htmlspecialchars($post_thumbnail); ?>" alt="Current Thumbnail" style="max-width: 150px; margin-bottom: 10px;">
+                                <?php endif; ?>
+                                <input type="file" name="post_thumbnail" class="form-control" accept="image/*">
+                                <!-- Optional: Hidden input to keep current thumbnail filename -->
+                                <input type="hidden" name="current_thumbnail" value="<?php echo htmlspecialchars($post_thumbnail); ?>">
                             </div>
+
                             <div class="col-md-3">
                                 <label class="form-label">Status</label>
                                 <select name="post_status" class="form-control">
@@ -136,34 +141,34 @@ require_once('parts/top.php'); ?>
                         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
                         <script>
-                        ClassicEditor
-                            .create(document.querySelector('#editor'))
-                            .catch(error => {
-                                console.error(error);
-                            });
+                            ClassicEditor
+                                .create(document.querySelector('#editor'))
+                                .catch(error => {
+                                    console.error(error);
+                                });
                         </script>
 
 
                         <script>
-                        // Function to generate a slug from a string
-                        function generateSlug(title) {
-                            return title
-                                .toLowerCase() // Convert to lowercase
-                                .replace(/\s+/g, '-') // Replace spaces with dashes
-                                .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
-                                .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
-                        }
+                            // Function to generate a slug from a string
+                            function generateSlug(title) {
+                                return title
+                                    .toLowerCase() // Convert to lowercase
+                                    .replace(/\s+/g, '-') // Replace spaces with dashes
+                                    .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
+                                    .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
+                            }
 
-                        // Get references to the title and URL input fields
-                        const titleInput = document.getElementById('post_title');
-                        const urlInput = document.getElementById('post_url');
+                            // Get references to the title and URL input fields
+                            const titleInput = document.getElementById('post_title');
+                            const urlInput = document.getElementById('post_url');
 
-                        // Add event listener to the title input field
-                        titleInput.addEventListener('input', function() {
-                            const titleValue = titleInput.value;
-                            const slug = generateSlug(titleValue);
-                            urlInput.value = slug;
-                        });
+                            // Add event listener to the title input field
+                            titleInput.addEventListener('input', function() {
+                                const titleValue = titleInput.value;
+                                const slug = generateSlug(titleValue);
+                                urlInput.value = slug;
+                            });
                         </script>
 
 
@@ -175,6 +180,7 @@ require_once('parts/top.php'); ?>
 
                 <?php
                 require_once('parts/db.php');
+
                 if (isset($_POST['insert_btn'])) {
 
                     $epost_title = $_POST['post_title'];
@@ -182,16 +188,59 @@ require_once('parts/top.php'); ?>
                     $epost_content = $_POST['content'];
                     $epost_status = $_POST['post_status'];
                     $epost_index = $_POST['post_index'];
-                    $epost_thumbnail = $_POST['post_thumbnail'];
 
-                    $epost_title = str_replace("'", "\'",$epost_title);
-                    $epost_content = str_replace("’", "\'", $epost_content);
                     $emeta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
                     $emeta_description = htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8');
                     $emeta_keyword = htmlspecialchars($_POST['meta_keyword'], ENT_QUOTES, 'UTF-8');
 
+                    // Handle thumbnail upload
+                    $post_id = intval($_GET['edit']); // Make sure you have $post_id from your URL or context
 
+                    if (isset($_FILES['post_thumbnail']) && $_FILES['post_thumbnail']['error'] == 0) {
+                        $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+                        $file_tmp = $_FILES['post_thumbnail']['tmp_name'];
+                        $file_name = basename($_FILES['post_thumbnail']['name']);
+                        $file_type = mime_content_type($file_tmp);
 
+                        if (in_array($file_type, $allowed_types)) {
+                            $ext = pathinfo($file_name, PATHINFO_EXTENSION);
+                            $new_file_name = uniqid('thumb_', true) . '.' . $ext;
+
+                            $upload_dir = '../assets/img/';
+                            $upload_path = $upload_dir . $new_file_name;
+
+                            if (move_uploaded_file($file_tmp, $upload_path)) {
+                                $epost_thumbnail = $new_file_name;
+
+                                // Optional: Delete old thumbnail file if it exists and is different
+                                if (!empty($_POST['current_thumbnail']) && $_POST['current_thumbnail'] !== $new_file_name) {
+                                    $old_file = $upload_dir . $_POST['current_thumbnail'];
+                                    if (file_exists($old_file)) {
+                                        unlink($old_file);
+                                    }
+                                }
+                            } else {
+                                echo "<script>alert('Failed to upload new thumbnail');</script>";
+                                exit;
+                            }
+                        } else {
+                            echo "<script>alert('Invalid thumbnail file type');</script>";
+                            exit;
+                        }
+                    } else {
+                        // No new file uploaded, keep current thumbnail
+                        $epost_thumbnail = $_POST['current_thumbnail'];
+                    }
+
+                    // Escape quotes properly
+                    $emeta_title = str_replace("'", "\'", $emeta_title);
+                    $emeta_description = str_replace("'", "\'", $emeta_description);
+                    $emeta_keyword = str_replace("'", "\'", $emeta_keyword);
+                    $epost_title = str_replace("'", "\'", $epost_title);
+                    $epost_content = str_replace("'", "\'", $epost_content);
+                    $epost_content = str_replace("’", "\'", $epost_content);
+
+                    // Update post query
                     $update_post = "UPDATE post SET 
           post_title='$epost_title',
           post_url='$epost_url',
@@ -201,17 +250,22 @@ require_once('parts/top.php'); ?>
           post_index='$epost_index' 
           WHERE post_id='$post_id'";
 
+
                     $run_update = mysqli_query($conn, $update_post);
 
-                    if ($run_update == true) {
+                    if ($run_update) {
 
+                        $update_meta = "UPDATE meta SET 
+            slug='$epost_url',
+            meta_title='$emeta_title',
+            meta_description='$emeta_description',
+            meta_keyword='$emeta_keyword' 
+            WHERE slug='$post_url'";
 
-
-                        $update_meta = "UPDATE meta SET slug='$epost_url',meta_title='$emeta_title',meta_description='$emeta_description',meta_keyword='$emeta_keyword' WHERE slug='$post_url'";
                         $run_meta = mysqli_query($conn, $update_meta);
 
                         echo "<script>alert('Record UPDATED');</script>";
-                        echo "<script>window.open('post_edit.php?edit=$post_id','_self');</script>";
+                           echo "<script>window.open('post_edit.php?edit=$post_id','_self');</script>";
                     } else {
                         echo "<script>alert('Failed');</script>";
                     }

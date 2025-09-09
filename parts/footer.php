@@ -1,188 +1,316 @@
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-
-            <!-- Logo & About -->
-            <div class="col-md-3 mb-4">
-                <div class="footer-logo mb-3">
-                    <img src="<?php echo $website_url; ?>/assets/img/logo2.png" height="40px" alt="">
-                </div>
-                <p class="footertext"">Welcome to Deli Paper, where creativity meets elegance. Our
-                    paper products are more
-                    than just
-                    functional; they show your company’s commitment to excellence. Deli Paper is made to be both stylish
-                    and functional.From protecting your culinary pleasures to enhancing your company’s image, our
-                    solutions seamlessly combine durability and design.</p>
-            </div>
-
-            <!-- Popular Products -->
-            <div class=" col-md-3 mb-4">
-                <h5>Popular Products</h5>
-                <ul class="list-unstyled footer-list">
-                    <?php
-
-                    $select_footer_product = "SELECT * FROM product where product_status='active' ";
-                    $run_footer_product = mysqli_query($conn, $select_footer_product);
-                    while ($row_footer_product = mysqli_fetch_array($run_footer_product)) {
-
-                        $footer_product_id = $row_footer_product['product_id'];
-                        $footer_product_name = $row_footer_product['product_name'];
-                        $footer_product_url = $row_footer_product['product_url'];
-
-                        ?>
-                    <li><a
-                            href="<?php echo $website_url; ?>/<?php echo $footer_product_url ?>"><?php echo $footer_product_name; ?></a>
-                    </li>
-                    <?php } ?>
-                </ul>
-            </div>
-
-            <!-- Useful Links -->
-            <div class="col-md-3 mb-4">
-                <h5>Useful Links</h5>
-                <ul class="list-unstyled footer-list">
-                    <li><a href="<?php echo $website_url; ?>/about-us">About Us</a></li>
-                    <!-- <li><a href="faq">FAQs</a></li> -->
-                    <li><a href="<?php echo $website_url; ?>/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="<?php echo $website_url; ?>/terms-and-conditions">Terms &
-                            Conditions</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info & Social -->
-            <div class="col-md-3 mb-4">
-                <h5>Contact Us</h5>
-                <ul class="list-unstyled  contact-info">
-                    <li class="mb-3"><i class='bx bx-envelope'></i><a
-                            href="mailto:sales@delipaper.co.uk">sales@delipaper.co.uk </a>
-                    </li>
-                    <li class="mb-3"><i class='bx bx-phone'></i><a href="tel:+447366426960">+447366426960</a></li>
-                    <li class="mb-3"><i class='bx bx-map'></i>72 Booker Lane, High Wycombe HP12 3UT</li>
-                </ul>
-                <div class="social-icons mt-4">
-                    <a href="https://www.facebook.com/delipaperuk/"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://uk.pinterest.com/delipaperuk/"><i class='bx bxl-pinterest'></i></a>
-                    <a href="https://www.facebook.com/delipaperuk/"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://www.linkedin.com/company/deli-paper-uk/"><i class='bx bxl-linkedin'></i></a>
-                </div>
-            </div>
-
+<div class="ticker-wrapper py-4" style="background: #2757FF !important;">
+    <div class="ticker-content">
+        <div class="ticker-item text-white"><span class="star text-dark">✻</span>FREE SHIPPING ON ALL ORDERS <span
+                class="star text-dark">✻</span>
         </div>
-        <div class="row d-flex justify-content-between">
-            <div class="col-md-5">
-                <img class="footer-payment-icons " src="https://img.icons8.com/color/60/mastercard.png"
-                    title="mastercard" alt="mastercard" />
-                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/color/60/google-pay.png"
-                    alt="google-pay" title="google-pay" />
-                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/color/60/visa.png" title="visa"
-                    alt="visa" />
-                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/nolan/60/apple-pay.png"
-                    alt="apple-pay" />
-
-                <img class="footer-payment-icons ml-3" src="https://img.icons8.com/fluency/60/bank-building.png"
-                    alt="bank-building" />
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+        <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
+    </div>
+</div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-3">
+            <div class="modal-header pb-0 pt-0" style="border-bottom: 0px !important;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="col-md-4">
-                <h5 class="font-weight-bold">Free Shipping</h5>
-                <img class="footer-payment-icons2 " src="https://img.icons8.com/color/96/great-britain.png"
-                    alt="great-britain" />
-                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/fluency/48/flag-of-europe.png"
-                    alt="flag-of-europe" />
-                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/color/96/usa.png" alt="usa" />
-                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/color/96/australia-flag--v1.png"
-                    alt="australia-flag--v1" />
-                <img class="footer-payment-icons2 ml-3" src="https://img.icons8.com/color/96/canada.png" alt="canada" />
+            <div class="modal-body mt-3" style="
+            padding: 17px 17px 17px 17px;
+            border-style: solid;
+            border-color: #942BEF;
+            border-radius: 7px 7px 7px 7px; 
+            ">
+                
+               <?php require_once('quote_form.php');?>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer pb-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-7 col-12 flex-padding">
+                <a class="navbar-brand d-flex align-items-center logo-text-footer"
+                    href="<?php echo $website_url ?>/"><img src="<?php echo $website_url ?>/assets/images/logo-img.png"
+                        class="img-fluid" alt=""> &nbsp;
+                    <h4 class="text-footer-paper mb-0"> The Deli Paper </h4>
 
+                </a>
+                <p class="footer-para mt-3">
+                    Welcome to The Deli Paper, where your culinary designs are elegantly displayed. Our deli paper
+                    is more than just a protective layer; it’s a statement of quality and commitment to your brand’s
+                    image.
+                </p>
+            </div>
+            <div class="col-xl-8">
+                <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-5 col-12 flex-padding">
+                <h5 class="text-product">Our Products</h5>
+                <ul class="mt-3 list-footer pl-0">
+                    <li>
+                        <a href="<?php echo $website_url ?>/wax-paper">Wax Paper</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/food-wrapping-paper">Food Wrapping Paper</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/butcher-paper">Butcher Paper</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/parchment-paper">Parchment Paper</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/paper-bags">Paper Bags</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/gift-wrapping-paper">Gift Wrapping Paper</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
+                <h5 class="text-product">Useful links</h5>
+                <ul class="mt-1 list-footer pl-0">
+                    <li>
+                        <a href="<?php echo $website_url ?>/privacy-policy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/terms-and-conditions">Terms & Condition</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/about-us">About Us</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/contact-us">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
+                <h5 class="text-product">Contact</h5>
+                <ul class="mt-1 list-footer pl-0">
+                    <li>
+                        <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/"><i
+                                class="bx bx-envelope icon-phone"></i>sales@thedelipaper.com</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $website_url ?>/"><i class="bx bx-map icon-phone"></i>Houston Texas</a>
+                    </li>
+
+
+                </ul>
+                <img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid" style="width: 75%;"
+                    alt="">
+            </div>
+            
+            </div>
+            
+            </div>
+            <!--<div class="col-xl-6 flex-padding">-->
+            <!--    <p class="space-text">&nbsp;</p>-->
+            <!--    <p class="space-text">&nbsp;</p>-->
+            <!--    <p class="space-text">&nbsp;</p>-->
+            <!--    <p class="space-text">&nbsp;</p>-->
+            <!--    <p class="space-text">&nbsp;</p>-->
+                <!-- <p class="space-text">&nbsp;</p>
+            <!--    <p class="space-text">&nbsp;</p>-->
+            <!--    <p class="space-text">&nbsp;</p> -->
+            <!--</div>-->
+            <!--<div class="col-md-12 flex-padding footer-flex-column">-->
+            <!--    <img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid" style="width: 50%;"-->
+            <!--        alt="">-->
+            <!--</div>-->
+            <div class="col-xl-12 flex-padding">
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="social-link d-flex align-items-center flex-wrap">
+                        <h5 class="mb-0">Connect with us!</h5>
+                        <div class="social-icons d-flex">
+                            <a href="https://www.instagram.com/the.delipaper/"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/the-deli-paper/"><i
+                                    class='bx bxl-linkedin-square'></i></a>
+                            <a href="https://www.facebook.com/thedelipaper"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.pinterest.com/thedelip/"><i class='bx bxl-pinterest'></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-logo-images d-flex align-items-center flex-wrap">
+                        <img src="<?php echo $website_url ?>/assets/images/footer-img-01.png" alt="">
+                        <img src="<?php echo $website_url ?>/assets/images/footer-img-02.png" alt="">
+                        <img src="<?php echo $website_url ?>/assets/images/footer-img-03.png" alt="">
+                        <img src="<?php echo $website_url ?>/assets/images/footer-img-04.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="footer-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 flex-padding">
+                <div class="d-flex justify-content-between align-items-center flex-bottom-footer flex-wrap">
+                    <div class="footer-div-inner">
+                        <p class="mb-0 text-white" style="visibility: hidden;">© 2025 The Deli Paper. All Rights
+                            Reserved</p>
+
+                    </div>
+                    <div class="footer-img-card">
+                        <img src="<?php echo $website_url ?>/assets/images/payment.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="footer-div">
+                        <p class="mb-0 text-white">© 2025 The Deli Paper. All Rights Reserved</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </footer>
 
-<!-- Your main footer goes here -->
 
-<!-- Copyright -->
-<div class="copyrightarea text-white text-center py-3">
-    &copy; 2025 Delipaper. All rights reserved.
-</div>
-
-
-
-<!-- Hidden default Google Translate -->
-<div id="google_translate_element" style="display: none;"></div>
-
-<!-- Custom Dropup -->
-<div class="translate-dropup">
-    <button class="dropup-button" id="translateButton">
-        <img src="https://flagcdn.com/gb.svg" width="20" style="vertical-align: middle;"> English
-    </button>
-    <div class="dropup-content">
-        <div onclick="translateLanguage('en|en', 'en')">
-            <img src="https://flagcdn.com/gb.svg" width="20"> English
-        </div>
-        <div onclick="translateLanguage('en|fr', 'fr')">
-            <img src="https://flagcdn.com/fr.svg" width="20"> French
-        </div>
-        <div onclick="translateLanguage('en|es', 'es')">
-            <img src="https://flagcdn.com/es.svg" width="20"> Spanish
-        </div>
-        <div onclick="translateLanguage('en|de', 'de')">
-            <img src="https://flagcdn.com/de.svg" width="20"> German
-        </div>
-        <div onclick="translateLanguage('en|it', 'it')">
-            <img src="https://flagcdn.com/it.svg" width="20"> Italian
-        </div>
-        <div onclick="translateLanguage('en|pt', 'pt')">
-            <img src="https://flagcdn.com/pt.svg" width="20"> Portuguese
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-3">
+            <div class="modal-header pb-0 pt-0" style="border-bottom: 0px !important;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mt-3" style="
+                padding: 17px 17px 17px 17px;
+                border-style: solid;
+                border-color: #942BEF;
+                border-radius: 7px 7px 7px 7px; 
+                ">
+                <?php require_once('quote_form.php');?>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Google Translate script -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en'
-    }, 'google_translate_element');
-}
 
-function translateLanguage(langPair, langCode) {
-    var select = document.querySelector("select.goog-te-combo");
-    if (!select) return;
-    select.value = langPair.split('|')[1];
-    select.dispatchEvent(new Event('change'));
 
-    // Update button to reflect the selected language and flag
-    const flagUrl = `https://flagcdn.com/${langCode}.svg`;
-    const languageNameMap = {
-        en: 'English',
-        fr: 'French',
-        es: 'Spanish',
-        de: 'German',
-        it: 'Italian',
-        pt: 'Portuguese'
-    };
-    document.getElementById("translateButton").innerHTML =
-        `<img src="${flagUrl}" width="20" style="vertical-align: middle; margin-right:4px"> ${languageNameMap[langCode]}`;
-}
+<script src="<?php echo $website_url ?>/assets/bootstrap/jquery/jquery.min.js"></script>
+<script src="<?php echo $website_url ?>/assets/bootstrap/js/popper.min.js"></script>
+<script src="<?php echo $website_url ?>/assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="<?php echo $website_url ?>/assets/js/main.js"></script>
+<script>
+$(document).ready(function () {
+  $('.btn-get-qoute').on('click', function () {
+    $('body').addClass('body-darkened');                  // dark background
+    $('.form-slide-panel').addClass('open');              // show panel
+    // $('body').css('overflow', 'hidden');
+    // sdsdsdsds///                  // optional: prevent scroll
+  });
+
+  $('.close-form').on('click', function () {
+    $('.form-slide-panel').removeClass('open');           // hide panel
+    $('body').removeClass('body-darkened');               // remove dark bg
+    // $('body').css('overflow', 'auto');                    // restore scroll
+  });
+});
+
+</script>
+<script>
+$(document).ready(function() {
+    $('.navbar-toggler').click(function() {
+        $('.sidebar').toggleClass('active');
+    });
+
+    $('.close-sidebar').click(function() {
+        $('.sidebar').removeClass('active');
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    // Show button after scrolling 200px
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('#scrollUp').fadeIn();
+        } else {
+            $('#scrollUp').fadeOut();
+        }
+    });
+
+    // Scroll to top on click
+    $('#scrollUp').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800); // 800ms smooth scroll
+        return false;
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $('.accordion-wrapper').click(function() {
+        const $this = $(this);
+
+        // Close all other accordions
+        $('.accordion-wrapper').not($this).each(function() {
+            $(this).find('.accordion-para').addClass('d-none');
+            $(this).find('.right-icon')
+                .removeClass('bx-chevron-down')
+                .addClass('bx-chevron-right');
+        });
+
+        // Toggle current accordion content
+        const $para = $this.find('.accordion-para');
+        $para.toggleClass('d-none');
+
+        // Toggle icon class
+        const $icon = $this.find('.right-icon');
+        if ($para.hasClass('d-none')) {
+            $icon.removeClass('bx-chevron-down').addClass('bx-chevron-right');
+        } else {
+            $icon.removeClass('bx-chevron-right').addClass('bx-chevron-down');
+        }
+    });
+});
 </script>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+<script>
+$(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        navText: [
+            '<span class="custom-prev"><i class="bx bx-chevron-left"></i></span>',
+            '<span class="custom-next"><i class="bx bx-chevron-right"></i></span></span>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+});
 </script>
-
-
-
-<!-- WhatsApp Sticky Button -->
-<a href="https://wa.me/+447366426960" class="whatsapp-float" target="_blank">
-    <i class='bx bxl-whatsapp whatsapp-icon'></i>
-</a>
-
-<script src="<?php echo $website_url; ?>/assets/bootstrap/jquery-3.7.1.min.js"></script>
-<script src="<?php echo $website_url; ?>/assets/bootstrap/bootstrap.min.js"></script>
-<script src="<?php echo $website_url; ?>/assets/bootstrap/popper.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-<script src="<?php echo $website_url; ?>/assets/js/script.js"></script>
-</body>
 </body>
 
 </html>

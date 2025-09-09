@@ -1,8 +1,13 @@
 <?php
 $page = "page";
 require_once('parts/top.php'); ?>
+<?php 
+if($admin_role != "admin"){
+    	echo "<script>window.open('post_view.php','_self');</script>";
+}
+?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-<?php require_once('parts/top.php'); ?>
+
 </head>
 
 <body class="sb-nav-fixed">

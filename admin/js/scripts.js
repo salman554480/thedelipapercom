@@ -3,7 +3,7 @@
     * Copyright 2013-2021 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
     */
-    // 
+// 
 // Scripts
 // 
 
@@ -24,3 +24,22 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+
+
+
+function autoCreateBackup() {
+    fetch('backup.php')
+        .then(response => response.json())
+        .then(data => {
+            console.log(`[Backup Status] ${data.message}`);
+        })
+        .catch(error => {
+            console.error('[Backup Error]', error);
+        });
+}
+
+// Every 15 minutes
+setInterval(autoCreateBackup, 900000);
+autoCreateBackup(); // Once on load
+

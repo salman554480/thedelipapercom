@@ -1,0 +1,30 @@
+ .text-form-quote {
+                font-family: "Marcellus", Sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    text-transform: uppercase;
+            }
+        @media screen and (max-width:767px) {
+            .choose-section .row{
+                padding: 0px 15px;
+            }
+            .round-clock h4 {
+    font-size: 20px;
+}
+    .round-clock {
+        padding: 22px 40px;
+        text-align: center;
+    }   
+    .round-clock svg {
+        display: flex;
+        margin: auto;
+    }
+    .social-link {
+    gap: 0px;
+    margin-bottom: 15px;
+}
+    .text-quote {
+        font-size: 30px !important;
+        padding-bottom: 4px;
+    }
+        }

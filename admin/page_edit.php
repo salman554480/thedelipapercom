@@ -1,6 +1,11 @@
 <?php
 $page = "page";
 require_once('parts/top.php'); ?>
+<?php 
+if($admin_role != "admin"){
+    	echo "<script>window.open('post_view.php','_self');</script>";
+}
+?>
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <?php echo require_once('parts/top.php'); ?>
 </head>
@@ -79,7 +84,7 @@ require_once('parts/top.php'); ?>
                                 <div class="col-md-6">
                                     <label class="form-label">Meta Title*</label>
                                     <input type="text" name="meta_title" value="<?php echo $meta_title; ?>"
-                                        class="form-control" required />
+                                        class="form-control"  />
                                 </div>
 
                                 <div class="col-md-6">

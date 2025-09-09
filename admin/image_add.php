@@ -127,6 +127,12 @@ require_once('parts/top.php'); ?>
                         // Delete from database
                         $sql = "DELETE FROM image WHERE image_name = '$image_name'";
                         mysqli_query($conn, $sql);
+                        
+                        $log_msg = "Deleted image with ID: $image_path";
+                                        // Insert into log table
+                                        $insert_log = "INSERT INTO log (log_msg, admin_id) 
+                                                       VALUES ('$log_msg', '$admin_id')";
+                                        mysqli_query($conn, $insert_log);
                     }
 
                     // Get all images

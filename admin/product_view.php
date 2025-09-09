@@ -1,6 +1,11 @@
 <?php
 $page = "product";
 require_once('parts/top.php'); ?>
+<?php 
+if($admin_role != "admin"){
+    	echo "<script>window.open('post_view.php','_self');</script>";
+}
+?>
 </head>
 
 <body class="sb-nav-fixed">
@@ -31,15 +36,29 @@ require_once('parts/top.php'); ?>
 
                             if (isset($_GET['del'])) {
                                 $del_id = $_GET['del'];
+                                
+                                if($admin_role == "admin"){
 
-                                $delete = "DELETE FROM product WHERE product_id='$del_id'";
-                                $run = mysqli_query($conn, $delete);
-
-                                if ($run === true) {
-                                    echo "<script>alert('Deleted');</script>";
-                                    echo "<script>window.open('product_view.php','_self');</script>";
+                                        $delete = "DELETE FROM product WHERE product_id='$del_id'";
+                                        $run = mysqli_query($conn, $delete);
+        
+                                        if ($run === true) {
+                                            
+                                            $log_msg = "Deleted product with ID: $del_id";
+                                                // Insert into log table
+                                                $insert_log = "INSERT INTO log (log_msg, admin_id) 
+                                                               VALUES ('$log_msg', '$admin_id')";
+                                                mysqli_query($conn, $insert_log);
+                                            
+                                            echo "<script>alert('Deleted');</script>";
+                                            echo "<script>window.open('product_view.php','_self');</script>";
+                                        } else {
+                                            echo "Failed,Try Again";
+                                        }
+                                
                                 } else {
-                                    echo "Failed,Try Again";
+                                    echo "<script>alert('Access denied. Only admins can delete products.');</script>";
+                                    echo "<script>window.open('post_view.php','_self');</script>";
                                 }
                             }
 
@@ -108,7 +127,7 @@ require_once('parts/top.php'); ?>
                                                         <hr class="dropdown-divider" />
                                                 </li>
                                                 <li> <a class="dropdown-item"
-                                                        href="../product_details.php?product_url=<?php echo $product_url; ?>">View
+                                                        href="product_details.php?product_url=<?php echo $product_url; ?>">View
                                                         Page</a></li>
                                             </ul>
                                             </li>

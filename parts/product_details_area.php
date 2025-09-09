@@ -14,403 +14,476 @@ $meta_title = $row_product['product_meta_title'];
 $meta_description = $row_product['product_meta_description'];
 $meta_keywords = $row_product['product_meta_keywords'];
 ?>
-<div class="website-area">
-    <div class="w-90 py-5 ">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="admin/assets/img/<?php echo $product_thumbnail; ?>" class="w-100 product-main-image" alt="">
-                <div class="mt-5">
-                    <div class="row ">
-                        <div class="col-6 col-md-4 feature-box2 ">
-                            <i class='bx bx-shape-square'></i>
-                            <span>Custom Sizes</span>
-                        </div>
-
-                        <div class="col-6 col-md-4 feature-box2">
-                            <i class='bx bxs-tree'></i>
-                            <span>Plant Base Material </span>
-                        </div>
-
-                        <div class="col-6 col-md-4 feature-box2">
-                            <i class='bx bx-timer'></i>
-                            <span>Fastest Turn Around</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h1 class="card-product-title"><?php echo $product_name; ?></h1>
-                <p class="product-intro"><?php echo $product_short_description; ?></p>
-                <h3 class="my-3">Request a Quote</h3>
-                <?php require_once('parts/quote.php'); ?>
-            </div>
-        </div>
-    </div>
-
-    <!-- <section class="py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div>
-                            <h2 class="section-heading">Affordable, premium custom printed parchment paper
-                            </h2>
-                            <h3 class="section-subheading">Custom printed parchment paper for cooking and serving hot
-                                and
-                                cold
-                                food
-                            </h3>
-                            <p class="product-intro">Get your brand noticed, make food displays more exciting and
-                                generate
-                                engagement from customers with custom printed parchment paper.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i> <span>High
-                                grease resistance</span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i>
-                            <span>Recyclable</span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i> <span>FDA
-                                approved
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i>
-                            <span>Halal certified
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i> <span>Oven
-                                safe up to 392°F
-
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i>
-                            <span>Freezer safe
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i>
-                            <span>Microwave safe
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i>
-                            <span>Delivery within 3 weeks
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i>
-                            <span>Custom sizes available up to 27.5” x 19.5”
-
-                            </span>
-                        </h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i> <span>Free
-                                shipping</span></h4>
-                        <h4 class="text-center font-weight-bold"><i class='bx bx-check-circle blue-tick'></i> <span>Free
-                                artwork design
-                            </span></h4>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
+<section class=" wax-product-section">
     <div class="container-fluid">
-        <!-- Nav tabs -->
-        <ul class="nav nav-pills" id="productTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#description" role="tab"
-                    aria-controls="description" aria-selected="true">Description</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="spec-tab" data-toggle="tab" href="#specification" role="tab"
-                    aria-controls="specification" aria-selected="false">Specification</a>
-            </li>
-        </ul>
+        <div class="row pt-5 pb-5 ml-5 mr-5">
 
-        <!-- Tab panes -->
-        <div class="tab-content border border-0 p-3" id="productTabContent">
-            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="desc-tab">
-                <div class="row no-gutters align-items-center">
-
-                    <!-- Image Column -->
-                    <div class="col-md-6">
-                        <img src="admin/assets/img/<?php echo $product_image1; ?>" alt="Section Image"
-                            class="section-image">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
+                <img src="<?php echo $img_path; ?>/<?php echo $product_thumbnail; ?>"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
+                <div class="ml-5 wax-right-content">
+                    <h1 class="text-wax"><?php echo $product_name; ?></h1>
+                    <div class="para-wax">
+                        <?php echo $product_short_description; ?>
                     </div>
 
-                    <!-- Text Content Column -->
-                    <div class="col-md-6 p-3">
-                        <div class="section-content">
-                            <!-- <h2 class="mb-3 section-heading ">wide range of premium branded greaseproof paper</h2>
-        <h5 class=" mb-3 section-subheading">promote your brand and improve your food presentation
-        </h5> -->
-                            <div class="mb-4 product-intro">
-                                <?php echo $product_content; ?>
+                    <form action="<?php echo $website_url ?>/" method="POST" enctype="multipart/form-data">
+                        <div class="row justify-content-start quote-content">
+                            <div class="col-xl-6">
+                                <div class="form-group mb-0">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control input-field" name="name">
+                                </div>
                             </div>
-
+                            <div class="col-xl-6">
+                                <div class="form-group mb-0">
+                                    <label for="">Email</label>
+                                    <input type="email" class="form-control input-field" name="email">
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group mb-0">
+                                    <label for="">Contact No.</label>
+                                    <input type="text" class="form-control input-field" name="contact">
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group mb-0">
+                                    <label for="">Standard Size</label>
+                                    <select class="form-control input-field" name="standard_size">
+                                        <option value="4″ x 4″" class="">4″ x 4″</option>
+                                        <option value="5″ x 5″" class="">5″ x 5″</option>
+                                        <option value="6” x 5”                  " class="">6” x 5” </option>
+                                        <option value="6″ x 6″" class="">6″ x 6″</option>
+                                        <option value="7” x 5”" class="">7” x 5”</option>
+                                        <option value="7” x 7”" class="">7” x 7”</option>
+                                        <option value="8” x 6” " class="">8” x 6” </option>
+                                        <option value="8” x 5”" class="">8” x 5”</option>
+                                        <option value="8” x 8”" class="">8” x 8”</option>
+                                        <option value="8.5” x 11”" class="">8.5” x 11”</option>
+                                        <option value="9″ x 5″" class="">9″ x 5″</option>
+                                        <option value="9″ x 6″" class="">9″ x 6″</option>
+                                        <option value="9” x 9”" class="">9” x 9”</option>
+                                        <option value="10″ x 5″" class="">10″ x 5″</option>
+                                        <option value="10″ x 6″" class="">10″ x 6″</option>
+                                        <option value="10″ x 8″" class="">10″ x 8″</option>
+                                        <option value="10″ x 10″" class="">10″ x 10″</option>
+                                        <option value="10.75″ x 10″" class="">10.75″ x 10″</option>
+                                        <option value="12″ x 6″" class="">12″ x 6″</option>
+                                        <option value="12″ x 8″" class="">12″ x 8″</option>
+                                        <option value="12″ x 9″" class="">12″ x 9″</option>
+                                        <option value="12″ x 10″" class="">12″ x 10″</option>
+                                        <option value="12″ x 12″" class="">12″ x 12″</option>
+                                        <option value="13″ x 6″" class="">13″ x 6″</option>
+                                        <option value="13″ x 9″" class="">13″ x 9″</option>
+                                        <option value="13″ x 10″" class="">13″ x 10″</option>
+                                        <option value="13″ x 13″" class="">13″ x 13″</option>
+                                        <option value="14” x 12”" class="">14” x 12”</option>
+                                        <option value="15″ x 9″" class="">15″ x 9″</option>
+                                        <option value="15″ x 10.75″" class="">15″ x 10.75″</option>
+                                        <option value="15″ x 12″" class="">15″ x 12″</option>
+                                        <option value="15″ x 13″" class="">15″ x 13″</option>
+                                        <option value="16” x 12”" class="">16” x 12”</option>
+                                        <option value="17” x 11”" class="">17” x 11”</option>
+                                        <option value="18” x 10”" class="">18” x 10”</option>
+                                        <option value="18” x 12”" class="">18” x 12”</option>
+                                        <option value="18” x 13”" class="">18” x 13”</option>
+                                        <option value="20″ x 10″ " class="">20″ x 10″ </option>
+                                        <option value="20” x 12”     " class="">20” x 12” </option>
+                                        <option value="20″ x 13″    " class="">20″ x 13″ </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group mb-0">
+                                    <label for="">Printing</label>
+                                    <select class="form-control input-field " name="printing" required="required">
+                                        <option value="4- Color" class="">4- Color</option>
+                                        <option value="2 Color" class="">2 Color</option>
+                                        <option value="1 Color" class="">1 Color</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group mb-0">
+                                    <label for="">Paper</label>
+                                    <select class="form-control input-field " required="required" name="paper">
+                                        <option value="White" class="">White</option>
+                                        <option value="	Kraft" class="">Kraft</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group mb-0">
+                                    <label for="">Quantity</label>
+                                    <input type="text" class="form-control input-field" name="quantity" id="">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 mt-1">
+                                <div class="form-group mb-0">
+                                    <label for="">Upload Logo File</label>
+                                    <input type="file" class="form-control input-field" name="logo_file" id="">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 mt-1">
+                                <div class="form-group mb-0">
+                                    <label for="">For Custom size / More information</label>
+                                    <input type="text" name="custom_info" class="form-control input-field" placeholder="Type Here"
+                                        id="" />
+                                </div>
+                            </div>
+                            <!-- <div class="col-xl-6">
+                                <div class="bg-white p-3 mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">I'm not a robot</label>
+                                        </div>
+                                        <img src="<?php echo $website_url ?>/assets/images/recaptcha.png"
+                                            style="width: 70px;" alt="">
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="col-xl-12 mt-3">
+                                <button
+                                    class="btn btn-send col-xl-8 d-flex justify-content-center mt-3	 m-auto" type="submit">Send</button>
+                            </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="spec-tab">
-                <!-- <h2 class="mb-3 section-heading">Specifications</h2> -->
-                <div class="container">
-                    <table class="table table-bordered table-striped  table-responsive">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p><b>Paper Type</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">White Paper</span></p>
-                                </td>
-                                <td>
-                                    <p><b>Product Name</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;"><?php echo $product_name; ?></span></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><b>Coating</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">Uncoated</span></p>
-                                </td>
-                                <td>
-                                    <p><b>Compatible Printing</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">Offset Printing</span></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><b>Feature</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">Greaseproof</span></p>
-                                </td>
-                                <td>
-                                    <p><b>Material</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">Plant Based Material</span></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><b>Pulp Style</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">Recycled</span></p>
-                                </td>
-                                <td>
-                                    <p><b>Color print</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">Custom Printing. 1 , 2 , 4 Color</span>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><b>Safety</b></p>
-                                </td>
-                                <td>
-                                    <p><span style="font-weight: 400;">non-hazardous</span></p>
-                                </td>
-                                <td>
-                                    <p><b>Usage</b></p>
-                                </td>
-                                <td>
-                                    <p>Food wrapping, Non-stick surface, Crafts or DIY projects</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <section class="steps-section text-center">
-        <div class="container">
-            <h2>Get Started with Your Custom Food Wrap</h2>
-            <p class="lead">Just three easy steps to personalized perfection</p>
-
-            <div class="row mt-5">
-                <div class="col-md-3">
-                    <div class="step-box">
-                        <i class='bx bx-food-menu'></i>
-                        <div class="step-title">Choose your food paper</div>
-                        <p>Select the material that suits your brand and style.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="step-box">
-                        <i class='bx bx-upload'></i>
-                        <div class="step-title">Select your desired color</div>
-                        <p>Send us your branding, and we’ll handle the rest.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="step-box">
-                        <i class='bx bx-package'></i>
-                        <div class="step-title">Choose your quantity</div>
-                        <p>We print, pack, and ship straight to your door.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="step-box">
-                        <i class='bx bx-package'></i>
-                        <div class="step-title">Upload your logo or artwork</div>
-                        <p>We print, pack, and ship straight to your door.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<section class="faq-section bg-white">
-    <div class="container">
-        <div class="row">
-
-            <!-- Left Column: Heading and CTA -->
-            <div class="col-md-12  mb-4 mb-md-0">
-                <!-- <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt=""> -->
-                <div class="faq-left">
-                    <h2 class="mb-3 section-heading text-center">Frequently Asked Questions</h2>
-                    <p class="mb-4 product-intro text-center">Have a question? We've got answers to some of the most
-                        common
-                        questions below.</p>
-
-                </div>
-            </div>
-
-            <!-- Right Column: FAQs -->
-            <div class="col-md-12">
-                <div id="faqAccordion">
-
+                    </form>
                     <?php
-                    // Fetch FAQs for the product
-                    $query_faq = "SELECT * FROM faq WHERE product_id = $product_id";
-                    $result_faq = mysqli_query($conn, $query_faq);
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        // Collect data
+                        $name = $_POST['name'] ?? '';
+                        $email = $_POST['email'] ?? '';
+                        $contact = $_POST['contact'] ?? '';
+                        $standard_size = $_POST['standard_size'] ?? '';
+                        $printing = $_POST['printing'] ?? '';
+                        $paper = $_POST['paper'] ?? '';
+                        $quantity = $_POST['quantity'] ?? '';
+                        $custom_info = $_POST['custom_info'] ?? '';
 
-                    if (mysqli_num_rows($result_faq) > 0) {
-                        $faq_count = 0;
-                        echo '<div class="accordion">';
-
-                        while ($row_faq = mysqli_fetch_assoc($result_faq)) {
-                            $question = htmlspecialchars($row_faq['faq_question']);
-                            $answer = htmlspecialchars($row_faq['faq_answer']);
-                            $collapseId = "faqCollapse" . $faq_count;
-                            $headingId = "faqHeading" . $faq_count;
-                            $showClass = '';
-                            $collapsedClass = 'collapsed';
-                            $ariaExpanded = 'false';
-
-                            // Open new row every 2 FAQs
-                            if ($faq_count % 2 == 0) {
-                                echo '<div class="row">';
+                        // If logo file was uploaded
+                        $uploaded_file_url = '';
+                        if (!empty($_FILES['logo_file']['name'])) {
+                            $upload_dir = "uploads/";
+                            if (!is_dir($upload_dir)) mkdir($upload_dir);
+                            $file_name = time() . "_" . basename($_FILES['logo_file']['name']);
+                            $file_path = $upload_dir . $file_name;
+                            if (move_uploaded_file($_FILES['logo_file']['tmp_name'], $file_path)) {
+                                $uploaded_file_url = $file_path;
                             }
-
-                            echo '
-            <div class="col-md-6 mb-3">
-                <div class="card faq-item">
-                    <div class="card-header" id="' . $headingId . '">
-                        <h5 class="mb-0">
-                            <button style="text-align:left;" class="btn btn-link ' . $collapsedClass . ' faq-question" data-toggle="collapse"
-                                data-target="#' . $collapseId . '" aria-expanded="' . $ariaExpanded . '" aria-controls="' . $collapseId . '">
-                                ' . $question . '
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="' . $collapseId . '" class="collapse ' . $showClass . '" aria-labelledby="' . $headingId . '"
-                        data-parent="#faqAccordion">
-                        <div class="card-body">
-                            ' . $answer . '
-                        </div>
-                    </div>
-                </div>
-            </div>';
-
-                            // Close row every 2 FAQs or at the end
-                            if ($faq_count % 2 == 1) {
-                                echo '</div>'; // close row
-                            }
-
-                            $faq_count++;
                         }
 
-                        // Close last row if it wasn't closed
-                        if ($faq_count % 2 != 0) {
-                            echo '</div>';
-                        }
+                        // Email content
+                        $message = "Name: $name\n";
+                        $message .= "Email: $email\n";
+                        $message .= "Contact No.: $contact\n";
+                        $message .= "Standard Sizes: $standard_size\n";
+                        $message .= "Printing: $printing\n";
+                        $message .= "Paper: $paper\n";
+                        $message .= "Quantity: $quantity\n";
+                        $message .= "Upload Logo File: $uploaded_file_url\n";
+                        $message .= "Custom Info: $custom_info\n";
 
-                        echo '</div>'; // close accordion
-                    } else {
-                        echo "<p>No FAQs available for this product.</p>";
+                        // Email setup
+                        $to = "adeeldevil444@gmail.com"; // ← change this to your email
+                        $subject = "New Quote Request";
+                        $headers = "From: $email\r\n";
+                        $headers .= "Reply-To: $email\r\n";
+
+                        // Send email
+                        if (mail($to, $subject, $message, $headers)) {
+                            echo "✅ Email sent successfully!";
+                        } else {
+                            echo "❌ Failed to send email.";
+                        }
                     }
                     ?>
+
+
+
+
+                    <!-- <button class="btn-slide-loop btn-get-qoute"><span>Get a Quote</span></button>
+                        <h3 class="text-follow mt-3">Follow Us</h3>
+                        <div class="social-media-link">
+                            <a href="https://www.instagram.com/the.delipaper/"><i
+                                    class="bx bxl-instagram rounded-pill"></i></a>
+                            <a href="https://www.linkedin.com/company/the-deli-paper/"><i
+                                    class="bx bxl-linkedin-square rounded-pill"></i></a>
+                            <a href="https://www.facebook.com/thedelipaper"><i
+                                    class="bx bxl-facebook rounded-pill"></i></a>
+                            <a href="https://www.pinterest.com/thedelip/"><i
+                                    class="bx bxl-pinterest rounded-pill"></i></a>
+                        </div>-->
                 </div>
-
-
             </div>
         </div>
+    </div>
+
 </section>
-<section class="py-5">
+
+<section class="work-section work-column-section">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12  mb-4 mb-md-0">
-                <!-- <img src="assets/img/faq.gif" class="d-block mx-auto my-3" alt=""> -->
-                <div class="faq-left">
-                    <h2 class="mb-3 section-heading text-center">Related Products</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="owl-carousel owl-theme">
-                    <?php
-
-                    $select_related_product = "SELECT * FROM product where product_status='active' ";
-                    $run_related_product = mysqli_query($conn, $select_related_product);
-                    while ($row_related_product = mysqli_fetch_array($run_related_product)) {
-
-                        $related_product_id = $row_related_product['product_id'];
-                        $related_product_name = $row_related_product['product_name'];
-                        $related_product_url = $row_related_product['product_url'];
-                        $related_product_thumbnail = $row_related_product['product_thumbnail'];
-
-                        ?>
-                    <a href="webpage.php?slug=<?php echo $related_product_url ?>">
-                        <div class="card">
-                            <img src="admin/assets/img/<?php echo $related_product_thumbnail; ?>"
-                                class="carousel-image2" alt="<?php echo $related_product_name; ?>">
-                            <div class="card-body">
-                                <h5 class="text-center my-2 font-weight-bold secondary-color">
-                                    <?php echo $related_product_name; ?>
-                                </h5>
-                                <p class="my-3 card-text text-dark text-center">
-                                    <?php echo substr($product_short_description, 0, 140); ?>...
-                                </p>
-                            </div>
+        <div class="row mt-5 pt-5 ml-5 mr-5">
+            <div class="col-md-12 flex-padding">
+                <div class="d-flex justify-content-between flex-product-items flex-wrap">
+                    <div class="product-item">
+                        <div class="icon-img rounded-circle">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fab-uncharted two_elementor_element"
+                                viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M171.73,232.813A5.381,5.381,0,0,0,176.7,229.5,48.081,48.081,0,0,1,191.6,204.244c1.243-.828,1.657-2.484,1.657-4.141a4.22,4.22,0,0,0-2.071-3.312L74.429,128.473,148.958,85a9.941,9.941,0,0,0,4.968-8.281,9.108,9.108,0,0,0-4.968-8.281L126.6,55.6a9.748,9.748,0,0,0-9.523,0l-100.2,57.966a9.943,9.943,0,0,0-4.969,8.281V236.954a9.109,9.109,0,0,0,4.969,8.281L39.235,258.07a8.829,8.829,0,0,0,4.968,1.242,9.4,9.4,0,0,0,6.625-2.484,10.8,10.8,0,0,0,2.9-7.039V164.5L169.66,232.4A4.5,4.5,0,0,0,171.73,232.813ZM323.272,377.73a12.478,12.478,0,0,0-4.969,1.242l-74.528,43.062V287.882c0-2.9-2.9-5.8-6.211-4.555a53.036,53.036,0,0,1-28.984.414,4.86,4.86,0,0,0-6.21,4.555V421.619l-74.529-43.061a8.83,8.83,0,0,0-4.969-1.242,9.631,9.631,0,0,0-9.523,9.523v26.085a9.107,9.107,0,0,0,4.969,8.281l100.2,57.553A8.829,8.829,0,0,0,223.486,480a11.027,11.027,0,0,0,4.969-1.242l100.2-57.553a9.941,9.941,0,0,0,4.968-8.281V386.839C332.8,382.285,328.24,377.73,323.272,377.73ZM286.007,78a23,23,0,1,0-23-23A23,23,0,0,0,286.007,78Zm63.627-10.086a23,23,0,1,0,23,23A23,23,0,0,0,349.634,67.914ZM412.816,151.6a23,23,0,1,0-23-23A23,23,0,0,0,412.816,151.6Zm-63.182-9.2a23,23,0,1,0,23,23A23,23,0,0,0,349.634,142.4Zm-63.627,83.244a23,23,0,1,0-23-23A23,23,0,0,0,286.007,225.648Zm-62.074,36.358a23,23,0,1,0-23-23A23,23,0,0,0,223.933,262.006Zm188.883-82.358a23,23,0,1,0,23,23A23,23,0,0,0,412.816,179.648Zm0,72.272a23,23,0,1,0,23,23A23,23,0,0,0,412.816,251.92Z"
+                                    class="two_elementor_element"></path>
+                            </svg>
                         </div>
-
-                    </a>
-                    <?php } ?>
+                        <h3>Free At Work</h3>
+                    </div>
+                    <div class="product-item">
+                        <div class="icon-img rounded-circle">
+                            <svg aria-hidden="true"
+                                class="e-font-icon-svg e-fab-acquisitions-incorporated two_elementor_element"
+                                viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M357.45 468.2c-1.2-7.7-1.3-7.6-9.6-7.6-99.8.2-111.8-2.4-112.7-2.6-12.3-1.7-20.6-10.5-21-23.1-.1-1.6-.2-71.6-1-129.1-.1-4.7 1.6-6.4 5.9-7.5 12.5-3 24.9-6.1 37.3-9.7 4.3-1.3 6.8-.2 8.4 3.5 4.5 10.3 8.8 20.6 13.2 30.9 1.6 3.7.1 4.4-3.4 4.4-10-.2-20-.1-30.4-.1v27h116c-1.4-9.5-2.7-18.1-4-27.5-7 0-13.8.4-20.4-.1-22.6-1.6-18.3-4.4-84-158.6-8.8-20.1-27.9-62.1-36.5-89.2-4.4-14 5.5-25.4 18.9-26.6 18.6-1.7 37.5-1.6 56.2-2 20.6-.4 41.2-.4 61.8-.5 3.1 0 4-1.4 4.3-4.3 1.2-9.8 2.7-19.5 4-29.2.8-5.3 1.6-10.7 2.4-16.1L23.75 0c-3.6 0-5.3 1.1-4.6 5.3 2.2 13.2-.8.8 6.4 45.3 63.4 0 71.8.9 101.8.5 12.3-.2 37 3.5 37.7 22.1.4 11.4-1.1 11.3-32.6 87.4-53.8 129.8-50.7 120.3-67.3 161-1.7 4.1-3.6 5.2-7.6 5.2-8.5-.2-17-.3-25.4.1-1.9.1-5.2 1.8-5.5 3.2-1.5 8.1-2.2 16.3-3.2 24.9h114.3v-27.6c-6.9 0-33.5.4-35.3-2.9 5.3-12.3 10.4-24.4 15.7-36.7 16.3 4 31.9 7.8 47.6 11.7 3.4.9 4.6 3 4.6 6.8-.1 42.9.1 85.9.2 128.8 0 10.2-5.5 19.1-14.9 23.1-6.5 2.7-3.3 3.4-121.4 2.4-5.3 0-7.1 2-7.6 6.8-1.5 12.9-2.9 25.9-5 38.8-.8 5 1.3 5.7 5.3 5.7 183.2.6-30.7 0 337.1 0-2.5-15-4.4-29.4-6.6-43.7zm-174.9-205.7c-13.3-4.2-26.6-8.2-39.9-12.5a44.53 44.53 0 0 1-5.8-2.9c17.2-44.3 34.2-88.1 51.3-132.1 7.5 2.4 7.9-.8 9.4 0 9.3 22.5 18.1 60.1 27 82.8 6.6 16.7 13 33.5 19.7 50.9a35.78 35.78 0 0 1-3.9 2.1c-13.1 3.9-26.4 7.5-39.4 11.7a27.66 27.66 0 0 1-18.4 0z"
+                                    class="two_elementor_element"></path>
+                            </svg>
+                        </div>
+                        <h3>Custom Size</h3>
+                    </div>
+                    <div class="product-item">
+                        <div class="icon-img rounded-circle">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-far-clock two_elementor_element"
+                                viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                                    class="two_elementor_element"></path>
+                            </svg>
+                        </div>
+                        <h3>Fastest Turn Around</h3>
+                    </div>
+                    <div class="product-item">
+                        <div class="icon-img rounded-circle">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-recycle two_elementor_element"
+                                viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M184.561 261.903c3.232 13.997-12.123 24.635-24.068 17.168l-40.736-25.455-50.867 81.402C55.606 356.273 70.96 384 96.012 384H148c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12H96.115c-75.334 0-121.302-83.048-81.408-146.88l50.822-81.388-40.725-25.448c-12.081-7.547-8.966-25.961 4.879-29.158l110.237-25.45c8.611-1.988 17.201 3.381 19.189 11.99l25.452 110.237zm98.561-182.915l41.289 66.076-40.74 25.457c-12.051 7.528-9 25.953 4.879 29.158l110.237 25.45c8.672 1.999 17.215-3.438 19.189-11.99l25.45-110.237c3.197-13.844-11.99-24.719-24.068-17.168l-40.687 25.424-41.263-66.082c-37.521-60.033-125.209-60.171-162.816 0l-17.963 28.766c-3.51 5.62-1.8 13.021 3.82 16.533l33.919 21.195c5.62 3.512 13.024 1.803 16.536-3.817l17.961-28.743c12.712-20.341 41.973-19.676 54.257-.022zM497.288 301.12l-27.515-44.065c-3.511-5.623-10.916-7.334-16.538-3.821l-33.861 21.159c-5.62 3.512-7.33 10.915-3.818 16.536l27.564 44.112c13.257 21.211-2.057 48.96-27.136 48.96H320V336.02c0-14.213-17.242-21.383-27.313-11.313l-80 79.981c-6.249 6.248-6.249 16.379 0 22.627l80 79.989C302.689 517.308 320 510.3 320 495.989V448h95.88c75.274 0 121.335-82.997 81.408-146.88z"
+                                    class="two_elementor_element"></path>
+                            </svg>
+                        </div>
+                        <h3>Recycle Paper</h3>
+                    </div>
+                    <div class="product-item">
+                        <div class="icon-img rounded-circle">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf two_elementor_element"
+                                viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"
+                                    class="two_elementor_element"></path>
+                            </svg>
+                        </div>
+                        <h3>Plant Base Material</h3>
+                    </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>
+<section class="tab-section">
+    <div class="container-fluid">
+        <div class="row ml-5 mr-5 mt-5 pt-5">
+            <div class="col-xl-8 flex-padding mt-3">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Specifications</a>
+                    </li>
+                    <!-- <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  </li> -->
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="content-area">
+                            <?php echo $product_content; ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="table-responsive mt-3">
+                            <table class="table table-bordered">
+                                <!-- <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead> -->
+                                <tbody>
+                                    <tr>
+                                        <th>Paper Type </th>
+                                        <td>White Paper</td>
+                                        <td>Product Name</td>
+                                        <td><?php echo $product_name ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Coating</th>
+                                        <td>Uncoated</td>
+                                        <td>Compatible Printing </td>
+                                        <td>Offset Printing</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <td>Greaseproof</td>
+                                        <td>Material</td>
+                                        <td>Plant Based Material</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pulp Style</th>
+                                        <td>Recycled</td>
+                                        <td>Color print</td>
+                                        <td>Custom Printing. 1 , 2 , 4 Color</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Safety</th>
+                                        <td>non-hazardous</td>
+                                        <td>Usage</td>
+                                        <td>Food wrapping, Non-stick surface, Crafts or DIY projects</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                </div>
+            </div>
+            <div class="col-xl-4 flex-padding mt-3">
+                <img src="<?php echo $img_path ?>/<?php echo $product_image1; ?>" class="img-fluid tab-img" alt="">
+                <img src="<?php echo $img_path ?>/<?php echo $product_image2; ?>" class="img-fluid tab-img mt-3 mb-3" alt="">
+                <div class="position-relative">
+                    <div class="overlay-img">
+                        <div class="d-flex justify-content-center align-items-center flex-column  p-1"
+                            style="height: -webkit-fill-available;">
+                            <h1 class="text-center text-white text-offer">Contact Now To Get 20% Off</h1>
+                            <button class="btn btn-order mt-3">Order Now</button>
+                        </div>
+                    </div>
+                    <img src="<?php echo $img_path ?>/tab-img-03.webp" class="img-fluid tab-img" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="standard-section">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12 text-center flex-padding">
+                <h1 class="text-faq">Frequently Asked Questions</h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row ml-5 mr-5 mt-5">
+            <?php
+            // Query to fetch FAQs for the product
+            $sql = "SELECT faq_question, faq_answer FROM faq WHERE product_id = $product_id";
+            $result = mysqli_query($conn, $sql);
+
+            // Check if any FAQs found
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+
+
+                    <div class="col-xl-6 col-lg-8 col-md-8 col-12 flex-padding">
+                        <div class="accordion-wrapper mt-3">
+                            <div class="accordion-text d-flex justify-content-between align-items-center">
+                                <h3><?php echo htmlspecialchars($row['faq_question']); ?></h3>
+                                <i class="bx bx-chevron-right right-icon"></i>
+                            </div>
+                            <p class="accordion-para d-none"><?php echo htmlspecialchars($row['faq_answer']); ?></p>
+                        </div>
+                    </div>
+            <?php
+                }
+            } else {
+                echo "<p>No FAQs available for this product.</p>";
+            }
+            ?>
+
+
+        </div>
+    </div>
+</section>
+
+<section class=" product-slider-section pb-5">
+    <div class="container">
+        <div class="row mt-5 pt-5">
+            <div class="col-md-12 m-auto">
+                <h1 class="text-center text-product" style="color: #2757FF;"> Other Products</h1>
+                <p class="text-center para-product">Diving deeper into our catalogue, you’ll uncover an array of
+                    offerings designed to enhance your experience beyond our core range.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="owl-carousel product-slide">
+            <?php
+            // Fetch other products excluding the current one
+            $query = "SELECT product_id, product_name, product_url, product_thumbnail 
+                      FROM product 
+                      WHERE product_id != $product_id 
+                      "; // Adjust the LIMIT as needed
+
+            $result = mysqli_query($conn, $query);
+
+            if ($result && mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $name = htmlspecialchars($row['product_name']);
+                    $url = htmlspecialchars($row['product_url']);
+                    $thumbnail = htmlspecialchars($row['product_thumbnail']);
+            ?>
+                    <div>
+                        <img src="<?php echo $img_path . '/' . $thumbnail; ?>" alt="">
+                        <h2 class="text-product-slide text-center">
+                            <a href="<?php echo $url; ?>"><?php echo $name; ?></a>
+                        </h2>
+                    </div>
+            <?php
+                }
+            } else {
+                echo "No other products found.";
+            }
+            ?>
+
+            <!-- <div> Your Content </div> -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Sliding Form Panel -->
+<div class="form-slide-panel shadow-lg">
+    <div class="" style="
+  border: 3px solid #8c30f5;
+        ">
+        <div class="form-header d-flex justify-content-end align-items-center">
+            <!-- <h5 class="mb-0">Get a Quote</h5> -->
+            <button class="btn btn-sm btn-link text-dark close-form" style="font-size: 45px; line-height: normal;">&times;</button>
+        </div>
+        <div class="form-body pl-3 pr-3 pb-5 pt-0">
+            <!-- Your form fields go here -->
+            <?php require_once('quote_form.php'); ?>
+        </div>
+    </div>
+</div>

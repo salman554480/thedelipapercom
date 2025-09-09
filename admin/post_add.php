@@ -2,6 +2,7 @@
 $page = "post";
 require_once('parts/top.php'); ?>
 
+
 <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>
 
@@ -36,6 +37,27 @@ require_once('parts/top.php'); ?>
                     <div class="card-body">
                         <form class="row g-3" action="" method="post" enctype="multipart/form-data">
 
+                            <div class="col-md-12">
+                                <label class="form-label">Category</label>
+                                <select class="form-select" name="category_id" id="example-select">
+                                    <option>Select Category</option>
+									<?php 
+									require_once('parts/db.php');
+
+									$select_category = "SELECT * FROM category ORDER BY category_name ASC";
+
+									$run_category = mysqli_query($conn, $select_category);
+									while ($row_category = mysqli_fetch_array($run_category)) {
+
+										$category_id = $row_category['category_id'];
+										$category_name = $row_category['category_name'];
+
+									?>
+									<option value="<?php echo $category_id; ?>"> <?php echo $category_name; ?></option>
+									<?php } ?>
+								</select>
+                            </div>
+                            
                             <div class="col-md-6">
                                 <label class="form-label">Title</label>
                                 <input type="text" name="post_title" id="post_title" class="form-control" autofocus
@@ -69,11 +91,16 @@ require_once('parts/top.php'); ?>
                                 <textarea id="" type="text" name="meta_description" class="form-control"></textarea>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <label class="form-label">Thumbnail</label>
-                                <input type="text" name="post_thumbnail" class="form-control">
-
+                                <input type="file" name="post_thumbnail" class="form-control" accept="image/*" required>
                             </div>
+                            
+                            <div class="col-md-3">
+                                <label class="form-label">Tag</label>
+                                <input type="text" name="post_tag" class="form-control">
+                            </div>
+
                             <div class="col-md-3">
                                 <label class="form-label">Status</label>
                                 <select name="post_status" class="form-control">
@@ -102,33 +129,33 @@ require_once('parts/top.php'); ?>
                         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
                         <script>
-                        ClassicEditor
-                            .create(document.querySelector('#editor'))
-                            .catch(error => {
-                                console.error(error);
-                            });
+                            ClassicEditor
+                                .create(document.querySelector('#editor'))
+                                .catch(error => {
+                                    console.error(error);
+                                });
                         </script>
 
                         <script>
-                        // Function to generate a slug from a string
-                        function generateSlug(title) {
-                            return title
-                                .toLowerCase() // Convert to lowercase
-                                .replace(/\s+/g, '-') // Replace spaces with dashes
-                                .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
-                                .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
-                        }
+                            // Function to generate a slug from a string
+                            function generateSlug(title) {
+                                return title
+                                    .toLowerCase() // Convert to lowercase
+                                    .replace(/\s+/g, '-') // Replace spaces with dashes
+                                    .replace(/[^a-z0-9-]/g, '') // Remove non-alphanumeric characters and dashes
+                                    .replace(/--+/g, '-'); // Replace multiple dashes with a single dash
+                            }
 
-                        // Get references to the title and URL input fields
-                        const titleInput = document.getElementById('post_title');
-                        const urlInput = document.getElementById('post_url');
+                            // Get references to the title and URL input fields
+                            const titleInput = document.getElementById('post_title');
+                            const urlInput = document.getElementById('post_url');
 
-                        // Add event listener to the title input field
-                        titleInput.addEventListener('input', function() {
-                            const titleValue = titleInput.value;
-                            const slug = generateSlug(titleValue);
-                            urlInput.value = slug;
-                        });
+                            // Add event listener to the title input field
+                            titleInput.addEventListener('input', function() {
+                                const titleValue = titleInput.value;
+                                const slug = generateSlug(titleValue);
+                                urlInput.value = slug;
+                            });
                         </script>
 
 
@@ -139,61 +166,93 @@ require_once('parts/top.php'); ?>
 
 
                 <?php
-                require_once('parts/db.php');
                 if (isset($_POST['insert_btn'])) {
 
-                    $post_title = $_POST['post_title'];
+                    // Other variables
+                    $post_title = htmlspecialchars($_POST['post_title']);
                     $post_url = $_POST['post_url'];
-                    $post_content = $_POST['content'];
-                    $post_content = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8');
+                    $post_content = addslashes($_POST['content']);
                     $post_status = $_POST['post_status'];
                     $post_index = $_POST['post_index'];
-                    $post_thumbnail = $_POST['post_thumbnail'];
+                    $post_tag = $_POST['post_tag'];
+                    $category_id = $_POST['category_id'];
+                    $meta_title = htmlspecialchars($_POST['meta_title']);
+                    $meta_description = htmlspecialchars($_POST['meta_description']);
+                    $meta_keyword = htmlspecialchars($_POST['meta_keyword']);
+                    $post_date = date('Y-m-d');
 
-                    $post_title = htmlspecialchars($_POST['post_title'], ENT_QUOTES, 'UTF-8');
-                    $meta_title = htmlspecialchars($_POST['meta_title'], ENT_QUOTES, 'UTF-8');
-                    $meta_description = htmlspecialchars($_POST['meta_description'], ENT_QUOTES, 'UTF-8');
-                    $meta_keyword = htmlspecialchars($_POST['meta_keyword'], ENT_QUOTES, 'UTF-8');
+                    // Handle file upload
+                    if (isset($_FILES['post_thumbnail']) && $_FILES['post_thumbnail']['error'] == 0) {
+                        $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+                        $file_tmp = $_FILES['post_thumbnail']['tmp_name'];
+                        $file_name = basename($_FILES['post_thumbnail']['name']);
+                        $file_type = mime_content_type($file_tmp);
 
-                    $post_date =  date('Y-m-d');
+                        if (in_array($file_type, $allowed_types)) {
+                            // Create unique filename to prevent overwrite
+                            $ext = pathinfo($file_name, PATHINFO_EXTENSION);
+                            $new_file_name = uniqid('thumb_', true) . '.' . $ext;
 
+                            $upload_dir = 'assets/img/';
+                            $upload_path = $upload_dir . $new_file_name;
+
+                            // Move uploaded file
+                            if (move_uploaded_file($file_tmp, $upload_path)) {
+                                $post_thumbnail = $new_file_name;
+                            } else {
+                                echo "<script>alert('Failed to upload thumbnail');</script>";
+                                exit;
+                            }
+                        } else {
+                            echo "<script>alert('Invalid file type. Only JPG, PNG, GIF, and WEBP are allowed.');</script>";
+                            exit;
+                        }
+                    } else {
+                        $post_thumbnail = '';  // Or set a default image filename if you want
+                    }
+
+                    // Insert post into database
                     $insert_admin = "INSERT INTO post(
-            post_title,
-            post_content,
-            post_url,
-            post_thumbnail,
-            post_date,
-            post_status,
-            post_index
-            )VALUES(
-            '$post_title',
-            '$post_content',
-            '$post_url',
-            '$post_thumbnail',
-            '$post_date',
-            '$post_status',
-            '$post_index'
-            )";
+        post_title,
+        post_content,
+        post_url,
+        post_thumbnail,
+        post_date,
+        post_status,
+        post_index,
+        category_id,
+        post_tag
+    ) VALUES (
+        '$post_title',
+        '$post_content',
+        '$post_url',
+        '$post_thumbnail',
+        '$post_date',
+        '$post_status',
+        '$post_index',
+        '$category_id',
+        '$post_tag'
+    )";
 
                     $run_admin = mysqli_query($conn, $insert_admin);
 
                     if ($run_admin == true) {
 
-                        $select_latest = "SELECT * FROM post where post_url='$post_url'";
+                        $select_latest = "SELECT * FROM post WHERE post_url='$post_url'";
                         $run_latest = mysqli_query($conn, $select_latest);
-                        $row_latest_post =  mysqli_fetch_array($run_latest);
+                        $row_latest_post = mysqli_fetch_array($run_latest);
                         $post_id = $row_latest_post['post_id'];
 
-                        $insert_meta = "INSERT INTO meta(slug,meta_title,meta_description,meta_keyword,meta_source,meta_source_id) VALUES('$post_url','$meta_title','$meta_description','$meta_keyword','post','$post_id')";
+                        $insert_meta = "INSERT INTO meta(slug, meta_title, meta_description, meta_keyword, meta_source, meta_source_id) VALUES('$post_url', '$meta_title', '$meta_description', '$meta_keyword', 'post', '$post_id')";
                         $run_meta = mysqli_query($conn, $insert_meta);
 
                         echo "<script>alert('Record Added');</script>";
                         echo "<script>window.open('post_view.php','_self');</script>";
                     } else {
-                        //echo "fail";
                         echo "<script>alert('Failed');</script>";
                     }
                 }
+
 
                 ?>
 

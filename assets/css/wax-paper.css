@@ -1,0 +1,116 @@
+@media screen and (max-width:767px) {
+			.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.text-product {
+    margin-top: 35px;
+            font-size: 30px;
+}
+.text-offer {
+        font-size: 35px;
+    }
+    .text-faq {
+    font-size: 30px;
+    }
+.social-media-link i {
+    font-size: 18px;
+    padding: 8px 8px;
+}   
+.para-wax {
+    font-size: 18px;
+}
+    .list-order {
+        margin-left: 35px !important;
+    }
+    .text-wax {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+.social-media-link{
+    gap: 8px;
+    display: flex;
+}
+.nav-tabs .nav-item {
+    width: -webkit-fill-available;
+    text-align: center;
+}
+.testimonial-section .row{
+	margin-bottom: 0px !important;
+}
+.text-why{
+	margin-bottom: 30px !important;
+	        font-size: 30px;
+        text-align: center;
+		color: #2757FF;
+}
+    .list-grease li a {
+        font-size: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        display: flex
+;
+        align-items: baseline;
+        margin-top: calc(20px / 2);
+        padding-bottom: calc(20px / 2);
+    }
+.greaseproof-section .row{
+/* margin-top: 20px !important; */
+}
+.list-grease li a i {
+    color: #942BEF;
+    font-size: 24px;
+}
+.para-grease {
+    font-weight: 400;
+    color: #000;
+    margin-top: 50px;
+}
+.btn-slide-loop {
+	margin: auto;
+}
+.paper-img{
+	margin-top: 60px;
+}
+.mt-20{
+	margin-top: 20px;
+}
+.deli-paper{
+	padding-bottom: 35px;
+}
+.standard-section .row{
+	padding-top: 0px !important;
+}
+.text-find {
+                font-size: 30px;
+        line-height: 40px;
+    }
+	    .text-quick {
+        font-size: 22px;
+    }
+	.accordion-text i{
+		display: none;
+	}
+	    .accordion-text h3 {
+        font-size: 23px;
+    }
+	.flex-padding-01{
+		padding: 5px !important;
+	}
+	.card-body h4{
+		        font-size: 14px;
+        line-height: 1.4em;	
+	}
+		}
+		.text-paper{
+			font-size: 40px;
+		}
+		.text-embark {
+			font-weight: 400;
+			letter-spacing: 2px;
+		}
+		.fs-50{
+			font-size: 50px;
+		}

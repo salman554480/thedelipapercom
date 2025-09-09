@@ -1,6 +1,7 @@
 <?php
 $page = "post";
 require_once('parts/top.php'); ?>
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -37,6 +38,13 @@ require_once('parts/top.php'); ?>
                                 $run = mysqli_query($conn, $delete);
 
                                 if ($run === true) {
+                                    
+                                    $log_msg = "Deleted post with ID: $del_id";
+                                        // Insert into log table
+                                        $insert_log = "INSERT INTO log (log_msg, admin_id) 
+                                                       VALUES ('$log_msg', '$admin_id')";
+                                        mysqli_query($conn, $insert_log);
+                                    
                                     echo "<script>alert('Deleted');</script>";
                                 } else {
                                     echo "Failed,Try Again";

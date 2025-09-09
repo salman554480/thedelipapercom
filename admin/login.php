@@ -50,8 +50,8 @@
                                     <?php
                                     require_once('parts/db.php');
                                     if (isset($_POST['submit'])) {
-                                        $email =  $_POST['email'];
-                                        $password =  $_POST['password'];
+                                        $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+                                         $password = trim($_POST['password']);
 
                                         $select = "SELECT * FROM admin WHERE admin_email='$email'";
                                         $run =  mysqli_query($conn, $select);
@@ -65,14 +65,80 @@
                                             $admin_role =  $row['admin_role'];
 
                                             if ($email ==   $user_email && $password ==  $user_password) {
-
-                                                if ($admin_role == "admin") {
-                                                    //header('Location:index.php');
-                                                    echo "<script>window.open('index.php','_self');</script>";
-                                                    $_SESSION['admin_email'] =  $user_email;
+                                                
+                                                $current_date =  date('Y-m-d');
+                                                $select_last_backup = "SELECT * FROM backup where backup_date='$current_date'";
+                                                $result_last_transaction = mysqli_query($conn, $select_last_backup);
+                                                if (mysqli_num_rows($result_last_transaction) > 0) {
+                                                    if ($admin_role == "admin") {
+                                                        //header('Location:index.php');
+                                                        echo "<script>window.open('index.php','_self');</script>";
+                                                        $_SESSION['admin_email'] =  $user_email;
+                                                        } else {
+                                                            echo "<script>window.open('post_view.php','_self');</script>";
+                                                            $_SESSION['admin_email'] =  $user_email;
+                                                        }
                                                 } else {
-                                                    echo "<script>window.open('post_view.php','_self');</script>";
-                                                    $_SESSION['admin_email'] =  $user_email;
+                                                    // Directory to store the backups
+                                                    $backupDir = 'database_backup/';
+                                                    // Ensure the backup directory exists, if not, create it
+                                                    if (!file_exists($backupDir)) {
+                                                        mkdir($backupDir, 0777, true);
+                                                    }
+                                        
+                                                    $backup =  "delipaper" . "_" . date("Y-m-d_H-i-s") . ".sql";
+                                                    // Set a backup file name based on the current date and time
+                                                    $backupFile = $backupDir . $backup;
+                                        
+                                                    // Open the backup file for writing
+                                                    $file = fopen($backupFile, 'w');
+                                        
+                                                    // Get all tables from the database
+                                                    $tables = $conn->query("SHOW TABLES");
+                                        
+                                                    if ($tables) {
+                                                        // Loop through all tables and dump each table
+                                                        while ($row = $tables->fetch_row()) {
+                                                            $table = $row[0];
+                                        
+                                                            // Write the table structure to the backup file
+                                                            $createTable = $conn->query("SHOW CREATE TABLE `$table`");
+                                                            $createTableRow = $createTable->fetch_row();
+                                                            fwrite($file, "\n\n" . $createTableRow[1] . ";\n\n");
+                                        
+                                                            // Dump the table data
+                                                            $result = $conn->query("SELECT * FROM `$table`");
+                                                            while ($dataRow = $result->fetch_assoc()) {
+                                                                $columns = array_keys($dataRow);
+                                                                $values = array_map(function ($value) {
+                                                                    return "'" . addslashes($value) . "'";
+                                                                }, array_values($dataRow));
+                                        
+                                                                $sql = "INSERT INTO `$table` (`" . implode('`, `', $columns) . "`) VALUES (" . implode(', ', $values) . ");\n";
+                                                                fwrite($file, $sql);
+                                                            }
+                                                        }
+                                        
+                                                        // Close the file
+                                                        fclose($file);
+                                                        $insert_backup = "INSERT into backup(backup_file) VALUES('$backup')";
+                                                        $conn->query($insert_backup);
+                                                        
+                                                        
+                                                        if ($admin_role == "admin") {
+                                                        //header('Location:index.php');
+                                                        echo "<script>window.open('index.php','_self');</script>";
+                                                        $_SESSION['admin_email'] =  $user_email;
+                                                        } else {
+                                                            echo "<script>window.open('post_view.php','_self');</script>";
+                                                            $_SESSION['admin_email'] =  $user_email;
+                                                        }
+                                                        
+                                                        
+                                                    } else {
+                                                        echo "Error fetching tables: " . $conn->error;
+                                                    }
+                                        
                                                 }
                                             } else {
                                                 echo "Invalid Login";
@@ -90,10 +156,7 @@
 
 
                                 </div>
-                                <div class="card-footer text-center py-3">
-                                    <div class="small"><a href="https://www.buymeacoffee.com/websterytcR/extras">For
-                                            More Scripts, Click Here!</a></div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
