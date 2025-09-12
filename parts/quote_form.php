@@ -24,7 +24,7 @@
                 <select class="form-control input-field" name="standard_size">
                     <option value="4″ x 4″" class="">4″ x 4″</option>
                     <option value="5″ x 5″" class="">5″ x 5″</option>
-                    <option value="6” x 5”                  " class="">6” x 5” </option>
+                    <option value="6” x 5″" class="">6” x 5” </option>
                     <option value="6″ x 6″" class="">6″ x 6″</option>
                     <option value="7” x 5”" class="">7” x 5”</option>
                     <option value="7” x 7”" class="">7” x 7”</option>
