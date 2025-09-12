@@ -659,27 +659,7 @@
    </div>
    <!-- <img src="<?php echo $assets_path;?>/assets/images/dots-img.png" class="img-fluid dots-img-01" alt=""> -->
 </section>
-<section class="amazing-client-section">
-   <div class="container">
-      <div class="row pt-5">
-         <div class="col-xl-6 col-lg-8 col-md-8 col-12 m-auto">
-            <h2 class="text-center text-client">Our Amazing Clients</h2>
-         </div>
-      </div>
-      <div class="row pt-5 pb-5">
-         <div class="col-md-12">
-            <div class="d-flex justify-content-between align-items-center flex-wrap logo-imgs">
-               <img src="<?php echo $assets_path;?>/assets/images/client-img-01.jpg" class="img-fluid" alt="">
-               <img src="<?php echo $assets_path;?>/assets/images/client-img-02.jpg" class="img-fluid" alt="">
-               <img src="<?php echo $assets_path;?>/assets/images/client-img-03.jpg" class="img-fluid" alt="">
-               <img src="<?php echo $assets_path;?>/assets/images/client-img-04.jpg" class="img-fluid" alt="">
-               <img src="<?php echo $assets_path;?>/assets/images/client-img-05.jpg" class="img-fluid" alt="">
-               <img src="<?php echo $assets_path;?>/assets/images/client-img-06.jpg" class="img-fluid" alt="">
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
+<?php include 'client_section.php'; ?>
 
 <?php } else if ($slug == "portfolio") { ?>
 

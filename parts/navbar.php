@@ -17,7 +17,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand d-flex align-items-center logo-text" href="<?php echo $website_url ?>"><img
-            src="<?php echo $website_url ?>/assets/images/logo-img.png" class="img-fluid" alt=""> &nbsp; The Deli
+            src="<?php echo $website_url ?>/assets/images/logo-img.png" height="40px" alt=""> &nbsp; The Deli
         Paper
 
     </a>

@@ -71,11 +71,11 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <meta name="msapplication-TileImage" content="https://thedelipaper.com/assets/images/favicon.png" />
 
 
-    <link rel="shortcut icon" href="<?php echo $website_url;?>/assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo $website_url; ?>/assets/images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="<?php echo $website_url;?>/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/bootstrap/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?php echo $website_url;?>/assets/bootstrap/fontawesome-free-5.13.0-web/css/all.min.css	">
+    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/bootstrap/fontawesome-free-5.13.0-web/css/all.min.css	">
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -85,6 +85,18 @@ $currentUrl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
 
-    <link rel="stylesheet" href="<?php echo $website_url;?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $website_url; ?>/assets/css/style.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF2BTYQH2S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-LF2BTYQH2S');
+    </script>

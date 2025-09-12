@@ -637,7 +637,7 @@
             </div>
         </div>
     </section>
-    <section class="standard-section">
+    <section class="standard-section mb-5">
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-12 text-center flex-padding">
@@ -756,6 +756,9 @@
             </div>
         </div>
     </section>
+
+    <?php include 'parts/client_section.php'; ?>
+
     <section class="blog-section pb-5">
         <div class="container">
             <div class="row mt-5 pt-5">

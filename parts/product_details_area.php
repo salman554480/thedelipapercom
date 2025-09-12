@@ -422,11 +422,13 @@ $meta_keywords = $row_product['product_meta_keywords'];
     </div>
 </section>
 
+<?php include 'client_section.php'; ?>
+
 <section class=" product-slider-section pb-5">
     <div class="container">
         <div class="row mt-5 pt-5">
             <div class="col-md-12 m-auto">
-                <h1 class="text-center text-product" style="color: #2757FF;"> Other Products</h1>
+                <h1 class="text-center other-products-heading" > Other Products</h1>
                 <p class="text-center para-product">Diving deeper into our catalogue, you’ll uncover an array of
                     offerings designed to enhance your experience beyond our core range.</p>
             </div>
