@@ -1,5 +1,5 @@
-<form action="<?php echo $website_url ?>/" method="POST" enctype="multipart/form-data">
-    <div class="row justify-content-start quote-content ml-5">
+<form id="quoteForm" enctype="multipart/form-data">
+    <div class="row justify-content-start quote-content ">
         <div class="col-xl-6">
             <div class="form-group mb-0">
                 <label for="">Name</label>
@@ -115,58 +115,177 @@
                                     </div>
                                 </div>
                             </div>-->
+        <!-- Math Quiz reCAPTCHA -->
+        <div class="col-xl-12">
+            <div class="form-group mb-3">
+                <div class="bg-light p-3 rounded">
+                    <label for="quizAnswer" id="quizQuestion" class="form-label fw-bold">Security Check: What is <span id="num1">5</span> + <span id="num2">3</span>?</label>
+                    <input type="number" id="quizAnswer" class="form-control w-25 d-inline-block ms-2" placeholder="Your answer" required>
+                    <div id="quizFeedback" class="mt-2" style="color: red; display: none;">❌ Incorrect answer. Please try again.</div>
+                    <div id="quizSuccess" class="mt-2" style="color: green; display: none;">✅ Correct! You can now submit the form.</div>
+                </div>
+            </div>
+        </div>
+        
         <div class="col-xl-12 mt-3">
-            <button
-                class="btn btn-send col-xl-8 d-flex justify-content-center mt-3	 m-auto" type="submit">Send</button>
+            <button id="submitBtn" class="btn btn-send col-xl-8 d-flex justify-content-center mt-3 m-auto" type="submit" disabled>Send</button>
+        </div>
+        
+        <!-- Response message container -->
+        <div id="responseMessage" class="col-xl-12 mt-3" style="display: none;">
+            <div class="alert" role="alert"></div>
         </div>
     </div>
 </form>
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Collect data
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $contact = $_POST['contact'] ?? '';
-    $standard_size = $_POST['standard_size'] ?? '';
-    $printing = $_POST['printing'] ?? '';
-    $paper = $_POST['paper'] ?? '';
-    $quantity = $_POST['quantity'] ?? '';
-    $custom_info = $_POST['custom_info'] ?? '';
 
-    // If logo file was uploaded
-    $uploaded_file_url = '';
-    if (!empty($_FILES['logo_file']['name'])) {
-        $upload_dir = "uploads/";
-        if (!is_dir($upload_dir)) mkdir($upload_dir);
-        $file_name = time() . "_" . basename($_FILES['logo_file']['name']);
-        $file_path = $upload_dir . $file_name;
-        if (move_uploaded_file($_FILES['logo_file']['tmp_name'], $file_path)) {
-            $uploaded_file_url = $file_path;
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Generate random numbers for the quiz
+    function generateRandomQuiz() {
+        const num1 = Math.floor(Math.random() * 10) + 1; // Random number 1-10
+        const num2 = Math.floor(Math.random() * 10) + 1; // Random number 1-10
+        const correctAnswer = num1 + num2;
+        
+        document.getElementById('num1').textContent = num1;
+        document.getElementById('num2').textContent = num2;
+        
+        // Store correct answer in a data attribute
+        document.getElementById('quizAnswer').setAttribute('data-correct-answer', correctAnswer);
+        
+        // Clear previous feedback
+        document.getElementById('quizFeedback').style.display = 'none';
+        document.getElementById('quizSuccess').style.display = 'none';
+        
+        // Disable submit button
+        document.getElementById('submitBtn').disabled = true;
+        document.getElementById('submitBtn').textContent = 'Send';
+    }
+    
+    // Check answer when user types
+    document.getElementById('quizAnswer').addEventListener('input', function() {
+        const userAnswer = parseInt(this.value);
+        const correctAnswer = parseInt(this.getAttribute('data-correct-answer'));
+        const feedback = document.getElementById('quizFeedback');
+        const success = document.getElementById('quizSuccess');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        // Clear previous feedback
+        feedback.style.display = 'none';
+        success.style.display = 'none';
+        
+        if (!isNaN(userAnswer)) {
+            if (userAnswer === correctAnswer) {
+                // Correct answer
+                success.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send';
+                submitBtn.classList.remove('btn-secondary');
+                submitBtn.classList.add('btn-primary');
+            } else {
+                // Wrong answer
+                feedback.style.display = 'block';
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Answer Required';
+                submitBtn.classList.remove('btn-primary');
+                submitBtn.classList.add('btn-secondary');
+            }
+        } else {
+            // No answer yet
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Answer Required';
+            submitBtn.classList.remove('btn-primary');
+            submitBtn.classList.add('btn-secondary');
         }
-    }
-
-    // Email content
-    $message = "Name: $name\n";
-    $message .= "Email: $email\n";
-    $message .= "Contact No.: $contact\n";
-    $message .= "Standard Sizes: $standard_size\n";
-    $message .= "Printing: $printing\n";
-    $message .= "Paper: $paper\n";
-    $message .= "Quantity: $quantity\n";
-    $message .= "Upload Logo File: $uploaded_file_url\n";
-    $message .= "Custom Info: $custom_info\n";
-
-    // Email setup
-    $to = "adeeldevil444@gmail.com"; // ← change this to your email
-    $subject = "New Quote Request";
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Send email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "✅ Email sent successfully!";
-    } else {
-        echo "❌ Failed to send email.";
-    }
-}
-?>
+    });
+    
+    // Generate new quiz when page loads
+    generateRandomQuiz();
+    
+    // Optional: Generate new quiz when user clicks on the question
+    document.getElementById('quizQuestion').addEventListener('click', function() {
+        generateRandomQuiz();
+        document.getElementById('quizAnswer').value = '';
+    });
+    
+    // Handle form submission with AJAX
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const responseMessage = document.getElementById('responseMessage');
+        const responseAlert = responseMessage.querySelector('.alert');
+        
+        // Disable submit button and show loading
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Sending...';
+        
+        // Hide previous messages
+        responseMessage.style.display = 'none';
+        
+        // Get form data
+        const formData = new FormData(this);
+        const quizAnswer = document.getElementById('quizAnswer').value;
+        const correctAnswer = document.getElementById('quizAnswer').getAttribute('data-correct-answer');
+        
+        // Add quiz validation to form data
+        formData.append('quiz_answer', quizAnswer);
+        formData.append('correct_answer', correctAnswer);
+        
+        // Convert FormData to JSON for easier handling
+        const jsonData = {};
+        for (let [key, value] of formData.entries()) {
+            jsonData[key] = value;
+        }
+        
+        // Send AJAX request
+        fetch('process_quote.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Show response message
+            responseMessage.style.display = 'block';
+            responseAlert.className = 'alert ' + (data.success ? 'alert-success' : 'alert-danger');
+            responseAlert.textContent = data.message;
+            
+            if (data.success) {
+                // Reset form on success
+                document.getElementById('quoteForm').reset();
+                generateRandomQuiz();
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Answer Required';
+                submitBtn.classList.remove('btn-primary');
+                submitBtn.classList.add('btn-secondary');
+            } else {
+                // Re-enable submit button on error
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send';
+                submitBtn.classList.remove('btn-secondary');
+                submitBtn.classList.add('btn-primary');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            responseMessage.style.display = 'block';
+            responseAlert.className = 'alert alert-danger';
+            responseAlert.textContent = 'An error occurred. Please try again.';
+            
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send';
+            submitBtn.classList.remove('btn-secondary');
+            submitBtn.classList.add('btn-primary');
+        })
+        .finally(() => {
+            // Reset button text
+            if (submitBtn.disabled) {
+                submitBtn.innerHTML = 'Send';
+            }
+        });
+    });
+});
+</script>
