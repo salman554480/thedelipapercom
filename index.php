@@ -815,7 +815,7 @@
 
     <script>
     $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
+        $('.custom-carousel').owlCarousel({
             items: 1,
             loop: true,
             margin: 10,

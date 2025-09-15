@@ -1,8 +1,18 @@
-<div class="ticker-wrapper ">
+<div class="ticker-wrapper">
     <div class="ticker-content">
-        <div class="ticker-item"><span class="star">✻</span>FREE SHIPPING ON ALL ORDERS <span class="star">✻</span>
-        </div>
+        <div class="ticker-item"><span class="star">✻</span>FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
         <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="ticker-item"><span class="star">✻</span>FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
         <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
         <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
         <div class="ticker-item">FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>

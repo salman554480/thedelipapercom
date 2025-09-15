@@ -73,7 +73,7 @@
                         <a href="<?php echo $website_url ?>/paper-bags">Paper Bags</a>
                     </li>
                     <li>
-                        <a href="<?php echo $website_url ?>/gift-wrapping-paper">Gift Wrapping Paper</a>
+                        <a href="<?php echo $website_url ?>/custom-napkins">Custom Napkins</a>
                     </li>
                 </ul>
             </div>
@@ -111,8 +111,8 @@
 
 
                 </ul>
-                <img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid" style="width: 75%;"
-                    alt="">
+                <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid" style="width: 75%;"
+                    alt=""></a>
             </div>
             
             </div>

@@ -253,55 +253,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
 
 <?php include 'client_section.php'; ?>
 
-<section class=" product-slider-section pb-5">
-    <div class="container">
-        <div class="row mt-5 pt-5">
-            <div class="col-md-12 m-auto">
-                <h1 class="text-center other-products-heading"> Other Products</h1>
-                <p class="text-center para-product">Diving deeper into our catalogue, you’ll uncover an array of
-                    offerings designed to enhance your experience beyond our core range.</p>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <div class="container-fluid">
-        <div class="owl-carousel product-slide">
-            <?php
-            // Fetch other products excluding the current one
-            $query = "SELECT product_id, product_name, product_url, product_thumbnail 
-                      FROM product 
-                      WHERE product_id != $product_id 
-                      "; // Adjust the LIMIT as needed
-
-            $result = mysqli_query($conn, $query);
-
-            if ($result && mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $name = htmlspecialchars($row['product_name']);
-                    $url = htmlspecialchars($row['product_url']);
-                    $thumbnail = htmlspecialchars($row['product_thumbnail']);
-            ?>
-                    <div>
-                        <img src="<?php echo $img_path . '/' . $thumbnail; ?>" alt="">
-                        <h2 class="text-product-slide text-center">
-                            <a href="<?php echo $url; ?>"><?php echo $name; ?></a>
-                        </h2>
-                    </div>
-            <?php
-                }
-            } else {
-                echo "No other products found.";
-            }
-            ?>
-
-            <!-- <div> Your Content </div> -->
-        </div>
-    </div>
-</section>
-
+   <?php require_once('product_slider.php'); ?>
 
 <!-- Sliding Form Panel -->
 <div class="form-slide-panel shadow-lg">

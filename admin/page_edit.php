@@ -51,10 +51,24 @@ if($admin_role != "admin"){
                             $page_title = $row_page['page_title'];
                             $page_url = $row_page['page_url'];
                             $page_content = $row_page['page_content'];
-                            $meta_title = $row_page['meta_title'];
-                            $meta_description = $row_page['meta_description'];
-                            $meta_keywords = $row_page['meta_keywords'];
-                        }
+                            
+                            // Get meta data from meta table
+                            $select_meta = "SELECT * FROM meta WHERE slug='$page_url'";
+                            $run_meta = mysqli_query($conn, $select_meta);
+                            
+                            if (mysqli_num_rows($run_meta) > 0) {
+                                $row_meta = mysqli_fetch_array($run_meta);
+                                $meta_title = $row_meta['meta_title'];
+                                $meta_description = $row_meta['meta_description'];
+                                $meta_keywords = $row_meta['meta_keyword'];
+                            } else {
+                                // If no meta record exists, use page data or empty values
+                                $meta_title = $row_page['meta_title'] ?? '';
+                                $meta_description = $row_page['meta_description'] ?? '';
+                                $meta_keywords = $row_page['meta_keywords'] ?? '';
+                            }
+
+                           
                         ?>
 
 
@@ -198,14 +212,27 @@ if($admin_role != "admin"){
                         $run_page = mysqli_query($conn, $update_page);
 
                         if ($run_page) {
-                            $update_meta = "UPDATE meta SET slug='$epage_url',meta_title='$emeta_title',meta_description='$emeta_description',meta_keyword='$emeta_keywords' where slug='$page_url'";
-                            $run_meta = mysqli_query($conn, $update_meta);
+                            // Check if meta record exists
+                            $check_meta = "SELECT * FROM meta WHERE slug='$page_url'";
+                            $run_check_meta = mysqli_query($conn, $check_meta);
+                            
+                            if (mysqli_num_rows($run_check_meta) > 0) {
+                                // Update existing meta record
+                                $update_meta = "UPDATE meta SET slug='$epage_url',meta_title='$emeta_title',meta_description='$emeta_description',meta_keyword='$emeta_keywords' where slug='$page_url'";
+                                $run_meta = mysqli_query($conn, $update_meta);
+                            } else {
+                                // Insert new meta record
+                                $insert_meta = "INSERT INTO meta (slug, meta_title, meta_description, meta_keyword) VALUES ('$epage_url', '$emeta_title', '$emeta_description', '$emeta_keywords')";
+                                $run_meta = mysqli_query($conn, $insert_meta);
+                            }
+                            
                             echo "<script>alert('Record updated successfully');</script>";
                             echo "<script>window.open('page_edit.php?edit=$edit_id','_self');</script>";
                         } else {
                             echo "<script>alert('Update failed');</script>";
                         }
                     }
+                    } // Close the if (isset($_GET['edit'])) statement
 
 
                     ?>

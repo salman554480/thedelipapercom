@@ -99,29 +99,4 @@ if (count($parts) == 2 && $parts[0] === 'category') {
           });
       });
    </script>
-   <script>
-      $('.product-slide').owlCarousel({
-          loop: true,
-          margin: 10,
-          responsiveClass: true,
-          navText: [
-              '<span class="custom-prev"><i class="bx bx-chevron-left"></i></span>',
-              '<span class="custom-next"><i class="bx bx-chevron-right"></i></span></span>'
-          ],
-          responsive: {
-              0: {
-                  items: 1,
-                  nav: true
-              },
-              600: {
-                  items: 3,
-                  nav: false
-              },
-              1000: {
-                  items: 4,
-                  nav: true,
-                  loop: false
-              }
-          }
-      })
-   </script>
+  
