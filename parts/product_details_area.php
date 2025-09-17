@@ -194,7 +194,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
             <div class="col-xl-4 flex-padding mt-3">
                 <img src="<?php echo $img_path ?>/<?php echo $product_image1; ?>" class="img-fluid tab-img" alt="">
                 <img src="<?php echo $img_path ?>/<?php echo $product_image2; ?>" class="img-fluid tab-img mt-3 mb-3" alt="">
-                <div class="position-relative">
+                <!--<div class="position-relative">
                     <div class="overlay-img">
                         <div class="d-flex justify-content-center align-items-center flex-column  p-1"
                             style="height: -webkit-fill-available;">
@@ -203,7 +203,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
                         </div>
                     </div>
                     <img src="<?php echo $img_path ?>/tab-img-03.webp" class="img-fluid tab-img" alt="">
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -253,7 +253,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
 
 <?php include 'client_section.php'; ?>
 
-   <?php require_once('product_slider.php'); ?>
+<?php require_once('product_slider.php'); ?>
 
 <!-- Sliding Form Panel -->
 <div class="form-slide-panel shadow-lg">
