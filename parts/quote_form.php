@@ -115,20 +115,8 @@
                                     </div>
                                 </div>
                             </div>-->
-        <!-- Math Quiz reCAPTCHA -->
-        <div class="col-xl-12">
-            <div class="form-group mb-3">
-                <div class="bg-light p-3 rounded">
-                    <label for="quizAnswer" id="quizQuestion" class="form-label fw-bold">Security Check: What is <span id="num1">5</span> + <span id="num2">3</span>?</label>
-                    <input type="number" id="quizAnswer" class="form-control w-25 d-inline-block ms-2" placeholder="Your answer" required>
-                    <div id="quizFeedback" class="mt-2" style="color: red; display: none;">❌ Incorrect answer. Please try again.</div>
-                    <div id="quizSuccess" class="mt-2" style="color: green; display: none;">✅ Correct! You can now submit the form.</div>
-                </div>
-            </div>
-        </div>
-        
         <div class="col-xl-12 mt-3">
-            <button id="submitBtn" class="btn btn-send col-xl-8 d-flex justify-content-center mt-3 m-auto" type="submit" disabled>Send</button>
+            <button id="submitBtn" class="btn btn-send col-xl-8 d-flex justify-content-center mt-3 m-auto" type="submit">Send</button>
         </div>
         
         <!-- Response message container -->
@@ -140,73 +128,6 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Generate random numbers for the quiz
-    function generateRandomQuiz() {
-        const num1 = Math.floor(Math.random() * 10) + 1; // Random number 1-10
-        const num2 = Math.floor(Math.random() * 10) + 1; // Random number 1-10
-        const correctAnswer = num1 + num2;
-        
-        document.getElementById('num1').textContent = num1;
-        document.getElementById('num2').textContent = num2;
-        
-        // Store correct answer in a data attribute
-        document.getElementById('quizAnswer').setAttribute('data-correct-answer', correctAnswer);
-        
-        // Clear previous feedback
-        document.getElementById('quizFeedback').style.display = 'none';
-        document.getElementById('quizSuccess').style.display = 'none';
-        
-        // Disable submit button
-        document.getElementById('submitBtn').disabled = true;
-        document.getElementById('submitBtn').textContent = 'Send';
-    }
-    
-    // Check answer when user types
-    document.getElementById('quizAnswer').addEventListener('input', function() {
-        const userAnswer = parseInt(this.value);
-        const correctAnswer = parseInt(this.getAttribute('data-correct-answer'));
-        const feedback = document.getElementById('quizFeedback');
-        const success = document.getElementById('quizSuccess');
-        const submitBtn = document.getElementById('submitBtn');
-        
-        // Clear previous feedback
-        feedback.style.display = 'none';
-        success.style.display = 'none';
-        
-        if (!isNaN(userAnswer)) {
-            if (userAnswer === correctAnswer) {
-                // Correct answer
-                success.style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send';
-                submitBtn.classList.remove('btn-secondary');
-                submitBtn.classList.add('btn-primary');
-            } else {
-                // Wrong answer
-                feedback.style.display = 'block';
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Answer Required';
-                submitBtn.classList.remove('btn-primary');
-                submitBtn.classList.add('btn-secondary');
-            }
-        } else {
-            // No answer yet
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Answer Required';
-            submitBtn.classList.remove('btn-primary');
-            submitBtn.classList.add('btn-secondary');
-        }
-    });
-    
-    // Generate new quiz when page loads
-    generateRandomQuiz();
-    
-    // Optional: Generate new quiz when user clicks on the question
-    document.getElementById('quizQuestion').addEventListener('click', function() {
-        generateRandomQuiz();
-        document.getElementById('quizAnswer').value = '';
-    });
-    
     // Handle form submission with AJAX
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -224,12 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Get form data
         const formData = new FormData(this);
-        const quizAnswer = document.getElementById('quizAnswer').value;
-        const correctAnswer = document.getElementById('quizAnswer').getAttribute('data-correct-answer');
-        
-        // Add quiz validation to form data
-        formData.append('quiz_answer', quizAnswer);
-        formData.append('correct_answer', correctAnswer);
         
         // Convert FormData to JSON for easier handling
         const jsonData = {};
@@ -255,17 +170,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 // Reset form on success
                 document.getElementById('quoteForm').reset();
-                generateRandomQuiz();
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Answer Required';
-                submitBtn.classList.remove('btn-primary');
-                submitBtn.classList.add('btn-secondary');
             } else {
                 // Re-enable submit button on error
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Send';
-                submitBtn.classList.remove('btn-secondary');
-                submitBtn.classList.add('btn-primary');
             }
         })
         .catch(error => {
@@ -277,8 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Re-enable submit button
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send';
-            submitBtn.classList.remove('btn-secondary');
-            submitBtn.classList.add('btn-primary');
         })
         .finally(() => {
             // Reset button text

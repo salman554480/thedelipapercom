@@ -15,18 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $input = json_decode(file_get_contents('php://input'), true);
 
 // Validate required fields
-$required_fields = ['name', 'email', 'contact', 'standard_size', 'printing', 'paper', 'quantity', 'quiz_answer', 'correct_answer'];
+$required_fields = ['name', 'email', 'contact', 'standard_size', 'printing', 'paper', 'quantity'];
 foreach ($required_fields as $field) {
     if (empty($input[$field])) {
         echo json_encode(['success' => false, 'message' => "Field '$field' is required"]);
         exit;
     }
-}
-
-// Validate quiz answer
-if ($input['quiz_answer'] != $input['correct_answer']) {
-    echo json_encode(['success' => false, 'message' => 'Security check failed. Please refresh and try again.']);
-    exit;
 }
 
 // Sanitize input data

@@ -80,21 +80,8 @@
                               placeholder="Message" id=""></textarea>
                         </div>
                      </div>
-                     <div class="col-xl-8 flex-padding">
-                        <div class="bg-white p-3 mb-3 mt-2" style="    border: 1px solid #d3d3d3;">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <div class="form-check">
-                                 <input type="checkbox" class="form-check-input" style="width: 28px; height: 28px;" id="exampleCheck1">
-                                 <label class="form-check-label mt-2 ml-3" for="exampleCheck1">I'm not a robot</label>
-                              </div>
-                              <img src="<?php echo $assets_path;?>/assets/images/recaptcha.png" style="width: 70px;" alt="">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-12">
-                        <p>By submitting your phone number, you agree to receiving texts from The Deli Paper</p>
-                     </div>
-                     <div class="col-xl-12">
+                    
+                     <div class="col-xl-12 mt-3">
                         <button
                            class="btn btn-send col-xl-5 col-8 d-flex justify-content-center mt-3	 m-auto">Send</button>
                      </div>
