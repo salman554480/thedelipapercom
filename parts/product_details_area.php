@@ -71,7 +71,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
     max-height: 80vh;
     object-fit: contain;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+/*    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);*/
 }
 
 .scrollable-content {

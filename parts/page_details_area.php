@@ -454,17 +454,17 @@
                     <h2 class="text-paper text-center">Wax Paper</h2>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-1.jpg" title="Wax Paper 01">
+                    <a href="<?php echo $website_url; ?>/wax-paper" title="Wax Paper 01">
                         <img src="<?php echo $assets_path?>/assets/images/img-1.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-2.jpg" title="Wax Paper 02">
+                    <a href="<?php echo $website_url; ?>/wax-paper" title="Wax Paper 02">
                         <img src="<?php echo $assets_path?>/assets/images/img-2.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-3.jpg" title="Wax Paper 03">
+                    <a href="<?php echo $website_url; ?>/wax-paper" title="Wax Paper 03">
                         <img src="<?php echo $assets_path?>/assets/images/img-3.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
@@ -474,17 +474,17 @@
                     <h2 class="text-paper text-center mt-5">Food Wrapping Paper</h2>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-4.jpg" title="Food Wrapping Paper 01">
+                    <a href="<?php echo $website_url; ?>/food-wrapping-paper" title="Food Wrapping Paper 01">
                         <img src="<?php echo $assets_path?>/assets/images/img-4.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-5.jpg" title="Food Wrapping Paper 02">
+                    <a href="<?php echo $website_url; ?>/food-wrapping-paper" title="Food Wrapping Paper 02">
                         <img src="<?php echo $assets_path?>/assets/images/img-5.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-6.jpg" title="Food Wrapping Paper 03">
+                    <a href="<?php echo $website_url; ?>/food-wrapping-paper" title="Food Wrapping Paper 03">
                         <img src="<?php echo $assets_path?>/assets/images/img-6.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
@@ -494,17 +494,17 @@
                     <h2 class="text-paper text-center mt-5">Gift Wrapping Paper</h2>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-7.jpg" title="Gift Wrapping Paper 01">
+                    <a href="<?php echo $website_url; ?>/gift-wrapping-paper" title="Gift Wrapping Paper 01">
                         <img src="<?php echo $assets_path?>/assets/images/img-7.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-8.jpg" title="Gift Wrapping Paper 02">
+                    <a href="<?php echo $website_url; ?>/gift-wrapping-paper" title="Gift Wrapping Paper 02">
                         <img src="<?php echo $assets_path?>/assets/images/img-8.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-9.webp" title="Gift Wrapping Paper 03">
+                    <a href="<?php echo $website_url; ?>/gift-wrapping-paper" title="Gift Wrapping Paper 03">
                         <img src="<?php echo $assets_path?>/assets/images/img-9.webp" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
@@ -514,17 +514,17 @@
                     <h2 class="text-paper text-center mt-5">Butcher Paper</h2>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-10.jpg" title="Butcher Paper 01">
+                    <a href="<?php echo $website_url; ?>/butcher-paper" title="Butcher Paper 01">
                         <img src="<?php echo $assets_path?>/assets/images/img-10.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-11.jpg" title="Butcher Paper 02">
+                    <a href="<?php echo $website_url; ?>/butcher-paper" title="Butcher Paper 02">
                         <img src="<?php echo $assets_path?>/assets/images/img-11.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-12.jpg" title="Butcher Paper 03">
+                    <a href="<?php echo $website_url; ?>/butcher-paper" title="Butcher Paper 03">
                         <img src="<?php echo $assets_path?>/assets/images/img-12.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
@@ -534,17 +534,17 @@
                     <h2 class="text-paper text-center mt-5">Paper Bags</h2>
                 </div>
                 <div class=" col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-13.jpg" title="Paper Bags 01">
+                    <a href="<?php echo $website_url; ?>/paper-bags" title="Paper Bags 01">
                         <img src="<?php echo $assets_path?>/assets/images/img-13.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class=" col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-14.jpg" title="Paper Bags 02">
+                    <a href="<?php echo $website_url; ?>/paper-bags" title="Paper Bags 02">
                         <img src="<?php echo $assets_path?>/assets/images/img-14.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class=" col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-15.jpg" title="Paper Bags 03">
+                    <a href="<?php echo $website_url; ?>/paper-bags" title="Paper Bags 03">
                         <img src="<?php echo $assets_path?>/assets/images/img-15.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
@@ -554,17 +554,17 @@
                     <h2 class="text-paper text-center mt-5">Parchment Paper</h2>
                 </div>
                 <div class=" col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-16.jpg" title="Parchment Paper 01">
+                    <a href="<?php echo $website_url; ?>/parchment-paper" title="Parchment Paper 01">
                         <img src="<?php echo $assets_path?>/assets/images/img-16.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class=" col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-17.jpg" title="Parchment Paper 02">
+                    <a href="<?php echo $website_url; ?>/parchment-paper" title="Parchment Paper 02">
                         <img src="<?php echo $assets_path?>/assets/images/img-17.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
                 <div class=" col-xl-4 col-lg-6 col-md-6 col-4 mt-3 flex-portfolio-imgs">
-                    <a href="assets/images/img-18.jpg" title="Parchment Paper 03">
+                    <a href="<?php echo $website_url; ?>/parchment-paper" title="Parchment Paper 03">
                         <img src="<?php echo $assets_path?>/assets/images/img-18.jpg" class="img-fluid wax-paper-img" alt="">
                     </a>
                 </div>
