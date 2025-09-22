@@ -14,16 +14,17 @@ $meta_title = $row_product['product_meta_title'];
 $meta_description = $row_product['product_meta_description'];
 $meta_keywords = $row_product['product_meta_keywords'];
 ?>
-<section class=" wax-product-section">
+<section class="wax-product-section sticky-product-section">
     <div class="container-fluid">
         <div class="row pt-5 pb-5 ml-5 mr-5">
-
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
-                <img src="<?php echo $img_path; ?>/<?php echo $product_thumbnail; ?>"
-                    class="img-fluid" alt="">
+                <div class="sticky-image-container">
+                    <img src="<?php echo $img_path; ?>/<?php echo $product_thumbnail; ?>"
+                        class="img-fluid sticky-product-image" alt="">
+                </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 flex-padding">
-                <div class="ml-5 wax-right-content">
+                <div class="ml-5 wax-right-content scrollable-content">
                     <h1 class="text-wax"><?php echo $product_name; ?></h1>
                     <div class="para-wax">
                         <?php echo $product_short_description; ?>
@@ -50,8 +51,56 @@ $meta_keywords = $row_product['product_meta_keywords'];
             </div>
         </div>
     </div>
-
 </section>
+
+<style>
+.sticky-product-section {
+    position: relative;
+    min-height: 100vh;
+}
+
+.sticky-image-container {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.sticky-product-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.scrollable-content {
+    padding-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sticky-image-container {
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .sticky-product-image {
+        max-height: 50vh;
+    }
+    
+    .wax-right-content {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .sticky-product-section .row {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+}
+</style>
 
 <section class="work-section work-column-section">
     <div class="container-fluid">
