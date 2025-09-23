@@ -30,8 +30,135 @@
             border-color: #942BEF;
             border-radius: 7px 7px 7px 7px; 
             ">
-                
-               <?php require_once('quote_form.php');?>
+                <h3>Get a Quote</h3>
+
+                <form id="quoteForm" enctype="multipart/form-data">
+                    <div class="row justify-content-start quote-content ">
+                        <div class="col-xl-6">
+                            <div class="form-group mb-0">
+                                <label for="">Name</label>
+                                <input type="text" class="form-control input-field" name="name">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="form-group mb-0">
+                                <label for="">Email</label>
+                                <input type="email" class="form-control input-field" name="email">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group mb-0">
+                                <label for="">Contact No.</label>
+                                <input type="text" class="form-control input-field" name="contact">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group mb-0">
+                                <label for="">Standard Size</label>
+                                <select class="form-control input-field" name="standard_size">
+                                    <option value="4″ x 4″" class="">4″ x 4″</option>
+                                    <option value="5″ x 5″" class="">5″ x 5″</option>
+                                    <option value="6” x 5″" class="">6” x 5” </option>
+                                    <option value="6″ x 6″" class="">6″ x 6″</option>
+                                    <option value="7” x 5”" class="">7” x 5”</option>
+                                    <option value="7” x 7”" class="">7” x 7”</option>
+                                    <option value="8” x 6” " class="">8” x 6” </option>
+                                    <option value="8” x 5”" class="">8” x 5”</option>
+                                    <option value="8” x 8”" class="">8” x 8”</option>
+                                    <option value="8.5” x 11”" class="">8.5” x 11”</option>
+                                    <option value="9″ x 5″" class="">9″ x 5″</option>
+                                    <option value="9″ x 6″" class="">9″ x 6″</option>
+                                    <option value="9” x 9”" class="">9” x 9”</option>
+                                    <option value="10″ x 5″" class="">10″ x 5″</option>
+                                    <option value="10″ x 6″" class="">10″ x 6″</option>
+                                    <option value="10″ x 8″" class="">10″ x 8″</option>
+                                    <option value="10″ x 10″" class="">10″ x 10″</option>
+                                    <option value="10.75″ x 10″" class="">10.75″ x 10″</option>
+                                    <option value="12″ x 6″" class="">12″ x 6″</option>
+                                    <option value="12″ x 8″" class="">12″ x 8″</option>
+                                    <option value="12″ x 9″" class="">12″ x 9″</option>
+                                    <option value="12″ x 10″" class="">12″ x 10″</option>
+                                    <option value="12″ x 12″" class="">12″ x 12″</option>
+                                    <option value="13″ x 6″" class="">13″ x 6″</option>
+                                    <option value="13″ x 9″" class="">13″ x 9″</option>
+                                    <option value="13″ x 10″" class="">13″ x 10″</option>
+                                    <option value="13″ x 13″" class="">13″ x 13″</option>
+                                    <option value="14” x 12”" class="">14” x 12”</option>
+                                    <option value="15″ x 9″" class="">15″ x 9″</option>
+                                    <option value="15″ x 10.75″" class="">15″ x 10.75″</option>
+                                    <option value="15″ x 12″" class="">15″ x 12″</option>
+                                    <option value="15″ x 13″" class="">15″ x 13″</option>
+                                    <option value="16” x 12”" class="">16” x 12”</option>
+                                    <option value="17” x 11”" class="">17” x 11”</option>
+                                    <option value="18” x 10”" class="">18” x 10”</option>
+                                    <option value="18” x 12”" class="">18” x 12”</option>
+                                    <option value="18” x 13”" class="">18” x 13”</option>
+                                    <option value="20″ x 10″ " class="">20″ x 10″ </option>
+                                    <option value="20” x 12”     " class="">20” x 12” </option>
+                                    <option value="20″ x 13″    " class="">20″ x 13″ </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="form-group mb-0">
+                                <label for="">Printing</label>
+                                <select class="form-control input-field " name="printing" required="required">
+                                    <option value="4- Color" class="">4- Color</option>
+                                    <option value="2 Color" class="">2 Color</option>
+                                    <option value="1 Color" class="">1 Color</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="form-group mb-0">
+                                <label for="">Paper</label>
+                                <select class="form-control input-field " required="required" name="paper">
+                                    <option value="White" class="">White</option>
+                                    <option value="	Kraft" class="">Kraft</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="form-group mb-0">
+                                <label for="">Quantity</label>
+                                <input type="text" class="form-control input-field" name="quantity" id="">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group mb-0">
+                                <label for="">Upload Logo File</label>
+                                <input type="file" class="form-control input-field" name="logo_file" id="">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group mb-0">
+                                <label for="">For Custom size / More information</label>
+                                <textarea name="custom_info" class="form-control input-field" rows="3" placeholder="Type Here"
+                                    id=""></textarea>
+                            </div>
+                        </div>
+                        <!-- <div class="col-xl-6">
+                                <div class="bg-white p-3 mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">I'm not a robot</label>
+                                        </div>
+                                        <img src="<?php echo $website_url ?>/assets/images/recaptcha.png"
+                                            style="width: 70px;" alt="">
+                                    </div>
+                                </div>
+                            </div>-->
+                        <div class="col-xl-12 mt-3">
+                            <button id="submitBtn" class="btn btn-send col-xl-8 d-flex justify-content-center mt-3 m-auto" type="submit">Send</button>
+                        </div>
+
+                        <!-- Response message container -->
+                        <div id="responseMessage" class="col-xl-12 mt-3" style="display: none;">
+                            <div class="alert" role="alert"></div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -54,69 +181,69 @@
             </div>
             <div class="col-xl-8">
                 <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-5 col-12 flex-padding">
-                <h5 class="text-product">Our Products</h5>
-                <ul class="mt-3 list-footer pl-0">
-                    <li>
-                        <a href="<?php echo $website_url ?>/wax-paper">Wax Paper</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/food-wrapping-paper">Food Wrapping Paper</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/butcher-paper">Butcher Paper</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/parchment-paper">Parchment Paper</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/paper-bags">Paper Bags</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/custom-napkins">Custom Napkins</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
-                <h5 class="text-product">Useful links</h5>
-                <ul class="mt-1 list-footer pl-0">
-                    <li>
-                        <a href="<?php echo $website_url ?>/privacy-policy">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/terms-and-conditions">Terms & Condition</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/about-us">About Us</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/contact-us">Contact Us</a>
-                    </li>
+                    <div class="col-xl-4 col-lg-6 col-md-5 col-12 flex-padding">
+                        <h5 class="text-product">Our Products</h5>
+                        <ul class="mt-3 list-footer pl-0">
+                            <li>
+                                <a href="<?php echo $website_url ?>/wax-paper">Wax Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/food-wrapping-paper">Food Wrapping Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/butcher-paper">Butcher Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/parchment-paper">Parchment Paper</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/paper-bags">Paper Bags</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/custom-napkins">Custom Napkins</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
+                        <h5 class="text-product">Useful links</h5>
+                        <ul class="mt-1 list-footer pl-0">
+                            <li>
+                                <a href="<?php echo $website_url ?>/privacy-policy">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/terms-and-conditions">Terms & Condition</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/about-us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/contact-us">Contact Us</a>
+                            </li>
 
-                </ul>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
-                <h5 class="text-product">Contact</h5>
-                <ul class="mt-1 list-footer pl-0">
-                    <li>
-                        <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/"><i
-                                class="bx bx-envelope icon-phone"></i>sales@thedelipaper.com</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $website_url ?>/"><i class="bx bx-map icon-phone"></i>Houston Texas</a>
-                    </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
+                        <h5 class="text-product">Contact</h5>
+                        <ul class="mt-1 list-footer pl-0">
+                            <li>
+                                <a href="<?php echo $website_url ?>/"><i class="bx bx-phone icon-phone"></i>832-900-9245</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/"><i
+                                        class="bx bx-envelope icon-phone"></i>sales@thedelipaper.com</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $website_url ?>/"><i class="bx bx-map icon-phone"></i>Houston Texas</a>
+                            </li>
 
 
-                </ul>
-                <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class="img-fluid" style="width: 75%;"
-                    alt=""></a>
-            </div>
-            
-            </div>
-            
+                        </ul>
+                        <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class=" footer-google-icon" 
+                                alt=""></a>
+                    </div>
+
+                </div>
+
             </div>
             <!--<div class="col-xl-6 flex-padding">-->
             <!--    <p class="space-text">&nbsp;</p>-->
@@ -124,7 +251,7 @@
             <!--    <p class="space-text">&nbsp;</p>-->
             <!--    <p class="space-text">&nbsp;</p>-->
             <!--    <p class="space-text">&nbsp;</p>-->
-                <!-- <p class="space-text">&nbsp;</p>
+            <!-- <p class="space-text">&nbsp;</p>
             <!--    <p class="space-text">&nbsp;</p>-->
             <!--    <p class="space-text">&nbsp;</p> -->
             <!--</div>-->
@@ -193,7 +320,7 @@
                 border-color: #942BEF;
                 border-radius: 7px 7px 7px 7px; 
                 ">
-                <?php require_once('quote_form.php');?>
+                <?php require_once('quote_form.php'); ?>
             </div>
         </div>
     </div>
@@ -208,108 +335,107 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="<?php echo $website_url ?>/assets/js/main.js"></script>
 <script>
-$(document).ready(function () {
-  $('.btn-get-qoute').on('click', function () {
-    $('body').addClass('body-darkened');                  // dark background
-    $('.form-slide-panel').addClass('open');              // show panel
-    // $('body').css('overflow', 'hidden');
-    // sdsdsdsds///                  // optional: prevent scroll
-  });
-
-  $('.close-form').on('click', function () {
-    $('.form-slide-panel').removeClass('open');           // hide panel
-    $('body').removeClass('body-darkened');               // remove dark bg
-    // $('body').css('overflow', 'auto');                    // restore scroll
-  });
-});
-
-</script>
-<script>
-$(document).ready(function() {
-    $('.navbar-toggler').click(function() {
-        $('.sidebar').toggleClass('active');
-    });
-
-    $('.close-sidebar').click(function() {
-        $('.sidebar').removeClass('active');
-    });
-});
-</script>
-<script>
-$(document).ready(function() {
-    // Show button after scrolling 200px
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 200) {
-            $('#scrollUp').fadeIn();
-        } else {
-            $('#scrollUp').fadeOut();
-        }
-    });
-
-    // Scroll to top on click
-    $('#scrollUp').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800); // 800ms smooth scroll
-        return false;
-    });
-});
-</script>
-<script>
-$(document).ready(function() {
-    $('.accordion-wrapper').click(function() {
-        const $this = $(this);
-
-        // Close all other accordions
-        $('.accordion-wrapper').not($this).each(function() {
-            $(this).find('.accordion-para').addClass('d-none');
-            $(this).find('.right-icon')
-                .removeClass('bx-chevron-down')
-                .addClass('bx-chevron-right');
+    $(document).ready(function() {
+        $('.btn-get-qoute').on('click', function() {
+            $('body').addClass('body-darkened'); // dark background
+            $('.form-slide-panel').addClass('open'); // show panel
+            // $('body').css('overflow', 'hidden');
+            // sdsdsdsds///                  // optional: prevent scroll
         });
 
-        // Toggle current accordion content
-        const $para = $this.find('.accordion-para');
-        $para.toggleClass('d-none');
-
-        // Toggle icon class
-        const $icon = $this.find('.right-icon');
-        if ($para.hasClass('d-none')) {
-            $icon.removeClass('bx-chevron-down').addClass('bx-chevron-right');
-        } else {
-            $icon.removeClass('bx-chevron-right').addClass('bx-chevron-down');
-        }
+        $('.close-form').on('click', function() {
+            $('.form-slide-panel').removeClass('open'); // hide panel
+            $('body').removeClass('body-darkened'); // remove dark bg
+            // $('body').css('overflow', 'auto');                    // restore scroll
+        });
     });
-});
+</script>
+<script>
+    $(document).ready(function() {
+        $('.navbar-toggler').click(function() {
+            $('.sidebar').toggleClass('active');
+        });
+
+        $('.close-sidebar').click(function() {
+            $('.sidebar').removeClass('active');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        // Show button after scrolling 200px
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('#scrollUp').fadeIn();
+            } else {
+                $('#scrollUp').fadeOut();
+            }
+        });
+
+        // Scroll to top on click
+        $('#scrollUp').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800); // 800ms smooth scroll
+            return false;
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.accordion-wrapper').click(function() {
+            const $this = $(this);
+
+            // Close all other accordions
+            $('.accordion-wrapper').not($this).each(function() {
+                $(this).find('.accordion-para').addClass('d-none');
+                $(this).find('.right-icon')
+                    .removeClass('bx-chevron-down')
+                    .addClass('bx-chevron-right');
+            });
+
+            // Toggle current accordion content
+            const $para = $this.find('.accordion-para');
+            $para.toggleClass('d-none');
+
+            // Toggle icon class
+            const $icon = $this.find('.right-icon');
+            if ($para.hasClass('d-none')) {
+                $icon.removeClass('bx-chevron-down').addClass('bx-chevron-right');
+            } else {
+                $icon.removeClass('bx-chevron-right').addClass('bx-chevron-down');
+            }
+        });
+    });
 </script>
 
 <script>
-$(document).ready(function() {
-    $('.owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        navText: [
-            '<span class="custom-prev"><i class="bx bx-chevron-left"></i></span>',
-            '<span class="custom-next"><i class="bx bx-chevron-right"></i></span></span>'
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            navText: [
+                '<span class="custom-prev"><i class="bx bx-chevron-left"></i></span>',
+                '<span class="custom-next"><i class="bx bx-chevron-right"></i></span></span>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
             }
-        }
+        });
     });
-});
 </script>
 </body>
 

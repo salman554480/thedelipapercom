@@ -1964,6 +1964,9 @@
       min-width: 100px;
       margin: 0 10px;
     }
+    .footer-google-icon{
+      width: 50% !important;
+    }
   }
 
   @media screen and (max-width:1030px) {
@@ -2272,6 +2275,10 @@
       width: 50px;
     }
 
+
+    .footer-google-icon{
+      width: 75%;
+    }
     .standard-section .row {
       margin-left: 0px !important;
       margin-right: 0px !important;
@@ -2512,7 +2519,7 @@
 
     .footer-logo-images img {
       margin-top: 10px;
-      width: 62px;
+      width: 50px;
     }
 
     .flex-portfolio-imgs {
