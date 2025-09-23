@@ -1,3 +1,6 @@
+<button class="btn btn-quote" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">Get A Free
+Quote</button>
+
 <div class="ticker-wrapper">
     <div class="ticker-content">
         <div class="ticker-item"><span class="star">✻</span>FREE SHIPPING ON ALL ORDERS <span class="star">✻</span></div>
@@ -92,7 +95,7 @@
     </a>
     <ul class="navbar-nav m-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="<?php echo $website_url ?>">Home</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="<?php echo $website_url ?>/" id="navbarDropdown" role="button"
@@ -120,13 +123,13 @@
             <a class="nav-link" href="<?php echo $website_url ?>/get-quote">Get a Quote</a>
         </li>-->
         <li class="nav-item">
-            <a class="nav-link" href="blog">Blog</a>
+            <a class="nav-link" href="<?php echo $website_url ?>/blog">Blog</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="contact-us">Contact</a>
+            <a class="nav-link" href="<?php echo $website_url ?>/contact-us">Contact</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="portfolio">Portfolio</a>
+            <a class="nav-link" href="<?php echo $website_url ?>/portfolio">Portfolio</a>
         </li>
     </ul>
     <div class="social-link-icon">

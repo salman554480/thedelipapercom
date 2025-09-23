@@ -252,6 +252,7 @@
   .social-link {
     gap: 25px;
   }
+  
 
   @keyframes slideDownUp {
     0% {
@@ -478,6 +479,11 @@
     height: auto;
     border-radius: 8px;
   }
+
+  .footer-google-icon{
+    width: 75%;
+  }
+
 
   /* Custom nav arrows */
   .custom-prev,
@@ -2276,9 +2282,7 @@
     }
 
 
-    .footer-google-icon{
-      width: 75%;
-    }
+    
     .standard-section .row {
       margin-left: 0px !important;
       margin-right: 0px !important;
