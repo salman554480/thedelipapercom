@@ -203,8 +203,7 @@
                                 <a href="<?php echo $website_url ?>/custom-napkins">Custom Napkins</a>
                             </li>
                         </ul>
-                        <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class="footer-google-icon" 
-                                alt=""></a>
+                       
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
                         <h5 class="text-product">Useful links</h5>
@@ -240,6 +239,8 @@
 
 
                         </ul>
+                        <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class="footer-google-icon" 
+                        alt=""></a>
                         
                     </div>
 
@@ -438,6 +439,13 @@
         });
     });
 </script>
+
+<!-- WhatsApp Sticky Icon -->
+<div class="whatsapp-sticky">
+        <a href="https://wa.me/12282769480" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+    </div>
 </body>
 
 </html>

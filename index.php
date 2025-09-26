@@ -841,6 +841,13 @@
         });
     });
     </script>
+
+    <!-- WhatsApp Sticky Icon -->
+    <div class="whatsapp-sticky">
+        <a href="https://wa.me/12282769480" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+    </div>
 </body>
 
 </html>

@@ -30,6 +30,7 @@ $meta_keywords = $row_product['product_meta_keywords'];
                         <?php echo $product_short_description; ?>
                     </div>
 
+                    <h4 class="text-follow mt-3">Get a Quote</h4>
                     <?php require_once('quote_form.php'); ?>
 
 
