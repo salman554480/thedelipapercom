@@ -78,10 +78,12 @@ Quote</button>
                 <a class="nav-link " href="<?php echo $website_url ?>/portfolio">Portfolio</a>
             </li>
         </ul>
-       <!-- <form class="form-inline my-2 my-lg-0">
-            <button class="btn-slide-loop" type="button" data-toggle="modal"
-                data-target=".bd-example-modal-lg"><span>Get a Quote</span></button>
-        </form>-->
+                <!--Email Address and Contact Number-->        
+                <div class="d-flex justify-content-end align-items-center ">
+
+                    <a href="mailto:sales@thedelipaper.com" class="d-flex w-100 align-items-center font-weight-bold"><i class="bx bx-envelope"></i> sales@thedelipaper.com</a>
+                    <a href="tel:832-900-9245" class="d-flex w-100 align-items-center ml-3 font-weight-bold"><i class="bx bxs-phone"></i> 832-900-9245</a>
+                </div>
     </div>
 </nav>
 
