@@ -146,19 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get form data
         const formData = new FormData(this);
         
-        // Convert FormData to JSON for easier handling
-        const jsonData = {};
-        for (let [key, value] of formData.entries()) {
-            jsonData[key] = value;
-        }
+        // Add current URL to track form submission source
+        formData.append('current_url', window.location.href);
         
-        // Send AJAX request
+        // Send AJAX request with FormData (for file uploads)
+        console.log('Sending AJAX request with FormData from:', window.location.href);
         fetch('process_quote.php', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+                // Don't set Content-Type for FormData - let browser set it with boundary
             },
-            body: JSON.stringify(jsonData)
+            body: formData
         })
         .then(response => response.json())
         .then(data => {

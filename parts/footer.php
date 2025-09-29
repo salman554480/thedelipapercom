@@ -15,8 +15,8 @@
         <div class="ticker-item text-white">FREE SHIPPING ON ALL ORDERS <span class="star text-dark">✻</span></div>
     </div>
 </div>
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1"
+    aria-hidden="true" id="quoteModal1">
     <div class="modal-dialog modal-md">
         <div class="modal-content p-3">
             <div class="modal-header pb-0 pt-0" style="border-bottom: 0px !important;">
@@ -31,8 +31,7 @@
             border-radius: 7px 7px 7px 7px; 
             ">
                 <h3>Get a Quote</h3>
-
-                <form id="quoteForm" enctype="multipart/form-data">
+                <form id="modalQuoteForm" enctype="multipart/form-data" onsubmit="return false;">
                     <div class="row justify-content-start quote-content ">
                         <div class="col-xl-6">
                             <div class="form-group mb-0">
@@ -58,17 +57,17 @@
                                 <select class="form-control input-field" name="standard_size">
                                     <option value="4″ x 4″" class="">4″ x 4″</option>
                                     <option value="5″ x 5″" class="">5″ x 5″</option>
-                                    <option value="6” x 5″" class="">6” x 5” </option>
+                                    <option value="6" x 5″" class="">6" x 5" </option>
                                     <option value="6″ x 6″" class="">6″ x 6″</option>
-                                    <option value="7” x 5”" class="">7” x 5”</option>
-                                    <option value="7” x 7”" class="">7” x 7”</option>
-                                    <option value="8” x 6” " class="">8” x 6” </option>
-                                    <option value="8” x 5”" class="">8” x 5”</option>
-                                    <option value="8” x 8”" class="">8” x 8”</option>
-                                    <option value="8.5” x 11”" class="">8.5” x 11”</option>
+                                    <option value="7" x 5"" class="">7" x 5"</option>
+                                    <option value="7" x 7"" class="">7" x 7"</option>
+                                    <option value="8" x 6" " class="">8" x 6" </option>
+                                    <option value="8" x 5"" class="">8" x 5"</option>
+                                    <option value="8" x 8"" class="">8" x 8"</option>
+                                    <option value="8.5" x 11"" class="">8.5" x 11"</option>
                                     <option value="9″ x 5″" class="">9″ x 5″</option>
                                     <option value="9″ x 6″" class="">9″ x 6″</option>
-                                    <option value="9” x 9”" class="">9” x 9”</option>
+                                    <option value="9" x 9"" class="">9" x 9"</option>
                                     <option value="10″ x 5″" class="">10″ x 5″</option>
                                     <option value="10″ x 6″" class="">10″ x 6″</option>
                                     <option value="10″ x 8″" class="">10″ x 8″</option>
@@ -83,18 +82,18 @@
                                     <option value="13″ x 9″" class="">13″ x 9″</option>
                                     <option value="13″ x 10″" class="">13″ x 10″</option>
                                     <option value="13″ x 13″" class="">13″ x 13″</option>
-                                    <option value="14” x 12”" class="">14” x 12”</option>
+                                    <option value="14" x 12"" class="">14" x 12"</option>
                                     <option value="15″ x 9″" class="">15″ x 9″</option>
                                     <option value="15″ x 10.75″" class="">15″ x 10.75″</option>
                                     <option value="15″ x 12″" class="">15″ x 12″</option>
                                     <option value="15″ x 13″" class="">15″ x 13″</option>
-                                    <option value="16” x 12”" class="">16” x 12”</option>
-                                    <option value="17” x 11”" class="">17” x 11”</option>
-                                    <option value="18” x 10”" class="">18” x 10”</option>
-                                    <option value="18” x 12”" class="">18” x 12”</option>
-                                    <option value="18” x 13”" class="">18” x 13”</option>
+                                    <option value="16" x 12"" class="">16" x 12"</option>
+                                    <option value="17" x 11"" class="">17" x 11"</option>
+                                    <option value="18" x 10"" class="">18" x 10"</option>
+                                    <option value="18" x 12"" class="">18" x 12"</option>
+                                    <option value="18" x 13"" class="">18" x 13"</option>
                                     <option value="20″ x 10″ " class="">20″ x 10″ </option>
-                                    <option value="20” x 12”     " class="">20” x 12” </option>
+                                    <option value="20" x 12"     " class="">20" x 12" </option>
                                     <option value="20″ x 13″    " class="">20″ x 13″ </option>
                                 </select>
                             </div>
@@ -150,15 +149,97 @@
                                 </div>
                             </div>-->
                         <div class="col-xl-12 mt-3">
-                            <button id="submitBtn" class="btn btn-send col-xl-8 d-flex justify-content-center mt-3 m-auto" type="submit">Send</button>
+                            <button id="modalSubmitBtn" class="btn btn-send col-xl-8 d-flex justify-content-center mt-3 m-auto" type="submit">Send</button>
                         </div>
 
                         <!-- Response message container -->
-                        <div id="responseMessage" class="col-xl-12 mt-3" style="display: none;">
+                        <div id="modalResponseMessage" class="col-xl-12 mt-3" style="display: none;">
                             <div class="alert" role="alert"></div>
                         </div>
                     </div>
                 </form>
+
+                <script>
+                    console.log('Script loading...');
+                    document.addEventListener('DOMContentLoaded', function() {
+                        console.log('DOM loaded, setting up form handler');
+                        
+                        const form = document.getElementById('modalQuoteForm');
+                        console.log('Form found:', form);
+                        
+                        if (!form) {
+                            console.error('Form with ID modalQuoteForm not found!');
+                            return;
+                        }
+                        
+                        // Handle form submission with AJAX
+                        form.addEventListener('submit', function(e) {
+                            console.log('Form submitted, preventing default');
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            const submitBtn = document.getElementById('modalSubmitBtn');
+                            const responseMessage = document.getElementById('modalResponseMessage');
+                            const responseAlert = responseMessage.querySelector('.alert');
+
+                            // Disable submit button and show loading
+                            submitBtn.disabled = true;
+                            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Sending...';
+
+                            // Hide previous messages
+                            responseMessage.style.display = 'none';
+
+                            // Get form data
+                            const formData = new FormData(this);
+                            
+                            // Add current URL to track form submission source
+                            formData.append('current_url', window.location.href);
+
+                            // Send AJAX request with FormData (for file uploads)
+                            console.log('Sending AJAX request with FormData from:', window.location.href);
+                            fetch('process_quote.php', {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest'
+                                        // Don't set Content-Type for FormData - let browser set it with boundary
+                                    },
+                                    body: formData
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Show response message
+                                    responseMessage.style.display = 'block';
+                                    responseAlert.className = 'alert ' + (data.success ? 'alert-success' : 'alert-danger');
+                                    responseAlert.textContent = data.message;
+
+                                    if (data.success) {
+                                        // Reset form on success
+                                        document.getElementById('modalQuoteForm').reset();
+                                    } else {
+                                        // Re-enable submit button on error
+                                        submitBtn.disabled = false;
+                                        submitBtn.textContent = 'Send';
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    responseMessage.style.display = 'block';
+                                    responseAlert.className = 'alert alert-danger';
+                                    responseAlert.textContent = 'An error occurred. Please try again.';
+
+                                    // Re-enable submit button
+                                    submitBtn.disabled = false;
+                                    submitBtn.textContent = 'Send';
+                                })
+                                .finally(() => {
+                                    // Reset button text
+                                    if (submitBtn.disabled) {
+                                        submitBtn.innerHTML = 'Send';
+                                    }
+                                });
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>
@@ -203,7 +284,7 @@
                                 <a href="<?php echo $website_url ?>/custom-napkins">Custom Napkins</a>
                             </li>
                         </ul>
-                       
+
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-5 col-12  flex-padding">
                         <h5 class="text-product">Useful links</h5>
@@ -239,9 +320,9 @@
 
 
                         </ul>
-                        <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class="footer-google-icon" 
-                        alt=""></a>
-                        
+                        <a href="https://maps.app.goo.gl/pC9B53QGgkSVXVNy6"><img src="<?php echo $website_url ?>/assets/images/google-img.png" class="footer-google-icon"
+                                alt=""></a>
+
                     </div>
 
                 </div>
@@ -307,26 +388,6 @@
 </footer>
 
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content p-3">
-            <div class="modal-header pb-0 pt-0" style="border-bottom: 0px !important;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mt-3" style="
-                padding: 17px 17px 17px 17px;
-                border-style: solid;
-                border-color: #942BEF;
-                border-radius: 7px 7px 7px 7px; 
-                ">
-                <?php require_once('quote_form.php'); ?>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -442,10 +503,10 @@
 
 <!-- WhatsApp Sticky Icon -->
 <div class="whatsapp-sticky">
-        <a href="https://wa.me/12282769480" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
-            <i class="bx bxl-whatsapp"></i>
-        </a>
-    </div>
+    <a href="https://wa.me/12282769480" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+        <i class="bx bxl-whatsapp"></i>
+    </a>
+</div>
 </body>
 
 </html>
