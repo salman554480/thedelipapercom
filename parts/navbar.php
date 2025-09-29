@@ -135,10 +135,11 @@ Quote</button>
         </li>
     </ul>
     <div class="social-link-icon">
-        <i class="bx bxl-instagram"></i>
-        <i class="bx bxl-linkedin-square"></i>
-        <i class="bx bxl-facebook"></i>
-        <i class="bx bxl-pinterest"></i>
+        <a href="https://www.instagram.com/thedelipaper/"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/thedelipaper/"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://www.facebook.com/thedelipaper/"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.pinterest.com/thedelipaper/"><i class="bx bxl-pinterest"></i></a>
+       
     </div>
 </div>
 <!-- sidebar-mobile-Nav End -->
