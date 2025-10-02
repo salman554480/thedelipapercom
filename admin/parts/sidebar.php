@@ -40,6 +40,7 @@
                                  <li><a class="dropdown-item" href="product_view.php">View Record</a></li>
                              </ul>
                          </li>
+                         <?php } ?>
 
                          <li class="nav-item dropdown">
                              <a class="nav-link <?php if ($page == "page") {
@@ -53,7 +54,7 @@
                              </ul>
                          </li>
 
-                         <?php } ?>
+                        
 
 
                          <!--Blog-->
