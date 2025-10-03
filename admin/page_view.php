@@ -1,11 +1,7 @@
 <?php
 $page = "page";
 require_once('parts/top.php'); ?>
-<?php 
-if($admin_role != "admin"){
-    	echo "<script>window.open('post_view.php','_self');</script>";
-}
-?>
+
 </head>
 
 <body class="sb-nav-fixed">
